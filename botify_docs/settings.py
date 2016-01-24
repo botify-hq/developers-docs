@@ -34,6 +34,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_medusa',
     'content'
 )
 
@@ -116,3 +117,14 @@ STATICFILES_DIRS = (
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+# MEDUSA_RENDERER_CLASS = "django_medusa.renderers.DiskStaticSiteRenderer"
+# MEDUSA_DEPLOY_DIR = os.path.join(
+#     BASE_DIR, '..', "_output"
+# )
+
+MEDUSA_RENDERER_CLASS = "django_medusa.renderers.S3StaticSiteRenderer"
+MEDUSA_MULTITHREAD = False
+AWS_ACCESS_KEY = os.getenv('AWS_ACCESS_KEY', None)
+AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY', None)
+AWS_STORAGE_BUCKET_NAME = "com.botify.developers"
