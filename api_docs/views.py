@@ -16,3 +16,7 @@ class MarkdownPageView(TemplateView):
         return {
             "content": load_md_file(self.page['markdown_file'])
         }
+
+
+class DatamodelView(TemplateView):
+    template_name = "base_md_file.html"

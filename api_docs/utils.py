@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
+from django.core.urlresolvers import reverse
 from markdown import markdown
 from .index import PAGES
 
@@ -73,3 +74,17 @@ def get_page_by_attr(attr_name, attr_value):
         return next(page for page in PAGES if page[attr_name] == attr_value)
     except StopIteration:
         return None
+
+
+def reverse_page(url_name, *args, **kwargs):
+    """
+    :param url_name: url (path) name
+    :type url_name: string
+    :return : string
+    Like djangos reverse but first it tries to match the PAGES constant before
+    trying django's default reverse
+    """
+    page = get_page_by_attr('url_name', url_name)
+    if page:
+        return reverse('md-page', kwargs={'path': page['path']})
+    return reverse(url_name, *args, **kwargs)

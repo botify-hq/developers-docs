@@ -9,11 +9,10 @@ import re
 from markdown.extensions import Extension
 from markdown.inlinepatterns import Pattern
 from markdown.util import etree
-from .utils import get_page_by_attr
-from django.core.urlresolvers import reverse
+from .utils import reverse_page
 
 
-BOTIFYLINK_RE = r'\[\[([\w_ -]+)\|([\w_ -]+)\]\]'
+BOTIFYLINK_RE = r'\[\[([\w0-9_ -]+)\;([\w0-9_ -]+)(#?[\w0-9_ -]*)\]\]'
 
 
 def build_url(label, base, end):
@@ -41,14 +40,18 @@ class BotifyLinks(Pattern):
     def handleMatch(self, m):
         link_text = m.group(2).strip()
         link_url_name = m.group(3).strip()
+        link_anchor = m.group(4).strip()
+
         if not link_text or not link_url_name:
             return ''
 
-        page = get_page_by_attr('url_name', link_url_name)
-
         a = etree.Element('a')
         a.text = link_text
-        a.set('href', reverse('md-page', kwargs={'path': page['path']}))
+
+        a.set('href', "{}{}".format(
+            reverse_page(link_url_name),
+            link_anchor
+        ))
         return a
 
 
