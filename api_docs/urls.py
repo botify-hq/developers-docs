@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = patterns(
     '',
-    url(r'^', views.HomePageView.as_view(), name='home')
+    url(r'(?P<path>.+)', views.MarkdownPageView.as_view(), name='md-page')
 )

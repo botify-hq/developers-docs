@@ -4,5 +4,5 @@ from django.contrib import admin
 urlpatterns = patterns(
     '',
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include('content.urls'))
+    url(r'^api', include('api_docs.urls'))
 )

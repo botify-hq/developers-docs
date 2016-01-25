@@ -35,7 +35,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_medusa',
-    'content'
+    'api_docs'
 )
 
 MIDDLEWARE_CLASSES = (
