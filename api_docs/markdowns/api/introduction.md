@@ -11,7 +11,9 @@ Botify provides a REST API to integrate Botify in third-party applications and u
 - [Reference](./reference.md)
 - [Error Codes](./error-codes.md)
 - [Rate Limit](./rate-limit.md)
-- [SDK](./sdk.md)
+- [[SDK|sdk]]
+
+
 
 ## Examples of use
 - Get the list of your projects and analyses.

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 from markdown import markdown
+from .index import PAGES
 
 
 def get_markdown_content(md_file):
@@ -42,7 +43,7 @@ def md2html(content):
         'markdown.extensions.sane_lists',
         'markdown.extensions.smarty',
         'markdown.extensions.toc',
-        'markdown.extensions.wikilinks'
+        'api_docs.md_extensions'
     ]
     return markdown(content, extensions=extensions)
 
@@ -56,3 +57,19 @@ def load_md_file(md_file):
     content = get_markdown_content(md_file)
     html = md2html(content)
     return html
+
+
+def get_page_by_attr(attr_name, attr_value):
+    """
+    :param attr_name: attribute to search
+    :type attr_name: string
+    :param attr_value: value to search
+    :type attr_value: string
+    :return : dict
+    searches a definition in the PAGES constant and returns
+    the first matchet element
+    """
+    try:
+        return next(page for page in PAGES if page[attr_name] == attr_value)
+    except StopIteration:
+        return None
