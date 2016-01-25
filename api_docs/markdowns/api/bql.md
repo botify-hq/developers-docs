@@ -12,9 +12,9 @@ BQL provides following search/aggregation abilities on a per-URL basis on the an
 
 ## Usage
 
-- [URLs Data Fetching](./urls-data-fetching.md)
-- [URLs Data Aggregation](./urls-data-aggregation.md)
-- [URLs Data Model Introspection](./urls-datamodel-introspection.md)
+- [[URLs Data Fetching;urls-data-fetching]].
+- [[URLs Data Aggregation;urls-data-aggregation]].
+- [[URLs Data Model Introspection;urls-datamodel-introspection]].
 
 
 ## Reference
@@ -31,7 +31,7 @@ BQL provides following search/aggregation abilities on a per-URL basis on the an
 
 #### `fields: Array<string>`
 
-The fields to fetch. Default field is `url`. This is equivalent to the `select` clause in SQL. List of fields is available in [datamodel](#datamodel).
+The fields to fetch. Default field is `url`. This is equivalent to the `select` clause in SQL. List of fields is available in [[Datamodel;datamodel]].
 
 Example: `['url, 'http_code']`
 
@@ -288,7 +288,7 @@ Data Type | Value Type
 
 **rights** is the list of operations the field can be used for. The rights may include the following:
 - `filters`: can be used in any [UrlsFilter](#urlsfilter)
-- `filters_exist`: can **only** be used with a predicate [exists](#exists-predicate) in a [UrlsFilter](#urlsfilter)`
+- `filters_exist`: can **only** be used with a predicate [exists](#exists-predicate) in a [UrlsFilter](#urlsfilter)
 - `select`: can be used in [UrlsQuery](#urlsquery) `fields`
-- `top_values`: can be used by [getUrlsFieldTopValues](./reference#Analysis_getUrlsFieldTopValues)
-- `suggest`: can be used by [getUrlsFieldSuggest](./reference#Analysis_getUrlsFieldSuggest)
+- `top_values`: can be used by [[getUrlsFieldTopValues;reference#Analysis_getUrlsFieldTopValues]]
+- `suggest`: can be used by [[getUrlsFieldSuggest;reference#Analysis_getUrlsFieldSuggest]]

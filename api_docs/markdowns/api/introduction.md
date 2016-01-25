@@ -3,15 +3,15 @@
 Botify provides a REST API to integrate Botify in third-party applications and use almost everything available in the Botify Analytics App and its Chrome Extension.
 
 ## Topics
-- [Authentication](./authentication.md)
-- [URLs Data Fetching](./urls-data-fetching.md)
-- [URLs Data Aggregation](./urls-data-aggregation.md)
-- [URLs Data Model Introspection](./urls-datamodel-introspection.md)
-- [BQL](./bql.md)
-- [Reference](./reference.md)
-- [Error Codes](./error-codes.md)
-- [Rate Limit](./rate-limit.md)
-- [[SDK|sdk]]
+- [[Authentication;authentication]].
+- [[URLs Data Fetching;urls-data-fetching]].
+- [[URLs Data Aggregation;urls-data-aggregation]].
+- [[URLs Data Model Introspection;urls-datamodel-introspection]].
+- [[BQL;bql]].
+- [[Reference;reference]].
+- [[Error Codes;error-codes]].
+- [[Rate Limit;rate-limit]].
+- [[SDK;sdk]].
 
 
 
@@ -26,5 +26,5 @@ Botify provides a REST API to integrate Botify in third-party applications and u
 - ... and much more
 
 ## Complex aggregations
-Complex aggregation can be performed on analysed URLs data. For that purpose, we developed a query language named **BQL** (Botify Query Language). Please read this page for [more information on BQL](./bql.md).
+Complex aggregation can be performed on analysed URLs data. For that purpose, we developed a query language named **BQL** (Botify Query Language). Please read this page for [[more information on BQL;bql]]
 

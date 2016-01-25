@@ -2,13 +2,13 @@
 
 ## Endpoint
 
-- Operation: [getUrls](./reference.md#Analysis_getUrls)
+- Operation: [[getUrls;reference#Analysis_getUrls]]
 - Path: `analyses/${username}/${project_slug}/${analysis_slug}/urls`
 - HTTP Verb: POST
 - Body : `Array<UrlsQuery>`
 - Response: `Array<UrlsResult>`
 
-Please refer to [UrlsQuery](./bql.md#urlsquery) documentation for information about `UrlsQuery` object.
+Please refer to [[UrlsQuery;bql#urlsquery]] documentation for information about `UrlsQuery` object.
 
 ```SH
 curl 'https://api.botify.com/analyses/${username}/${project_slug}/${analysis_slug}/urls' \
@@ -20,7 +20,7 @@ curl 'https://api.botify.com/analyses/${username}/${project_slug}/${analysis_slu
 
 ## Example
 
-The following example of [UrlsQuery](./bql.md#urlsquery) fetches `url` and `metadata.title.nb` fields and filters the dataset on new URLs that respond with a 2xx HTTP code. The result is sorted on descending number of titles.
+The following example of [[UrlsQuery;bql#urlsquery]] fetches `url` and `metadata.title.nb` fields and filters the dataset on new URLs that respond with a 2xx HTTP code. The result is sorted on descending number of titles.
 
 ```JSON
 {

@@ -2,12 +2,12 @@
 
 ## Endpoint
 
-- Operation: [getUrlsDatamodel](./reference.md#Analysis_getUrlsDatamodel)
+- Operation: [[getUrlsDatamodel;reference#Analysis_getUrlsDatamodel]]
 - Path: `analyses/${username}/${project_slug}/${analysis_slug}/urls/datamodel`
 - HTTP Verb: POST
 - Response: `DataModel`
 
-Please refer to [DataModel](./bql.md#datamodel) documentation for information about `DataModel` object.
+Please refer to [[DataModel;datamodel]] documentation for information about `DataModel` object.
 
 ```SH
 curl 'https://api.botify.com/analyses/${username}/${project_slug}/${analysis_slug}/urls/datamodel' \
@@ -37,7 +37,7 @@ In almost every **analysis** endpoint dealing with URL Data model, an **area par
 
 ## Data Types
 
-**data_type** describes the type of the data stored. It allows to know which type of input to use or which [predicates](./bql.md#predicates) are available.
+**data_type** describes the type of the data stored. It allows to know which type of input to use or which [predicates](#predicates) are available.
 
 Data types are `string`, `integer`, `long`, `float`, `double`, `boolean`, `struct`, `date`, `datetime`, `tree`.
 
