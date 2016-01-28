@@ -1,5 +1,6 @@
 from django.views.generic import TemplateView
 from django.http import Http404
+from django.conf import settings
 from utils import load_md_file, get_page_by_attr
 
 
@@ -20,3 +21,12 @@ class MarkdownPageView(TemplateView):
 
 class DatamodelView(TemplateView):
     template_name = "base_md_file.html"
+
+
+class SwaggerUiView(TemplateView):
+    template_name = "swagger_ui.html"
+
+    def get_context_data(self, *args, **kwargs):
+        return {
+            "api_url": settings.SWAGGER_API_URL
+        }

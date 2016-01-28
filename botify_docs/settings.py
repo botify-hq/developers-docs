@@ -128,3 +128,5 @@ MEDUSA_MULTITHREAD = False
 AWS_ACCESS_KEY = os.getenv('AWS_ACCESS_KEY', None)
 AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY', None)
 AWS_STORAGE_BUCKET_NAME = "com.botify.developers"
+
+SWAGGER_API_URL = "http://api.botify.fr:8000/v1/swagger.json"
