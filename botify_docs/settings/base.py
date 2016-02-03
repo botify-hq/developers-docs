@@ -36,7 +36,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_medusa',
-    'api_docs'
+    'api_docs',
+    'pipeline',
+    'storages'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -116,12 +118,15 @@ STATICFILES_DIRS = (
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
-    'botify_docs.finders.AppDirectoriesFinder'
+    'botify_docs.finders.AppDirectoriesFinder',
+    'pipeline.finders.PipelineFinder'
 )
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'botify_docs.storage.StaticFilesStorage'
+DEFAULT_FILE_STORAGE = 'botify_docs.storage.MediaFilesStorage'
 
 MEDUSA_RENDERER_CLASS = "django_medusa.renderers.S3StaticSiteRenderer"
 MEDUSA_MULTITHREAD = False
@@ -139,7 +144,49 @@ FINDER_IGNORE_PATTERNS = [
 
 
 AWS_ACCESS_KEY = os.getenv('AWS_ACCESS_KEY', None)
+AWS_ACCESS_KEY_ID = AWS_ACCESS_KEY
 AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY', None)
-AWS_STORAGE_BUCKET_NAME = "com.botify.developers"
+AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME', None)
 
 SWAGGER_API_URL = "https://api.botify.com/v1/swagger.json"
+
+PIPELINE = {
+    'STYLESHEETS': {
+        'swagger_ui': {
+            'source_filenames': (
+                'swagger-ui/dist/css/typography.css',
+                'swagger-ui/dist/css/reset.css',
+                'swagger-ui/dist/css/screen.css',
+                'swagger-ui/dist/css/reset.css',
+                'swagger-ui/dist/css/print.css'
+            ),
+            'output_filename': 'css/style_swagger.css',
+            'extra_context': {
+                'media': 'screen,projection',
+            },
+        },
+    },
+    'JAVASCRIPT': {
+        'swagger_ui': {
+            'source_filenames': (
+                'swagger-ui/dist/lib/jquery-1.8.0.min.js',
+                'swagger-ui/dist/lib/jquery.slideto.min.js',
+                'swagger-ui/dist/lib/jquery.wiggle.min.js',
+                'swagger-ui/dist/lib/jquery.ba-bbq.min.js',
+                'swagger-ui/dist/lib/handlebars-2.0.0.js',
+                'swagger-ui/dist/lib/js-yaml.min.js',
+                'swagger-ui/dist/lib/lodash.min.js',
+                'swagger-ui/dist/lib/backbone-min.js',
+                'swagger-ui/dist/swagger-ui.js',
+                'swagger-ui/dist/lib/highlight.7.3.pack.js',
+                'swagger-ui/dist/lib/jsoneditor.min.js',
+                'swagger-ui/dist/lib/marked.js',
+                'swagger-ui/dist/lib/swagger-oauth.js'
+            ),
+            'output_filename': 'js/script_swagger.js',
+        }
+    }
+}
+
+PIPELINE['CSS_COMPRESSOR'] = 'pipeline.compressors.NoopCompressor'
+PIPELINE['JS_COMPRESSOR'] = 'pipeline.compressors.NoopCompressor'
