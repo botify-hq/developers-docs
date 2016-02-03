@@ -13,8 +13,9 @@ import os
 import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+BASE_DIR = os.path.realpath(
+    os.path.join(os.path.abspath(__file__), '../..')
+)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -106,12 +107,16 @@ ALLOWED_HOSTS = ['*']
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
+)
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'botify_docs.finders.AppDirectoriesFinder'
 )
 
 # Simplified static file serving.
@@ -120,6 +125,19 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 MEDUSA_RENDERER_CLASS = "django_medusa.renderers.S3StaticSiteRenderer"
 MEDUSA_MULTITHREAD = False
+MEDUSA_COLLECT_STATIC = True
+FINDER_IGNORE_PATTERNS = [
+    '*.scss',
+    '*.scssc',
+    '*.less',
+    'node_modules',
+    'examples',
+    'unit_testing',
+    'tests',
+    'test',
+]
+
+
 AWS_ACCESS_KEY = os.getenv('AWS_ACCESS_KEY', None)
 AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY', None)
 AWS_STORAGE_BUCKET_NAME = "com.botify.developers"
