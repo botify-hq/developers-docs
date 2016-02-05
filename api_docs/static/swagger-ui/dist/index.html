@@ -32,9 +32,13 @@
 
   <script type="text/javascript">
     $(function () {
-      
-      var url = "http://petstore.swagger.io/v2/swagger.json";
-      
+      var url = window.location.search.match(/url=([^&]+)/);
+      if (url && url.length > 1) {
+        url = decodeURIComponent(url[1]);
+      } else {
+        url = "http://petstore.swagger.io/v2/swagger.json";
+      }
+
       // Pre load translate...
       if(window.SwaggerTranslator) {
         window.SwaggerTranslator.translate();
@@ -76,10 +80,11 @@
       });
 
       function addApiKeyAuthorization(){
-        var key = "Token" + $('#input_token')[0].value;
+        var key = encodeURIComponent($('#input_apiKey')[0].value);
         if(key && key.trim() != "") {
-          var apiKeyAuth = new SwaggerClient.ApiKeyAuthorization("api_key", key, "query");
-          window.swaggerUi.api.clientAuthorizations.add("api_key", apiKeyAuth);
+            var apiKeyAuth = new SwaggerClient.ApiKeyAuthorization("api_key", key, "query");
+            window.swaggerUi.api.clientAuthorizations.add("api_key", apiKeyAuth);
+            log("added key " + key);
         }
       }
 
