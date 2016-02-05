@@ -338,6 +338,9 @@ SwaggerUi.Views.OperationView = Backbone.View.extend({
   },
 
   addStatusCode: function(statusCode) {
+    if(statusCode.code === 'default'){
+      statusCode.code = 'other';
+    }
     // Render status codes
     statusCode.defaultRendering = this.model.defaultRendering;
     var statusCodeView = new SwaggerUi.Views.StatusCodeView({
