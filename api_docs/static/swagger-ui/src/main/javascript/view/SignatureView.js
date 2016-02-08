@@ -9,11 +9,9 @@ SwaggerUi.Views.SignatureView = Backbone.View.extend({
   },
 
   initialize: function () {
-    console.log('SignatureView::initialize');
   },
 
   render: function(){
-
     $(this.el).html(Handlebars.templates.signature(this.model));
 
     if (this.model.defaultRendering === 'model') {

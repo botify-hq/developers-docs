@@ -14,7 +14,6 @@ SwaggerUi.Views.OperationView = Backbone.View.extend({
   },
 
   initialize: function(opts) {
-    console.log('OperationView::initialize');
     opts = opts || {};
     this.router = opts.router;
     this.auths = opts.auths;
@@ -243,6 +242,7 @@ SwaggerUi.Views.OperationView = Backbone.View.extend({
       param = ref4[p];
       this.addParameter(param, contentTypeModel.consumes);
     }
+
     ref5 = this.model.responseMessages;
     for (q = 0, len4 = ref5.length; q < len4; q++) {
       statusCode = ref5[q];
@@ -338,9 +338,11 @@ SwaggerUi.Views.OperationView = Backbone.View.extend({
   },
 
   addStatusCode: function(statusCode) {
+    // Rename status code default to "other"
     if(statusCode.code === 'default'){
       statusCode.code = 'other';
     }
+
     // Render status codes
     statusCode.defaultRendering = this.model.defaultRendering;
     var statusCodeView = new SwaggerUi.Views.StatusCodeView({
