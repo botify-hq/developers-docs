@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Katahdin Round';
+  src: url('../fonts/KatahdinRound/KatahdinRound.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/KatahdinRound/KatahdinRound.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/KatahdinRound/KatahdinRound.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/KatahdinRound/KatahdinRound.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/KatahdinRound/KatahdinRound.svg#1fd5ec53d7b17e8d57370e3c086a46da') format('svg'); /* Legacy iOS */
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Titillium';
+  src: url('../fonts/titillium/titillium-regular.eot');
+  src: url('../fonts/titillium/titillium-regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/titillium/titillium-regular.woff2') format('woff2'),
+       url('../fonts/titillium/titillium-regular.woff') format('woff'),
+       url('../fonts/titillium/titillium-regular.ttf') format('truetype'),
+       url('../fonts/titillium/titillium-regular.svg#titillium_webregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Titillium';
+  src: url('../fonts/titillium/titillium-semibold.eot');
+  src: url('../fonts/titillium/titillium-semibold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/titillium/titillium-semibold.woff2') format('woff2'),
+       url('../fonts/titillium/titillium-semibold.woff') format('woff'),
+       url('../fonts/titillium/titillium-semibold.ttf') format('truetype'),
+       url('../fonts/titillium/titillium-semibold.svg#titillium_websemibold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
