@@ -1,0 +1,176 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 6, ../sass/_reset.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 17, ../sass/_reset.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* line 31, ../sass/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 35, ../sass/_reset.scss */
+ol,
+ul {
+  list-style: none;
+}
+
+/* line 40, ../sass/_reset.scss */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* line 46, ../sass/_reset.scss */
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+/* line 54, ../sass/_reset.scss */
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 61, ../sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: 'Katahdin Round';
+  src: url("../fonts/KatahdinRound/KatahdinRound.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/KatahdinRound/KatahdinRound.eot?#iefix") format("embedded-opentype"), url("../fonts/KatahdinRound/KatahdinRound.woff") format("woff"), url("../fonts/KatahdinRound/KatahdinRound.ttf") format("truetype"), url("../fonts/KatahdinRound/KatahdinRound.svg#1fd5ec53d7b17e8d57370e3c086a46da") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Titillium';
+  src: url("../fonts/titillium/titillium-regular.eot");
+  src: url("../fonts/titillium/titillium-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/titillium/titillium-regular.woff2") format("woff2"), url("../fonts/titillium/titillium-regular.woff") format("woff"), url("../fonts/titillium/titillium-regular.ttf") format("truetype"), url("../fonts/titillium/titillium-regular.svg#titillium_webregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Titillium';
+  src: url("../fonts/titillium/titillium-semibold.eot");
+  src: url("../fonts/titillium/titillium-semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/titillium/titillium-semibold.woff2") format("woff2"), url("../fonts/titillium/titillium-semibold.woff") format("woff"), url("../fonts/titillium/titillium-semibold.ttf") format("truetype"), url("../fonts/titillium/titillium-semibold.svg#titillium_websemibold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+/* line 1, ../sass/_utils.scss */
+.big-title {
+  font-family: 'Katahdin Round';
+}
+
+/* line 5, ../sass/_utils.scss */
+.bold-text {
+  font-family: 'Titillium';
+  font-weight: bold;
+}
+
+/* line 5, ../sass/main.scss */
+html {
+  -webkit-box-shadow: inset 0px 100px 80px -8px rgba(40, 48, 99, 0.56);
+  -moz-box-shadow: inset 0px 100px 80px -8px rgba(40, 48, 99, 0.56);
+  box-shadow: inset 0px 100px 80px -8px rgba(40, 48, 99, 0.56);
+}
+/* line 10, ../sass/main.scss */
+html body {
+  background: #685189;
+  background-image: url("../images/robot.png");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  font-family: 'Titillium';
+  font-size: 14px;
+  font-weight: normal;
+}
+/* line 20, ../sass/main.scss */
+html body .wrapper {
+  width: 1300px;
+  margin: auto;
+}
+/* line 25, ../sass/main.scss */
+html body .inner-wrapper {
+  width: 970px;
+  margin: auto;
+}
+/* line 30, ../sass/main.scss */
+html body .main-content {
+  width: 100%;
+  margin-top: 537px;
+  background-image: url("../images/shape.png");
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+/* line 37, ../sass/main.scss */
+html body .main-content .content {
+  padding-top: 93px;
+}
+/* line 40, ../sass/main.scss */
+html body .main-content .content .main-content__body {
+  padding-bottom: 50px;
+  background: #f0f9f9;
+}
+/* line 44, ../sass/main.scss */
+html body .main-content .content .main-content__body .main-content__item {
+  padding-left: 82px;
+}
+/* line 48, ../sass/main.scss */
+html body .main-content .content .main-content__body .main-content__item .main-content__item-title h2 {
+  margin-left: -2px;
+  margin-bottom: 15px;
+  color: #685189;
+  font-family: 'Katahdin Round';
+  font-size: 16px;
+  text-transform: uppercase;
+}
+/* line 58, ../sass/main.scss */
+html body .main-content .content .main-content__body .main-content__item .main-content__item-description {
+  color: #7b6f6f;
+  line-height: 20px;
+}
+/* line 63, ../sass/main.scss */
+html body .main-content .content .main-content__body .main-content__item.getting-started {
+  background: url("../images/icons/flag-icon.png") no-repeat;
+  background-position: 0 0;
+}
+/* line 68, ../sass/main.scss */
+html body .main-content .content .main-content__body .main-content__item.api-reference {
+  background: url("../images/icons/case-icon.png") no-repeat;
+  background-position: 0 0;
+}
+/* line 73, ../sass/main.scss */
+html body .main-content .content .main-content__body .main-content__item.our-sdk {
+  background: url("../images/icons/heart-icon.png") no-repeat;
+  background-position: 0 0;
+}
