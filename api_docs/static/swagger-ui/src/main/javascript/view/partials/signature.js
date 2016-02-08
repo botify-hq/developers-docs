@@ -506,18 +506,18 @@ SwaggerUi.partials.signature = (function () {
         output = schema.default;
       } else if (type === 'string') {
         if (format === 'date-time') {
-          output = new Date().toISOString();
+          output = 'date-time';
         } else if (format === 'date') {
-          output = new Date().toISOString().split('T')[0];
+          output = 'date';
         } else {
           output = 'string';
         }
       } else if (type === 'integer') {
-        output = 0;
+        output = "integer";
       } else if (type === 'number') {
-        output = 0.0;
+        output = "number";
       } else if (type === 'boolean') {
-        output = true;
+        output = "boolean";
       } else if (type === 'object') {
         output = {};
 
@@ -554,7 +554,6 @@ SwaggerUi.partials.signature = (function () {
     modelsToIgnore = modelsToIgnore || {};
 
     modelsToIgnore[value.name] = value;
-
     // Response support
     if (value.examples && _.isPlainObject(value.examples) && value.examples['application/json']) {
       value.definition.example = value.examples['application/json'];
@@ -565,7 +564,6 @@ SwaggerUi.partials.signature = (function () {
     } else if (!value.definition.example) {
       value.definition.example = value.examples;
     }
-
     return schemaToJSON(value.definition, value.models, modelsToIgnore, value.modelPropertyMacro);
   };
 
