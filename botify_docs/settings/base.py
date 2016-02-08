@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django_medusa',
     'api_docs',
+    'botify_docs',
     'pipeline',
     'storages'
 )
@@ -161,6 +162,15 @@ PIPELINE = {
                 'swagger-ui/dist/css/print.css'
             ),
             'output_filename': 'css/style_swagger.css',
+            'extra_context': {
+                'media': 'screen,projection',
+            },
+        },
+        'main_style': {
+            'source_filenames': {
+                'css/main.css'
+            },
+            'output_filename': 'css/style_main.css',
             'extra_context': {
                 'media': 'screen,projection',
             },
