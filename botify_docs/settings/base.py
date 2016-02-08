@@ -160,9 +160,10 @@ PIPELINE = {
             },
         },
         'main_style': {
-            'source_filenames': {
-                'css/main.css'
-            },
+            'source_filenames': (
+                'style/css/bootstrap.min.css',
+                'style/css/main.css',
+            ),
             'output_filename': 'css/style_main.css',
             'extra_context': {
                 'media': 'screen,projection',
