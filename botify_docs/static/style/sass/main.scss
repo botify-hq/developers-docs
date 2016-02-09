@@ -41,35 +41,79 @@ html {
       }
 
       .main-content__header {
-        .main-content__header-left {
-          display: flex;
-          flex-direction: column;
+        .inner-wrapper {
+          position: relative;
 
-          .botify-logo {
-            width: 132px;
-            height: 48px;
-            margin-bottom: 10px;
-            background: url('../images/botify-logo.png') no-repeat;
-            background-size: contain;
-          }
-
-          .developers-logo {
-            width: 393px;
-            height: 65px;
-            background: url('../images/developers-logo.png') no-repeat;
-            background-size: contain;
-          }
-
-          @media(max-width: 767px) {
+          .main-content__header-left {
+            display: flex;
             flex-direction: column;
 
             .botify-logo {
-              width: 100px;
-              margin-bottom: 0px;
+              width: 132px;
+              height: 48px;
+              margin-bottom: 10px;
+              background: url('../images/botify-logo.png') no-repeat;
+              background-size: contain;
             }
 
             .developers-logo {
-              width: 225px;
+              width: 393px;
+              height: 65px;
+              background: url('../images/developers-logo.png') no-repeat;
+              background-size: contain;
+            }
+
+            @media(max-width: 767px) {
+              flex-direction: column;
+
+              .botify-logo {
+                width: 100px;
+                margin-bottom: 0px;
+              }
+
+              .developers-logo {
+                width: 225px;
+              }
+            }
+          }
+
+          .main-content__header-right {
+            position: absolute;
+            top: 0;
+            right: -30px;
+
+            .back-to-botify {
+              display: flex;
+              align-items: center;
+              width: 176px;
+              color: #644F87;
+              font-family: "Katahdin Round";
+              font-size: 10px;
+              background: #eaf7f6;
+              border-bottom: 4px solid #dfeae8;
+              border-radius: 20px;
+              text-decoration: none;
+              cursor: pointer;
+
+              .back-icon {
+                width: 33px;
+                height: 20px;
+                margin-left: 13px;
+                background: url('../images/icons/back-icon.png') no-repeat;
+              }
+
+              .back-text {
+                width: 135px;
+                padding: 15px 0 13px 17px;
+                -webkit-box-shadow: inset 8px 0px 5px -5px #cde9e5;
+                -moz-box-shadow: inset 8px 0px 5px -5px #cde9e5;
+                box-shadow: inset 8px 0px 5px -5px #cde9e5;
+              }
+
+              @media(max-width: 767px) {
+                -webkit-transform: scale(0.7);
+                transform: scale(0.7);
+              }
             }
           }
         }
