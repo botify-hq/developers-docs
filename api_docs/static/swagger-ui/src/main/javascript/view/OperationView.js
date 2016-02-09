@@ -245,6 +245,7 @@ SwaggerUi.Views.OperationView = Backbone.View.extend({
       this.addParameter(param, contentTypeModel.consumes);
     }
 
+    /* Hide error responses
     ref5 = this.model.responseMessages;
     for (q = 0, len4 = ref5.length; q < len4; q++) {
       statusCode = ref5[q];
@@ -255,6 +256,7 @@ SwaggerUi.Views.OperationView = Backbone.View.extend({
       }
       this.addStatusCode(statusCode);
     }
+    */
 
     this.showSnippet();
     return this;
