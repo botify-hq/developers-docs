@@ -51,3 +51,9 @@ Handlebars.registerHelper('renderTextParam', function(param) {
     }
     return new Handlebars.SafeString(result);
 });
+
+Handlebars.registerHelper('definitionJSON', function(param) {
+    param = param.replace(/(": )(")([^"]*)(")/gm, '$1<b class="$3">$3</b>');
+    return new Handlebars.SafeString(param)
+});
+

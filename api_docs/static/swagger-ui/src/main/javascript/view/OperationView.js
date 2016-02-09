@@ -179,6 +179,7 @@ SwaggerUi.Views.OperationView = Backbone.View.extend({
           this.model.headers = this.parseResponseHeaders(value.headers);
           signatureModel = {
             sampleJSON: isJSON ? JSON.stringify(SwaggerUi.partials.signature.createJSONSample(value), void 0, 2) : false,
+            modelJSON: isJSON ? JSON.stringify(SwaggerUi.partials.signature.createJSONSample(value, {}, false), void 0, 2) : false,
             isParam: false,
             sampleXML: isXML ? SwaggerUi.partials.signature.createXMLSample(value.definition, value.models) : false,
             signature: SwaggerUi.partials.signature.getModelSignature(value.name, value.definition, value.models, value.modelPropertyMacro)

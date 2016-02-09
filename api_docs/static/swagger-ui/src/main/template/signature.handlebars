@@ -2,6 +2,7 @@
 <ul class="signature-nav">
   <li><a class="description-link" href="#" data-sw-translate>Model</a></li>
   <li><a class="snippet-link" href="#" data-sw-translate>Example Value</a></li>
+  <li><a class="json-model-link" href="#" data-sw-translate>JSON Model</a></li>
 </ul>
 <div>
 
@@ -13,7 +14,7 @@
   <div class="snippet">
   {{#if sampleJSON}}
       <div class="snippet_json">
-        <pre><code>{{sampleJSON}}</code></pre>
+        <pre><code>{{ sampleJSON }}</code></pre>
         {{#if isParam}}<small class="notice" data-sw-translate></small>{{/if}}
       </div>
   {{/if}}
@@ -24,4 +25,14 @@
     </div>
   {{/if}}
   </div>
+
+  <div class="json-model">
+  {{#if modelJSON}}
+      <div class="snippet_json">
+        <pre><code>{{#definitionJSON modelJSON}}{{/definitionJSON}}</code></pre>
+        {{#if isParam}}<small class="notice" data-sw-translate></small>{{/if}}
+      </div>
+  {{/if}}
+  </div>
+
 </div>
