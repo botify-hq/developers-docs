@@ -25530,11 +25530,12 @@ SwaggerUi.Views.OperationView = Backbone.View.extend({
       }
       param.type = type;
     }
-    responseContentTypeView = new SwaggerUi.Views.ResponseContentTypeView({
+    // Hide content-type dropdown
+    /*responseContentTypeView = new SwaggerUi.Views.ResponseContentTypeView({
       model: contentTypeModel,
       router: this.router
     });
-    $('.response-content-type', $(this.el)).append(responseContentTypeView.render().el);
+    $('.response-content-type', $(this.el)).append(responseContentTypeView.render().el);*/
     ref4 = this.model.parameters;
     for (p = 0, len3 = ref4.length; p < len3; p++) {
       param = ref4[p];
