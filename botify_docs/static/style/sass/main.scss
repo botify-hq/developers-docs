@@ -31,30 +31,75 @@ html {
 
     .main-content {
       width: 100%;
-      margin-top: 537px;
-      background-image: url('../images/shape.png');
-      background-repeat: no-repeat;
-      background-position: center 0;
-
-      @media(max-width: 767px) {
-        margin-top: 155px;
-      }
 
       .content {
         padding-top: 93px;
 
-        .main-content__header {
+        @media(max-width: 767px) {
+          padding-top: 10px;
+        }
+      }
+
+      .main-content__header {
+        .main-content__header-left {
+          display: flex;
+          flex-direction: column;
+
+          .botify-logo {
+            width: 132px;
+            height: 48px;
+            margin-bottom: 10px;
+            background: url('../images/botify-logo.png') no-repeat;
+            background-size: contain;
+          }
+
+          .developers-logo {
+            width: 393px;
+            height: 65px;
+            background: url('../images/developers-logo.png') no-repeat;
+            background-size: contain;
+          }
+
+          @media(max-width: 767px) {
+            flex-direction: column;
+
+            .botify-logo {
+              width: 100px;
+              margin-bottom: 0px;
+            }
+
+            .developers-logo {
+              width: 225px;
+            }
+          }
+        }
+      }
+
+      .main-content__body {
+        margin-top: 320px;
+        padding-top: 97px;
+        background-image: url('../images/shape.png');
+        background-repeat: no-repeat;
+        background-position: center 0;
+
+        @media(max-width: 767px) {
+          margin-top: 53px;
+        }
+
+        .main-info {
           padding-bottom: 50px;
           background: #f0f9f9;
 
-          .main-content__item {
+          .main-info__item {
             padding-left: 82px;
 
             @media(max-width: 991px) {
               margin-bottom: 20px;
             }
 
-            .main-content__item-title {
+            .main-info__item-title {
+              cursor: pointer;
+
               h2 {
                 margin-left: -2px;
                 margin-bottom: 15px;
@@ -62,10 +107,14 @@ html {
                 font-family: 'Katahdin Round';
                 font-size: 16px;
                 text-transform: uppercase;
+
+                &:hover {
+                  text-decoration: underline;
+                }
               }
             }
 
-            .main-content__item-description {
+            .main-info__item-description {
               color: #7b6f6f;
               line-height: 20px;
             }
@@ -86,16 +135,15 @@ html {
             }
           }
         }
-      }
 
-      .main-content__body {
         .open-source {
-          padding-top: 100px;
+          padding-top: 84px;
           padding-bottom: 135px;
           background-color: rgba(23, 26, 46, 0.9);
           background-image: url('../images/montagne.png');
           background-repeat: no-repeat;
-          background-position: center 0;
+          background-position: center -16px;
+          border-top: 16px solid rgba(104, 81, 137, 0.3);
 
           .open-source__buton {
             display: flex;
@@ -103,7 +151,7 @@ html {
             justify-content: center;
             padding: 10px 30px;
             margin-bottom: 80px;
-            border: 4px solid rgba(23, 26, 46, 0.3);
+            border: 4px solid rgba(255, 202, 202, 0.2);
             color: #ffcaca;
             font-size: 27px;
             text-align: center;
