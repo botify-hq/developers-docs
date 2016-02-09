@@ -3,16 +3,9 @@
 @import "./_utils.scss";
 
 html {
-  -webkit-box-shadow: inset 0px 100px 80px -8px rgba(40,48,99,0.56);
-  -moz-box-shadow: inset 0px 100px 80px -8px rgba(40,48,99,0.56);
-  box-shadow: inset 0px 100px 80px -8px rgba(40,48,99,0.56);
-
   body {
-    background: #685189;
-    background-image: url('../images/robot.png');
-    background-repeat: no-repeat;
-    background-position: center 0;
-
+    background: url("../images/robot.png") no-repeat center 0, url('../images/pattern.png') repeat-x;
+    background-color: #685189;
     font-family: 'Titillium';
     font-size: 14px;
     font-weight: normal;
@@ -23,7 +16,7 @@ html {
     }
 
     .inner-wrapper {
-      width: 970px;
+      width: 85%;
       margin: auto;
     }
 
@@ -43,6 +36,10 @@ html {
 
           .main-content__item {
             padding-left: 82px;
+
+            @media(max-width: 991px) {
+              margin-bottom: 20px;
+            }
 
             .main-content__item-title {
               h2 {
@@ -106,6 +103,15 @@ html {
               margin: 0 10px;
               background: url('../images/icons/heart-full-icon.png') no-repeat;
             }
+
+            @media(max-width: 767px) {
+              flex-direction: column;
+
+              .heart-icon {
+                margin: 10px 0;
+              }
+            }
+
           }
 
           .open-source__menu {
@@ -113,9 +119,12 @@ html {
 
             .open-source__item {
               padding-top: 10px;
-              padding-right: 100px;
               background: url('../images/icons/tile-icon.png') no-repeat;
-              background-position: 213px 0;
+              background-position: right top;
+
+              @media(max-width: 991px) {
+                margin-bottom: 20px;
+              }
 
               .open-source__item-title {
                 h2 {
@@ -137,12 +146,29 @@ html {
         }
 
         .hiring {
-          height: 510px;
           padding-top: 75px;
+          padding-bottom: 50px;
           background: #fff;
           background-image: url('../images/robot2.png');
           background-repeat: no-repeat;
-          background-position: right bottom;
+
+          @media(max-width: 991px) {
+            padding-bottom: 400px;
+            background-position: center bottom;
+          }
+
+          @media(max-width: 767px) {
+            padding-bottom: 450px;
+            background-position: center bottom;
+          }
+
+          @media (min-width: 992px) {
+            background-position: 140% bottom;
+          }
+
+          @media (min-width: 1200px) {
+            background-position: 105% bottom;
+          }
 
           .hiring__title {
             margin-bottom: 10px;
@@ -164,8 +190,167 @@ html {
     }
   }
 
+  /* ======= Footer ======= */
   .footer {
     background: #c6b5dd;
-    height: 130px;
+    background: #253340;
+    color: #fff;
+    padding-top: 40px;
+    font-size: 14px;
+    position: relative;
+    z-index: 20;
+
+    h2 {
+      font-size: 30px;
+      font-weight: 300;
+      padding-bottom: 35px;
+    }
+
+    p {
+      -webkit-opacity: 0.5;
+      -moz-opacity: 0.5;
+      opacity: 0.5;
+    }
+
+    .btn-cta,
+    a.btn-cta {
+      padding: 9px 10px;
+    }
+
+    .footer-col.links .fa {
+      margin-right: 5px;
+    }
+
+    .footer-col.links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col.connect .social {
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+
+    .footer-col.connect .social li {
+      margin-right: 10px;
+    }
+
+    .footer-col.connect .social li a .fa {
+      color: #b3b3b3;
+      font-size: 22px;
+    }
+
+    .footer-col.connect .social li a:hover .fa {
+      color: #47c9af;
+    }
+
+    .footer-col.connect .btn-cta-primary {
+      background: #5d80a1;
+      border-color: #5d80a1;
+    }
+
+    .footer-col.connect .btn-cta-primary:hover {
+      background: #4a6781;
+      border-color: #4a6781;
+    }
+
+    .footer-col .title {
+      color: #fff;
+      font-weight: normal;
+      font-size: 18px;
+      margin-top: 0;
+      margin-bottom: 20px;
+      -webkit-opacity: 0.9;
+      -moz-opacity: 0.9;
+      opacity: 0.9;
+    }
+
+    .footer-col p {
+      color: #fff;
+    }
+
+    .footer-col a {
+      color: #6d8dab;
+    }
+
+    .footer-col a:hover {
+      color: #8da6bd;
+    }
+
+    .footer-col a.btn-cta-primary{
+      color: #fff;
+    }
+
+    .footer-col .navbar-form {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .footer-col .navbar-form .form-control {
+      -webkit-opacity: 0.9;
+      -moz-opacity: 0.9;
+      opacity: 0.9;
+    }
+
+    .footer-col .navbar-form .form-control:focus {
+      -webkit-opacity: 1;
+      -moz-opacity: 1;
+      opacity: 1;
+    }
+
+    .has-divider {
+      border-top: 1px solid #2b3b4a;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    .download .download-list li {
+      margin-bottom: 15px;
+    }
+
+    .download .download-list li .btn-ghost {
+      text-align: left;
+      -webkit-opacity: 0.6;
+      -moz-opacity: 0.6;
+      opacity: 0.6;
+      width: 230px;
+    }
+
+    .download .download-list li .btn-ghost:hover {
+      -webkit-opacity: 1;
+      -moz-opacity: 1;
+      opacity: 1;
+    }
+
+    .contact p {
+      -webkit-opacity: 0.5;
+      -moz-opacity: 0.5;
+      opacity: 0.5;
+    }
+
+    .contact p a {
+      -webkit-opacity: 1;
+      -moz-opacity: 1;
+      opacity: 1;
+    }
+
+    .contact .fa {
+      margin-right: 10px;
+      font-size: 20px;
+    }
+
+    .contact .email .fa {
+      font-size: 16px;
+    }
+
+    .bottom-bar {
+      background: #1e1e1e;
+      color: #b3b3b3;
+      font-size: 14px;
+      padding: 10px 0;
+    }
+
+    .bottom-bar .copyright {
+      line-height: 1.6;
+    }
   }
 }
