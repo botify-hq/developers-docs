@@ -17,9 +17,9 @@ SwaggerUi.Views.HeaderView = Backbone.View.extend({
   },
 
   showCustomOnKeyup: function(e){
-    if (e.keyCode === 13) {
+    /*if (e.keyCode === 13) {
       this.showCustom();
-    }
+    }*/
   },
 
   showCustom: function(e){
