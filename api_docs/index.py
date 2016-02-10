@@ -2,51 +2,61 @@ PAGES = [
     {
         "url_name": "authentication",
         "markdown_file": "api/authentication.md",
-        "path": "/authentication"
+        "path": "api/authentication",
+        "properties": {
+            "menu_item": "authentication",
+            "breadcrumb": ["introduction"],
+            "title": "API Authentication"
+        }
     },
     {
         "url_name": "bql",
-        "markdown_file": "api/bql.md",
-        "path": "/bql"
+        "markdown_file": "bql/bql.md",
+        "path": "bql"
     },
     {
         "url_name": "error-codes",
         "markdown_file": "api/error-codes.md",
-        "path": "/error-codes"
+        "path": "api/error-codes"
     },
     {
         "url_name": "introduction",
         "markdown_file": "api/introduction.md",
-        "path": "/"
+        "path": "api",
+        "properties": {
+            "menu_item": "introduction",
+            "breadcrumb": [],
+            "title": "Getting Started"
+        }
     },
     {
         "url_name": "rate-limit",
         "markdown_file": "api/rate-limit.md",
-        "path": "/rate-limit"
+        "path": "api/rate-limit"
     },
     {
         "url_name": "reference",
         "markdown_file": "api/reference.md",
-        "path": "/reference"
+        "path": "api/reference"
     },
     {
         "url_name": "sdk",
-        "markdown_file": "api/sdk.md",
-        "path": "/sdk"
+        "markdown_file": "sdk/sdk.md",
+        "path": "sdk"
     },
     {
         "url_name": "urls-data-aggregation",
-        "markdown_file": "api/urls-data-aggregation.md",
-        "path": "/urls-data-aggregation"
+        "markdown_file": "bql/urls-data-aggregation.md",
+        "path": "bql/urls-data-aggregation"
     },
     {
         "url_name": "urls-data-fetching",
-        "markdown_file": "api/urls-data-fetching.md",
-        "path": "/urls-data-fetching"
+        "markdown_file": "bql/urls-data-fetching.md",
+        "path": "bql/urls-data-fetching"
     },
     {
         "url_name": "urls-datamodel-introspection",
-        "markdown_file": "api/urls-datamodel-introspection.md",
-        "path": "/urls-datamodel-introspection"
+        "markdown_file": "bql/urls-datamodel-introspection.md",
+        "path": "bql/urls-datamodel-introspection"
     }
 ]

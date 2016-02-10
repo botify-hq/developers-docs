@@ -1,0 +1,6 @@
+<ol class="breadcrumb">
+  {% for page in breadcrumb %}
+      <li><a href="{{ page.link }}">{{ page.name }}</a></li>
+  {% endfor %}
+  <li><a href="#">{{ properties.title }}</a></li>
+</ol>
