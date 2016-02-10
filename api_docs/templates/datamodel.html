@@ -1,0 +1,61 @@
+{% extends "base/inside_page.html" %}
+
+{% block breadcrumb %}
+{% endblock %}
+
+{% block left_header %}
+<div class="left-content__header">
+  <div class="col-xs-11 no-pad-r">
+    <div class="left-content__title">Datamodel</div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+{% endblock %}
+
+{% block left_content %}
+<div id="datamodel">
+  <table>
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Field Type</th>
+        <th>Group</th>
+        <th>Is Sortable</th>
+        <th>Multiple</th>
+        <th>Rights</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+{% endblock %}
+
+{% block extra_script %}
+<script type="text/javascript">
+  $(function () {
+    $.ajax({
+      "url": "{{ datamodel_api_url }}",
+      "method": "get",
+      "dataType": "json"
+    }).done(function(data, status){
+      var table = $("#datamodel tbody");
+      if(status == "success"){
+        $.each(data.fields, function(index, field){
+          var tr = $('<tr/>');
+          tr.append("<td>" + field.value + "</td>");
+          tr.append("<td>" + field.name + "</td>");
+          tr.append("<td>" + field.data_type + "</td>");
+          tr.append("<td>" + field.field_type + "</td>");
+          tr.append("<td>" + field.group + "</td>");
+          tr.append("<td>" + field.is_sortable + "</td>");
+          tr.append("<td>" + field.multiple + "</td>");
+          tr.append("<td>" + field.rights + "</td>");
+          table.append(tr);
+        });
+      }
+    });
+  });
+</script>
+{% endblock %}

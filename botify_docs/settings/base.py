@@ -143,6 +143,7 @@ FINDER_IGNORE_PATTERNS = [
 ]
 
 SWAGGER_API_URL = "https://api.botify.com/v1/swagger.json"
+DATAMODEL_API_URL = "https://api.botify.com/v1/analyses/datamodel"
 
 PIPELINE = {
     'STYLESHEETS': {
@@ -203,7 +204,7 @@ PIPELINE = {
         'common_script': {
             'source_filenames': (
                 'js/highlight/highlight.pack.js',
-                'js/jquery/jquery.js',
+                'swagger-ui/dist/lib/jquery-1.8.0.min.js',
                 'js/bootstrap/bootstrap.min.js',
             ),
             'output_filename': 'js/script_common.js',
