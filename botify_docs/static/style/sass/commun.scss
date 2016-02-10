@@ -1,0 +1,168 @@
+@import "./_reset.scss";
+@import "./_fonts.scss";
+@import "./_utils.scss";
+
+body {
+  font-family: 'Titillium';
+  font-size: 14px;
+  font-weight: normal;
+
+  background: -webkit-linear-gradient(left, rgba(104, 81, 137, 0.9), rgba(104, 81, 137, 0.9)), url("../images/commun-pattern.png");
+  background: -o-linear-gradient(left, rgba(104, 81, 137, 0.9), rgba(104, 81, 137, 0.9)), url("../images/commun-pattern.png");
+  background: linear-gradient(to right, rgba(104, 81, 137, 0.9), rgba(104, 81, 137, 0.9)), url("../images/commun-pattern.png");
+  background-size: cover;
+
+  .inner-wrapper {
+    width: 90%;
+    height: inherit;
+    margin: auto;
+  }
+
+  .header {
+    margin-top: 65px;
+
+    .botify-developer-logo {
+      width: 241px;
+      height: 50px;
+      background: url('../images/botify-developers-logo.png') no-repeat;
+    }
+  }
+
+  .main-content {
+    display: flex;
+    margin-top: 40px;
+    background-color: #fff;
+
+    .sidebar {
+      padding-top: 80px;
+      padding-left: 66px;
+      background: #f8f5f5;
+
+      .sidebar__header {
+        margin-bottom: 20px;
+        color: #cebae9;
+        font-family: "Katahdin Round";
+        font-size: 20px;
+      }
+
+      .sidebar__menu {
+        width: 132px;
+
+        .sidebar__group {
+          cursor: pointer;
+
+          & + .sidebar__group {
+            margin-top: 10px;
+          }
+
+          .sidebar__group-header {
+            font-weight: bold;
+            color: #3e3a3a;
+            padding-bottom: 9px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #e4dbeb;
+          }
+
+          &.open {
+            & + .sidebar__group {
+              margin-top: 40px;
+            }
+
+            .sidebar__group-header {
+              color: #cebae9;
+            }
+            .sidebar__group-body {
+              display: block;
+            }
+          }
+
+          .sidebar__group-body {
+            display: none;
+
+            .sidebar__group-item {
+              color: #978e8e;
+              font-weight: bold;
+              cursor: pointer;
+
+              & + .sidebar__group-item {
+                margin-top: 20px;
+              }
+
+              &.active,
+              &:hover {
+                color: #685189;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .left-content {
+      padding-top: 80px;
+      margin-left: 20px;
+
+      .left-content__breadcrumb {
+        .breadcrumb {
+          background-color: transparent;
+
+          a {
+            color: #c1b3b3;
+          }
+        }
+      }
+
+      .left-content__header {
+        margin-bottom: 57px;
+
+        .left-content__title {
+          padding-bottom: 25px;
+          padding-left: 15px;
+          border-bottom: 1px solid #e8e1f1;
+          color: #c6b5dd;
+          font-family: "Katahdin Round";
+          font-size: 59px;
+          text-transform: uppercase;
+        }
+
+        .left-content__icon {
+          width: 66px;
+          height: 113px;
+          background: url('../images/icons/getting-started-icon.png') no-repeat;
+        }
+      }
+
+      .left-content__body {
+        .left-content__body-content {
+          padding-left: 15px;
+          .section {
+            margin-bottom: 30px;
+
+            .section__header {
+              margin-bottom: 5px;
+
+              .section__header-title {
+                color: #ce4a57;
+                font-family: "Katahdin Round";
+                font-weight: bold;
+                text-transform: uppercase;
+              }
+            }
+
+            .section__body {
+              p {
+                color: #463f3f;
+                line-height: 25px;
+
+                a {
+                  color: #e85d6b;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

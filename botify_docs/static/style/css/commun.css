@@ -1,0 +1,451 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 6, ../sass/_reset.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 17, ../sass/_reset.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* line 31, ../sass/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 35, ../sass/_reset.scss */
+ol,
+ul {
+  list-style: none;
+}
+
+/* line 40, ../sass/_reset.scss */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* line 46, ../sass/_reset.scss */
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+/* line 54, ../sass/_reset.scss */
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 61, ../sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: 'Katahdin Round';
+  src: url("../fonts/katahdinRound/KatahdinRound.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/katahdinRound/KatahdinRound.eot?#iefix") format("embedded-opentype"), url("../fonts/katahdinRound/KatahdinRound.woff") format("woff"), url("../fonts/katahdinRound/KatahdinRound.ttf") format("truetype"), url("../fonts/katahdinRound/KatahdinRound.svg#1fd5ec53d7b17e8d57370e3c086a46da") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Titillium';
+  src: url("../fonts/titillium/titillium-regular.eot");
+  src: url("../fonts/titillium/titillium-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/titillium/titillium-regular.woff2") format("woff2"), url("../fonts/titillium/titillium-regular.woff") format("woff"), url("../fonts/titillium/titillium-regular.ttf") format("truetype"), url("../fonts/titillium/titillium-regular.svg#titillium_webregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Titillium';
+  src: url("../fonts/titillium/titillium-semibold.eot");
+  src: url("../fonts/titillium/titillium-semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/titillium/titillium-semibold.woff2") format("woff2"), url("../fonts/titillium/titillium-semibold.woff") format("woff"), url("../fonts/titillium/titillium-semibold.ttf") format("truetype"), url("../fonts/titillium/titillium-semibold.svg#titillium_websemibold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+/* line 1, ../sass/_utils.scss */
+.big-title {
+  font-family: 'Katahdin Round';
+}
+
+/* line 5, ../sass/_utils.scss */
+.bold-text {
+  font-family: 'Titillium';
+  font-weight: bold;
+}
+
+/* line 10, ../sass/_utils.scss */
+.botify-btn {
+  padding: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  background: #a07cd5;
+  border-bottom: 4px solid  #956fc7;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* line 22, ../sass/_utils.scss */
+.bold {
+  font-weight: bold;
+}
+
+/* line 26, ../sass/_utils.scss */
+.no-pad-r {
+  padding-right: 0 !important;
+}
+
+/* ======= Footer ======= */
+/* line 31, ../sass/_utils.scss */
+.footer {
+  background: #c6b5dd;
+  background: #253340;
+  color: #fff;
+  padding-top: 40px;
+  font-size: 14px;
+  position: relative;
+  z-index: 20;
+}
+/* line 40, ../sass/_utils.scss */
+.footer h2 {
+  font-size: 30px;
+  font-weight: 300;
+  padding-right: 15px;
+  padding-bottom: 35px;
+  padding-left: 15px;
+}
+/* line 48, ../sass/_utils.scss */
+.footer p {
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+/* line 54, ../sass/_utils.scss */
+.footer .btn-cta,
+.footer a.btn-cta {
+  padding: 9px 10px;
+}
+/* line 61, ../sass/_utils.scss */
+.footer .footer-col.links .fa {
+  margin-right: 5px;
+}
+/* line 65, ../sass/_utils.scss */
+.footer .footer-col.links li {
+  margin-bottom: 10px;
+}
+/* line 68, ../sass/_utils.scss */
+.footer .footer-col.connect .social {
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+/* line 73, ../sass/_utils.scss */
+.footer .footer-col.connect .social li {
+  margin-right: 10px;
+}
+/* line 77, ../sass/_utils.scss */
+.footer .footer-col.connect .social li a .fa {
+  color: #b3b3b3;
+  font-size: 22px;
+}
+/* line 82, ../sass/_utils.scss */
+.footer .footer-col.connect .social li a:hover .fa {
+  color: #47c9af;
+}
+/* line 86, ../sass/_utils.scss */
+.footer .footer-col.connect .btn-cta-primary {
+  background: #5d80a1;
+  border-color: #5d80a1;
+}
+/* line 91, ../sass/_utils.scss */
+.footer .footer-col.connect .btn-cta-primary:hover {
+  background: #4a6781;
+  border-color: #4a6781;
+}
+/* line 97, ../sass/_utils.scss */
+.footer .free-trial {
+  margin-bottom: 20px;
+}
+/* line 101, ../sass/_utils.scss */
+.footer .footer-col .title {
+  color: #fff;
+  font-weight: normal;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  -webkit-opacity: 0.9;
+  -moz-opacity: 0.9;
+  opacity: 0.9;
+}
+/* line 112, ../sass/_utils.scss */
+.footer .footer-col p {
+  color: #fff;
+}
+/* line 116, ../sass/_utils.scss */
+.footer .footer-col a {
+  color: #6d8dab;
+}
+/* line 120, ../sass/_utils.scss */
+.footer .footer-col a:hover {
+  color: #8da6bd;
+}
+/* line 124, ../sass/_utils.scss */
+.footer .footer-col a.btn-cta-primary {
+  color: #fff;
+}
+/* line 128, ../sass/_utils.scss */
+.footer .footer-col .navbar-form {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 133, ../sass/_utils.scss */
+.footer .footer-col .navbar-form .form-control {
+  -webkit-opacity: 0.9;
+  -moz-opacity: 0.9;
+  opacity: 0.9;
+}
+/* line 139, ../sass/_utils.scss */
+.footer .footer-col .navbar-form .form-control:focus {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+/* line 145, ../sass/_utils.scss */
+.footer .has-divider {
+  border-top: 1px solid #2b3b4a;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/* line 151, ../sass/_utils.scss */
+.footer .download .download-list li {
+  margin-bottom: 15px;
+}
+/* line 155, ../sass/_utils.scss */
+.footer .download .download-list li .btn-ghost {
+  text-align: left;
+  -webkit-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+  width: 230px;
+}
+/* line 163, ../sass/_utils.scss */
+.footer .download .download-list li .btn-ghost:hover {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+/* line 169, ../sass/_utils.scss */
+.footer .contact p {
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+/* line 175, ../sass/_utils.scss */
+.footer .contact p a {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+/* line 181, ../sass/_utils.scss */
+.footer .contact .fa {
+  margin-right: 10px;
+  font-size: 20px;
+}
+/* line 186, ../sass/_utils.scss */
+.footer .contact .email .fa {
+  font-size: 16px;
+}
+/* line 190, ../sass/_utils.scss */
+.footer .bottom-bar {
+  background: #1e1e1e;
+  color: #b3b3b3;
+  font-size: 14px;
+  padding: 10px 0;
+}
+/* line 197, ../sass/_utils.scss */
+.footer .bottom-bar .copyright {
+  line-height: 1.6;
+}
+
+/* line 5, ../sass/commun.scss */
+body {
+  font-family: 'Titillium';
+  font-size: 14px;
+  font-weight: normal;
+  background: -webkit-linear-gradient(left, rgba(104, 81, 137, 0.9), rgba(104, 81, 137, 0.9)), url("../images/commun-pattern.png");
+  background: -o-linear-gradient(left, rgba(104, 81, 137, 0.9), rgba(104, 81, 137, 0.9)), url("../images/commun-pattern.png");
+  background: linear-gradient(to right, rgba(104, 81, 137, 0.9), rgba(104, 81, 137, 0.9)), url("../images/commun-pattern.png");
+  background-size: cover;
+}
+/* line 15, ../sass/commun.scss */
+body .inner-wrapper {
+  width: 90%;
+  height: inherit;
+  margin: auto;
+}
+/* line 21, ../sass/commun.scss */
+body .header {
+  margin-top: 65px;
+}
+/* line 24, ../sass/commun.scss */
+body .header .botify-developer-logo {
+  width: 241px;
+  height: 50px;
+  background: url("../images/botify-developers-logo.png") no-repeat;
+}
+/* line 31, ../sass/commun.scss */
+body .main-content {
+  display: flex;
+  margin-top: 40px;
+  background-color: #fff;
+}
+/* line 36, ../sass/commun.scss */
+body .main-content .sidebar {
+  padding-top: 80px;
+  padding-left: 66px;
+  background: #f8f5f5;
+}
+/* line 41, ../sass/commun.scss */
+body .main-content .sidebar .sidebar__header {
+  margin-bottom: 20px;
+  color: #cebae9;
+  font-family: "Katahdin Round";
+  font-size: 20px;
+}
+/* line 48, ../sass/commun.scss */
+body .main-content .sidebar .sidebar__menu {
+  width: 132px;
+}
+/* line 51, ../sass/commun.scss */
+body .main-content .sidebar .sidebar__menu .sidebar__group {
+  cursor: pointer;
+}
+/* line 54, ../sass/commun.scss */
+body .main-content .sidebar .sidebar__menu .sidebar__group + .sidebar__group {
+  margin-top: 10px;
+}
+/* line 58, ../sass/commun.scss */
+body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-header {
+  font-weight: bold;
+  color: #3e3a3a;
+  padding-bottom: 9px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e4dbeb;
+}
+/* line 67, ../sass/commun.scss */
+body .main-content .sidebar .sidebar__menu .sidebar__group.open + .sidebar__group {
+  margin-top: 40px;
+}
+/* line 71, ../sass/commun.scss */
+body .main-content .sidebar .sidebar__menu .sidebar__group.open .sidebar__group-header {
+  color: #cebae9;
+}
+/* line 74, ../sass/commun.scss */
+body .main-content .sidebar .sidebar__menu .sidebar__group.open .sidebar__group-body {
+  display: block;
+}
+/* line 79, ../sass/commun.scss */
+body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-body {
+  display: none;
+}
+/* line 82, ../sass/commun.scss */
+body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-body .sidebar__group-item {
+  color: #978e8e;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* line 87, ../sass/commun.scss */
+body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-body .sidebar__group-item + .sidebar__group-item {
+  margin-top: 20px;
+}
+/* line 91, ../sass/commun.scss */
+body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-body .sidebar__group-item.active, body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-body .sidebar__group-item:hover {
+  color: #685189;
+}
+/* line 101, ../sass/commun.scss */
+body .main-content .left-content {
+  padding-top: 80px;
+  margin-left: 20px;
+}
+/* line 106, ../sass/commun.scss */
+body .main-content .left-content .left-content__breadcrumb .breadcrumb {
+  background-color: transparent;
+}
+/* line 109, ../sass/commun.scss */
+body .main-content .left-content .left-content__breadcrumb .breadcrumb a {
+  color: #c1b3b3;
+}
+/* line 115, ../sass/commun.scss */
+body .main-content .left-content .left-content__header {
+  margin-bottom: 57px;
+}
+/* line 118, ../sass/commun.scss */
+body .main-content .left-content .left-content__header .left-content__title {
+  padding-bottom: 25px;
+  padding-left: 15px;
+  border-bottom: 1px solid #e8e1f1;
+  color: #c6b5dd;
+  font-family: "Katahdin Round";
+  font-size: 59px;
+  text-transform: uppercase;
+}
+/* line 128, ../sass/commun.scss */
+body .main-content .left-content .left-content__header .left-content__icon {
+  width: 66px;
+  height: 113px;
+  background: url("../images/icons/getting-started-icon.png") no-repeat;
+}
+/* line 136, ../sass/commun.scss */
+body .main-content .left-content .left-content__body .left-content__body-content {
+  padding-left: 15px;
+}
+/* line 138, ../sass/commun.scss */
+body .main-content .left-content .left-content__body .left-content__body-content .section {
+  margin-bottom: 30px;
+}
+/* line 141, ../sass/commun.scss */
+body .main-content .left-content .left-content__body .left-content__body-content .section .section__header {
+  margin-bottom: 5px;
+}
+/* line 144, ../sass/commun.scss */
+body .main-content .left-content .left-content__body .left-content__body-content .section .section__header .section__header-title {
+  color: #ce4a57;
+  font-family: "Katahdin Round";
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 153, ../sass/commun.scss */
+body .main-content .left-content .left-content__body .left-content__body-content .section .section__body p {
+  color: #463f3f;
+  line-height: 25px;
+}
+/* line 157, ../sass/commun.scss */
+body .main-content .left-content .left-content__body .left-content__body-content .section .section__body p a {
+  color: #e85d6b;
+  text-decoration: none;
+}
