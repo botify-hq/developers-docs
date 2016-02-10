@@ -169,6 +169,16 @@ PIPELINE = {
                 'media': 'screen,projection',
             },
         },
+        'commun_style': {
+            'source_filenames': (
+                'style/css/bootstrap.min.css',
+                'style/css/commun.css',
+            ),
+            'output_filename': 'css/style_commun.css',
+            'extra_context': {
+                'media': 'screen,projection',
+            },
+        },
     },
     'JAVASCRIPT': {
         'swagger_ui': {
