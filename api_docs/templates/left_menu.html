@@ -1,0 +1,37 @@
+<div class="sidebar__menu">
+    <div class="sidebar__group open">
+      <div class="sidebar__group-header">API</div>
+      <div class="sidebar__group-body">
+        <div class="sidebar__group-item {% ifequal properties.menu_item "api_introduction" %}active{% endifequal %}">
+          Getting started
+        </div>
+        <div class="sidebar__group-item {% ifequal properties.menu_item "authentication" %}active{% endifequal %}">
+          <a href="{% url 'md-page' 'api/authentication' %}">Authentication</a>
+        </div>
+        <div class="sidebar__group-item {% ifequal properties.menu_item "swagger" %}active{% endifequal %}">
+          <a href="{% url 'swagger-ui' %}">Reference</a>
+        </div>
+        <div class="sidebar__group-item">Javascript SDK</div>
+        <div class="sidebar__group-item">Python SDK</div>
+      </div>
+    </div>
+    <div class="sidebar__group">
+      <div class="sidebar__group-header">Our Projects</div>
+      <div class="sidebar__group-body">
+        <div class="sidebar__group-item active">Getting started</div>
+        <div class="sidebar__group-item">API Reference</div>
+        <div class="sidebar__group-item">Javascript SDK</div>
+        <div class="sidebar__group-item">Python SDK</div>
+      </div>
+    </div>
+    <div class="sidebar__group">
+      <div class="sidebar__group-header">We are Hiring</div>
+      <div class="sidebar__group-body">
+        <div class="sidebar__group-item active">Getting started</div>
+        <div class="sidebar__group-item">API Reference</div>
+        <div class="sidebar__group-item">Javascript SDK</div>
+        <div class="sidebar__group-item">Python SDK</div>
+      </div>
+    </div>
+  </div>
+</div>
