@@ -1,1 +1,38 @@
-from .base import *
+from .base import *  # NOQA
+
+# MEDUSA_RENDERER_CLASS = "django_medusa.renderers.DiskStaticSiteRenderer"
+# MEDUSA_DEPLOY_DIR = os.path.join(
+#     BASE_DIR, '..', "_output"
+# )
+
+STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
+ALLOWED_HOSTS = ['localhost', 'testserver']
+
+AWS_ACCESS_KEY = "xxxxxxxxxxxxxxxxxxx"
+AWS_ACCESS_KEY_ID = AWS_ACCESS_KEY
+AWS_SECRET_ACCESS_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+AWS_STORAGE_BUCKET_NAME = "com.botify.developers"
+
+SWAGGER_API_URL = "http://api.botify.fr:8000/v1/swagger.json"
+DATAMODEL_API_URL = "http://api.botify.fr:8000/v1/analyses/datamodel"
+
+DEBUG = True
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+        },
+
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}

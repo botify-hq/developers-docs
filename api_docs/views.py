@@ -31,7 +31,12 @@ class MarkdownPageView(TemplateView):
 
 
 class DatamodelView(TemplateView):
-    template_name = "base_md_file.html"
+    template_name = "datamodel.html"
+
+    def get_context_data(self, *args, **kwargs):
+        return {
+            "datamodel_api_url": settings.DATAMODEL_API_URL
+        }
 
 
 class SwaggerUiView(TemplateView):
