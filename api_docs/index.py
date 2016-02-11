@@ -1,25 +1,5 @@
 PAGES = [
     {
-        "url_name": "authentication",
-        "markdown_file": "api/authentication.md",
-        "path": "api/authentication",
-        "properties": {
-            "menu_item": "authentication",
-            "breadcrumb": ["introduction"],
-            "title": "API Authentication"
-        }
-    },
-    {
-        "url_name": "bql",
-        "markdown_file": "bql/bql.md",
-        "path": "bql"
-    },
-    {
-        "url_name": "error-codes",
-        "markdown_file": "api/error-codes.md",
-        "path": "api/error-codes"
-    },
-    {
         "url_name": "introduction",
         "markdown_file": "api/introduction.md",
         "path": "api",
@@ -30,33 +10,93 @@ PAGES = [
         }
     },
     {
-        "url_name": "rate-limit",
-        "markdown_file": "api/rate-limit.md",
-        "path": "api/rate-limit"
+        "url_name": "authentication",
+        "markdown_file": "api/authentication.md",
+        "path": "api/authentication",
+        "properties": {
+            "menu_item": "authentication",
+            "breadcrumb": ["introduction"],
+            "title": "Authentication"
+        }
     },
     {
         "url_name": "reference",
         "markdown_file": "api/reference.md",
-        "path": "api/reference"
+        "path": "api/reference",
+        "properties": {
+            "menu_item": "reference",
+            "breadcrumb": ["introduction"],
+            "title": "Reference"
+        }
     },
     {
-        "url_name": "sdk",
-        "markdown_file": "sdk/sdk.md",
-        "path": "sdk"
+        "url_name": "error-codes",
+        "markdown_file": "api/error-codes.md",
+        "path": "api/error-codes",
+        "properties": {
+            "menu_item": "error-codes",
+            "breadcrumb": ["introduction"],
+            "title": "Error Codes"
+        }
+    },
+    {
+        "url_name": "rate-limit",
+        "markdown_file": "api/rate-limit.md",
+        "path": "api/rate-limit",
+        "properties": {
+            "menu_item": "rate-limit",
+            "breadcrumb": ["introduction"],
+            "title": "API Rate Limit"
+        }
+    },
+    {
+        "url_name": "bql",
+        "markdown_file": "bql/bql.md",
+        "path": "bql",
+        "properties": {
+            "menu_item": "bql",
+            "breadcrumb": [],
+            "title": "Botify Query DSL"
+        }
     },
     {
         "url_name": "urls-data-aggregation",
         "markdown_file": "bql/urls-data-aggregation.md",
-        "path": "bql/urls-data-aggregation"
+        "path": "bql/urls-data-aggregation",
+        "properties": {
+            "menu_item": "urls-data-aggregation",
+            "breadcrumb": ['bql'],
+            "title": "Urls Data Aggregation"
+        }
     },
     {
         "url_name": "urls-data-fetching",
         "markdown_file": "bql/urls-data-fetching.md",
-        "path": "bql/urls-data-fetching"
+        "path": "bql/urls-data-fetching",
+        "properties": {
+            "menu_item": "urls-data-fetching",
+            "breadcrumb": ['bql'],
+            "title": "Urls Data Fetching"
+        }
     },
     {
         "url_name": "urls-datamodel-introspection",
         "markdown_file": "bql/urls-datamodel-introspection.md",
-        "path": "bql/urls-datamodel-introspection"
-    }
+        "path": "bql/urls-datamodel-introspection",
+        "properties": {
+            "menu_item": "urls-datamodel-introspection",
+            "breadcrumb": ['bql'],
+            "title": "Urls Datamodel Introspection"
+        }
+    },
+    {
+        "url_name": "sdk",
+        "markdown_file": "sdk/sdk.md",
+        "path": "sdk",
+        "properties": {
+            "menu_item": "sdk",
+            "breadcrumb": [],
+            "title": "SDK Introduction"
+        }
+    },
 ]

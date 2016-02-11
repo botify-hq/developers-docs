@@ -292,7 +292,7 @@ table {
   line-height: 1.6;
 }
 
-/* line 5, ../sass/commun.scss */
+/* line 5, ../sass/common.scss */
 body {
   font-family: 'Titillium';
   font-size: 14px;
@@ -301,150 +301,207 @@ body {
   background: -o-linear-gradient(left, rgba(104, 81, 137, 0.9), rgba(104, 81, 137, 0.9)), url("../images/commun-pattern.png");
   background: linear-gradient(to right, rgba(104, 81, 137, 0.9), rgba(104, 81, 137, 0.9)), url("../images/commun-pattern.png");
 }
-/* line 14, ../sass/commun.scss */
+/* line 14, ../sass/common.scss */
 body .inner-wrapper {
   width: 90%;
   height: inherit;
   margin: auto;
 }
-/* line 20, ../sass/commun.scss */
+/* line 20, ../sass/common.scss */
 body .header {
   margin-top: 65px;
 }
-/* line 23, ../sass/commun.scss */
+/* line 23, ../sass/common.scss */
 body .header .botify-developer-logo {
   width: 241px;
   height: 50px;
   background: url("../images/botify-developers-logo.png") no-repeat;
 }
-/* line 30, ../sass/commun.scss */
+/* line 30, ../sass/common.scss */
 body .main-content {
   display: flex;
   margin-top: 40px;
   background-color: #fff;
 }
-/* line 35, ../sass/commun.scss */
+/* line 35, ../sass/common.scss */
 body .main-content .sidebar {
   padding-top: 80px;
-  padding-left: 66px;
+  padding-bottom: 30px;
+  padding-left: 60px;
   background: #f8f5f5;
 }
-/* line 40, ../sass/commun.scss */
+/* line 41, ../sass/common.scss */
 body .main-content .sidebar .sidebar__header {
   margin-bottom: 20px;
+}
+/* line 43, ../sass/common.scss */
+body .main-content .sidebar .sidebar__header a {
   color: #cebae9;
   font-family: "Katahdin Round";
   font-size: 20px;
 }
-/* line 47, ../sass/commun.scss */
+/* line 50, ../sass/common.scss */
 body .main-content .sidebar .sidebar__menu {
-  width: 132px;
+  padding-right: 20px;
 }
-/* line 50, ../sass/commun.scss */
+/* line 53, ../sass/common.scss */
 body .main-content .sidebar .sidebar__menu .sidebar__group {
   cursor: pointer;
 }
-/* line 53, ../sass/commun.scss */
+/* line 56, ../sass/common.scss */
 body .main-content .sidebar .sidebar__menu .sidebar__group + .sidebar__group {
   margin-top: 10px;
 }
-/* line 57, ../sass/commun.scss */
+/* line 60, ../sass/common.scss */
 body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-header {
-  font-weight: bold;
-  color: #3e3a3a;
   padding-bottom: 9px;
   margin-bottom: 10px;
   border-bottom: 1px solid #e4dbeb;
 }
-/* line 66, ../sass/commun.scss */
+/* line 65, ../sass/common.scss */
+body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-header a {
+  font-weight: bold;
+  color: #3e3a3a;
+}
+/* line 72, ../sass/common.scss */
 body .main-content .sidebar .sidebar__menu .sidebar__group.open + .sidebar__group {
   margin-top: 40px;
 }
-/* line 70, ../sass/commun.scss */
-body .main-content .sidebar .sidebar__menu .sidebar__group.open .sidebar__group-header {
+/* line 77, ../sass/common.scss */
+body .main-content .sidebar .sidebar__menu .sidebar__group.open .sidebar__group-header a {
   color: #cebae9;
 }
-/* line 73, ../sass/commun.scss */
+/* line 81, ../sass/common.scss */
 body .main-content .sidebar .sidebar__menu .sidebar__group.open .sidebar__group-body {
   display: block;
 }
-/* line 78, ../sass/commun.scss */
+/* line 86, ../sass/common.scss */
 body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-body {
   display: none;
 }
-/* line 81, ../sass/commun.scss */
-body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-body .sidebar__group-item {
+/* line 90, ../sass/common.scss */
+body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-body .sidebar__group-item a {
   color: #978e8e;
   font-weight: bold;
-  cursor: pointer;
 }
-/* line 86, ../sass/commun.scss */
+/* line 95, ../sass/common.scss */
 body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-body .sidebar__group-item + .sidebar__group-item {
   margin-top: 20px;
 }
-/* line 90, ../sass/commun.scss */
-body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-body .sidebar__group-item.active, body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-body .sidebar__group-item:hover {
+/* line 101, ../sass/common.scss */
+body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-body .sidebar__group-item.active a, body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-body .sidebar__group-item:hover a {
   color: #685189;
 }
-/* line 100, ../sass/commun.scss */
+/* line 111, ../sass/common.scss */
 body .main-content .left-content {
   padding-top: 80px;
   margin-left: 20px;
 }
-/* line 105, ../sass/commun.scss */
+/* line 116, ../sass/common.scss */
 body .main-content .left-content .left-content__breadcrumb .breadcrumb {
   background-color: transparent;
 }
-/* line 108, ../sass/commun.scss */
+/* line 119, ../sass/common.scss */
 body .main-content .left-content .left-content__breadcrumb .breadcrumb a {
   color: #c1b3b3;
 }
-/* line 114, ../sass/commun.scss */
+/* line 125, ../sass/common.scss */
 body .main-content .left-content .left-content__header {
-  margin-bottom: 57px;
+  margin-bottom: 15px;
 }
-/* line 117, ../sass/commun.scss */
+/* line 128, ../sass/common.scss */
 body .main-content .left-content .left-content__header .left-content__title {
   padding-bottom: 25px;
   padding-left: 15px;
   border-bottom: 1px solid #e8e1f1;
   color: #c6b5dd;
   font-family: "Katahdin Round";
-  font-size: 59px;
+  font-size: 50px;
   text-transform: uppercase;
 }
-/* line 127, ../sass/commun.scss */
+/* line 138, ../sass/common.scss */
 body .main-content .left-content .left-content__header .left-content__icon {
   width: 66px;
   height: 113px;
   background: url("../images/icons/getting-started-icon.png") no-repeat;
 }
-/* line 135, ../sass/commun.scss */
+/* line 145, ../sass/common.scss */
+body .main-content .left-content .left-content__body {
+  padding-bottom: 40px;
+}
+/* line 148, ../sass/common.scss */
 body .main-content .left-content .left-content__body .left-content__body-content {
   padding-left: 15px;
 }
-/* line 137, ../sass/commun.scss */
-body .main-content .left-content .left-content__body .left-content__body-content .section {
-  margin-bottom: 30px;
-}
-/* line 140, ../sass/commun.scss */
-body .main-content .left-content .left-content__body .left-content__body-content .section .section__header {
-  margin-bottom: 5px;
-}
-/* line 143, ../sass/commun.scss */
-body .main-content .left-content .left-content__body .left-content__body-content .section .section__header .section__header-title {
+/* line 151, ../sass/common.scss */
+body .main-content .left-content .left-content__body .left-content__body-content h1, body .main-content .left-content .left-content__body .left-content__body-content h2, body .main-content .left-content .left-content__body .left-content__body-content h3, body .main-content .left-content .left-content__body .left-content__body-content h4, body .main-content .left-content .left-content__body .left-content__body-content h5 {
   color: #ce4a57;
   font-family: "Katahdin Round";
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 152, ../sass/commun.scss */
-body .main-content .left-content .left-content__body .left-content__body-content .section .section__body p {
+/* line 158, ../sass/common.scss */
+body .main-content .left-content .left-content__body .left-content__body-content h1 {
+  font-size: 18px;
+}
+/* line 162, ../sass/common.scss */
+body .main-content .left-content .left-content__body .left-content__body-content h2 {
+  font-size: 16px;
+}
+/* line 166, ../sass/common.scss */
+body .main-content .left-content .left-content__body .left-content__body-content h3 {
+  font-size: 14px;
+}
+/* line 170, ../sass/common.scss */
+body .main-content .left-content .left-content__body .left-content__body-content h4 {
+  font-size: 13px;
+}
+/* line 174, ../sass/common.scss */
+body .main-content .left-content .left-content__body .left-content__body-content h5 {
+  font-size: 12px;
+}
+/* line 178, ../sass/common.scss */
+body .main-content .left-content .left-content__body .left-content__body-content ul {
+  list-style-type: square;
+  list-style-position: inside;
+}
+/* line 183, ../sass/common.scss */
+body .main-content .left-content .left-content__body .left-content__body-content p, body .main-content .left-content .left-content__body .left-content__body-content ul {
   color: #463f3f;
   line-height: 25px;
 }
-/* line 156, ../sass/commun.scss */
-body .main-content .left-content .left-content__body .left-content__body-content .section .section__body p a {
+/* line 187, ../sass/common.scss */
+body .main-content .left-content .left-content__body .left-content__body-content p a, body .main-content .left-content .left-content__body .left-content__body-content ul a {
   color: #e85d6b;
-  text-decoration: none;
+}
+/* line 192, ../sass/common.scss */
+body .main-content .left-content .left-content__body .left-content__body-content p + h2,
+body .main-content .left-content .left-content__body .left-content__body-content p + h3,
+body .main-content .left-content .left-content__body .left-content__body-content p + h4,
+body .main-content .left-content .left-content__body .left-content__body-content p + h5,
+body .main-content .left-content .left-content__body .left-content__body-content p + table,
+body .main-content .left-content .left-content__body .left-content__body-content p + pre {
+  margin-top: 15px;
+}
+/* line 201, ../sass/common.scss */
+body .main-content .left-content .left-content__body .left-content__body-content p + p {
+  margin-top: 10px;
+}
+/* line 205, ../sass/common.scss */
+body .main-content .left-content .left-content__body .left-content__body-content h1, body .main-content .left-content .left-content__body .left-content__body-content h2, body .main-content .left-content .left-content__body .left-content__body-content h3,
+body .main-content .left-content .left-content__body .left-content__body-content h4, body .main-content .left-content .left-content__body .left-content__body-content h5,
+body .main-content .left-content .left-content__body .left-content__body-content ul {
+  padding: 10px 0;
+}
+/* line 211, ../sass/common.scss */
+body .main-content .left-content .left-content__body .left-content__body-content th {
+  font-weight: bold;
+}
+/* line 215, ../sass/common.scss */
+body .main-content .left-content .left-content__body .left-content__body-content th, body .main-content .left-content .left-content__body .left-content__body-content td {
+  padding: 5px 30px 5px 0;
+}
+/* line 219, ../sass/common.scss */
+body .main-content .left-content .left-content__body .left-content__body-content img {
+  width: 100%;
 }

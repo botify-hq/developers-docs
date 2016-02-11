@@ -1,9 +1,8 @@
 <div class="sidebar__menu">
     <div class="sidebar__group open">
-      <div class="sidebar__group-header">API</div>
       <div class="sidebar__group-body">
-        <div class="sidebar__group-item {% ifequal properties.menu_item "api_introduction" %}active{% endifequal %}">
-          Getting started
+        <div class="sidebar__group-item {% ifequal properties.menu_item "introduction" %}active{% endifequal %}">
+          <a href="{% url 'md-page' 'api' %}">Getting started</a>
         </div>
         <div class="sidebar__group-item {% ifequal properties.menu_item "authentication" %}active{% endifequal %}">
           <a href="{% url 'md-page' 'api/authentication' %}">Authentication</a>
@@ -11,27 +10,45 @@
         <div class="sidebar__group-item {% ifequal properties.menu_item "swagger" %}active{% endifequal %}">
           <a href="{% url 'swagger-ui' %}">Reference</a>
         </div>
-        <div class="sidebar__group-item">Javascript SDK</div>
-        <div class="sidebar__group-item">Python SDK</div>
+        <div class="sidebar__group-item {% ifequal properties.menu_item "error-codes" %}active{% endifequal %}">
+          <a href="{% url 'md-page' 'api/error-codes' %}">Error Codes</a>
+        </div>
+        <div class="sidebar__group-item {% ifequal properties.menu_item "rate-limit" %}active{% endifequal %}">
+          <a href="{% url 'md-page' 'api/rate-limit' %}">Rate Limit</a>
+        </div>
+        <div class="sidebar__group-item {% ifequal properties.menu_item "rate-limit" %}active{% endifequal %}">
+          <a href="{% url 'md-page' 'sdk' %}">SDK</a>
+        </div>
       </div>
-    </div>
-    <div class="sidebar__group">
-      <div class="sidebar__group-header">Our Projects</div>
+    </div><!-- END SideBar Group -->
+    <div class="sidebar__group open">
+      <div class="sidebar__group-header">
+        <a href="{% url 'md-page' 'bql' %}">BQL</a>
+      </div>
       <div class="sidebar__group-body">
-        <div class="sidebar__group-item active">Getting started</div>
-        <div class="sidebar__group-item">API Reference</div>
-        <div class="sidebar__group-item">Javascript SDK</div>
-        <div class="sidebar__group-item">Python SDK</div>
+        <div class="sidebar__group-item {% ifequal properties.menu_item "bql" %}active{% endifequal %}">
+          <a href="{% url 'md-page' 'bql' %}">Getting started</a>
+        </div>
+        <div class="sidebar__group-item {% ifequal properties.menu_item "urls-data-fetching" %}active{% endifequal %}">
+          <a href="{% url 'md-page' 'bql/urls-data-fetching' %}">Data Fetching</a>
+        </div>
+        <div class="sidebar__group-item {% ifequal properties.menu_item "urls-data-aggregation" %}active{% endifequal %}">
+          <a href="{% url 'md-page' 'bql/urls-data-aggregation' %}">Data Aggregation</a>
+        </div>
+        <div class="sidebar__group-item {% ifequal properties.menu_item "urls-datamodel-introspection" %}active{% endifequal %}">
+          <a href="{% url 'md-page' 'bql/urls-datamodel-introspection' %}">Data Model Introspection</a>
+        </div>
       </div>
-    </div>
+    </div><!-- END SideBar Group -->
     <div class="sidebar__group">
-      <div class="sidebar__group-header">We are Hiring</div>
-      <div class="sidebar__group-body">
-        <div class="sidebar__group-item active">Getting started</div>
-        <div class="sidebar__group-item">API Reference</div>
-        <div class="sidebar__group-item">Javascript SDK</div>
-        <div class="sidebar__group-item">Python SDK</div>
+      <div class="sidebar__group-header">
+        <a href="https://github.com/botify-labs/">Our Projects</a>
       </div>
-    </div>
+    </div><!-- END SideBar Group -->
+    <div class="sidebar__group">
+      <div class="sidebar__group-header">
+        <a href="https://www.botify.com/jobs/">We are Hiring</a>
+      </div>
+    </div><!-- END SideBar Group -->
   </div>
 </div>

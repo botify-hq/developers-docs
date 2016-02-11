@@ -8,6 +8,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% stylesheet 'commun_style' %}
+  {% javascript 'common_script' %}
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
   <div class="container">
@@ -21,7 +23,9 @@
       <div class="inner-wrapper">
         <div class="main-content">
           <div class="sidebar col-md-3">
-            <div class="sidebar__header">HOME</div>
+            <div class="sidebar__header">
+              <a href="/">HOME</a>
+            </div>
             {% include "left_menu.html" %}
           <div class="left-content col-md-7 col-md-offset-1">
             <div class="left-content__breadcrumb">
@@ -30,20 +34,21 @@
               </div>
             </div>
             <div class="left-content__header">
-              <div class="col-xs-11 no-pad-r">
-                <div class="left-content__title">{{ properties.title }}</div>
-              </div>
-              <div class="col-xs-1">
-                <div class="left-content__icon"></div>
+              <div class="col-xs-12 no-pad-r">
+                <div class="col-xs-11 left-content__title">{{ properties.title }}</div>
+                <div class="col-xs-1">
+                  <div class="left-content__icon"></div>
+                </div>
               </div>
               <div class="clearfix"></div>
             </div>
             <div class="left-content__body">
-              <div class="col-xs-11 no-pad-r">
+              <div class="col-xs-12 no-pad-r">
                 <div class="left-content__body-content">
                   {{ content|safe }}
                 </div>
               </div>
+              <div class="clearfix"></div>
             </div>
           </div>
         </div>
