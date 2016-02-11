@@ -171,10 +171,11 @@ PIPELINE = {
         },
         'commun_style': {
             'source_filenames': (
+                'style/css/monokai-sublime.css',
                 'style/css/bootstrap.min.css',
-                'style/css/commun.css',
+                'style/css/common.css',
             ),
-            'output_filename': 'css/style_commun.css',
+            'output_filename': 'css/style_common.css',
             'extra_context': {
                 'media': 'screen,projection',
             },
@@ -198,6 +199,12 @@ PIPELINE = {
                 'swagger-ui/dist/lib/swagger-oauth.js'
             ),
             'output_filename': 'js/script_swagger.js',
+        },
+        'common_script': {
+            'source_filenames': (
+                'js/highlight/highlight.pack.js',
+            ),
+            'output_filename': 'js/script_common.js',
         }
     }
 }
