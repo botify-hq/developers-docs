@@ -17,7 +17,7 @@ class StaticDjangoRenderer(StaticSiteRenderer):
 
     def get_paths(self):
         from .urls import urlpatterns
-        paths = []
+        paths = ['/']
         for pattern in urlpatterns:
             if pattern.name not in self.EXCLUDED_PATTERNS:
                 paths.append(reverse_page(pattern.name))
