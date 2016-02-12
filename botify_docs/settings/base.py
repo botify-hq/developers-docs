@@ -130,7 +130,7 @@ STATICFILES_FINDERS = (
 
 MEDUSA_RENDERER_CLASS = "django_medusa.renderers.S3StaticSiteRenderer"
 MEDUSA_MULTITHREAD = False
-MEDUSA_COLLECT_STATIC = True
+MEDUSA_COLLECT_STATIC = False
 FINDER_IGNORE_PATTERNS = [
     '*.scss',
     '*.scssc',
