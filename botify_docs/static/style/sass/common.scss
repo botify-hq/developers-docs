@@ -1,0 +1,283 @@
+@import "./_reset.scss";
+@import "./_fonts.scss";
+@import "./_utils.scss";
+
+body {
+  font-family: 'Titillium';
+  font-size: 14px;
+  font-weight: normal;
+
+  background: -webkit-linear-gradient(left, rgba(104, 81, 137, 0.9), rgba(104, 81, 137, 0.9)), url("../images/commun-pattern.png");
+  background: -o-linear-gradient(left, rgba(104, 81, 137, 0.9), rgba(104, 81, 137, 0.9)), url("../images/commun-pattern.png");
+  background: linear-gradient(to right, rgba(104, 81, 137, 0.9), rgba(104, 81, 137, 0.9)), url("../images/commun-pattern.png");
+
+  .inner-wrapper {
+    width: 90%;
+    height: inherit;
+    margin: auto;
+  }
+
+  .header {
+    margin-top: 65px;
+
+    .botify-developer-logo {
+      width: 241px;
+      height: 50px;
+      background: url('../images/botify-developers-logo.png') no-repeat;
+    }
+  }
+
+  .top-menu {
+    .botify-developer-logo {
+      width: 241px;
+      height: 50px;
+      background: url('../images/botify-developers-logo.png') no-repeat;
+    }
+
+    .navbar-custom {
+      padding-bottom: 20px;
+      border: 0;
+      background: #776295;
+
+      .icon-bar {
+        background-color: #fff;
+      }
+
+      .navbar-nav {
+        li {
+          &.active {
+            a {
+              color: #777;
+            }
+          }
+
+          &:not(.active) a {
+            color: #fff;
+
+            &:hover {
+              color: #333;
+            }
+          }
+        }
+
+        .open {
+          .dropdown-menu {
+            li:not(.active) {
+              a {
+                color: #fff;
+
+                &:hover {
+                  color: #333;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .main-content {
+    margin-top: 40px;
+    background-color: #fff;
+
+    .sidebar {
+      padding-top: 80px;
+      padding-bottom: 30px;
+      padding-left: 60px;
+      background: #f8f5f5;
+
+      .sidebar__header {
+        margin-bottom: 20px;
+        a {
+          color: #cebae9;
+          font-family: "Katahdin Round";
+          font-size: 20px;
+        }
+      }
+
+      .sidebar__menu {
+        padding-right: 20px;
+
+        .sidebar__group {
+          cursor: pointer;
+
+          & + .sidebar__group {
+            margin-top: 10px;
+          }
+
+          .sidebar__group-header {
+            padding-bottom: 9px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #e4dbeb;
+
+            a {
+              font-weight: bold;
+              color: #3e3a3a;
+            }
+          }
+
+          &.open {
+            & + .sidebar__group {
+              margin-top: 40px;
+            }
+
+            .sidebar__group-header {
+              a {
+                color: #cebae9;
+              }
+            }
+            .sidebar__group-body {
+              display: block;
+            }
+          }
+
+          .sidebar__group-body {
+            display: none;
+
+            .sidebar__group-item {
+              a {
+                color: #978e8e;
+                font-weight: bold;
+              }
+
+              & + .sidebar__group-item {
+                margin-top: 20px;
+              }
+
+              &.active,
+              &:hover {
+                a {
+                  color: #685189;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .right-content {
+      padding-top: 80px;
+      margin-left: 20px;
+
+      @media(max-width: 991px) {
+        padding-top: 10px;
+        margin-left: 0px;
+      }
+
+      .right-content__breadcrumb {
+        .breadcrumb {
+          background-color: transparent;
+
+          a {
+            color: #c1b3b3;
+          }
+        }
+      }
+
+      .right-content__header {
+        margin-bottom: 15px;
+
+        .right-content__title {
+          padding-bottom: 25px;
+          padding-left: 15px;
+          border-bottom: 1px solid #e8e1f1;
+          color: #c6b5dd;
+          font-family: "Katahdin Round";
+          font-size: 50px;
+          text-transform: uppercase;
+        }
+
+        .right-content__icon {
+          width: 66px;
+          height: 113px;
+          background: url('../images/icons/getting-started-icon.png') no-repeat;
+        }
+      }
+
+      .right-content__body {
+        padding-bottom: 40px;
+
+        .right-content__body-content {
+          padding-left: 15px;
+
+          h1, h2, h3, h4, h5 {
+            color: #ce4a57;
+            font-family: "Katahdin Round";
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+
+          h1 {
+            font-size: 18px;
+          }
+
+          h2 {
+            font-size: 16px;
+          }
+
+          h3 {
+            font-size: 14px;
+          }
+
+          h4 {
+            font-size: 13px;
+          }
+
+          h5 {
+            font-size: 12px;
+          }
+
+          ul {
+            list-style-type: square;
+            list-style-position: inside;
+          }
+
+          p, ul {
+            color: #463f3f;
+            line-height: 25px;
+
+            a {
+              color: #e85d6b;
+            }
+          }
+
+          p + h2,
+          p + h3,
+          p + h4,
+          p + h5,
+          p + table,
+          pre + table,
+          p + pre {
+            margin-top: 15px;
+          }
+
+          p + p,
+          pre + h3,
+          h3 + pre {
+            margin-top: 10px;
+          }
+
+          h1, h2,h3,
+          h4, h5,
+          ul {
+            padding: 10px 0;
+          }
+
+          th {
+            font-weight: bold;
+          }
+
+          th, td {
+            padding: 5px 30px 5px 0;
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

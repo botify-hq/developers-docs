@@ -2,3 +2,4 @@ venv
 *.pyc
 staticfiles
 /botify_docs/settings/local.py
+.sass-cache/

@@ -1,0 +1,123 @@
+{% load pipeline %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% block style %}
+    {% stylesheet 'common_style' %}
+  {% endblock %}
+</head>
+<body>
+  <div class="container">
+    <div class="header hidden-xs hidden-sm">
+      <div class="inner-wrapper">
+        <div class="botify-developer-logo"></div>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="inner-wrapper">
+        <div class="main-content">
+          <div class="top-menu col-xs-12 visible-xs visible-sm no-pad">
+            {% include "top_menu.html" %}
+          </div>
+          <div class="sidebar col-md-3 hidden-xs hidden-sm">
+            <div class="sidebar__header">
+              <a href="/">HOME</a>
+            </div>
+            {% include "left_menu.html" %}
+          </div>
+          <div class="right-content col-xs-12 col-xs-offset-0 col-md-7 col-md-offset-1">
+            {% block breadcrumb %}
+              <div class="right-content__breadcrumb">
+                <div class="col-xs-11 no-pad-r">
+                  {% include "breadcrumb.html" %}
+                </div>
+              </div>
+            {% endblock %}
+
+            {% block right_header %}
+            {% endblock %}
+
+            <div class="right-content__body">
+              <div class="col-xs-12 no-pad-r">
+                <div class="right-content__body-content">
+                  {% block right_content %}
+                  {% endblock %}
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="inner-wrapper">
+          <h2>More Good Things to Explore</h2>
+          <div>
+            <div class="footer-col links col-md-3 col-sm-4 col-xs-12">
+              <div class="footer-col-inner">
+                <h3 class="title">About Us</h3>
+                <ul class="list-unstyled">
+                  <li><a href="/team/"><i class="fa fa-caret-right"></i>Team</a></li>
+                  <li><a href="/clients/"><i class="fa fa-caret-right"></i>Clients</a></li>
+                  <li><a href="/certification/"><i class="fa fa-caret-right"></i>Certification program</a></li>
+                  <li><a href="/partners/"><i class="fa fa-caret-right"></i>Partners</a></li>
+                </ul>
+              </div><!--//footer-col-inner-->
+            </div><!--//foooter-col-->
+            <div class="footer-col links col-md-3 col-sm-4 col-xs-12">
+              <div class="footer-col-inner">
+                <h3 class="title">Features &amp; Plans</h3>
+                <ul class="list-unstyled">
+                  <li><a href="/features/"><i class="fa fa-caret-right"></i>How it works</a></li>
+                  <li><a href="/blog/tag/testimonials/"><i class="fa fa-caret-right"></i>Testimonials</a></li>
+                  <li><a href="/pricing/"><i class="fa fa-caret-right"></i>Pricing</a></li>
+                  <li><a href="/log-analyzer/"><i class="fa fa-caret-right"></i>Botify Log Analyzer Premium</a></li>
+                </ul>
+              </div><!--//footer-col-inner-->
+            </div><!--//foooter-col-->
+            <div class="footer-col links col-md-3 col-sm-4 col-xs-12 sm-break">
+              <div class="footer-col-inner">
+                <h3 class="title">Support</h3>
+                <ul class="list-unstyled">
+                  <li><a href="/blog/"><i class="fa fa-caret-right"></i>Blog</a></li>
+                  <li><a href="/support/"><i class="fa fa-caret-right"></i>Support</a></li>
+                  <li><a href="/contact/"><i class="fa fa-caret-right"></i>Contact us</a></li>
+                  <li><a href="/jobs/"><i class="fa fa-caret-right"></i>Jobs</a></li>
+                </ul>
+              </div><!--//footer-col-inner-->
+            </div><!--//foooter-col-->
+            <div class="footer-col connect col-md-3 col-sm-12 col-xs-12">
+              <div class="footer-col-inner">
+                <ul class="social list-inline">
+                  <li><a href="https://twitter.com/botify" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="https://www.facebook.com/botify" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="https://www.linkedin.com/company/botify" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+                <a href="https://app.botify.com/signup/" class="free-trial btn btn-cta btn-cta-primary">Start Your Free Trial Now</a>
+              </div><!--//footer-col-inner-->
+            </div><!--//foooter-col-->
+            <div class="clearfix"></div>
+          </div><!--//row-->
+          <div class="has-divider signature">
+            <div class="footer-col download col-md-6 col-sm-12 col-xs-12">
+              <small><a href="/terms-privacy/">Privacy Policy Terms &amp; Conditions</a> | Botify 2016</small>
+            </div><!--//contact-->
+            <div class="clearfix"></div>
+          </div>
+        </div><!--//inner-wrapper-->
+      </div><!--//footer-content-->
+    </div>
+  </footer>
+  {% javascript 'common_script' %}
+  {% block extra_script %}
+  {% endblock %}
+</body>
+</html>

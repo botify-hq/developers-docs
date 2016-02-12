@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django_medusa',
     'api_docs',
+    'botify_docs',
     'pipeline',
     'storages'
 )
@@ -125,8 +126,7 @@ STATICFILES_FINDERS = (
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 # STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-STATICFILES_STORAGE = 'botify_docs.storage.StaticFilesStorage'
-DEFAULT_FILE_STORAGE = 'botify_docs.storage.MediaFilesStorage'
+
 
 MEDUSA_RENDERER_CLASS = "django_medusa.renderers.S3StaticSiteRenderer"
 MEDUSA_MULTITHREAD = False
@@ -142,13 +142,8 @@ FINDER_IGNORE_PATTERNS = [
     'test',
 ]
 
-
-AWS_ACCESS_KEY = os.getenv('AWS_ACCESS_KEY', None)
-AWS_ACCESS_KEY_ID = AWS_ACCESS_KEY
-AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY', None)
-AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME', None)
-
 SWAGGER_API_URL = "https://api.botify.com/v1/swagger.json"
+DATAMODEL_API_URL = "https://api.botify.com/v1/analyses/datamodel"
 
 PIPELINE = {
     'STYLESHEETS': {
@@ -165,11 +160,32 @@ PIPELINE = {
                 'media': 'screen,projection',
             },
         },
+        'main_style': {
+            'source_filenames': (
+                'style/css/bootstrap.min.css',
+                'style/css/main.css',
+            ),
+            'output_filename': 'css/style_main.css',
+            'extra_context': {
+                'media': 'screen,projection',
+            },
+        },
+        'common_style': {
+            'source_filenames': (
+                'style/css/monokai-sublime.css',
+                'style/css/bootstrap.min.css',
+                'style/css/common.css',
+            ),
+            'output_filename': 'css/style_common.css',
+            'extra_context': {
+                'media': 'screen,projection',
+            },
+        },
     },
     'JAVASCRIPT': {
         'swagger_ui': {
             'source_filenames': (
-                'swagger-ui/dist/lib/jquery-1.8.0.min.js',
+                'js/jquery/jquery.js',
                 'swagger-ui/dist/lib/jquery.slideto.min.js',
                 'swagger-ui/dist/lib/jquery.wiggle.min.js',
                 'swagger-ui/dist/lib/jquery.ba-bbq.min.js',
@@ -184,6 +200,14 @@ PIPELINE = {
                 'swagger-ui/dist/lib/swagger-oauth.js'
             ),
             'output_filename': 'js/script_swagger.js',
+        },
+        'common_script': {
+            'source_filenames': (
+                'js/highlight/highlight.pack.js',
+                'js/jquery/jquery.js',
+                'js/bootstrap/bootstrap.min.js',
+            ),
+            'output_filename': 'js/script_common.js',
         }
     }
 }

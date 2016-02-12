@@ -1,7 +1,7 @@
 from django.views.generic import TemplateView
 from django.http import Http404
 from django.conf import settings
-from utils import load_md_file, get_page_by_attr
+from utils import load_md_file, get_page_by_attr, reverse_page
 
 
 class MarkdownPageView(TemplateView):
@@ -14,13 +14,29 @@ class MarkdownPageView(TemplateView):
         return super(MarkdownPageView, self).get(*args, **kwargs)
 
     def get_context_data(self, *args, **kwargs):
+        properties = self.page.get('properties', {})
+        breadcrumb = []
+        for page_name in properties.get('breadcrumb', []):
+            page = get_page_by_attr('url_name', page_name)
+            title = page['properties']['title'] if 'properties' in page and 'title' in page['properties'] else ""
+            breadcrumb.append({
+                'link': reverse_page(page_name),
+                'name': title
+            })
         return {
-            "content": load_md_file(self.page['markdown_file'])
+            "content": load_md_file(self.page['markdown_file']),
+            "properties": properties,
+            "breadcrumb": breadcrumb
         }
 
 
 class DatamodelView(TemplateView):
-    template_name = "base_md_file.html"
+    template_name = "datamodel.html"
+
+    def get_context_data(self, *args, **kwargs):
+        return {
+            "datamodel_api_url": settings.DATAMODEL_API_URL
+        }
 
 
 class SwaggerUiView(TemplateView):

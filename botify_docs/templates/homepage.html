@@ -1,0 +1,199 @@
+{% load pipeline %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% stylesheet 'main_style' %}
+</head>
+<body>
+  <div class="container">
+    <div class="main-content">
+      <div class="content">
+        <div class="main-content__header">
+          <div class="inner-wrapper">
+            <div class="main-content__header-left">
+              <div class="botify-logo hidden-xs"></div>
+              <div class="developers-logo hidden-xs"></div>
+              <div class="botify-developers-logo visible-xs"></div>
+            </div>
+            <div class="main-content__header-right">
+              <a class="back-to-botify" href="/">
+                <div class="back-icon"></div>
+                <div class="back-text">Back to botify</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="main-content__body">
+          <div class="main-info">
+            <div class="inner-wrapper">
+              <div class="col-xs-12 col-md-4 col-md-offset-0">
+                <div class="main-info__item getting-started">
+                  <div class="main-info__item-title">
+                    <h2>Getting started</h2>
+                  </div>
+                  <div class="main-info__item-description">
+                    <span class="bold-text">Lorem ipsum</span> dolor sit amet, consectetur adipiscing elit. Morbi libero quam.
+                    <span class="bold-text">Lorem ipsum</span> dolor sit amet, consectetur adipiscing elit. Morbi libero quam.
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-4 col-md-offset-0">
+                <div class="main-info__item api-reference">
+                  <div class="main-info__item-title">
+                    <h2>API Reference</h2>
+                  </div>
+                  <div class="main-info__item-description">
+                    <span class="bold-text">Lorem ipsum</span> dolor sit amet, consectetur adipiscing elit. Morbi libero quam.
+                    <span class="bold-text">Lorem ipsum</span> dolor sit amet, consectetur adipiscing elit. Morbi libero quam.
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-4 col-md-offset-0">
+                <div class="main-info__item our-sdk">
+                  <div class="main-info__item-title">
+                    <h2>Our SDK's</h2>
+                  </div>
+                  <div class="main-info__item-description">
+                    <span class="bold-text">Lorem ipsum</span> dolor sit amet, consectetur adipiscing elit. Morbi libero quam.
+                    <span class="bold-text">Lorem ipsum</span> dolor sit amet, consectetur adipiscing elit. Morbi libero quam.
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="open-source">
+            <div class="inner-wrapper">
+              <div class="open-source__header">
+                <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                  <div class="big-title open-source__buton">
+                    We <span class="heart-icon"></span> Open Source
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div class="open-source__menu">
+                <div class="col-xs-12 col-md-4 col-md-offset-0">
+                  <div class="open-source__item">
+                    <div class="open-source__item-title">
+                      <h2>Simpleflow</h2>
+                    </div>
+                    <div class="open-source__item-description">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec facilisis diam. Aliquam erat.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec facilisis diam. Aliquam erat.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-4 col-md-offset-0">
+                  <div class="open-source__item">
+                    <div class="open-source__item-title">
+                      <h2>React-classmap</h2>
+                    </div>
+                    <div class="open-source__item-description">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec facilisis diam. Aliquam erat.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec facilisis diam. Aliquam erat.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-4 col-md-offset-0">
+                  <div class="open-source__item">
+                    <div class="open-source__item-title">
+                      <h2>Getting started</h2>
+                    </div>
+                    <div class="open-source__item-description">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec facilisis diam. Aliquam erat.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec facilisis diam. Aliquam erat.
+                    </div>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4">
+                <div class="botify-btn open-source-documentation__buton">View all the documentation</div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="hiring">
+            <div class="inner-wrapper">
+              <div class="col-xs-12 col-md-5 col-md-offset-0 col-lg-4">
+                <div class="hiring__title">We are hiring.</div>
+                <div class="hiring__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="bold-text">Maecenas</span> nec facilisis diam. Aliquam erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="bold-text">Maecenas</span> nec facilisis diam. Aliquam erat.
+                </div>
+                <div class="botify-btn col-xs-8 col-xs-offset-2">Join our team</div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="inner-wrapper">
+          <h2>More Good Things to Explore</h2>
+          <div>
+            <div class="footer-col links col-md-3 col-sm-4 col-xs-12">
+              <div class="footer-col-inner">
+                <h3 class="title">About Us</h3>
+                <ul class="list-unstyled">
+                  <li><a href="/team/"><i class="fa fa-caret-right"></i>Team</a></li>
+                  <li><a href="/clients/"><i class="fa fa-caret-right"></i>Clients</a></li>
+                  <li><a href="/certification/"><i class="fa fa-caret-right"></i>Certification program</a></li>
+                  <li><a href="/partners/"><i class="fa fa-caret-right"></i>Partners</a></li>
+                </ul>
+              </div><!--//footer-col-inner-->
+            </div><!--//foooter-col-->
+            <div class="footer-col links col-md-3 col-sm-4 col-xs-12">
+              <div class="footer-col-inner">
+                <h3 class="title">Features &amp; Plans</h3>
+                <ul class="list-unstyled">
+                  <li><a href="/features/"><i class="fa fa-caret-right"></i>How it works</a></li>
+                  <li><a href="/blog/tag/testimonials/"><i class="fa fa-caret-right"></i>Testimonials</a></li>
+                  <li><a href="/pricing/"><i class="fa fa-caret-right"></i>Pricing</a></li>
+                  <li><a href="/log-analyzer/"><i class="fa fa-caret-right"></i>Botify Log Analyzer Premium</a></li>
+                </ul>
+              </div><!--//footer-col-inner-->
+            </div><!--//foooter-col-->
+            <div class="footer-col links col-md-3 col-sm-4 col-xs-12 sm-break">
+              <div class="footer-col-inner">
+                <h3 class="title">Support</h3>
+                <ul class="list-unstyled">
+                  <li><a href="/blog/"><i class="fa fa-caret-right"></i>Blog</a></li>
+                  <li><a href="/support/"><i class="fa fa-caret-right"></i>Support</a></li>
+                  <li><a href="/contact/"><i class="fa fa-caret-right"></i>Contact us</a></li>
+                  <li><a href="/jobs/"><i class="fa fa-caret-right"></i>Jobs</a></li>
+                </ul>
+              </div><!--//footer-col-inner-->
+            </div><!--//foooter-col-->
+            <div class="footer-col connect col-md-3 col-sm-12 col-xs-12">
+              <div class="footer-col-inner">
+                <ul class="social list-inline">
+                  <li><a href="https://twitter.com/botify" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="https://www.facebook.com/botify" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="https://www.linkedin.com/company/botify" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+                <a href="https://app.botify.com/signup/" class="free-trial btn btn-cta btn-cta-primary">Start Your Free Trial Now</a>
+              </div><!--//footer-col-inner-->
+            </div><!--//foooter-col-->
+            <div class="clearfix"></div>
+          </div><!--//row-->
+          <div class="has-divider signature">
+            <div class="footer-col download col-md-6 col-sm-12 col-xs-12">
+              <small><a href="/terms-privacy/">Privacy Policy Terms &amp; Conditions</a> | Botify 2016</small>
+            </div><!--//contact-->
+            <div class="clearfix"></div>
+          </div>
+        </div><!--//inner-wrapper-->
+      </div><!--//footer-content-->
+    </footer>
+  </div>
+</body>
+</html>
+
