@@ -1,0 +1,57 @@
+<nav class="navbar navbar-default navbar-custom">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand botify-developer-logo" href="#"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="{% ifequal properties.menu_item "introduction" %}active{% endifequal %}">
+          <a href="{% url 'md-page' 'api' %}">Getting Started <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="{% ifequal properties.menu_item "authentication" %}active{% endifequal %}">
+          <a href="{% url 'md-page' 'api/authentication' %}">Authentication</a>
+        </li>
+        <li class="{% ifequal properties.menu_item "swagger" %}active{% endifequal %}">
+          <a href="{% url 'swagger-ui' %}">Reference</a>
+        </li>
+        <li class="{% ifequal properties.menu_item "error-codes" %}active{% endifequal %}">
+          <a href="{% url 'md-page' 'api/error-codes' %}">Error Codes</a>
+        </li>
+        <li class="{% ifequal properties.menu_item "rate-limit" %}active{% endifequal %}">
+          <a href="{% url 'md-page' 'api/rate-limit' %}">Rate Limit</a>
+        </li>
+        <li class="{% ifequal properties.menu_item "sdk" %}active{% endifequal %}">
+          <a href="{% url 'md-page' 'sdk' %}">SDK</a>
+        </li>
+        <li class="dropdown {% ifequal properties.menu_item "bql" %}active{% endifequal %}">
+          <a href="{% url 'md-page' 'bql' %}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">BQL <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li class="{% ifequal properties.menu_item "bql" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'bql' %}">Getting started</a>
+            </li>
+            <li class="{% ifequal properties.menu_item "urls-data-fetching" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'bql/urls-data-fetching' %}">Data Fetching</a>
+            </li>
+            <li class="{% ifequal properties.menu_item "urls-data-aggregation" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'bql/urls-data-aggregation' %}">Data Aggregation</a>
+            </li>
+            <li class="{% ifequal properties.menu_item "urls-datamodel-introspection" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'bql/urls-datamodel-introspection' %}">Data Model Introspection</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Our Projects</a></li>
+        <li><a href="#">We are Hiring</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

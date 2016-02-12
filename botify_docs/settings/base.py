@@ -169,7 +169,7 @@ PIPELINE = {
                 'media': 'screen,projection',
             },
         },
-        'commun_style': {
+        'common_style': {
             'source_filenames': (
                 'style/css/monokai-sublime.css',
                 'style/css/bootstrap.min.css',
@@ -203,6 +203,8 @@ PIPELINE = {
         'common_script': {
             'source_filenames': (
                 'js/highlight/highlight.pack.js',
+                'js/jquery/jquery.js',
+                'js/bootstrap/bootstrap.min.js',
             ),
             'output_filename': 'js/script_common.js',
         }

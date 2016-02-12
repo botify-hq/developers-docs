@@ -15,7 +15,7 @@ PAGES = [
         "path": "api/authentication",
         "properties": {
             "menu_item": "authentication",
-            "breadcrumb": ["introduction"],
+            "breadcrumb": [],
             "title": "Authentication"
         }
     },
@@ -25,7 +25,7 @@ PAGES = [
         "path": "api/reference",
         "properties": {
             "menu_item": "reference",
-            "breadcrumb": ["introduction"],
+            "breadcrumb": [],
             "title": "Reference"
         }
     },
@@ -35,7 +35,7 @@ PAGES = [
         "path": "api/error-codes",
         "properties": {
             "menu_item": "error-codes",
-            "breadcrumb": ["introduction"],
+            "breadcrumb": [],
             "title": "Error Codes"
         }
     },
@@ -45,8 +45,18 @@ PAGES = [
         "path": "api/rate-limit",
         "properties": {
             "menu_item": "rate-limit",
-            "breadcrumb": ["introduction"],
+            "breadcrumb": [],
             "title": "API Rate Limit"
+        }
+    },
+    {
+        "url_name": "sdk",
+        "markdown_file": "sdk/sdk.md",
+        "path": "sdk",
+        "properties": {
+            "menu_item": "sdk",
+            "breadcrumb": [],
+            "title": "SDK Introduction"
         }
     },
     {
@@ -87,16 +97,6 @@ PAGES = [
             "menu_item": "urls-datamodel-introspection",
             "breadcrumb": ['bql'],
             "title": "Urls Datamodel Introspection"
-        }
-    },
-    {
-        "url_name": "sdk",
-        "markdown_file": "sdk/sdk.md",
-        "path": "sdk",
-        "properties": {
-            "menu_item": "sdk",
-            "breadcrumb": [],
-            "title": "SDK Introduction"
         }
     },
 ]
