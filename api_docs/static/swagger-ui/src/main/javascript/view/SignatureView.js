@@ -4,22 +4,21 @@ SwaggerUi.Views.SignatureView = Backbone.View.extend({
   events: {
     'click a.description-link'       : 'switchToDescription',
     'click a.snippet-link'           : 'switchToSnippet',
+    'click a.json-model-link'        : 'switchToJSONModel',
+
     'mousedown .snippet_json'          : 'jsonSnippetMouseDown',
     'mousedown .snippet_xml'          : 'xmlSnippetMouseDown'
   },
 
   initialize: function () {
-    console.log('SignatureView::initialize');
   },
 
   render: function(){
-
     $(this.el).html(Handlebars.templates.signature(this.model));
-
     if (this.model.defaultRendering === 'model') {
-      this.switchToDescription();
-    } else {
       this.switchToSnippet();
+    } else {
+      this.switchToJSONModel();
     }
 
     return this;
@@ -31,8 +30,11 @@ SwaggerUi.Views.SignatureView = Backbone.View.extend({
 
     $('.snippet', $(this.el)).hide();
     $('.description', $(this.el)).show();
-    $('.description-link', $(this.el)).addClass('selected');
+    $('.json-model', $(this.el)).hide();
+
     $('.snippet-link', $(this.el)).removeClass('selected');
+    $('.description-link', $(this.el)).addClass('selected');
+    $('.json-model-link', $(this.el)).removeClass('selected');
   },
 
   // handler for show sample
@@ -41,8 +43,23 @@ SwaggerUi.Views.SignatureView = Backbone.View.extend({
 
     $('.snippet', $(this.el)).show();
     $('.description', $(this.el)).hide();
+    $('.json-model', $(this.el)).hide();
+
     $('.snippet-link', $(this.el)).addClass('selected');
     $('.description-link', $(this.el)).removeClass('selected');
+    $('.json-model-link', $(this.el)).removeClass('selected');
+  },
+
+  switchToJSONModel: function(e){
+    if (e) { e.preventDefault(); }
+
+    $('.snippet', $(this.el)).hide();
+    $('.description', $(this.el)).hide();
+    $('.json-model', $(this.el)).show();
+
+    $('.snippet-link', $(this.el)).removeClass('selected');
+    $('.description-link', $(this.el)).removeClass('selected');
+    $('.json-model-link', $(this.el)).addClass('selected');
   },
 
   // handler for snippet to text area

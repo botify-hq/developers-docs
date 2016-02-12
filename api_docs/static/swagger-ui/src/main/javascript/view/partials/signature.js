@@ -462,7 +462,7 @@ SwaggerUi.partials.signature = (function () {
   };
 
   // copy-pasted from swagger-js
-  var schemaToJSON = function (schema, models, modelsToIgnore, modelPropertyMacro) {
+  var schemaToJSON = function (schema, models, modelsToIgnore, modelPropertyMacro, useValueSamples) {
     // Resolve the schema (Handle nested schemas)
     schema = resolveSchema(schema);
 
@@ -492,7 +492,7 @@ SwaggerUi.partials.signature = (function () {
         if (!_.isUndefined(model)) {
           if (_.isUndefined(modelsToIgnore[model.name])) {
             modelsToIgnore[model.name] = model;
-            output = schemaToJSON(model.definition, models, modelsToIgnore, modelPropertyMacro);
+            output = schemaToJSON(model.definition, models, modelsToIgnore, modelPropertyMacro, useValueSamples);
             delete modelsToIgnore[model.name];
           } else {
             if (model.type === 'array') {
@@ -506,18 +506,18 @@ SwaggerUi.partials.signature = (function () {
         output = schema.default;
       } else if (type === 'string') {
         if (format === 'date-time') {
-          output = new Date().toISOString();
+          output = useValueSamples ? new Date().toISOString() : "date time";
         } else if (format === 'date') {
-          output = new Date().toISOString().split('T')[0];
+          output = useValueSamples ? new Date().toISOString().split('T')[0] : "date";
         } else {
           output = 'string';
         }
       } else if (type === 'integer') {
-        output = 0;
+        output = useValueSamples ? 0 : 'integer';
       } else if (type === 'number') {
-        output = 0.0;
+        output = useValueSamples ? 0.0 : 'number';
       } else if (type === 'boolean') {
-        output = true;
+        output = useValueSamples ? true : 'boolean';
       } else if (type === 'object') {
         output = {};
 
@@ -527,17 +527,17 @@ SwaggerUi.partials.signature = (function () {
           // Allow macro to set the default value
           cProperty.default = modelPropertyMacro(property);
 
-          output[name] = schemaToJSON(cProperty, models, modelsToIgnore, modelPropertyMacro);
+          output[name] = schemaToJSON(cProperty, models, modelsToIgnore, modelPropertyMacro, useValueSamples);
         });
       } else if (type === 'array') {
         output = [];
 
         if (_.isArray(schema.items)) {
           _.forEach(schema.items, function (item) {
-            output.push(schemaToJSON(item, models, modelsToIgnore, modelPropertyMacro));
+            output.push(schemaToJSON(item, models, modelsToIgnore, modelPropertyMacro, useValueSamples));
           });
         } else if (_.isPlainObject(schema.items)) {
-          output.push(schemaToJSON(schema.items, models, modelsToIgnore, modelPropertyMacro));
+          output.push(schemaToJSON(schema.items, models, modelsToIgnore, modelPropertyMacro, useValueSamples));
         } else if (_.isUndefined(schema.items)) {
           output.push({});
         } else {
@@ -550,8 +550,11 @@ SwaggerUi.partials.signature = (function () {
   };
 
   // copy-pasted from swagger-js
-  var createJSONSample = function (value, modelsToIgnore) {
+  var createJSONSample = function (value, modelsToIgnore, useValueSamples) {
     modelsToIgnore = modelsToIgnore || {};
+    if(typeof useValueSamples == "undefined"){
+        useValueSamples = true;
+    }
 
     modelsToIgnore[value.name] = value;
 
@@ -566,7 +569,7 @@ SwaggerUi.partials.signature = (function () {
       value.definition.example = value.examples;
     }
 
-    return schemaToJSON(value.definition, value.models, modelsToIgnore, value.modelPropertyMacro);
+    return schemaToJSON(value.definition, value.models, modelsToIgnore, value.modelPropertyMacro, useValueSamples);
   };
 
   // copy-pasted from swagger-js

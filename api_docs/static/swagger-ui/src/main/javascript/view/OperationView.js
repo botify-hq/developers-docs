@@ -14,7 +14,6 @@ SwaggerUi.Views.OperationView = Backbone.View.extend({
   },
 
   initialize: function(opts) {
-    console.log('OperationView::initialize');
     opts = opts || {};
     this.router = opts.router;
     this.auths = opts.auths;
@@ -180,6 +179,7 @@ SwaggerUi.Views.OperationView = Backbone.View.extend({
           this.model.headers = this.parseResponseHeaders(value.headers);
           signatureModel = {
             sampleJSON: isJSON ? JSON.stringify(SwaggerUi.partials.signature.createJSONSample(value), void 0, 2) : false,
+            modelJSON: isJSON ? JSON.stringify(SwaggerUi.partials.signature.createJSONSample(value, {}, false), void 0, 2) : false,
             isParam: false,
             sampleXML: isXML ? SwaggerUi.partials.signature.createXMLSample(value.definition, value.models) : false,
             signature: SwaggerUi.partials.signature.getModelSignature(value.name, value.definition, value.models, value.modelPropertyMacro)
@@ -233,16 +233,19 @@ SwaggerUi.Views.OperationView = Backbone.View.extend({
       }
       param.type = type;
     }
-    responseContentTypeView = new SwaggerUi.Views.ResponseContentTypeView({
+    // Hide content-type dropdown
+    /*responseContentTypeView = new SwaggerUi.Views.ResponseContentTypeView({
       model: contentTypeModel,
       router: this.router
     });
-    $('.response-content-type', $(this.el)).append(responseContentTypeView.render().el);
+    $('.response-content-type', $(this.el)).append(responseContentTypeView.render().el);*/
     ref4 = this.model.parameters;
     for (p = 0, len3 = ref4.length; p < len3; p++) {
       param = ref4[p];
       this.addParameter(param, contentTypeModel.consumes);
     }
+
+    /* Hide error responses
     ref5 = this.model.responseMessages;
     for (q = 0, len4 = ref5.length; q < len4; q++) {
       statusCode = ref5[q];
@@ -253,6 +256,7 @@ SwaggerUi.Views.OperationView = Backbone.View.extend({
       }
       this.addStatusCode(statusCode);
     }
+    */
 
     this.showSnippet();
     return this;
@@ -338,9 +342,11 @@ SwaggerUi.Views.OperationView = Backbone.View.extend({
   },
 
   addStatusCode: function(statusCode) {
+    // Rename status code default to "other"
     if(statusCode.code === 'default'){
       statusCode.code = 'other';
     }
+
     // Render status codes
     statusCode.defaultRendering = this.model.defaultRendering;
     var statusCodeView = new SwaggerUi.Views.StatusCodeView({
