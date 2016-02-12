@@ -15,7 +15,7 @@ Botify provides a REST API to integrate Botify in third-party applications and u
 
 
 
-## Examples of use
+## Use examples
 - Get the list of your projects and analyses.
 - Get crawl statistics.
 - Search for URL matching complex filters.
