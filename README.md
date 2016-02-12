@@ -1,41 +1,42 @@
-# Heroku Django Starter Template
+# Botify Developers Docs
+This repo contains sources to build the Botify Developers **static website** using Django Medusa.
 
-An utterly fantastic project starter template for Django 1.9.
+- `botify_docs` app contains main templates, styles, statics and homepage.
+- `api_docs` contains mostly markdown files that are used to generated documentation pages.
 
-## Features
 
-- Production-ready configuration for Static Files, Database Settings, Gunicorn, etc.
-- Enhancements to Django's static file serving functionality via WhiteNoise
+## Add / Update api documentation pages
+`api_docs/markdown/index.py` describes pages path and their relative markdown file.
 
-## How to Use
+## Publish on dev / prod environment
+@TODO
 
-To use this project, follow these steps:
 
-1. Create your working environment.
-2. Install Django (`$ pip install django`)
-3. Create a new project using this template
+## Development
 
-## Creating Your Project
+### Requirement
+- python 2.7
+- python-dev 2.7 (for ubuntu)
+- pip (for ubuntu)
 
-Using this template to create a new Django app is easy::
+```SH
+sudo apt-get install python2.7 python2.7-dev python-pip
+sudo pip install virtualenvwrapper
+```
 
-    $ django-admin.py startproject --template=https://github.com/heroku/heroku-django-template/archive/master.zip --name=Procfile helloworld
+### Installation
+```SH
+mkvirtualenv docs
+pip install -r requirements.txt
+```
 
-You can replace ``helloworld`` with your desired project name.
+### Run Server
+```SH
+./manage.py runserver
+```
+Open in your browser `http://127.0.0.1:8000/`.
 
-## Deployment to Heroku
+### Build CSS
+@TODO
 
-    $ git init
-    $ git add -A
-    $ git commit -m "Initial commit"
 
-    $ heroku create
-    $ git push heroku master
-
-    $ heroku run python manage.py migrate
-
-## Further Reading
-
-- [Gunicorn](https://warehouse.python.org/project/gunicorn/)
-- [WhiteNoise](https://warehouse.python.org/project/whitenoise/)
-- [dj-database-url](https://warehouse.python.org/project/dj-database-url/)
