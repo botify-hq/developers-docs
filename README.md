@@ -6,11 +6,8 @@ This repo contains sources to build the Botify Developers **static website** usi
 
 
 ## Add / Update api documentation pages
+
 `api_docs/markdown/index.py` describes pages path and their relative markdown file.
-
-## Publish on dev / prod environment
-@TODO
-
 
 ## Development
 
@@ -24,19 +21,44 @@ sudo apt-get install python2.7 python2.7-dev python-pip
 sudo pip install virtualenvwrapper
 ```
 
+For virtualenvwrapper on Linux, add the following to your `~/.bashrc` file
+
+```SH
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+export BOTIFY_ENVIRONMENT=local
+export LC_ALL="en_US.UTF-8"
+source /usr/local/bin/virtualenvwrapper.sh
+```
+
+and then `source ~/.bashrc`. For other OS read the installation guide on 
+http://virtualenvwrapper.readthedocs.org/en/latest/install.html#installation
+
 ### Installation
 ```SH
 mkvirtualenv docs
+workon docs
 pip install -r requirements.txt
 ```
 
 ### Run Server
+be sure to be on the virtual env `workon docs`
+
 ```SH
-./manage.py runserver
+./script/run
 ```
-Open in your browser `http://127.0.0.1:8000/`.
+
+You can define a different host and port if you need to
+
+```SH
+./script/run 0.0.0.0:8080
+```
 
 ### Build CSS
 @TODO
 
+### Deploy locally
+@TODO How to locally generate the files
 
+### Deploy Production
+@TODO How to deploy to a s3 bucket
