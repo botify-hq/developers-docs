@@ -185,7 +185,7 @@ PIPELINE = {
     'JAVASCRIPT': {
         'swagger_ui': {
             'source_filenames': (
-                'swagger-ui/dist/lib/jquery-1.8.0.min.js',
+                'js/jquery/jquery.js',
                 'swagger-ui/dist/lib/jquery.slideto.min.js',
                 'swagger-ui/dist/lib/jquery.wiggle.min.js',
                 'swagger-ui/dist/lib/jquery.ba-bbq.min.js',
@@ -204,7 +204,7 @@ PIPELINE = {
         'common_script': {
             'source_filenames': (
                 'js/highlight/highlight.pack.js',
-                'swagger-ui/dist/lib/jquery-1.8.0.min.js',
+                'js/jquery/jquery.js',
                 'js/bootstrap/bootstrap.min.js',
             ),
             'output_filename': 'js/script_common.js',

@@ -1,26 +1,26 @@
 {% extends "base/inside_page.html" %}
 
 {% block breadcrumb %}
-<div class="left-content__breadcrumb">
+<div class="right-content__breadcrumb">
   <div class="col-xs-11 no-pad-r">
     {% include "breadcrumb.html" %}
   </div>
 </div>
 {% endblock %}
 
-{% block left_header %}
-<div class="left-content__header">
+{% block right_header %}
+<div class="right-content__header">
   <div class="col-xs-12 no-pad-r">
-    <div class="col-xs-11 left-content__title">{{ properties.title }}</div>
+    <div class="col-xs-11 right-content__title">{{ properties.title }}</div>
     <div class="col-xs-1 hidden-sm hidden-xs">
-      <div class="left-content__icon"></div>
+      <div class="right-content__icon"></div>
     </div>
   </div>
   <div class="clearfix"></div>
 </div>
 {% endblock %}
 
-{% block left_content %}
+{% block right_content %}
   {{ content|safe }}
 {% endblock %}
 

@@ -28,22 +28,22 @@
             </div>
             {% include "left_menu.html" %}
           </div>
-          <div class="left-content col-xs-12 col-xs-offset-0 col-md-7 col-md-offset-1">
+          <div class="right-content col-xs-12 col-xs-offset-0 col-md-7 col-md-offset-1">
             {% block breadcrumb %}
-              <div class="left-content__breadcrumb">
+              <div class="right-content__breadcrumb">
                 <div class="col-xs-11 no-pad-r">
                   {% include "breadcrumb.html" %}
                 </div>
               </div>
             {% endblock %}
 
-            {% block left_header %}
+            {% block right_header %}
             {% endblock %}
-            
-            <div class="left-content__body">
+
+            <div class="right-content__body">
               <div class="col-xs-12 no-pad-r">
-                <div class="left-content__body-content">
-                  {% block left_content %}
+                <div class="right-content__body-content">
+                  {% block right_content %}
                   {% endblock %}
                 </div>
               </div>

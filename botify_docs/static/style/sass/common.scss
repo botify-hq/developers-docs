@@ -157,7 +157,7 @@ body {
       }
     }
 
-    .left-content {
+    .right-content {
       padding-top: 80px;
       margin-left: 20px;
 
@@ -166,7 +166,7 @@ body {
         margin-left: 0px;
       }
 
-      .left-content__breadcrumb {
+      .right-content__breadcrumb {
         .breadcrumb {
           background-color: transparent;
 
@@ -176,10 +176,10 @@ body {
         }
       }
 
-      .left-content__header {
+      .right-content__header {
         margin-bottom: 15px;
 
-        .left-content__title {
+        .right-content__title {
           padding-bottom: 25px;
           padding-left: 15px;
           border-bottom: 1px solid #e8e1f1;
@@ -189,17 +189,17 @@ body {
           text-transform: uppercase;
         }
 
-        .left-content__icon {
+        .right-content__icon {
           width: 66px;
           height: 113px;
           background: url('../images/icons/getting-started-icon.png') no-repeat;
         }
       }
 
-      .left-content__body {
+      .right-content__body {
         padding-bottom: 40px;
 
-        .left-content__body-content {
+        .right-content__body-content {
           padding-left: 15px;
 
           h1, h2, h3, h4, h5 {
