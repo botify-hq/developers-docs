@@ -2,7 +2,7 @@
 import os
 from django.core.urlresolvers import reverse
 from markdown import markdown
-from .index import PAGES
+from .markdowns.index import PAGES
 
 
 def get_markdown_content(md_file):

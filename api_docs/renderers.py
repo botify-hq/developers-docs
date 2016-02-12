@@ -1,5 +1,5 @@
 from django_medusa.renderers import StaticSiteRenderer
-from .index import PAGES
+from .markdowns.index import PAGES
 from utils import reverse_page
 
 
