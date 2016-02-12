@@ -45,6 +45,11 @@ body {
         background-color: #fff;
       }
 
+      .navbar-collapse {
+        border: 0;
+        box-shadow: none;
+      }
+
       @media(min-width: 768px) {
         .container-fluid {
           padding: 0;
@@ -62,7 +67,7 @@ body {
       .navbar-nav {
         > li {
           &.active {
-            a {
+            > a {
               color: #777;
             }
           }
@@ -71,7 +76,7 @@ body {
             color: #fff;
 
             &:hover {
-              color: #333;
+              color: #C6B5DD;
             }
           }
         }
@@ -90,8 +95,14 @@ body {
                 }
 
                 &:hover {
-                  color: #333;
+                  color: #C6B5DD;
                 }
+              }
+            }
+
+            & > .active {
+              & > a {
+                background-color: #776295;
               }
             }
           }
@@ -207,6 +218,12 @@ body {
       .right-content__header {
         margin-bottom: 15px;
 
+        @media(max-width: 991px) {
+          > .col-xs-12 {
+            padding-top: 0 !important;
+          }
+        }
+
         .right-content__title {
           padding-bottom: 25px;
           padding-left: 15px;
@@ -229,6 +246,10 @@ body {
 
         .right-content__body-content {
           padding-left: 15px;
+
+          @media(max-width: 991px) {
+            padding-left: 0;
+          }
 
           h1, h2, h3, h4, h5 {
             color: #ce4a57;
@@ -280,8 +301,13 @@ body {
           }
 
           p + p,
+          pre + h2,
           pre + h3,
-          h3 + pre {
+          pre + h4,
+          pre + h5,
+          pre + p,
+          h3 + pre,
+          table + p {
             margin-top: 10px;
           }
 
@@ -291,18 +317,57 @@ body {
             padding: 10px 0;
           }
 
-          th {
-            font-weight: bold;
+
+          table {
+            border-collapse: collapse;
+
+            th {
+              font-weight: bold;
+            }
+
+            th,
+            td {
+              border: 1px solid #ddd;
+              background-color: #fff;
+            }
+
+            & > thead > tr > th,
+            & > tbody > tr > th,
+            & > tfoot > tr > th,
+            & > thead > tr > td,
+            & > tbody > tr > td,
+            & > tfoot > tr > td {
+              padding: 8px;
+              line-height: 1.42857143;
+              vertical-align: top;
+              border-top: 1px solid #ddd;
+            }
+
+            & > thead > tr > th {
+              vertical-align: bottom;
+              border-bottom: 2px solid #ddd;
+            }
+
+            & > tbody > tr:nth-child(odd) {
+              background-color: #f9f9f9;
+
+              td {
+                background-color: #f9f9f9;
+              }
+            }
           }
 
-          th, td {
-            padding: 5px 30px 5px 0;
-          }
+
 
           img {
             width: 100%;
           }
         }
+      }
+
+      .hljs-string,
+      .hljs-attr {
+        line-height: 20px;
       }
     }
   }
