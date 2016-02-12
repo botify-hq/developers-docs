@@ -162,7 +162,7 @@ PIPELINE = {
         },
         'main_style': {
             'source_filenames': (
-                'style/css/bootstrap.min.css',
+                'node_modules/bootstrap/dist/css/bootstrap.min.css',
                 'style/css/main.css',
             ),
             'output_filename': 'css/style_main.css',
@@ -185,7 +185,7 @@ PIPELINE = {
     'JAVASCRIPT': {
         'swagger_ui': {
             'source_filenames': (
-                'js/jquery/jquery.js',
+                'node_modules/jquery/dist/jquery.min.js',
                 'swagger-ui/dist/lib/jquery.slideto.min.js',
                 'swagger-ui/dist/lib/jquery.wiggle.min.js',
                 'swagger-ui/dist/lib/jquery.ba-bbq.min.js',
