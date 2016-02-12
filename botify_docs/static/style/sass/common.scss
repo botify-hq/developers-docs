@@ -28,6 +28,8 @@ body {
   }
 
   .top-menu {
+    margin-top: 30px;
+
     .botify-developer-logo {
       width: 241px;
       height: 50px;
@@ -35,23 +37,37 @@ body {
     }
 
     .navbar-custom {
-      padding-bottom: 20px;
+      margin-bottom: 0;
       border: 0;
-      background: #776295;
+      background: transparent;
 
       .icon-bar {
         background-color: #fff;
       }
 
+      @media(min-width: 768px) {
+        .container-fluid {
+          padding: 0;
+
+          .navbar-header {
+            padding: 0 15px;
+          }
+
+          .navbar-collapse {
+            padding: 65px 0 0;
+          }
+        }
+      }
+
       .navbar-nav {
-        li {
+        > li {
           &.active {
             a {
               color: #777;
             }
           }
 
-          &:not(.active) a {
+          &:not(.active) > a {
             color: #fff;
 
             &:hover {
@@ -61,10 +77,17 @@ body {
         }
 
         .open {
+          > a {
+            color: #333 !important;
+          }
+
           .dropdown-menu {
             li:not(.active) {
               a {
                 color: #fff;
+                @media(min-width: 768px) {
+                  color: #333;
+                }
 
                 &:hover {
                   color: #333;
@@ -78,8 +101,13 @@ body {
   }
 
   .main-content {
+    display: flex;
     margin-top: 40px;
     background-color: #fff;
+
+    @media(max-width: 991px) {
+      display: block;
+    }
 
     .sidebar {
       padding-top: 80px;
