@@ -1,0 +1,33 @@
+{
+  "name": "developer-docs",
+  "version": "0.1.0",
+  "description": "An utterly fantastic project starter template for Django 1.9.",
+  "main": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "mv node_modules/ ./botify_docs/static/",
+    "build:css": "node-sass -w botify_docs/static/style/sass/ -o botify_docs/static/style/css/",
+    "build:postcss": "postcss --use autoprefixer botify_docs/static/style/css/*.css -d botify_docs/static/style/css",
+    "build": "npm run build:css && npm run build:postcss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/botify-hq/developer-docs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/botify-hq/developer-docs/issues"
+  },
+  "homepage": "https://github.com/botify-hq/developer-docs#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.2",
+    "node-sass": "^3.4.2",
+    "postcss-cli": "^2.5.1",
+    "watch": "^0.17.1"
+  }
+}
