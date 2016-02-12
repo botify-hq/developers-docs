@@ -27,8 +27,57 @@ body {
     }
   }
 
+  .top-menu {
+    .botify-developer-logo {
+      width: 241px;
+      height: 50px;
+      background: url('../images/botify-developers-logo.png') no-repeat;
+    }
+
+    .navbar-custom {
+      padding-bottom: 20px;
+      border: 0;
+      background: #776295;
+
+      .icon-bar {
+        background-color: #fff;
+      }
+
+      .navbar-nav {
+        li {
+          &.active {
+            a {
+              color: #777;
+            }
+          }
+
+          &:not(.active) a {
+            color: #fff;
+
+            &:hover {
+              color: #333;
+            }
+          }
+        }
+
+        .open {
+          .dropdown-menu {
+            li:not(.active) {
+              a {
+                color: #fff;
+
+                &:hover {
+                  color: #333;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   .main-content {
-    display: flex;
     margin-top: 40px;
     background-color: #fff;
 
@@ -112,6 +161,11 @@ body {
       padding-top: 80px;
       margin-left: 20px;
 
+      @media(max-width: 991px) {
+        padding-top: 10px;
+        margin-left: 0px;
+      }
+
       .left-content__breadcrumb {
         .breadcrumb {
           background-color: transparent;
@@ -194,11 +248,14 @@ body {
           p + h4,
           p + h5,
           p + table,
+          pre + table,
           p + pre {
             margin-top: 15px;
           }
 
-          p + p, {
+          p + p,
+          pre + h3,
+          h3 + pre {
             margin-top: 10px;
           }
 
