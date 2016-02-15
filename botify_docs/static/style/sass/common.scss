@@ -134,9 +134,7 @@ body {
 
     .sidebar {
       max-width: 315px;
-      padding-top: 80px;
-      padding-bottom: 30px;
-      padding-left: 60px;
+      padding: 80px 0 100px 60px;
       background: #f8f5f5;
 
       .sidebar__header {
@@ -166,6 +164,12 @@ body {
             a {
               font-weight: bold;
               color: #3e3a3a;
+            }
+
+            &.active {
+              a {
+                color: #685189 !important;
+              }
             }
           }
 
