@@ -4,16 +4,16 @@ Botify API allows you to get in information collected by Botify on analysed URLs
 
 ## Endpoint
 
-- Operation: [[getUrls;reference#Analysis_getUrlDetail]]
+- Operation: [[getUrlDetail;reference#Analysis_getUrlDetail]]
 - Path: `analyses/{username}/{project_slug}/{analysis_slug}/urls/{url}`
 - HTTP Verb: GET
 - Response: `Object`
 
 ```SH
-curl 'https://api.botify.com/analyses/${username}/${project_slug}/${analysis_slug}/urls/${url}?fields=${fields}' \
+curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}/urls/${url}?fields=${fields}' \
      -X GET \
      -H 'Authorization: Token ${API_KEY}' \
-     -H 'Content-type: application/json' \
+     -H 'Content-type: application/json'
 ```
 
 ## Example

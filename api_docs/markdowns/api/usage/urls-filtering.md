@@ -14,7 +14,7 @@ Botify API allows you to filter the dataset of URLs of your analysis and return 
 Please refer to [[UrlsQuery;bql-urls-query]] documentation for information about input.
 
 ```SH
-curl 'https://api.botify.com/analyses/${username}/${project_slug}/${analysis_slug}/urls' \
+curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}/urls' \
      -X POST \
      -H 'Authorization: Token ${API_KEY}' \
      -H 'Content-type: application/json' \
@@ -51,22 +51,27 @@ The following example of [[UrlsQuery;bql-urls-query]] fetches `url` and `metadat
 
 A sample result would be:
 ```JSON
-[
-  {
-    "url": "www.abc.com/1",
-    "metadata": {
-      "title": {
-        "nb": 15
+{
+  "count": 11,
+  "page": 1,
+  "size": 10,
+  "results": [
+    {
+      "url": "www.abc.com/1",
+      "metadata": {
+        "title": {
+          "nb": 15
+        }
+      }
+    },
+    {
+      "url": "www.abc.com/2",
+      "metadata": {
+        "title": {
+          "nb": 9
+        }
       }
     }
-  },
-  {
-    "url": "www.abc.com/2",
-    "metadata": {
-      "title": {
-        "nb": 9
-      }
-    }
-  }
-]
+  ]
+}
 ```

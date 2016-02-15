@@ -13,7 +13,7 @@ Using Botify API, you can aggregate URLs to compute metrics like sum of inlinks,
 Please refer to [[UrlsAggsQuery;bql#urlsaggsquery]] documentation for information about input.
 
 ```SH
-curl 'https://api.botify.com/analyses/${username}/${project_slug}/${analysis_slug}/urls/aggs' \
+curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}/urls/aggs' \
      -X POST \
      -H 'Authorization: Token ${API_KEY}' \
      -H 'Content-type: application/json' \

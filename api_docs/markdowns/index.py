@@ -62,6 +62,26 @@ PAGES = [
         }
     },
     {
+        "url_name": "usage-list-projects",
+        "markdown_file": "api/usage/list-projects.md",
+        "path": "api/usage/list-projects",
+        "properties": {
+            "menu_item": "usage-list-projects",
+            "breadcrumb": ["usage"],
+            "title": "List projects"
+        }
+    },
+    {
+        "url_name": "usage-list-analyses",
+        "markdown_file": "api/usage/list-analyses.md",
+        "path": "api/usage/list-analyses",
+        "properties": {
+            "menu_item": "usage-list-analyses",
+            "breadcrumb": ["usage"],
+            "title": "List analyses"
+        }
+    },
+    {
         "url_name": "usage-url-fetching",
         "markdown_file": "api/usage/url-fetching.md",
         "path": "api/usage/url-fetching",
@@ -129,7 +149,7 @@ PAGES = [
         "properties": {
             "menu_item": "bql",
             "breadcrumb": [],
-            "title": "BQL: Botify Query DSL"
+            "title": "Botify Query DSL"
         }
     },
     {
