@@ -166,7 +166,7 @@ PIPELINE = {
         },
         'main_style': {
             'source_filenames': (
-                'style/css/bootstrap.min.css',
+                'node_modules/bootstrap/dist/css/bootstrap.min.css',
                 'style/css/main.css',
             ),
             'output_filename': 'css/style_main.css',
@@ -177,7 +177,7 @@ PIPELINE = {
         'common_style': {
             'source_filenames': (
                 'style/css/monokai-sublime.css',
-                'style/css/bootstrap.min.css',
+                'node_modules/bootstrap/dist/css/bootstrap.min.css',
                 'style/css/common.css',
             ),
             'output_filename': 'css/style_common.css',
@@ -189,7 +189,7 @@ PIPELINE = {
     'JAVASCRIPT': {
         'swagger_ui': {
             'source_filenames': (
-                'js/jquery/jquery.js',
+                'node_modules/jquery/dist/jquery.min.js',
                 'swagger-ui/dist/lib/jquery.slideto.min.js',
                 'swagger-ui/dist/lib/jquery.wiggle.min.js',
                 'swagger-ui/dist/lib/jquery.ba-bbq.min.js',
@@ -208,8 +208,8 @@ PIPELINE = {
         'common_script': {
             'source_filenames': (
                 'js/highlight/highlight.pack.js',
-                'js/jquery/jquery.js',
-                'js/bootstrap/bootstrap.min.js',
+                'node_modules/jquery/dist/jquery.min.js',
+                'node_modules/bootstrap/dist/js/bootstrap.min.js',
             ),
             'output_filename': 'js/script_common.js',
         }
