@@ -58,7 +58,20 @@ You can define a different host and port if you need to
 @TODO
 
 ### Deploy locally
-@TODO How to locally generate the files
+
+To generate the website:
+```SH
+./script/deploy_local
+# => answer 'yes'
+```
+
+Then you may want to serve them through HTTP with:
+```SH
+python -m SimpleHTTPServer 8001
+```
+
+And then open your brower at http://localhost:8001/_output/
+
 
 ### Deploy Production
 @TODO How to deploy to a s3 bucket
