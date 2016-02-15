@@ -47,5 +47,8 @@ class SwaggerUiView(TemplateView):
 
     def get_context_data(self, *args, **kwargs):
         return {
-            "api_url": settings.SWAGGER_API_URL
+            "api_url": settings.SWAGGER_API_URL,
+            "properties": {
+                "menu_item": "reference"
+            }
         }

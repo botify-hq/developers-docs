@@ -1,26 +1,27 @@
   <ul class='operations' >
     <li class='{{method}} operation' id='{{parentId}}_{{nickname}}'>
       <div class='heading'>
-        <h3>
-          <span class='http_method'>
-          <a href='#!/{{encodedParentId}}/{{nickname}}' class="toggleOperation">{{method}}</a>
-          </span>
-          <span class='path'>
-          <a href='#!/{{encodedParentId}}/{{nickname}}' class="toggleOperation {{#if deprecated}}deprecated{{/if}}">{{path}}</a>
-          </span>
-        </h3>
-        <ul class='options'>
-          <li>
-          <a href='#!/{{encodedParentId}}/{{nickname}}' class="toggleOperation">{{{nickname}}}</a>
-          </li>
-        </ul>
+        <div class="topHeading">
+          <div class='httpMethod {{method}}'>
+            <a href='#!/{{encodedParentId}}/{{nickname}}' class="toggleOperation">{{method}}</a>
+          </div>
+          <div class="operationId">
+            <a href='#!/{{encodedParentId}}/{{nickname}}' class="toggleOperation">{{{nickname}}}</a>
+          </div>
+        </div>
       </div>
       <div class='content' id='{{parentId}}_{{nickname}}_content' style='display:none'>
+        <div class="path">
+          <h3>
+            <a href='#!/{{encodedParentId}}/{{nickname}}' class="toggleOperation {{#if deprecated}}deprecated{{/if}}">
+              {{path}}
+            </a>
+          </h3>
+        </div>
         {{#if deprecated}}
             <h4><span data-sw-translate>Warning: Deprecated</span></h4>
         {{/if}}
         {{#if description}}
-        <h4><span data-sw-translate>Implementation Notes</span></h4>
         <div class="markdown">{{{description}}}</div>
         {{/if}}
         {{#oauth}}
@@ -71,10 +72,10 @@
           <thead>
             <tr>
             <th style="width: 100px; max-width: 100px" data-sw-translate>Parameter</th>
-            <th style="width: 310px; max-width: 310px" data-sw-translate>Value</th>
+            <th style="width: 210px; max-width: 210px" data-sw-translate>Value</th>
             <th style="width: 200px; max-width: 200px" data-sw-translate>Description</th>
-            <th style="width: 100px; max-width: 100px" data-sw-translate>Parameter Type</th>
-            <th style="width: 220px; max-width: 230px" data-sw-translate>Data Type</th>
+            <th style="width: 150px; max-width: 150px" data-sw-translate>Parameter Type</th>
+            <th style="width: 170px; max-width: 170px" data-sw-translate>Data Type</th>
             </tr>
           </thead>
           <tbody class="operation-params">
@@ -110,8 +111,8 @@
           {{#if isReadOnly}}
           {{else}}
           <div class='sandbox_header'>
-            <input class='submit' type='submit' value='Try it out!' data-sw-translate/>
-            <a href='#' class='response_hider' style='display:none' data-sw-translate>Hide Response</a>
+            <input class='submit swagger-btn' type='submit' value='Try it out!' data-sw-translate/>
+            <a href='#' class='response_hider swagger-btn' style='display:none' data-sw-translate>Hide Response</a>
             <span class='response_throbber' style='display:none'></span>
           </div>
           {{/if}}

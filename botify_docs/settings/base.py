@@ -156,8 +156,7 @@ PIPELINE = {
         'swagger_ui': {
             'source_filenames': (
                 'swagger-ui/dist/css/typography.css',
-                'swagger-ui/dist/css/reset.css',
-                'swagger-ui/dist/css/screen.css',
+                'swagger-ui/dist/css/screen.css'
             ),
             'output_filename': 'css/style_swagger.css',
             'extra_context': {
