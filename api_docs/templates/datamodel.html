@@ -1,4 +1,5 @@
 {% extends "base/inside_page.html" %}
+{% load markdown_content %}
 
 {% block breadcrumb %}
 {% endblock %}
@@ -30,6 +31,7 @@
     <tbody></tbody>
   </table>
 </div>
+{% md_content "partials/urls-datamodel.md" %}
 {% endblock %}
 
 {% block extra_script %}
