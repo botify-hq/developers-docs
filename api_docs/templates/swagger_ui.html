@@ -1,15 +1,43 @@
+{% extends "base/inside_page.html" %}
 {% load pipeline %}
 
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Swagger UI</title>
-  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+{% block style %}
+  {% stylesheet 'common_style' %}
   {% stylesheet 'swagger_ui' %}
-  {% javascript 'swagger_ui' %}
+{% endblock %}
 
+{% block breadcrumb %}
+{% endblock %}
+
+{% block right_header %}
+<div class="right-content__header">
+  <div class="col-xs-11 no-pad-r">
+    <div class="left-content__title">Api Sandbox</div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+{% endblock %}
+
+{% block right_content %}
+<div class="swagger-section">
+  <div id='header'>
+    <div class="swagger-ui-wrap">
+      <form id='api_selector'>
+        <div class='input'><input placeholder="api_key" id="input_apiKey" name="apiKey" type="text"/></div>
+      </form>
+    </div>
+  </div>
+
+  <div id="message-bar" class="swagger-ui-wrap" data-sw-translate>&nbsp;</div>
+  <div id="swagger-ui-container" class="swagger-ui-wrap"></div>  
+</div>
+{% endblock %}
+
+{% block script %}
+  {% javascript 'swagger_ui' %}
+{% endblock %}
+
+{% block extra_script %}
 <script type="text/javascript">
     $(function () {
       
@@ -80,20 +108,6 @@
       }
   });
   </script>
-</head>
+{% endblock %}
 
-<body class="swagger-section">
-<div id='header'>
-  <div class="swagger-ui-wrap">
-    <a id="logo" href="http://swagger.io">swagger</a>
-    <form id='api_selector'>
-      <div class='input'><input placeholder="api_key" id="input_apiKey" name="apiKey" type="text"/></div>
-    </form>
-  </div>
-</div>
-
-<div id="message-bar" class="swagger-ui-wrap" data-sw-translate>&nbsp;</div>
-<div id="swagger-ui-container" class="swagger-ui-wrap"></div>
-</body>
-</html>
 
