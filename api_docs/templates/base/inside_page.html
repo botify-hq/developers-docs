@@ -20,19 +20,19 @@
       <div class="inner-wrapper">
         <div class="main-content">
           <div class="top-menu col-xs-12 visible-xs visible-sm no-pad">
-            {% include "top_menu.html" %}
+            {% include "partials/top_menu.html" %}
           </div>
           <div class="sidebar col-md-3 hidden-xs hidden-sm">
             <div class="sidebar__header">
               <a href="/">HOME</a>
             </div>
-            {% include "left_menu.html" %}
+            {% include "partials/left_menu.html" %}
           </div>
           <div class="right-content col-xs-12 col-xs-offset-0 col-md-7 col-md-offset-1">
             {% block breadcrumb %}
               <div class="right-content__breadcrumb">
                 <div class="col-xs-11 no-pad-r">
-                  {% include "breadcrumb.html" %}
+                  {% include "partials/breadcrumb.html" %}
                 </div>
               </div>
             {% endblock %}
