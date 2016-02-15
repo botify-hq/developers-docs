@@ -1,14 +1,17 @@
-# URLs Fetching
+# URLs Filtering
+
+Botify API allows you to filter the dataset of URLs of your analysis and return any available information. **Full list of requestable fields** can be found in [[Urls Datamodel;urls-datamodel]].
+
 
 ## Endpoint
 
 - Operation: [[getUrls;reference#Analysis_getUrls]]
-- Path: `analyses/${username}/${project_slug}/${analysis_slug}/urls`
+- Path: `analyses/{username}/{project_slug}/{analysis_slug}/urls`
 - HTTP Verb: POST
 - Body : `Array<UrlsQuery>`
 - Response: `Array<UrlsResult>`
 
-Please refer to [[UrlsQuery;bql-urls-query]] documentation for information about `UrlsQuery` object.
+Please refer to [[UrlsQuery;bql-urls-query]] documentation for information about input.
 
 ```SH
 curl 'https://api.botify.com/analyses/${username}/${project_slug}/${analysis_slug}/urls' \

@@ -16,21 +16,13 @@ Botify provides a REST API in order to integrate Botify in third-party applicati
 
 ## Topics
 - [[Authentication;authentication]]
+- [[Usage;usage]]
 - [[Reference;reference]]
 - [[URLs Datamodel;urls-datamodel]]
+- [[BQL;bql]]
 - [[Error Codes;error-codes]]
 - [[Rate Limit;rate-limit]]
 - [[Jobs;jobs]]
-- [[Usage;usage]]
-  - [[URL Fetching;usage-url-fetching]]
-  - [[URLs Filtering;usage-urls-filtering]]
-  - [[URLs Aggregation;usage-urls-aggregation]]
-  - [[CSV Export;usage-csv-export]]
-  - [[PDF Export;usage-pdf-export]]
-- [[BQL;bql]]
-  - [[UrlsQuery;bql-urls-query]]
-  - [[UrlsAggsQuery;bql-urls-aggs-query]]
-  - [[UrlsFilter;bql-urls-filter]]
 - [[SDKs;sdks]]
 
 

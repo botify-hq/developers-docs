@@ -1,14 +1,16 @@
 # URLs Aggregation
 
+Using Botify API, you can aggregate URLs to compute metrics like sum of inlinks, avegare load time, etc. You can also group URLs on any aggregable field and compute metrics on each group. **Full list of aggregable fields** can be found in [[Urls Datamodel;urls-datamodel#agg]].
+
 ## Endpoint
 
 - Operation: [[getUrlsAggs;reference#Analysis_getUrlsAggs]]
-- Path: `analyses/${username}/${project_slug}/${analysis_slug}/urls/aggs`
+- Path: `analyses/{username}/{project_slug}/{analysis_slug}/urls/aggs`
 - HTTP Verb: POST
 - Body : `Array<UrlsAggsQuery>`
 - Response: `Array<UrlsAggsResult>`
 
-Please refer to [[UrlsAggsQuery;bql#urlsaggsquery]] documentation for information about `UrlsAggsQuery` object.
+Please refer to [[UrlsAggsQuery;bql#urlsaggsquery]] documentation for information about input.
 
 ```SH
 curl 'https://api.botify.com/analyses/${username}/${project_slug}/${analysis_slug}/urls/aggs' \

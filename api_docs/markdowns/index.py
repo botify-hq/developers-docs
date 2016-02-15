@@ -165,7 +165,7 @@ PAGES = [
     # SDKs
     {
         "url_name": "sdks",
-        "markdown_file": "sdks.md",
+        "markdown_file": "api/sdks.md",
         "path": "sdks",
         "properties": {
             "menu_item": "sdks",

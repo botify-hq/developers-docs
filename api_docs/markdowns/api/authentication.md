@@ -9,7 +9,7 @@ The *Authorization* header must be set on every request to the API.
 **Example:**
 ```SH
 curl 'https://api.botify.com/projects/${username}' \
-     -H 'Authorization: Token ${API_KEY}'
+     -H 'Authorization: Token ${API_KEY}' \
 ```
 
 ### Get your API Token
