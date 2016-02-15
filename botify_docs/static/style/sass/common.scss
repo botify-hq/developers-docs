@@ -11,10 +11,20 @@ body {
   background: -o-linear-gradient(left, rgba(104, 81, 137, 0.9), rgba(104, 81, 137, 0.9)), url("../images/commun-pattern.png");
   background: linear-gradient(to right, rgba(104, 81, 137, 0.9), rgba(104, 81, 137, 0.9)), url("../images/commun-pattern.png");
 
+  .container {
+    @media(max-width: 767px) {
+      padding: 0;
+    }
+  }
+
   .inner-wrapper {
     width: 90%;
     height: inherit;
     margin: auto;
+
+    @media(max-width: 767px) {
+      width: 100%;
+    }
   }
 
   .header {
