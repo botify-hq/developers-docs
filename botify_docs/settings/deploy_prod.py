@@ -13,3 +13,5 @@ AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID', None)
 AWS_ACCESS_KEY = AWS_ACCESS_KEY_ID
 AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY', None)
 AWS_STORAGE_BUCKET_NAME = 'com.botify.saas.production.developer-docs'
+
+MEDUSA_S3_MAX_AGE = 60
