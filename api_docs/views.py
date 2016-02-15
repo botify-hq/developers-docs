@@ -5,7 +5,7 @@ from utils import load_md_file, get_page_by_attr, reverse_page
 
 
 class MarkdownPageView(TemplateView):
-    template_name = "base_md_file.html"
+    template_name = "base/base_md_file.html"
 
     def get(self, *args, **kwargs):
         self.page = get_page_by_attr('path', kwargs.get('path', ''))
