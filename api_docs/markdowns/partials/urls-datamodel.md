@@ -1,5 +1,3 @@
-# URLs Datamodel
-
 ## Area
 
 In almost every **analysis** endpoint dealing with URL Data model, an **area parameter** is present (its default value is `current`). It refers to the subset of URL to compute on:
