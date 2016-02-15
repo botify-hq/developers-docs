@@ -133,8 +133,8 @@ PAGES = [
     },
     {
         "url_name": "usage-others",
-        "markdown_file": "api/usage/others.md",
-        "path": "api/usage/others",
+        "markdown_file": "api/usage/other-usages.md",
+        "path": "api/usage/other-usages",
         "properties": {
             "menu_item": "usage-others",
             "breadcrumb": ['usage'],
