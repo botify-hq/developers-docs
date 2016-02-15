@@ -116,7 +116,9 @@
       </div><!--//footer-content-->
     </div>
   </footer>
-  {% javascript 'common_script' %}
+  {% block script %}
+    {% javascript 'common_script' %}
+  {% endblock %}
   {% block extra_script %}
   {% endblock %}
 </body>
