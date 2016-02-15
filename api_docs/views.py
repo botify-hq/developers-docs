@@ -35,7 +35,10 @@ class DatamodelView(TemplateView):
 
     def get_context_data(self, *args, **kwargs):
         return {
-            "datamodel_api_url": settings.DATAMODEL_API_URL
+            "datamodel_api_url": settings.DATAMODEL_API_URL,
+            "properties": {
+                "menu_item": "datamodel"
+            }
         }
 
 

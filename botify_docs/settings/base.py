@@ -178,6 +178,7 @@ PIPELINE = {
             'source_filenames': (
                 'style/css/monokai-sublime.css',
                 'style/css/bootstrap.min.css',
+                'style/css/datatables.min.css',
                 'style/css/common.css',
             ),
             'output_filename': 'css/style_common.css',
@@ -210,6 +211,7 @@ PIPELINE = {
                 'js/highlight/highlight.pack.js',
                 'js/jquery/jquery.js',
                 'js/bootstrap/bootstrap.min.js',
+                'js/datatables/datatables.min.js',
             ),
             'output_filename': 'js/script_common.js',
         }
