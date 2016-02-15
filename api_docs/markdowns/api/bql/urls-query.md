@@ -1,27 +1,40 @@
 # UrlsQuery
 
-```JS
+`UrlsQuery` is used for [[Urls Filtering;usage-urls-filtering]] to define fields selection, filter to operate and sort to apply on result.
+
+## Format
+```JSON
 {
-  "fields": Array<string>, // optional
-  "sort": Array<UrlsSort>, // optional
-  "filters": UrlsFilter, // optionnal
+  "fields": Array<string>,
+  "sort": ?Array<UrlsSort>,
+  "filters": ?UrlsFilter
 }
 ```
 
-#### `fields: Array<string>`
+### `fields: Array<string>`
 
-The fields to fetch. Default field is `url`. This is equivalent to the `select` clause in SQL. List of fields is available in [[Datamodel;urls-datamodel]].
+The fields to fetch. Default field is `url`. This is equivalent to the `select` clause in SQL. List of fields in [[Datamodel;urls-datamodel]].
 
-Example: `['url, 'http_code']`
+**Example:**
+```JSON
+["url", "http_code"]
+```
 
-
-#### `sort: Array<UrlsSort>`
+### `sort: Array<UrlsSort>`
 
 Requires the result to be sorted on a certain set of fields. Sort criteria are not necessarily part of the fetched fields.
 
-Example: `[ {"http_code": {"order": "desc"}} ]`
+**Example:**
+```JSON
+[
+  {"http_code": {"order": "desc"}}
+]
+```
+
+### `filters: UrlsFilter`
+
+Please refer to [[UrlsFilter;bql-urls-filter]] documentation.
 
 
-#### `filters: UrlsFilter`
-
-Please refer to [UrlsFilter](#urlsfilter) documentation.
+## Example
+Full example in [[Urls Filtering documentation;usage-urls-filtering#example]].

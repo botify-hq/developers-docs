@@ -1,5 +1,16 @@
 # URLs Datamodel
 
+## Area
+
+In almost every **analysis** endpoint dealing with URL Data model, an **area parameter** is present (its default value is `current`). It refers to the subset of URL to compute on:
+
+![screenshot from 2016-01-08 11 49 14](https://cloud.githubusercontent.com/assets/1886834/12196436/df1d2632-b5fe-11e5-9f7a-04197d49a49f.png)
+*URLs distribution chart available in movements tab of analysis report.*
+
+- **current**: URLs that were crawled in the current analysis (blue and purple part)
+- **new**: URLs crawled in the current analysis but not in the previous analysis (blue part)
+- **disappeared**: URLs crawled in the previous analysis but not in the current analysis (red part)
+
 **name** identifies fields.
 
 **data type** describe the type of the data stored. It allows to know which type of input to use or which [predicates](#predicates) are available.
@@ -21,7 +32,7 @@ Data Type | Value Type
 
 **multiple** is set to `true` whenever the value is a **list**. For instance, `query_string_keys` contains a list of query string keys. Example: `['page', 'length']` on a paginated url.
 
-**is_sortable** is set to `true` if the field can be used in [UrlsQuery](#urlsquery) `sort`.
+**is_able** is set to `true` if the field can be used in [UrlsQuery](#urlsquery) `sort`.
 
 **rights** is the list of operations the field can be used for. The rights may include the following:
 - `filters`: can be used in any [UrlsFilter](#urlsfilter)
@@ -29,7 +40,9 @@ Data Type | Value Type
 - `select`: can be used in [UrlsQuery](#urlsquery) `fields`
 - `top_values`: can be used by [[getUrlsFieldTopValues;reference#Analysis_getUrlsFieldTopValues]]
 - `suggest`: can be used by [[getUrlsFieldSuggest;reference#Analysis_getUrlsFieldSuggest]]
-
+- agg:numerical
+- agg:categorical
+- **sort**: 
 
 ## Type
 
@@ -45,19 +58,19 @@ Data types are `string`, `integer`, `long`, `float`, `double`, `boolean`, `struc
 
 ### `url`
 Standalone URL
-```JS
+```JSON
 string
 ```
 
 ### `image_url`
 Url of an image
-```JS
+```JSON
 string
 ```
 
 ### `url_status`
 Url with its crawled state. If not crawled, no information can be obtained using the URLs endpoint.
-```JS
+```JSON
 {
   "url": string,
   "crawled": boolean
@@ -66,7 +79,7 @@ Url with its crawled state. If not crawled, no information can be obtained using
 
 ### `url_link_status`
 Url with its crawled state and its follow/nofollow status
-```JS
+```JSON
 {
   "status": string,
   "url": {
@@ -78,13 +91,13 @@ Url with its crawled state and its follow/nofollow status
 
 ### `url_http_code`
 Url with its HTTP status code
-```JS
+```JSON
 [string, string] // [URL, HTTP Status Code]
 ```
 
 ### `string_nb_map`
 List of strings with their number of occurrences.
-```JS
+```JSON
 [
   {
     "text": string,
@@ -95,13 +108,13 @@ List of strings with their number of occurrences.
 
 ### `time_millisec`
 Number of milliseconds (duration)
-```JS
+```JSON
 integer
 ```
 
 ### `hreflang_valid_values`
 
-```JS
+```JSON
 {
     "url": {
         "url": Url,
@@ -120,7 +133,7 @@ WARNING_DEST_NOT_CRAWLED | URL referenced by hreflang tag was not crawled.
 
 ### `hreflang_error_values`
 
-```JS
+```JSON
 {
     "url": {
         "url": Url,

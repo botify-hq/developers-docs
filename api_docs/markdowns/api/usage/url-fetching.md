@@ -1,6 +1,6 @@
 # URL Fetching
 
-Botify API allows you to get in information collected by Botify on analysed URLs. **Full list of requestable fields** can be found in [[Urls Datamodel;urls-datamodel]].
+Botify API allows you to get in information collected by Botify on analysed URLs. **Full list of requestable fields** can be found in [[URLs Datamodel;urls-datamodel]].
 
 ## Endpoint
 

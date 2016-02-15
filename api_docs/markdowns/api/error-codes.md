@@ -1,7 +1,7 @@
 # Error Codes
 
 When a client error occurs, a 4xx HTTP status code is returned with the following error payload. `error_code` provides a more specific code than the HTTP status code can. Error codes are listed below.
-```JS
+```JSON
 {
   "error": {
     "error_code": string

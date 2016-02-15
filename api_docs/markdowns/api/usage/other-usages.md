@@ -5,7 +5,7 @@ Botify API allow you even much more including
 - Get analysis top external domains and subdomains
 - Get analysis sitemaps report and sample of urls out of config and only in sitemaps.
 - Get analysis orphan URLs
-- Get Urls Datamodel
+- Get URLs Datamodel
 - Get crawl statistics
 - Get project saved filters
 - etc

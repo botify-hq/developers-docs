@@ -10,4 +10,4 @@ Our Javascript Javascript SDK is open-source and works either on NodeJS or in br
 
 ## Python SDK
 
-Comming soon!
+Coming soon!

@@ -107,7 +107,7 @@ PAGES = [
         "path": "api/usage/urls-aggregation",
         "properties": {
             "menu_item": "usage-urls-aggregation",
-            "breadcrumb": ['usage'],
+            "breadcrumb": ["usage"],
             "title": "Urls Aggregation"
         }
     },
@@ -117,7 +117,7 @@ PAGES = [
         "path": "api/usage/csv-export",
         "properties": {
             "menu_item": "usage-csv-export",
-            "breadcrumb": ['usage'],
+            "breadcrumb": ["usage"],
             "title": "CSV Export"
         }
     },
@@ -127,7 +127,7 @@ PAGES = [
         "path": "api/usage/pdf-export",
         "properties": {
             "menu_item": "usage-pdf-export",
-            "breadcrumb": ['usage'],
+            "breadcrumb": ["usage"],
             "title": "PDF Export"
         }
     },
@@ -137,7 +137,7 @@ PAGES = [
         "path": "api/usage/other-usages",
         "properties": {
             "menu_item": "usage-others",
-            "breadcrumb": ['usage'],
+            "breadcrumb": ["usage"],
             "title": "Other usages"
         }
     },
@@ -158,7 +158,7 @@ PAGES = [
         "path": "api/bql/urls-query",
         "properties": {
             "menu_item": "bql-urls-query",
-            "breadcrumb": [],
+            "breadcrumb": ["bql"],
             "title": "UrlsQuery"
         }
     },
@@ -168,7 +168,7 @@ PAGES = [
         "path": "api/bql/urls-aggs-query",
         "properties": {
             "menu_item": "bql-urls-aggs-query",
-            "breadcrumb": [],
+            "breadcrumb": ["bql"],
             "title": "UrlsAggsQuery"
         }
     },
@@ -178,7 +178,7 @@ PAGES = [
         "path": "api/bql/urls-filter",
         "properties": {
             "menu_item": "bql-urls-filter",
-            "breadcrumb": [],
+            "breadcrumb": ["bql"],
             "title": "UrlsFilter"
         }
     },

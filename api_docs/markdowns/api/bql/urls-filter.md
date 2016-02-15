@@ -1,41 +1,52 @@
 # UrlsFilter
 
-`UrlsFilter` allows to define filtering condition on data fields (FieldFilter) that can be composed using boolean conditions (and, or, not)
+`UrlsFilter` allows to define the filter to perform on URLs fields. It can be composed using boolean conditions (and, or, not).
 
 ## FieldFilter
-A field filter allows to describe a predicate to apply on a given field
-```JS
+A field filter allows to describe a predicate to apply on a given field.
+```JSON
 {
   "predicate": string,
   "field": string,
-  "value": any,
+  "value": ?any,
 }
 ```
 
 ## Predicates
-According to the field type, several predicates can be applied.
-*Note: List of fields is available in data model.*
+According to the field type, several predicates can be applied. **Full list of fields** can be found in [[URLs Datamodel;urls-datamodel]].
 
 ### Numerical Predicates
 Numerical fields have continuous values. Numerical fields include `integer`, `long`, `float`, `double`, `date` and `datetime` fields.
 
 #### eq: Equals
-Example: `{ field: 'http_code', predicate: 'eq', value: 200 }`
+```JSON
+{ "predicate": "eq", "field": "http_code", "value": 200 }
+```
 
 #### gt: Greather than
-Example: `{ field: 'http_code', predicate: 'gt', value: 200 }`
+```JSON
+{ "predicate": "gt", "field": "http_code", "value": 200 }
+```
 
 #### gte: Greather than or equal
-Example: `{ field: 'http_code', predicate: 'gte', value: 200 }`
+```JSON
+{ "predicate": "gte", "field": "http_code", "value": 200 }
+```
 
 #### lt: Lower than
-Example: `{ field: 'http_code', predicate: 'lt', value: 200 }`
+```JSON
+{ "predicate": "lt", "field": "http_code", "value": 200 }
+```
 
 #### lte: Lower than or equal
-Example: `{ field: 'http_code', predicate: 'lte', value: 200 }`
+```JSON
+{ "predicate": "lte", "field": "http_code", "value": 200 }
+```
 
 #### between: Between
-Example: `{ field: 'http_code', predicate: 'between', value: [200, 300] }`
+```JSON
+{ "predicate": "between", "field": "http_code", "value": [200, 300] }
+```
 **Note**: Lower bondary is inclusive whereas **upper bondary is exclusive**, ie the above example means `200 <= http_code < 300`.
 
 
@@ -43,19 +54,29 @@ Example: `{ field: 'http_code', predicate: 'between', value: [200, 300] }`
 Categorical fields have discrete values. Categorical fields include `string`, `boolean` and `tree` fields.
 
 #### eq: Equals
-Example: `{ field: 'url', predicate: 'eq', value: 'https://botify.com' }`
+```JSON
+{ "predicate": "eq", "field": "url", "value": 'https://botify.com' }
+```
 
 #### contains: Contains
-Example: `{ field: 'url', predicate: 'contains', value: 'botify' }`
+```JSON
+{ "predicate": "contains", "field": "url", "value": 'botify' }
+```
 
 #### starts: Starts with
-Example: `{ field: 'url', predicate: 'start', value: 'https' }`
+```JSON
+{ "predicate": "start", "field": "url", "value": 'https' }
+```
 
 #### ends: Ends with
-Example: `{ field: 'url', predicate: 'ends', value: 'hifi' }`
+```JSON
+{ "predicate": "ends", "field": "url", "value": 'hifi' }
+```
 
 #### re: Match Regex
-Example: `{ field: 'url', predicate: 're', value: 'https.*hifi' }`
+```JSON
+{ "predicate": "re", "field": "url", "value": 'https.*hifi' }
+```
 
 
 ### Tree Predicates
@@ -63,13 +84,16 @@ Tree fields can use both categorical predicates and some extra predicates making
 
 #### with_children
 Returns given value and all its children.
-Example: `{ field: 'segments.segment_1.value', predicate: 'with_children', value: 'foo' }` could return `foo`, `foo/bar`, `foo/baz`.
+```JSON
+"segments"segment_1."value"',, { "field": " "predicate: 'with_childr', value: 'foo' }` could return `foo`, `foo/bar`, `foo/baz`.
 
 #### without_children
-Example: `{ field: 'segments.segment_1.value', predicate: 'without_children', value: 'foo' }` could return `foo`.
+```JSON
+"segments"segment_1."value"',, { "field": " "predicate: 'without_childr', value: 'foo' }` could return `foo`.
 
 #### only_children
-Example: `{ field: 'segments.segment_1.value', predicate: 'only_children', value: 'foo' }` could return `foo/bar`, `foo/baz`.
+```JSON
+"segments"segment_1."value"',, { "field": " "predicate: 'only_childr', value: 'foo' }` could return `foo/bar`, `foo/baz`.
 
 
 ### Exists Predicate

@@ -1,6 +1,6 @@
 # URLs Aggregation
 
-Using Botify API, you can aggregate URLs to compute metrics like sum of inlinks, avegare load time, etc. You can also group URLs on any aggregable field and compute metrics on each group. **Full list of aggregable fields** can be found in [[Urls Datamodel;urls-datamodel#agg]].
+Using Botify API, you can aggregate URLs to compute metrics like sum of inlinks, avegare load time, etc. You can also group URLs on any aggregable field and compute metrics on each group. **Full list of aggregable fields** can be found in [[URLs Datamodel;urls-datamodel?filter=agg:]].
 
 ## Endpoint
 

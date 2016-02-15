@@ -12,7 +12,7 @@ from markdown.util import etree
 from .utils import reverse_page
 
 
-BOTIFYLINK_RE = r'\[\[([\w0-9_ -]+)\;([\w0-9_ -]+)(#?[\w0-9_ -]*)\]\]'
+BOTIFYLINK_RE = r'\[\[([\w0-9_ -]+)\;([\w0-9_ -]+)(#?[\w0-9_ -?]*)\]\]'
 
 
 def build_url(label, base, end):
