@@ -1,4 +1,4 @@
-# URLs Data Aggregation
+# URLs Aggregation
 
 ## Endpoint
 

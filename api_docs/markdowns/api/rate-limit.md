@@ -1,4 +1,4 @@
-# API Rate Limit
+# Rate Limit
 
 To prevent an excessive usage of the API and ensure Botify API availability, we set up an API Rate Limit.
 

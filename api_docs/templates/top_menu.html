@@ -20,8 +20,8 @@
         <li class="{% ifequal properties.menu_item "authentication" %}active{% endifequal %}">
           <a href="{% url 'md-page' 'api/authentication' %}">Authentication</a>
         </li>
-        <li class="{% ifequal properties.menu_item "swagger" %}active{% endifequal %}">
-          <a href="{% url 'swagger-ui' %}">Reference</a>
+        <li class="{% ifequal properties.menu_item "reference" %}active{% endifequal %}">
+          <a href="{% url 'reference' %}">Reference</a>
         </li>
         <li class="{% ifequal properties.menu_item "error-codes" %}active{% endifequal %}">
           <a href="{% url 'md-page' 'api/error-codes' %}">Error Codes</a>

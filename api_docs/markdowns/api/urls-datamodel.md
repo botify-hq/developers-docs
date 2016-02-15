@@ -1,50 +1,46 @@
-# URLs Data Model Introspection
+# URLs Datamodel
 
-## Endpoint
+**name** identifies fields.
 
-- Operation: [[getUrlsDatamodel;reference#Analysis_getUrlsDatamodel]]
-- Path: `analyses/${username}/${project_slug}/${analysis_slug}/urls/datamodel`
-- HTTP Verb: POST
-- Response: `DataModel`
+**data type** describe the type of the data stored. It allows to know which type of input to use or which [predicates](#predicates) are available.
 
-Please refer to [[DataModel;datamodel]] documentation for information about `DataModel` object.
+Data Type | Value Type
+--- | ---
+`integer` | Numerical
+`long` | Numerical
+`float` | Numerical
+`double` | Numerical
+`date` | Numerical
+`datetime` | Numerical
+`string` | Categorical
+`boolean` | Categorical
+`tree` | Categorical
+`struct` | N/A
 
-```SH
-curl 'https://api.botify.com/analyses/${username}/${project_slug}/${analysis_slug}/urls/datamodel' \
-     -X GET \
-     -H 'Authorization: Token ${API_KEY}' \
-```
+**field type** describes the concept represented by the field like `url_status` or `time_sec`. If the field doesn't represent any specific concept, `field_type` equals `data_type`. List of field types may depend on the data model type. It allows to know how to render the field data.
 
-**Result may differ from an analysis to another** because all features are not enabled on all analyses.
+**multiple** is set to `true` whenever the value is a **list**. For instance, `query_string_keys` contains a list of query string keys. Example: `['page', 'length']` on a paginated url.
 
+**is_sortable** is set to `true` if the field can be used in [UrlsQuery](#urlsquery) `sort`.
 
-## List of fields
-
-@TODO: Add script to fetch data model
-
-
-## Area
-
-In almost every **analysis** endpoint dealing with URL Data model, an **area parameter** is present (its default value is `current`). It refers to the subset of URL to compute on:
-
-![screenshot from 2016-01-08 11 49 14](https://cloud.githubusercontent.com/assets/1886834/12196436/df1d2632-b5fe-11e5-9f7a-04197d49a49f.png)
-*URLs distribution chart available in movements tab of analysis report.*
-
-- **current**: URLs that were crawled in the current analysis (blue and purple part)
-- **new**: URLs crawled in the current analysis but not in the previous analysis (blue part)
-- **disappeared**: URLs crawled in the previous analysis but not in the current analysis (red part)
+**rights** is the list of operations the field can be used for. The rights may include the following:
+- `filters`: can be used in any [UrlsFilter](#urlsfilter)
+- `filters_exist`: can **only** be used with a predicate [exists](#exists-predicate) in a [UrlsFilter](#urlsfilter)
+- `select`: can be used in [UrlsQuery](#urlsquery) `fields`
+- `top_values`: can be used by [[getUrlsFieldTopValues;reference#Analysis_getUrlsFieldTopValues]]
+- `suggest`: can be used by [[getUrlsFieldSuggest;reference#Analysis_getUrlsFieldSuggest]]
 
 
-## Data Types
+## Type
 
-**data_type** describes the type of the data stored. It allows to know which type of input to use or which [predicates](#predicates) are available.
+**type** describes the type of the data stored. It allows to know which type of input to use or which [predicates](#predicates) are available.
 
 Data types are `string`, `integer`, `long`, `float`, `double`, `boolean`, `struct`, `date`, `datetime`, `tree`.
 
 
-## Fields Types
+## SubType
 
-**field_type** describes the concept represented by the field. Sample concepts are `UrlStatus` or `TimeMilliseconds`. If the field doesn't represent any specific concept, `field_type` is the same as `data_type`. It allows to know how to render the field data.
+**subtype** describes the concept represented by the field. Sample concepts are `UrlStatus` or `TimeMilliseconds`. If the field doesn't represent any specific concept, `field_type` is the same as `data_type`. It allows to know how to render the field data.
 
 
 ### `url`

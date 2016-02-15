@@ -4,8 +4,8 @@ When a client error occurs, a 4xx HTTP status code is returned with the followin
 ```JS
 {
   "error": {
-    "message": string,
     "error_code": string
+    "message": string,
   }
 }
 ```

@@ -1,4 +1,5 @@
 PAGES = [
+    # Main
     {
         "url_name": "introduction",
         "markdown_file": "api/introduction.md",
@@ -20,16 +21,6 @@ PAGES = [
         }
     },
     {
-        "url_name": "reference",
-        "markdown_file": "api/reference.md",
-        "path": "api/reference",
-        "properties": {
-            "menu_item": "reference",
-            "breadcrumb": [],
-            "title": "Reference"
-        }
-    },
-    {
         "url_name": "error-codes",
         "markdown_file": "api/error-codes.md",
         "path": "api/error-codes",
@@ -46,57 +37,140 @@ PAGES = [
         "properties": {
             "menu_item": "rate-limit",
             "breadcrumb": [],
-            "title": "API Rate Limit"
+            "title": "Rate Limit"
         }
     },
     {
-        "url_name": "sdk",
-        "markdown_file": "sdk/sdk.md",
-        "path": "sdk",
+        "url_name": "jobs",
+        "markdown_file": "api/jobs.md",
+        "path": "api/jobs",
         "properties": {
-            "menu_item": "sdk",
+            "menu_item": "jobs",
             "breadcrumb": [],
-            "title": "SDK Introduction"
+            "title": "Jobs"
         }
     },
+    # Usage
+    {
+        "url_name": "usage",
+        "markdown_file": "api/usage/usage.md",
+        "path": "api/usage",
+        "properties": {
+            "menu_item": "usage",
+            "breadcrumb": [],
+            "title": "Usage"
+        }
+    },
+    {
+        "url_name": "usage-url-fetching",
+        "markdown_file": "api/usage/url-fetching.md",
+        "path": "api/usage/url-fetching",
+        "properties": {
+            "menu_item": "usage-url-fetching",
+            "breadcrumb": ["usage"],
+            "title": "Url Fetching"
+        }
+    },
+    {
+        "url_name": "usage-urls-filtering",
+        "markdown_file": "api/usage/urls-filtering.md",
+        "path": "api/usage/urls-filtering",
+        "properties": {
+            "menu_item": "usage-urls-filtering",
+            "breadcrumb": ["usage"],
+            "title": "Urls Filtering"
+        }
+    },
+    {
+        "url_name": "usage-urls-aggregation",
+        "markdown_file": "api/usage/urls-aggregation.md",
+        "path": "api/usage/urls-aggregation",
+        "properties": {
+            "menu_item": "usage-urls-aggregation",
+            "breadcrumb": ['usage'],
+            "title": "Urls Aggregation"
+        }
+    },
+    {
+        "url_name": "usage-csv-export",
+        "markdown_file": "api/usage/csv-export.md",
+        "path": "api/usage/csv-export",
+        "properties": {
+            "menu_item": "usage-csv-export",
+            "breadcrumb": ['usage'],
+            "title": "CSV Export"
+        }
+    },
+    {
+        "url_name": "usage-pdf-export",
+        "markdown_file": "api/usage/pdf-export.md",
+        "path": "api/usage/pdf-export",
+        "properties": {
+            "menu_item": "usage-pdf-export",
+            "breadcrumb": ['usage'],
+            "title": "PDF Export"
+        }
+    },
+    {
+        "url_name": "usage-others",
+        "markdown_file": "api/usage/others.md",
+        "path": "api/usage/others",
+        "properties": {
+            "menu_item": "usage-others",
+            "breadcrumb": ['usage'],
+            "title": "Other usages"
+        }
+    },
+    # BQL
     {
         "url_name": "bql",
-        "markdown_file": "bql/bql.md",
-        "path": "bql",
+        "markdown_file": "api/bql/bql.md",
+        "path": "api/bql",
         "properties": {
             "menu_item": "bql",
             "breadcrumb": [],
-            "title": "Botify Query DSL"
+            "title": "BQL: Botify Query DSL"
         }
     },
     {
-        "url_name": "urls-data-aggregation",
-        "markdown_file": "bql/urls-data-aggregation.md",
-        "path": "bql/urls-data-aggregation",
+        "url_name": "bql-urls-query",
+        "markdown_file": "api/bql/urls-query.md",
+        "path": "api/bql/urls-query",
         "properties": {
-            "menu_item": "urls-data-aggregation",
-            "breadcrumb": ['bql'],
-            "title": "Urls Data Aggregation"
+            "menu_item": "bql-urls-query",
+            "breadcrumb": [],
+            "title": "UrlsQuery"
         }
     },
     {
-        "url_name": "urls-data-fetching",
-        "markdown_file": "bql/urls-data-fetching.md",
-        "path": "bql/urls-data-fetching",
+        "url_name": "bql-urls-aggs-query",
+        "markdown_file": "api/bql/urls-aggs-query.md",
+        "path": "api/bql/urls-aggs-query",
         "properties": {
-            "menu_item": "urls-data-fetching",
-            "breadcrumb": ['bql'],
-            "title": "Urls Data Fetching"
+            "menu_item": "bql-urls-aggs-query",
+            "breadcrumb": [],
+            "title": "UrlsAggsQuery"
         }
     },
     {
-        "url_name": "urls-datamodel-introspection",
-        "markdown_file": "bql/urls-datamodel-introspection.md",
-        "path": "bql/urls-datamodel-introspection",
+        "url_name": "bql-urls-filter",
+        "markdown_file": "api/bql/urls-filter.md",
+        "path": "api/bql/urls-filter",
         "properties": {
-            "menu_item": "urls-datamodel-introspection",
-            "breadcrumb": ['bql'],
-            "title": "Urls Datamodel Introspection"
+            "menu_item": "bql-urls-filter",
+            "breadcrumb": [],
+            "title": "UrlsFilter"
+        }
+    },
+    # SDKs
+    {
+        "url_name": "sdks",
+        "markdown_file": "sdks.md",
+        "path": "sdks",
+        "properties": {
+            "menu_item": "sdks",
+            "breadcrumb": [],
+            "title": "SDKs"
         }
     },
 ]
