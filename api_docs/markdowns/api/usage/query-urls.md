@@ -35,11 +35,8 @@ The following example of [[BQLQuery;bql-query]] fetches `url` and `metadata.titl
     "and": [
       {
         "field": "http_code",
-        "value": [
-          200,
-          300
-        ],
-        "predicate": "between"
+        "predicate": "between",
+        "value": [200, 300]
       },
       {
         "not": {
