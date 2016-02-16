@@ -176,7 +176,7 @@ PAGES = [
     {
         "url_name": "sdks",
         "markdown_file": "api/sdks.md",
-        "path": "sdks",
+        "path": "api/sdks",
         "properties": {
             "menu_item": "sdks",
             "breadcrumb": [],
