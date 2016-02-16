@@ -17,19 +17,19 @@ Describes the basic type of the data as it is stored. It allows which [[predicat
 Describes the concept represented by the field, such as `url_status` or `time_millisec`. If the field doesn't represent any specific concept, `subtype` is the same as `type`. List of subtypes may depend on the datamodel. It allows to know how to render the field data.
 
 
-### `url`
+### url
 Standalone URL
 ```JSON
 string
 ```
 
-### `image_url`
+### image_url
 Url of an image
 ```JSON
 string
 ```
 
-### `url_status`
+### url_status
 Url with its crawled state. If not crawled, no information can be obtained using the URLs endpoint.
 ```JSON
 {
@@ -38,7 +38,7 @@ Url with its crawled state. If not crawled, no information can be obtained using
 }
 ```
 
-### `url_link_status`
+### url_link_status
 Url with its crawled state and its follow/nofollow status
 ```JSON
 {
@@ -50,13 +50,13 @@ Url with its crawled state and its follow/nofollow status
 }
 ```
 
-### `url_http_code`
+### url_http_code
 Url with its HTTP status code
 ```JSON
 [string, string] // [URL, HTTP Status Code]
 ```
 
-### `string_nb_map`
+### string_nb_map
 List of strings with their number of occurrences.
 ```JSON
 [
@@ -67,13 +67,13 @@ List of strings with their number of occurrences.
 ]
 ```
 
-### `time_millisec`
+### time_millisec
 Number of milliseconds (duration)
 ```JSON
 integer
 ```
 
-### `hreflang_valid_values`
+### hreflang_valid_values
 
 ```JSON
 {
@@ -92,7 +92,7 @@ WARNING_DEST_BLOCKED_ROBOTS_TXT | URL referenced by hreflang tag is blocked by (
 WARNING_DEST_BLOCKED_CONFIG | URL referenced by hreflang tag was not crawled due to project settings.
 WARNING_DEST_NOT_CRAWLED | URL referenced by hreflang tag was not crawled.
 
-### `hreflang_error_values`
+### hreflang_error_values
 
 ```JSON
 {
