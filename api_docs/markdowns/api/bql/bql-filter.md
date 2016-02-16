@@ -218,7 +218,7 @@ The following `BQLFilter` filters the analysis URLs dataset on new URLs which ar
 {
   "and": [
     {
-      "field": "strategic.is_strategic",
+      "field": "compliant.is_compliant",
       "value": true
     },
     {

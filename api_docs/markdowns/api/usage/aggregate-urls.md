@@ -40,7 +40,7 @@ The following example of [[BQLAggsQuery;bql#urlsaggsquery]] compute the number o
       }
     ],
     "filters": {
-      "field": "strategic.is_strategic",
+      "field": "compliant.is_compliant",
       "predicate": "eq",
       "value": true
     }
@@ -170,7 +170,7 @@ The following example of [[BQLAggsQuery;bql#urlsaggsquery]] groups URLs by HTTP 
       }
     ],
     "filters": {
-      "field": "strategic.is_strategic",
+      "field": "compliant.is_compliant",
       "predicate": "eq",
       "value": true
     }
