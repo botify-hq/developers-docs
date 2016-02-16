@@ -1,6 +1,6 @@
 # List projects
 
-Botify API can returns your list of project of a given user.
+Botify API can return your list of project of a given user.
 
 ## Endpoint
 

@@ -1,6 +1,6 @@
 # List analyses
 
-Botify API can returns your list of analyses of a given project.
+Botify API can return your list of analyses of a given project.
 
 ## Endpoint
 
