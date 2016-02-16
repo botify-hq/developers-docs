@@ -1417,9 +1417,6 @@ ul.operations {
 .endpoint {
   border-bottom: 1px solid #c3d9ec !important;
 }
-.endpoint + .endpoint {
-  margin-top: 5px;
-}
 .endpoints {
   padding: 0 !important;
 }
