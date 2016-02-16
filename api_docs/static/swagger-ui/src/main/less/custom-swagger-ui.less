@@ -63,6 +63,8 @@ body .main-content .right-content .right-content__body .right-content__body-cont
 
 		div.content {
 			border: none !important;
+			border-radius: 0 !important;
+			margin: 0 !important;
 		}
 
 		div.heading h3 span.path a {
@@ -191,4 +193,93 @@ input[type="text"] {
 input[type="text"]:focus,
 input[type="text"].focus {
   border-bottom: solid 2px #776295 !important;
+}
+
+
+/*
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+
+pre {
+	padding: 0 !important;
+}
+
+pre code {
+  display: block !important;
+  overflow-x: auto !important;
+  padding: 0.5em !important;
+  background: #251E2F !important;
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace !important;
+  font-size: 12px !important;
+}
+
+pre code,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2 !important;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.attribute {
+  color: #f92672 !important;
+  line-height: 20px !important;
+}
+
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.value .integer, .value .number, .integer, .number {
+	color: greenyellow !important;
+}
+
+.value .string, .string {
+	color: darkturquoise !important;
+}
+
+.value .date, .date {
+	color: darkorange !important;
+}
+
+.value .boolean, .value .literal, .boolean, .literal {
+  color: deeppink !important;
 }
