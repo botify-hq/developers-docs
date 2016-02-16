@@ -35,20 +35,17 @@
       <div class="sidebar__group-item {% ifequal properties.menu_item "usage-list-analyses" %}active{% endifequal %}">
         <a href="{% url 'md-page' 'api/usage/list-analyses' %}">List Analyses</a>
       </div>
-      <div class="sidebar__group-item {% ifequal properties.menu_item "usage-url-fetching" %}active{% endifequal %}">
-        <a href="{% url 'md-page' 'api/usage/url-fetching' %}">URL Fetching</a>
+      <div class="sidebar__group-item {% ifequal properties.menu_item "usage-get-url-detail" %}active{% endifequal %}">
+        <a href="{% url 'md-page' 'api/usage/get-url-detail' %}">Get URL Detail</a>
       </div>
-      <div class="sidebar__group-item {% ifequal properties.menu_item "usage-urls-filtering" %}active{% endifequal %}">
-        <a href="{% url 'md-page' 'api/usage/urls-filtering' %}">URLs Filtering</a>
+      <div class="sidebar__group-item {% ifequal properties.menu_item "usage-urls-querying" %}active{% endifequal %}">
+        <a href="{% url 'md-page' 'api/usage/urls-querying' %}">URLs Querying</a>
       </div>
       <div class="sidebar__group-item {% ifequal properties.menu_item "usage-urls-aggregation" %}active{% endifequal %}">
         <a href="{% url 'md-page' 'api/usage/urls-aggregation' %}">URLs Aggregation</a>
       </div>
       <div class="sidebar__group-item {% ifequal properties.menu_item "usage-csv-export" %}active{% endifequal %}">
         <a href="{% url 'md-page' 'api/usage/csv-export' %}">CSV Export</a>
-      </div>
-      <div class="sidebar__group-item {% ifequal properties.menu_item "usage-pdf-export" %}active{% endifequal %}">
-        <a href="{% url 'md-page' 'api/usage/pdf-export' %}">PDF Export</a>
       </div>
       <div class="sidebar__group-item {% ifequal properties.menu_item "usage-other-usages" %}active{% endifequal %}">
         <a href="{% url 'md-page' 'api/usage/other-usages' %}">Other Usages</a>

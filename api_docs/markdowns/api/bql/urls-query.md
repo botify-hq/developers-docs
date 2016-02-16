@@ -1,6 +1,6 @@
 # UrlsQuery
 
-`UrlsQuery` is used for [[Urls Filtering;usage-urls-filtering]] to define fields selection, filter to operate and sort to apply on result.
+`UrlsQuery` is used for [[Urls Filtering;usage-urls-querying]] to define fields selection, filter to operate and sort to apply on result.
 
 ## Format
 ```JSON
@@ -17,7 +17,7 @@ The fields to fetch. Default field is `url`. This is equivalent to the `select` 
 
 **Example:**
 ```JSON
-["url", "http_code"]
+[ "url", "http_code" ]
 ```
 
 ### `sort: Array<UrlsSort>`
@@ -27,7 +27,11 @@ Requires the result to be sorted on a certain set of fields. Sort criteria are n
 **Example:**
 ```JSON
 [
-  {"http_code": {"order": "desc"}}
+  {
+    "http_code": {
+      "order": "desc"
+    }
+  }
 ]
 ```
 
@@ -37,4 +41,4 @@ Please refer to [[UrlsFilter;bql-urls-filter]] documentation.
 
 
 ## Example
-Full example in [[Urls Filtering documentation;usage-urls-filtering#example]].
+Full example in [[Urls Filtering documentation;usage-urls-querying#example]].

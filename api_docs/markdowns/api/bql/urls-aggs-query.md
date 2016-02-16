@@ -67,11 +67,13 @@ Note: The default metric is `count`.
 **Examples**
 count of URLs
 ```JSON
-'count'
+"count"
 ```
 Sum of internal inlinks nofollow
 ```JSON
-{ "sum": "inlinks_internal.nb.follow.total" }
+{
+  "sum": "inlinks_internal.nb.follow.total"
+}
 ```
 
 

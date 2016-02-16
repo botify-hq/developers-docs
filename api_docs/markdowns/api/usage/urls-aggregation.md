@@ -59,8 +59,8 @@ A sample result would be the following. Requested metrics are returned in the sa
       {
         "metrics": [
           37,
-          118.52380952380952,
-        ],
+          118.52380952380952
+        ]
       }
     ]
   }
@@ -79,7 +79,7 @@ The following example of [[UrlsAggsQuery;bql#urlsaggsquery]] groups URLs by HTTP
     "aggs": [
       {
         "group_by": [
-          "http_code",
+          "http_code"
         ],
         "metrics": [
           "count",

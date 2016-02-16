@@ -82,23 +82,23 @@ PAGES = [
         }
     },
     {
-        "url_name": "usage-url-fetching",
-        "markdown_file": "api/usage/url-fetching.md",
-        "path": "api/usage/url-fetching",
+        "url_name": "usage-get-url-detail",
+        "markdown_file": "api/usage/get-url-detail.md",
+        "path": "api/usage/get-url-detail",
         "properties": {
-            "menu_item": "usage-url-fetching",
+            "menu_item": "usage-get-url-detail",
             "breadcrumb": ["usage"],
-            "title": "Url Fetching"
+            "title": "Get URL Detail"
         }
     },
     {
-        "url_name": "usage-urls-filtering",
-        "markdown_file": "api/usage/urls-filtering.md",
-        "path": "api/usage/urls-filtering",
+        "url_name": "usage-urls-querying",
+        "markdown_file": "api/usage/urls-querying.md",
+        "path": "api/usage/urls-querying",
         "properties": {
-            "menu_item": "usage-urls-filtering",
+            "menu_item": "usage-urls-querying",
             "breadcrumb": ["usage"],
-            "title": "Urls Filtering"
+            "title": "URLs Querying"
         }
     },
     {
@@ -108,7 +108,7 @@ PAGES = [
         "properties": {
             "menu_item": "usage-urls-aggregation",
             "breadcrumb": ["usage"],
-            "title": "Urls Aggregation"
+            "title": "URLs Aggregation"
         }
     },
     {
@@ -119,16 +119,6 @@ PAGES = [
             "menu_item": "usage-csv-export",
             "breadcrumb": ["usage"],
             "title": "CSV Export"
-        }
-    },
-    {
-        "url_name": "usage-pdf-export",
-        "markdown_file": "api/usage/pdf-export.md",
-        "path": "api/usage/pdf-export",
-        "properties": {
-            "menu_item": "usage-pdf-export",
-            "breadcrumb": ["usage"],
-            "title": "PDF Export"
         }
     },
     {

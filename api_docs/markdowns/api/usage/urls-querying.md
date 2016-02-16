@@ -1,4 +1,4 @@
-# URLs Filtering
+# URLs Querying
 
 Botify API allows you to filter the dataset of URLs of your analysis and return any available information. **Full list of requestable fields** can be found in [[URLs Datamodel;urls-datamodel]].
 
@@ -27,12 +27,18 @@ The following example of [[UrlsQuery;bql-urls-query]] fetches `url` and `metadat
 
 ```JSON
 {
-  "fields": ["url", "metadata.title.nb"],
+  "fields": [
+    "url",
+    "metadata.title.nb"
+  ],
   "filters": {
     "and": [
       {
         "field": "http_code",
-        "value": [200, 300],
+        "value": [
+          200,
+          300
+        ],
         "predicate": "between"
       },
       {
@@ -44,7 +50,11 @@ The following example of [[UrlsQuery;bql-urls-query]] fetches `url` and `metadat
     ]
   },
   "sort": [
-    { "metadata.title.nb": { "order": "desc" } }
+    {
+      "metadata.title.nb": {
+        "order": "desc"
+      }
+    }
   ]
 }
 ```
