@@ -656,7 +656,7 @@ body .main-content .right-content .right-content__body .right-content__body-cont
 }
 /* line 387, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content img {
-  width: 100%;
+  max-width: 100%;
 }
 /* line 393, ../sass/common.scss */
 body .main-content .right-content .hljs-string,

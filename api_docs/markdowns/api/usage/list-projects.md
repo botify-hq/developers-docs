@@ -1,4 +1,4 @@
-# List analyses
+# List projects
 
 Botify API can returns your list of project of a given user.
 

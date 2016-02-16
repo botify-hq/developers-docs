@@ -166,7 +166,7 @@ The `exists` predicate takes no value and tests if the field exists in the docum
 ```
 
 ### Multiple Prefix Predicates
-Some fields can contains a list of values, they are called **multiple**. For instance, `query_string_keys` could be equal to `['page', 'length']` on a URL with pagination.
+Some fields can contains a list of values, they are called **multiple** fields. For instance, `query_string_keys` could be equal to `['page', 'length']` on a URL with pagination.
 
 To filter on these fields, **predicates must be prefixed** by `any.` For instance, the following filters URLs on these having a query string key that is equal to "page".
 

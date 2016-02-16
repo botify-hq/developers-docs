@@ -1,4 +1,4 @@
-# Introduction
+# Getting started
 
 Botify provides a REST API in order to integrate Botify in third-party applications and allowing to use almost everything available in the Botify Analytics and the Chrome Extension.
 
