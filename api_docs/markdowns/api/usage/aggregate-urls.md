@@ -7,10 +7,10 @@ Using Botify API, you can aggregate URLs to compute metrics like sum of inlinks,
 - Operation: [[getUrlsAggs;reference#!/Analysis/getUrlsAggs]]
 - Path: `analyses/{username}/{project_slug}/{analysis_slug}/urls/aggs`
 - HTTP Verb: POST
-- Body : `Array<UrlsAggsQuery>`
-- Response: `Array<UrlsAggsResult>`
+- Body : `Array<BQLAggsQuery>`
+- Response: `Array<BQLAggsResult>`
 
-Please refer to [[UrlsAggsQuery;bql#urlsaggsquery]] documentation for information about input.
+Please refer to [[BQLAggsQuery;bql#urlsaggsquery]] documentation for information about input.
 
 ```SH
 curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}/urls/aggs' \
@@ -23,7 +23,7 @@ curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_
 
 ## Example: Aggregation on filtered dataset
 
-The following example of [[UrlsAggsQuery;bql#urlsaggsquery]] compute the number of compliant URLs and their average response time.
+The following example of [[BQLAggsQuery;bql#urlsaggsquery]] compute the number of compliant URLs and their average response time.
 
 ### Request
 ```JSON
@@ -70,7 +70,7 @@ A sample result would be the following. Requested metrics are returned in the sa
 
 ## Example: Simple Group-By with two Metrics
 
-The following example of [[UrlsAggsQuery;bql#urlsaggsquery]] groups URLs by HTTP Code. Using `metrics` key, we request the number of URLs and average response time for each group.
+The following example of [[BQLAggsQuery;bql#urlsaggsquery]] groups URLs by HTTP Code. Using `metrics` key, we request the number of URLs and average response time for each group.
 
 ### Request
 ```JSON
@@ -142,7 +142,7 @@ This example returns 3 groups: the URLs with HTTP code 200, the URLs with HTTP c
 
 ## Example: Simple and Range Group-By
 
-The following example of [[UrlsAggsQuery;bql#urlsaggsquery]] groups URLs by HTTP code and response time on 2 ranges (fast and slow URLs). The URLs dataset is filtered on compliant URLs using `filters` key.
+The following example of [[BQLAggsQuery;bql#urlsaggsquery]] groups URLs by HTTP code and response time on 2 ranges (fast and slow URLs). The URLs dataset is filtered on compliant URLs using `filters` key.
 
 ### Request
 ```JSON

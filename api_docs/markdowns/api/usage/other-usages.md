@@ -8,7 +8,7 @@ Botify API allow you even much more including
 - Get URLs Datamodel
 - Get crawl statistics
 - Get project saved filters
-- etc
+- and more
 
 For a complete list of operations (and so usages), please refer to **[[reference;reference]]**.
 

@@ -30,12 +30,12 @@ Data Type | Value Type
 
 **multiple** is set to `true` whenever the value is a **list**. For instance, `query_string_keys` contains a list of query string keys. Example: `['page', 'length']` on a paginated url.
 
-**is_able** is set to `true` if the field can be used in [UrlsQuery](#urlsquery) `sort`.
+**is_able** is set to `true` if the field can be used in [BQLQuery](#urlsquery) `sort`.
 
 **rights** is the list of operations the field can be used for. The rights may include the following:
-- `filters`: can be used in any [UrlsFilter](#urlsfilter)
-- `filters_exist`: can **only** be used with a predicate [exists](#exists-predicate) in a [UrlsFilter](#urlsfilter)
-- `select`: can be used in [UrlsQuery](#urlsquery) `fields`
+- `filters`: can be used in any [BQLFilter](#urlsfilter)
+- `filters_exist`: can **only** be used with a predicate [exists](#exists-predicate) in a [BQLFilter](#urlsfilter)
+- `select`: can be used in [BQLQuery](#urlsquery) `fields`
 - `top_values`: can be used by [[getUrlsFieldTopValues;reference#!/Analysis/getUrlsFieldTopValues]]
 - `suggest`: can be used by [[getUrlsFieldSuggest;reference#!/Analysis/getUrlsFieldSuggest]]
 - agg:numerical

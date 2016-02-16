@@ -1,6 +1,6 @@
-# UrlsFilter
+# BQLFilter
 
-`UrlsFilter` allows to define the filter to perform on URLs fields. It can be composed using boolean conditions (and, or, not).
+`BQLFilter` allows to define the filter to perform on URLs fields. It can be composed using boolean conditions (and, or, not).
 
 ## FieldFilter
 A field filter allows to describe a predicate to apply on a given field. **Full list of fields** can be found in [[URLs Datamodel;urls-datamodel]].
@@ -213,7 +213,7 @@ To filter on these fields, **predicates must be prefixed** by `any.` For instanc
 
 
 ## Example
-The following `UrlsFilter` filters the analysis URLs dataset on new URLs which are compliant and have no title.
+The following `BQLFilter` filters the analysis URLs dataset on new URLs which are compliant and have no title.
 ```JSON
 {
   "and": [

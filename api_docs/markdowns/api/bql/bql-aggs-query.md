@@ -1,24 +1,24 @@
-# UrlsAggsQuery
+# BQLAggsQuery
 
-`UrlsAggsQuery` is used for [[Urls Aggregation;usage-urls-aggregation]] to define aggregation to perform, metrics to compute, and filter to operate.
+`BQLAggsQuery` is used for [[Urls Aggregation;usage-aggregate-urls]] to define aggregation to perform, metrics to compute, and filter to operate.
 
 ## Format
 ```JSON
 {
   "aggs": [
     {
-      "group_by": ?Array<GroupBy>,
-      "metrics": Array<Metric>
+      "group_by": ?Array<BQLGroupBy>,
+      "metrics": Array<BQLMetric>
     }
   ],
-  "filters": ?UrlFilters
+  "filters": ?BQLFilter
 }
 ```
 
-A `UrlsAggsQuery` is composed of a list of `Aggregate` and an optional `UrlFilters`. An `Aggregate` defines some `Metric` to compute. `GroupBys` can be used to group URLs and compute metrics on each groups.
+A `BQLAggsQuery` is composed of a list of `BQLAggregate` and an optional `BQLFilter`. An `BQLAggregate` defines some `BQLMetric` to compute. `BQLGroupBy` can be used to group URLs and compute metrics on each groups.
 
-### GroupBy
-A `GroupBy` is defined by:
+### Group-Bys
+A group-by is defined by:
   - a `field` on which the group-by is performed.
   - some optional `ranges` that define buckets for the group-by operation.
 
@@ -55,7 +55,7 @@ The following groups URLs by their `delay_last_byte` on two ranges (fast and slo
 }
 ```
 
-### Metric
+### Metrics
 Metrics define the operation to compute. Except for `count`, a field on which the metric is applied must be provided. Available metrics are:
 - `count`
 - `sum`
@@ -77,10 +77,10 @@ Sum of internal inlinks nofollow
 ```
 
 
-### `filters: UrlsFilter`
+### Filters
 
-Please refer to [[UrlsFilter;bql-urls-filter]] documentation.
+Please refer to [[BQLFilter;bql-filter]] documentation.
 
 
 ## Examples
-Full examples in [[Urls Aggregation documentation;usage-urls-aggregation#example-aggregation-on-filtered-dataset]].
+Full examples in [[Urls Aggregation documentation;usage-aggregate-urls#example-aggregation-on-filtered-dataset]].

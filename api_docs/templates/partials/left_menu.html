@@ -38,11 +38,11 @@
       <div class="sidebar__group-item {% ifequal properties.menu_item "usage-get-url-detail" %}active{% endifequal %}">
         <a href="{% url 'md-page' 'api/usage/get-url-detail' %}">Get URL Detail</a>
       </div>
-      <div class="sidebar__group-item {% ifequal properties.menu_item "usage-urls-querying" %}active{% endifequal %}">
-        <a href="{% url 'md-page' 'api/usage/urls-querying' %}">URLs Querying</a>
+      <div class="sidebar__group-item {% ifequal properties.menu_item "usage-query-urls" %}active{% endifequal %}">
+        <a href="{% url 'md-page' 'api/usage/query-urls' %}">Query URLs</a>
       </div>
-      <div class="sidebar__group-item {% ifequal properties.menu_item "usage-urls-aggregation" %}active{% endifequal %}">
-        <a href="{% url 'md-page' 'api/usage/urls-aggregation' %}">URLs Aggregation</a>
+      <div class="sidebar__group-item {% ifequal properties.menu_item "usage-aggregate-urls" %}active{% endifequal %}">
+        <a href="{% url 'md-page' 'api/usage/aggregate-urls' %}">Aggregate URLs</a>
       </div>
       <div class="sidebar__group-item {% ifequal properties.menu_item "usage-csv-export" %}active{% endifequal %}">
         <a href="{% url 'md-page' 'api/usage/csv-export' %}">CSV Export</a>
@@ -57,14 +57,14 @@
       <a href="{% url 'md-page' 'api/bql' %}">BQL</a>
     </div>
     <div class="sidebar__group-body">
-      <div class="sidebar__group-item {% ifequal properties.menu_item "bql-urls-query" %}active{% endifequal %}">
-        <a href="{% url 'md-page' 'api/bql/urls-query' %}">UrlsQuery</a>
+      <div class="sidebar__group-item {% ifequal properties.menu_item "bql-query" %}active{% endifequal %}">
+        <a href="{% url 'md-page' 'api/bql/bql-query' %}">BQLQuery</a>
       </div>
-      <div class="sidebar__group-item {% ifequal properties.menu_item "bql-urls-aggs-query" %}active{% endifequal %}">
-        <a href="{% url 'md-page' 'api/bql/urls-aggs-query' %}">UrlsAggsQuery</a>
+      <div class="sidebar__group-item {% ifequal properties.menu_item "bql-aggs-query" %}active{% endifequal %}">
+        <a href="{% url 'md-page' 'api/bql/bql-aggs-query' %}">BQLAggsQuery</a>
       </div>
-      <div class="sidebar__group-item {% ifequal properties.menu_item "bql-urls-filter" %}active{% endifequal %}">
-        <a href="{% url 'md-page' 'api/bql/urls-filter' %}">UrlsFilter</a>
+      <div class="sidebar__group-item {% ifequal properties.menu_item "bql-filter" %}active{% endifequal %}">
+        <a href="{% url 'md-page' 'api/bql/bql-filter' %}">BQLFilter</a>
       </div>
     </div>
   </div><!-- END SideBar Group -->

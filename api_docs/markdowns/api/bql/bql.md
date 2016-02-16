@@ -10,8 +10,8 @@ BQL provides following abilities on a per-URL basis on the analysis dataset:
   - Data models introspection
 
 ## Reference
-- [[UrlsQuery;bql-urls-query]]
-- [[UrlsAggsQuery;bql-urls-aggs-query]]
-- [[UrlsFilter;bql-urls-filter]]
+- [[BQLQuery;bql-query]]
+- [[BQLAggsQuery;bql-aggs-query]]
+- [[BQLFilter;bql-filter]]
 
 

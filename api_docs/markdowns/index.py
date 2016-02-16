@@ -92,23 +92,23 @@ PAGES = [
         }
     },
     {
-        "url_name": "usage-urls-querying",
-        "markdown_file": "api/usage/urls-querying.md",
-        "path": "api/usage/urls-querying",
+        "url_name": "usage-query-urls",
+        "markdown_file": "api/usage/query-urls.md",
+        "path": "api/usage/query-urls",
         "properties": {
-            "menu_item": "usage-urls-querying",
+            "menu_item": "usage-query-urls",
             "breadcrumb": ["usage"],
-            "title": "URLs Querying"
+            "title": "Query URLs"
         }
     },
     {
-        "url_name": "usage-urls-aggregation",
-        "markdown_file": "api/usage/urls-aggregation.md",
-        "path": "api/usage/urls-aggregation",
+        "url_name": "usage-aggregate-urls",
+        "markdown_file": "api/usage/aggregate-urls.md",
+        "path": "api/usage/aggregate-urls",
         "properties": {
-            "menu_item": "usage-urls-aggregation",
+            "menu_item": "usage-aggregate-urls",
             "breadcrumb": ["usage"],
-            "title": "URLs Aggregation"
+            "title": "Aggregate URLs"
         }
     },
     {
@@ -122,11 +122,11 @@ PAGES = [
         }
     },
     {
-        "url_name": "usage-others",
+        "url_name": "usage-other-usages",
         "markdown_file": "api/usage/other-usages.md",
         "path": "api/usage/other-usages",
         "properties": {
-            "menu_item": "usage-others",
+            "menu_item": "usage-other-usages",
             "breadcrumb": ["usage"],
             "title": "Other usages"
         }
@@ -143,33 +143,33 @@ PAGES = [
         }
     },
     {
-        "url_name": "bql-urls-query",
-        "markdown_file": "api/bql/urls-query.md",
-        "path": "api/bql/urls-query",
+        "url_name": "bql-query",
+        "markdown_file": "api/bql/bql-query.md",
+        "path": "api/bql/bql-query",
         "properties": {
-            "menu_item": "bql-urls-query",
+            "menu_item": "bql-query",
             "breadcrumb": ["bql"],
-            "title": "UrlsQuery"
+            "title": "BQLQuery"
         }
     },
     {
-        "url_name": "bql-urls-aggs-query",
-        "markdown_file": "api/bql/urls-aggs-query.md",
-        "path": "api/bql/urls-aggs-query",
+        "url_name": "bql-aggs-query",
+        "markdown_file": "api/bql/bql-aggs-query.md",
+        "path": "api/bql/bql-aggs-query",
         "properties": {
-            "menu_item": "bql-urls-aggs-query",
+            "menu_item": "bql-aggs-query",
             "breadcrumb": ["bql"],
-            "title": "UrlsAggsQuery"
+            "title": "BQLAggsQuery"
         }
     },
     {
-        "url_name": "bql-urls-filter",
-        "markdown_file": "api/bql/urls-filter.md",
-        "path": "api/bql/urls-filter",
+        "url_name": "bql-filter",
+        "markdown_file": "api/bql/bql-filter.md",
+        "path": "api/bql/bql-filter",
         "properties": {
-            "menu_item": "bql-urls-filter",
+            "menu_item": "bql-filter",
             "breadcrumb": ["bql"],
-            "title": "UrlsFilter"
+            "title": "BQLFilter"
         }
     },
     # SDKs
