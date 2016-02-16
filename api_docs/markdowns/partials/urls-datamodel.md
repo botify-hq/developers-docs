@@ -1,3 +1,14 @@
+## Permissions
+List of operations the field can be used for. The rights may include the following:
+- **select:** can be used in [[BQLQuery;bql-query]] fields.
+- **filters**`:** can be used in [[BQLFilter;bql-filter]].
+- **filters_exist:** can **only** be used with a [[exist predicate;bql-filter#exists-predicate]] in a BQLFilter.
+- **sort:** can be used in BQLFilter [[sort;bql-query]].
+- **agg:numerical:** can be used in BQLAggsQuery [[groupby;bql-aggs-query#]].
+- **agg:categorical:** can be used in BQLAggsQuery [[simple groupby;bql-aggs-query#simple-groupby]].
+- **top_values:** can be used by [[getUrlsFieldTopValues;reference#!/Analysis/getUrlsFieldTopValues]]
+- **suggest:** can be used by [[getUrlsFieldSuggest;reference#!/Analysis/getUrlsFieldSuggest]]
+
 ## Area
 
 In almost every **analysis** endpoint dealing with URL Data model, an **area parameter** is present (its default value is `current`). It refers to the subset of URL to compute on:
@@ -9,7 +20,8 @@ In almost every **analysis** endpoint dealing with URL Data model, an **area par
 - **new**: URLs crawled in the current analysis but not in the previous analysis (blue part)
 - **disappeared**: URLs crawled in the previous analysis but not in the current analysis (red part)
 
-**name** identifies fields.
+
+
 
 **data type** describe the type of the data stored. It allows to know which type of input to use or which [predicates](#predicates) are available.
 
@@ -32,15 +44,7 @@ Data Type | Value Type
 
 **is_able** is set to `true` if the field can be used in [BQLQuery](#urlsquery) `sort`.
 
-**rights** is the list of operations the field can be used for. The rights may include the following:
-- `filters`: can be used in any [BQLFilter](#urlsfilter)
-- `filters_exist`: can **only** be used with a predicate [exists](#exists-predicate) in a [BQLFilter](#urlsfilter)
-- `select`: can be used in [BQLQuery](#urlsquery) `fields`
-- `top_values`: can be used by [[getUrlsFieldTopValues;reference#!/Analysis/getUrlsFieldTopValues]]
-- `suggest`: can be used by [[getUrlsFieldSuggest;reference#!/Analysis/getUrlsFieldSuggest]]
-- agg:numerical
-- agg:categorical
-- **sort**: 
+
 
 ## Type
 
