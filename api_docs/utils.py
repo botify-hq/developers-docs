@@ -44,7 +44,8 @@ def md2html(content):
         'markdown.extensions.sane_lists',
         'markdown.extensions.smarty',
         'markdown.extensions.toc',
-        'api_docs.md_extensions'
+        'api_docs.md_extensions.botify_link',
+        'api_docs.md_extensions.code_tabs',
     ]
     return markdown(content, extensions=extensions)
 

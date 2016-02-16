@@ -9,7 +9,7 @@ import re
 from markdown.extensions import Extension
 from markdown.inlinepatterns import Pattern
 from markdown.util import etree
-from .utils import reverse_page
+from ..utils import reverse_page
 
 
 BOTIFYLINK_RE = r'\[\[([^\[\]\;]+)\;([\w0-9_ -]+)(#?[\w0-9_ -]*)\]\]'
