@@ -209,6 +209,7 @@ PIPELINE = {
             'source_filenames': (
                 'js/highlight/highlight.pack.js',
                 'js/jquery/jquery.js',
+                'js/jquery/url.min.js',
                 'js/bootstrap/bootstrap.min.js',
                 'js/datatables/datatables.min.js',
             ),

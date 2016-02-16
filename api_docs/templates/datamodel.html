@@ -33,7 +33,7 @@
 {% block extra_script %}
 <script type="text/javascript">
   $(function () {
-    $('#datamodel table').DataTable({
+    var datamodel = $('#datamodel table').DataTable({
       "processing": true,
       "ajax": {
         "url": "{{ datamodel_api_url }}",
@@ -52,6 +52,11 @@
       "scrollX": true,
       "pagingType": "numbers"
     });
+
+    var filter = url('?') && url('?').filter;
+    if(filter) {
+      datamodel.search(filter).draw();
+    }
   });
 </script>
 
