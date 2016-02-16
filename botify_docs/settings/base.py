@@ -143,12 +143,10 @@ FINDER_IGNORE_PATTERNS = [
 ]
 
 # @TODO use the prod's real urls once they are released
-SWAGGER_API_URL = "https://gist.githubusercontent.com/pleasedontbelong/676d86f7ce11039d7f63/raw/0bd7bb82f86e0e5229db7b6b1bfc04e98a43dd23/public.swagger.json"
+SWAGGER_API_URL = "https://gist.githubusercontent.com/pleasedontbelong/676d86f7ce11039d7f63/raw/988705d580ec569542fd93ff70787ec51490b9a7/public.swagger.json"
 DATAMODEL_API_URL = "https://gist.githubusercontent.com/pleasedontbelong/d4d6a773c3dcbb6b525d/raw/d8ec201bf57c2aaf383e776a11608ec8846841f8/datamodel.json"
 # SWAGGER_API_URL = "https://api.botify.com/v1/swagger.json"
 # DATAMODEL_API_URL = "https://api.botify.com/v1/analyses/datamodel"
-
-
 
 
 PIPELINE = {
