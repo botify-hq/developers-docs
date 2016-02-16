@@ -256,6 +256,19 @@ html {
           .open-source-documentation__buton {
             a {
               text-decoration: none;
+
+              .botify-btn {
+                img {
+                  height: 32px;
+                  margin-right: 8px;
+                  vertical-align: middle;
+                }
+
+                span {
+                  vertical-align: middle;
+                  font-size: 20px;
+                }
+              }
             }
           }
         }

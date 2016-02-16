@@ -566,6 +566,15 @@ html body .main-content .main-content__body .open-source .open-source__menu .ope
 html body .main-content .main-content__body .open-source .open-source-documentation__buton a {
   text-decoration: none;
 }
+html body .main-content .main-content__body .open-source .open-source-documentation__buton a .botify-btn img {
+  height: 32px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+html body .main-content .main-content__body .open-source .open-source-documentation__buton a .botify-btn span {
+  vertical-align: middle;
+  font-size: 20px;
+}
 /* line 263, ../sass/main.scss */
 html body .main-content .main-content__body .hiring {
   padding-top: 75px;
