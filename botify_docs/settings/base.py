@@ -143,12 +143,10 @@ FINDER_IGNORE_PATTERNS = [
 ]
 
 # @TODO use the prod's real urls once they are released
-SWAGGER_API_URL = "https://gist.githubusercontent.com/pleasedontbelong/676d86f7ce11039d7f63/raw/0bd7bb82f86e0e5229db7b6b1bfc04e98a43dd23/public.swagger.json"
-DATAMODEL_API_URL = "https://gist.githubusercontent.com/pleasedontbelong/d4d6a773c3dcbb6b525d/raw/d8ec201bf57c2aaf383e776a11608ec8846841f8/datamodel.json"
+SWAGGER_API_URL = "https://gist.githubusercontent.com/pleasedontbelong/676d86f7ce11039d7f63/raw/988705d580ec569542fd93ff70787ec51490b9a7/public.swagger.json"
 # SWAGGER_API_URL = "https://api.botify.com/v1/swagger.json"
-# DATAMODEL_API_URL = "https://api.botify.com/v1/analyses/datamodel"
 
-
+DATAMODEL_API_URL = "https://api.botify.com/v1/analyses/datamodel"
 
 
 PIPELINE = {
@@ -189,8 +187,7 @@ PIPELINE = {
     'JAVASCRIPT': {
         'swagger_ui': {
             'source_filenames': (
-                'js/jquery/jquery.js',
-                'js/bootstrap/bootstrap.min.js',
+                'swagger-ui/dist/lib/jquery-1.8.0.min.js',
                 'swagger-ui/dist/lib/jquery.slideto.min.js',
                 'swagger-ui/dist/lib/jquery.wiggle.min.js',
                 'swagger-ui/dist/lib/jquery.ba-bbq.min.js',
@@ -199,7 +196,7 @@ PIPELINE = {
                 'swagger-ui/dist/lib/lodash.min.js',
                 'swagger-ui/dist/lib/backbone-min.js',
                 'swagger-ui/dist/swagger-ui.js',
-                'swagger-ui/dist/lib/highlight.7.3.pack.js',
+                'js/highlight/highlight.pack.js',
                 'swagger-ui/dist/lib/jsoneditor.min.js',
                 'swagger-ui/dist/lib/marked.js',
                 'swagger-ui/dist/lib/swagger-oauth.js'
