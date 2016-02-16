@@ -5,7 +5,7 @@ Botify API allows you to filter the dataset of URLs of your analysis and return 
 
 ## Endpoint
 
-- Operation: [[getUrls;reference#!/Analysis_getUrls]]
+- Operation: [[getUrls;reference#!/Analysis/getUrls]]
 - Path: `analyses/{username}/{project_slug}/{analysis_slug}/urls`
 - HTTP Verb: POST
 - Body : `Array<BQLQuery>`
