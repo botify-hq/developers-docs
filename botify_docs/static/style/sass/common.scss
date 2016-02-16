@@ -115,6 +115,12 @@ body {
             & > .active {
               & > a {
                 background-color: #776295;
+
+                @media(max-width: 767px) {
+                  background: transparent;
+                  color: #fff;
+                  font-weight: bold;
+                }
               }
             }
           }

@@ -14,5 +14,10 @@
 
 {% block extra_script %}
   <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    $(document).ready(function() {
+      $(".dropdown-toggle").dropdown();
+    });
+  </script>
 {% endblock %}
 

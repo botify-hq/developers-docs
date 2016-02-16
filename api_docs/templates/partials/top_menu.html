@@ -23,29 +23,72 @@
         <li class="{% ifequal properties.menu_item "reference" %}active{% endifequal %}">
           <a href="{% url 'reference' %}">Reference</a>
         </li>
+        <li class="{% ifequal properties.menu_item "datamodel" %}active{% endifequal %}">
+          <a href="{% url 'urls-datamodel' %}">URLs Datamodel</a>
+        </li>
         <li class="{% ifequal properties.menu_item "error-codes" %}active{% endifequal %}">
           <a href="{% url 'md-page' 'api/error-codes' %}">Error Codes</a>
         </li>
         <li class="{% ifequal properties.menu_item "rate-limit" %}active{% endifequal %}">
           <a href="{% url 'md-page' 'api/rate-limit' %}">Rate Limit</a>
         </li>
-        <li class="{% ifequal properties.menu_item "sdk" %}active{% endifequal %}">
-          <a href="{% url 'md-page' 'sdk' %}">SDK</a>
+        <li class="{% ifequal properties.menu_item "jobs" %}active{% endifequal %}">
+          <a href="{% url 'md-page' 'api/jobs' %}">Jobs</a>
         </li>
-        <li class="dropdown {% ifequal properties.menu_item "bql" %}active{% endifequal %}">
-          <a href="{% url 'md-page' 'bql' %}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">BQL <span class="caret"></span></a>
+        <li class="dropdown {% if properties.menu_item == "usage" or properties.breadcrumb.0 == "usage" %}active{% endif %}">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usage <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li class="{% ifequal properties.menu_item "usage" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'api/usage' %}">Usage</a>
+            </li>
+            <li class="{% ifequal properties.menu_item "usage-list-projects" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'api/usage/list-projects' %}">List Projects</a>
+            </li>
+            <li class="{% ifequal properties.menu_item "usage-list-analyses" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'api/usage/list-analyses' %}">List Analyses</a>
+            </li>
+            <li class="{% ifequal properties.menu_item "usage-get-url-detail" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'api/usage/get-url-detail' %}">Get URL Detail</a>
+            </li>
+            <li class="{% ifequal properties.menu_item "usage-query-urls" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'api/usage/query-urls' %}">Query URLs</a>
+            </li>
+            <li class="{% ifequal properties.menu_item "usage-aggregate-urls" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'api/usage/aggregate-urls' %}">Aggregate URLs</a>
+            </li>
+            <li class="{% ifequal properties.menu_item "usage-csv-export" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'api/usage/csv-export' %}">CSV Export</a>
+            </li>
+            <li class="{% ifequal properties.menu_item "usage-other-usages" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'api/usage/other-usages' %}">Other Usages</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown {% if properties.menu_item == "bql" or properties.breadcrumb.0 == "bql" %}active{% endif %}">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">BQL <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li class="{% ifequal properties.menu_item "bql" %}active{% endifequal %}">
-              <a href="{% url 'md-page' 'bql' %}">Getting started</a>
+              <a href="{% url 'md-page' 'api/bql' %}">BQL</a>
             </li>
-            <li class="{% ifequal properties.menu_item "urls-data-fetching" %}active{% endifequal %}">
-              <a href="{% url 'md-page' 'bql/urls-data-fetching' %}">Data Fetching</a>
+            <li class="{% ifequal properties.menu_item "bql-query" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'api/bql/bql-query' %}">BQLQuery</a>
             </li>
-            <li class="{% ifequal properties.menu_item "urls-data-aggregation" %}active{% endifequal %}">
-              <a href="{% url 'md-page' 'bql/urls-data-aggregation' %}">Data Aggregation</a>
+            <li class="{% ifequal properties.menu_item "bql-aggs-query" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'api/bql/bql-aggs-query' %}">BQLAggsQuery</a>
             </li>
-            <li class="{% ifequal properties.menu_item "urls-datamodel-introspection" %}active{% endifequal %}">
-              <a href="{% url 'md-page' 'bql/urls-datamodel-introspection' %}">Data Model Introspection</a>
+            <li class=" {% ifequal properties.menu_item "bql-filter" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'api/bql/bql-filter' %}">BQLFilter</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown {% if properties.menu_item == "sdks" or properties.breadcrumb.0 == "sdks" %}active{% endif %}">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SDKs <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li class="{% ifequal properties.menu_item "sdks" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'sdks' %}" target="_blank">SDKs</a>
+            </li>
+            <li>
+              <a href="https://github.com/botify-labs/botify-sdk-js" target="_blank">Javascript SDK</a>
             </li>
           </ul>
         </li>
