@@ -4,7 +4,7 @@ Botify API can returns your list of analyses of a given project.
 
 ## Endpoint
 
-- Operation: [[getAnalyses;reference#Analysis_getAnalyses]]
+- Operation: [[getAnalyses;reference#!/Analysis/getAnalyses]]
 - Path: `analyses/{username}/{project_slug}`
 - HTTP Verb: GET
 - Response: `Array<Analysis>`

@@ -36,8 +36,8 @@ Data Type | Value Type
 - `filters`: can be used in any [UrlsFilter](#urlsfilter)
 - `filters_exist`: can **only** be used with a predicate [exists](#exists-predicate) in a [UrlsFilter](#urlsfilter)
 - `select`: can be used in [UrlsQuery](#urlsquery) `fields`
-- `top_values`: can be used by [[getUrlsFieldTopValues;reference#Analysis_getUrlsFieldTopValues]]
-- `suggest`: can be used by [[getUrlsFieldSuggest;reference#Analysis_getUrlsFieldSuggest]]
+- `top_values`: can be used by [[getUrlsFieldTopValues;reference#!/Analysis/getUrlsFieldTopValues]]
+- `suggest`: can be used by [[getUrlsFieldSuggest;reference#!/Analysis/getUrlsFieldSuggest]]
 - agg:numerical
 - agg:categorical
 - **sort**: 

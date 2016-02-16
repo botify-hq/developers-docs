@@ -4,7 +4,7 @@ Using Botify API, you can aggregate URLs to compute metrics like sum of inlinks,
 
 ## Endpoint
 
-- Operation: [[getUrlsAggs;reference#Analysis_getUrlsAggs]]
+- Operation: [[getUrlsAggs;reference#!/Analysis/getUrlsAggs]]
 - Path: `analyses/{username}/{project_slug}/{analysis_slug}/urls/aggs`
 - HTTP Verb: POST
 - Body : `Array<UrlsAggsQuery>`
