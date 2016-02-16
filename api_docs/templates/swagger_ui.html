@@ -73,6 +73,8 @@
             hljs.highlightBlock(e)
           });
 
+          $('#resource_Analysis').addClass('active').find('.endpoints').css({'display': 'block'});
+
           addApiKeyAuthorization();
         },
         onFailure: function(data) {

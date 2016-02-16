@@ -1,3 +1,7 @@
+.parameter-content-type {
+	display: none;
+}
+
 #swagger-ui-container h1 {
 	padding-top: 0;
 }
@@ -27,6 +31,11 @@
 
 body .main-content .right-content .right-content__body .right-content__body-content table > tbody > tr td {
 	vertical-align: middle;
+}
+
+.swagger-section .swagger-ui-wrap .code,
+.swagger-section .swagger-ui-wrap ul#resources {
+	font-family: 'Titillium';
 }
 
 .swagger-section .swagger-ui-wrap ul#resources li.resource {
@@ -62,9 +71,35 @@ body .main-content .right-content .right-content__body .right-content__body-cont
 		}
 
 		div.content {
+			margin: 0 !important;
+			padding: 0 !important;
+			padding-bottom: 10px !important;
 			border: none !important;
 			border-radius: 0 !important;
-			margin: 0 !important;
+
+			h4 {
+				padding-top: 5px !important;
+			}
+
+			table {
+				.markdown p {
+					padding: 0;
+				}
+			}
+
+			.sandbox_header {
+				margin-bottom: 10px;
+			}
+
+			.response-class {
+				h4 {
+					margin-top: 10px;
+				}
+
+				.signature-nav {
+					padding: 0 !important;
+				}
+			}
 		}
 
 		div.heading h3 span.path a {
@@ -92,7 +127,7 @@ ul {
 	}
 
 	.model-signature pre {
-		max-height: 350px;
+		max-height: 400px;
 	}
 }
 
@@ -112,9 +147,17 @@ ul {
 }
 
 .endpoint {
-	border: 1px solid #c3d9ec !important;
+	border-bottom: 1px solid #c3d9ec !important;
 	& + .endpoint {
 		margin-top: 5px;
+	}
+}
+
+.endpoints {
+	padding: 0 !important;
+
+	.endpoint:last-child {
+		border-bottom: 0 !important;
 	}
 }
 
@@ -137,6 +180,7 @@ ul {
 	}
 
 	.httpMethod {
+		line-height: 22px;
 	  text-transform: uppercase;
 
 		&.get {
@@ -173,6 +217,7 @@ ul {
 	}
 }
 
+
 select {
   padding: 5px !important;
 	background: #fff !important;
@@ -206,6 +251,7 @@ pre {
 	padding: 0 !important;
 }
 
+.block pre,
 pre code {
   display: block !important;
   overflow-x: auto !important;
@@ -213,11 +259,6 @@ pre code {
   background: #251E2F !important;
   font-family: Menlo,Monaco,Consolas,"Courier New",monospace !important;
   font-size: 12px !important;
-}
-
-pre code,
-.hljs-tag,
-.hljs-subst {
   color: #f8f8f2 !important;
 }
 
