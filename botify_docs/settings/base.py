@@ -188,7 +188,6 @@ PIPELINE = {
         'swagger_ui': {
             'source_filenames': (
                 'swagger-ui/dist/lib/jquery-1.8.0.min.js',
-                'js/bootstrap/bootstrap.min.js',
                 'swagger-ui/dist/lib/jquery.slideto.min.js',
                 'swagger-ui/dist/lib/jquery.wiggle.min.js',
                 'swagger-ui/dist/lib/jquery.ba-bbq.min.js',
