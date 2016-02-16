@@ -10,7 +10,7 @@
       <div class="sidebar__group-item {% ifequal properties.menu_item "reference" %}active{% endifequal %}">
         <a href="{% url 'reference' %}">Reference</a>
       </div>
-      <div class="sidebar__group-item {% ifequal properties.menu_item "urls-datamodel" %}active{% endifequal %}">
+      <div class="sidebar__group-item {% ifequal properties.menu_item "datamodel" %}active{% endifequal %}">
         <a href="{% url 'urls-datamodel' %}">URLs Datamodel</a>
       </div>
       <div class="sidebar__group-item {% ifequal properties.menu_item "error-codes" %}active{% endifequal %}">
@@ -25,7 +25,7 @@
     </div>
   </div><!-- END SideBar Group -->
   <div class="sidebar__group open">
-    <div class="sidebar__group-header {% ifequal properties.menu_item "usage" %}active{% endifequal %}">
+    <div class="sidebar__group-header {% if properties.menu_item == "usage" or properties.breadcrumb.0 == "usage" %}active{% endif %}">
       <a href="{% url 'md-page' 'api/usage' %}">Usage</a>
     </div>
     <div class="sidebar__group-body">
@@ -53,7 +53,7 @@
     </div>
   </div><!-- END SideBar Group -->
   <div class="sidebar__group open">
-    <div class="sidebar__group-header {% ifequal properties.menu_item "bql" %}active{% endifequal %}">
+    <div class="sidebar__group-header {% if properties.menu_item == "bql" or properties.breadcrumb.0 == "bql" %}active{% endif %}">
       <a href="{% url 'md-page' 'api/bql' %}">BQL</a>
     </div>
     <div class="sidebar__group-body">
@@ -69,7 +69,7 @@
     </div>
   </div><!-- END SideBar Group -->
   <div class="sidebar__group open">
-    <div class="sidebar__group-header">
+    <div class="sidebar__group-header {% if properties.menu_item == "sdks" or properties.breadcrumb.0 == "sdks" %}active{% endif %}">
       <a href="{% url 'md-page' 'sdks' %}">SDKs</a>
     </div>
     <div class="sidebar__group-body">

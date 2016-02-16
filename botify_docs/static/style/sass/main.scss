@@ -151,13 +151,11 @@ html {
               h2 {
                 margin-left: -2px;
                 margin-bottom: 15px;
-                color: #685189;
-                font-family: 'Katahdin Round';
-                font-size: 16px;
-                text-transform: uppercase;
-
-                &:hover {
-                  text-decoration: underline;
+                a {
+                  color: #685189;
+                  font-family: 'Katahdin Round';
+                  font-size: 16px;
+                  text-transform: uppercase;
                 }
               }
             }
@@ -238,10 +236,12 @@ html {
               .open-source__item-title {
                 h2 {
                   margin-bottom: 15px;
-                  color: #a893c7;
-                  font-family: "Katahdin Round";
-                  font-size: 16px;
-                  text-transform: uppercase;
+                  a {
+                    color: #a893c7;
+                    font-family: "Katahdin Round";
+                    font-size: 16px;
+                    text-transform: uppercase;
+                  }
                 }
               }
 
@@ -250,6 +250,12 @@ html {
                 font-weight: bold;
                 line-height: 25px;
               }
+            }
+          }
+
+          .open-source-documentation__buton {
+            a {
+              text-decoration: none;
             }
           }
         }

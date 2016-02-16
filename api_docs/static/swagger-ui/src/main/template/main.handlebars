@@ -1,3 +1,4 @@
+{{!--
 <div class='info' id='api_info'>
   {{#if info}}
   <div class="info_title">{{info.title}}</div>
@@ -13,20 +14,28 @@
   {{#if info.license}}<div class='info_license'><a href='{{info.license.url}}'>{{info.license.name}}</a></div>{{/if}}
   {{/if}}
 </div>
-<div class='container' id='resources_container'>
+--}}
+<h1>Reference</h1>
+<form id='api_selector'>
+  <div class='input'>
+    <label for="input_apiKey">Your token here: </label>
+    <input placeholder="token" id="input_apiKey" name="apiKey" type="text"/>
+  </div>
+</form>
+<div id="message-bar" class="swagger-ui-wrap" data-sw-translate>&nbsp;</div>
+<div id='resources_container'>
   <ul id='resources'></ul>
-
+  {{!--
   <div class="footer">
     <h4 style="color: #999">[ <span style="font-variant: small-caps">base url</span>: {{basePath}}
     {{#if info.version}}
   , <span style="font-variant: small-caps" data-sw-translate>api version</span>: {{info.version}}
     {{/if}}]
-    {{!-- 
     {{#if validatorUrl}}
     <span style="float:right"><a href="{{validatorUrl}}/debug?url={{url}}"><img id="validator" src="{{validatorUrl}}?url={{url}}"></a>
     </span>
     {{/if}}
-    --}}
     </h4>
-    </div>
+  </div>
+  --}}
 </div>

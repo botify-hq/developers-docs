@@ -16,32 +16,35 @@
         <a href="/"><div class="botify-developer-logo"></div><a>
       </div>
     </div>
+    <div class="top-menu visible-xs visible-sm">
+      <div class="inner-wrapper">
+        <div class="col-xs-12 no-pad">
+          {% include "partials/top_menu.html" %}
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
     <div class="main-container">
       <div class="inner-wrapper">
         <div class="main-content">
-          <div class="top-menu col-xs-12 visible-xs visible-sm no-pad">
-            {% include "partials/top_menu.html" %}
-          </div>
           <div class="sidebar col-md-3 hidden-xs hidden-sm">
             <div class="sidebar__header">
               <a href="/">HOME</a>
             </div>
             {% include "partials/left_menu.html" %}
           </div>
-          <div class="right-content col-xs-12 col-xs-offset-0 col-md-7 col-md-offset-1">
+          <div class="right-content col-xs-12 col-xs-offset-0 col-md-9 col-md-offset-0">
             {% block breadcrumb %}
               <div class="right-content__breadcrumb">
                 <div class="col-xs-11 no-pad-r">
                   {% include "partials/breadcrumb.html" %}
                 </div>
+                <div class="clearfix"></div>
               </div>
             {% endblock %}
 
-            {% block right_header %}
-            {% endblock %}
-
             <div class="right-content__body">
-              <div class="col-xs-12 no-pad-r">
+              <div class="col-xs-12 no-pad">
                 <div class="right-content__body-content">
                   {% block right_content %}
                   {% endblock %}

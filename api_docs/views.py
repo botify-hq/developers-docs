@@ -35,7 +35,10 @@ class DatamodelView(TemplateView):
 
     def get_context_data(self, *args, **kwargs):
         return {
-            "datamodel_api_url": settings.DATAMODEL_API_URL
+            "datamodel_api_url": settings.DATAMODEL_API_URL,
+            "properties": {
+                "menu_item": "datamodel"
+            }
         }
 
 
@@ -44,5 +47,8 @@ class SwaggerUiView(TemplateView):
 
     def get_context_data(self, *args, **kwargs):
         return {
-            "api_url": settings.SWAGGER_API_URL
+            "api_url": settings.SWAGGER_API_URL,
+            "properties": {
+                "menu_item": "reference"
+            }
         }

@@ -11,10 +11,22 @@ body {
   background: -o-linear-gradient(left, rgba(104, 81, 137, 0.9), rgba(104, 81, 137, 0.9)), url("../images/commun-pattern.png");
   background: linear-gradient(to right, rgba(104, 81, 137, 0.9), rgba(104, 81, 137, 0.9)), url("../images/commun-pattern.png");
 
+  .container {
+    width: calc(100% - 30px);
+
+    @media(max-width: 767px) {
+      padding: 0;
+    }
+  }
+
   .inner-wrapper {
     width: 90%;
     height: inherit;
     margin: auto;
+
+    @media(max-width: 767px) {
+      width: 100%;
+    }
   }
 
   .header {
@@ -28,6 +40,8 @@ body {
   }
 
   .top-menu {
+    margin-top: 30px;
+
     .botify-developer-logo {
       width: 241px;
       height: 50px;
@@ -35,40 +49,72 @@ body {
     }
 
     .navbar-custom {
-      padding-bottom: 20px;
+      margin-bottom: 0;
       border: 0;
-      background: #776295;
+      background: transparent;
 
       .icon-bar {
         background-color: #fff;
       }
 
+      .navbar-collapse {
+        border: 0;
+        box-shadow: none;
+      }
+
+      @media(min-width: 768px) {
+        .container-fluid {
+          padding: 0;
+
+          .navbar-header {
+            padding: 0 15px;
+          }
+
+          .navbar-collapse {
+            padding: 65px 0 0;
+          }
+        }
+      }
+
       .navbar-nav {
-        li {
+        > li {
           &.active {
-            a {
+            > a {
               color: #777;
             }
           }
 
-          &:not(.active) a {
+          &:not(.active) > a {
             color: #fff;
 
             &:hover {
-              color: #333;
+              color: #C6B5DD;
             }
           }
         }
 
         .open {
+          > a {
+            color: #333 !important;
+          }
+
           .dropdown-menu {
             li:not(.active) {
               a {
                 color: #fff;
-
-                &:hover {
+                @media(min-width: 768px) {
                   color: #333;
                 }
+
+                &:hover {
+                  color: #C6B5DD;
+                }
+              }
+            }
+
+            & > .active {
+              & > a {
+                background-color: #776295;
               }
             }
           }
@@ -78,13 +124,17 @@ body {
   }
 
   .main-content {
+    display: flex;
     margin-top: 40px;
     background-color: #fff;
 
+    @media(max-width: 991px) {
+      display: block;
+    }
+
     .sidebar {
-      padding-top: 80px;
-      padding-bottom: 30px;
-      padding-left: 60px;
+      max-width: 315px;
+      padding: 80px 0 100px 60px;
       background: #f8f5f5;
 
       .sidebar__header {
@@ -114,6 +164,12 @@ body {
             a {
               font-weight: bold;
               color: #3e3a3a;
+            }
+
+            &.active {
+              a {
+                color: #685189 !important;
+              }
             }
           }
 
@@ -169,6 +225,7 @@ body {
       .right-content__breadcrumb {
         .breadcrumb {
           background-color: transparent;
+          margin: 0;
 
           a {
             color: #c1b3b3;
@@ -177,16 +234,10 @@ body {
       }
 
       .right-content__header {
-        margin-bottom: 15px;
-
-        .right-content__title {
-          padding-bottom: 25px;
-          padding-left: 15px;
-          border-bottom: 1px solid #e8e1f1;
-          color: #c6b5dd;
-          font-family: "Katahdin Round";
-          font-size: 50px;
-          text-transform: uppercase;
+        @media(max-width: 991px) {
+          > .col-xs-12 {
+            padding-top: 0 !important;
+          }
         }
 
         .right-content__icon {
@@ -197,18 +248,29 @@ body {
       }
 
       .right-content__body {
-        padding-bottom: 100px;
+        padding: 0 40px 100px 15px;
 
         .right-content__body-content {
-          padding-left: 15px;
+
+          @media(max-width: 991px) {
+            padding-left: 0;
+          }
 
           h1, h2, h3, h4, h5 {
             color: #ce4a57;
-            font-weight: bold;
+            font-family: "Katahdin Round";
+            text-transform: uppercase;
           }
 
           h1 {
-            font-size: 18px;
+            padding-bottom: 25px;
+            padding-left: 15px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e8e1f1;
+            color: #c6b5dd;
+            font-family: "Katahdin Round";
+            font-size: 50px;
+            text-transform: uppercase;
           }
 
           h2 {
@@ -241,6 +303,20 @@ body {
             }
           }
 
+          .pagination {
+            .active {
+              a {
+                background-color: #C6B5DD;
+                border-color: #C6B5DD;
+              }
+            }
+
+            a {
+              color: #776295;
+              outline: 0;
+            }
+          }
+
           p + h2,
           p + h3,
           p + h4,
@@ -252,8 +328,13 @@ body {
           }
 
           p + p,
+          pre + h2,
           pre + h3,
-          h3 + pre {
+          pre + h4,
+          pre + h5,
+          pre + p,
+          h3 + pre,
+          table + p {
             margin-top: 10px;
           }
 
@@ -263,16 +344,70 @@ body {
             padding: 10px 0;
           }
 
-          th {
-            font-weight: bold;
-          }
 
-          th, td {
-            padding: 5px 30px 5px 0;
+          table {
+            border-collapse: collapse;
+
+            th {
+              font-weight: bold;
+            }
+
+            th,
+            td {
+              border: 1px solid #ddd;
+              background-color: #fff;
+            }
+
+            & > thead > tr > th,
+            & > tbody > tr > th,
+            & > tfoot > tr > th,
+            & > thead > tr > td,
+            & > tbody > tr > td,
+            & > tfoot > tr > td {
+              padding: 8px;
+              line-height: 1.42857143;
+              vertical-align: top;
+              border-top: 1px solid #ddd;
+            }
+
+            & > thead > tr > th {
+              vertical-align: bottom;
+              border-bottom: 2px solid #ddd;
+            }
+
+            & > tbody > tr:nth-child(odd) {
+              background-color: #f9f9f9;
+
+              td {
+                background-color: #f9f9f9;
+              }
+            }
           }
 
           img {
             width: 100%;
+          }
+        }
+      }
+
+      .hljs-string,
+      .hljs-attr {
+        line-height: 20px;
+      }
+
+      #datamodel {
+        .datamodel-table {
+          margin-bottom: 0;
+
+          td, th {
+            word-break: break-all;
+            min-width: 120px;
+          }
+        }
+
+        @media(max-width: 767px) {
+          .dataTables_length {
+            padding: 10px 0;
           }
         }
       }

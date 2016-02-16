@@ -9,12 +9,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   -webkit-margin-after: 0em;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
-/* line 17, ../sass/_reset.scss */
+/* line 15, ../sass/_reset.scss */
 article,
 aside,
 details,
@@ -29,36 +27,36 @@ section {
   display: block;
 }
 
-/* line 31, ../sass/_reset.scss */
+/* line 29, ../sass/_reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 35, ../sass/_reset.scss */
+/* line 33, ../sass/_reset.scss */
 ol,
 ul {
   list-style: none;
 }
 
-/* line 40, ../sass/_reset.scss */
+/* line 38, ../sass/_reset.scss */
 blockquote,
 q {
   quotes: none;
 }
 
-/* line 46, ../sass/_reset.scss */
+/* line 44, ../sass/_reset.scss */
 blockquote:before, blockquote:after {
   content: '';
   content: none;
 }
 
-/* line 54, ../sass/_reset.scss */
+/* line 52, ../sass/_reset.scss */
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 61, ../sass/_reset.scss */
+/* line 59, ../sass/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -462,36 +460,35 @@ html body .main-content .main-content__body .main-info .main-info__item .main-in
 html body .main-content .main-content__body .main-info .main-info__item .main-info__item-title h2 {
   margin-left: -2px;
   margin-bottom: 15px;
+}
+/* line 154, ../sass/main.scss */
+html body .main-content .main-content__body .main-info .main-info__item .main-info__item-title h2 a {
   color: #685189;
   font-family: 'Katahdin Round';
   font-size: 16px;
   text-transform: uppercase;
 }
-/* line 159, ../sass/main.scss */
-html body .main-content .main-content__body .main-info .main-info__item .main-info__item-title h2:hover {
-  text-decoration: underline;
-}
-/* line 165, ../sass/main.scss */
+/* line 163, ../sass/main.scss */
 html body .main-content .main-content__body .main-info .main-info__item .main-info__item-description {
   color: #7b6f6f;
   line-height: 20px;
 }
-/* line 170, ../sass/main.scss */
+/* line 168, ../sass/main.scss */
 html body .main-content .main-content__body .main-info .main-info__item.getting-started {
   background: url("../images/icons/flag-icon.png") no-repeat;
   background-position: 0 0;
 }
-/* line 175, ../sass/main.scss */
+/* line 173, ../sass/main.scss */
 html body .main-content .main-content__body .main-info .main-info__item.api-reference {
   background: url("../images/icons/case-icon.png") no-repeat;
   background-position: 0 0;
 }
-/* line 180, ../sass/main.scss */
+/* line 178, ../sass/main.scss */
 html body .main-content .main-content__body .main-info .main-info__item.our-sdk {
   background: url("../images/icons/heart-icon.png") no-repeat;
   background-position: 0 0;
 }
-/* line 187, ../sass/main.scss */
+/* line 185, ../sass/main.scss */
 html body .main-content .main-content__body .open-source {
   padding-top: 84px;
   padding-bottom: 135px;
@@ -501,7 +498,7 @@ html body .main-content .main-content__body .open-source {
   background-position: center -16px;
   border-top: 16px solid rgba(104, 81, 137, 0.3);
 }
-/* line 196, ../sass/main.scss */
+/* line 194, ../sass/main.scss */
 html body .main-content .main-content__body .open-source .open-source__buton {
   display: flex;
   align-items: center;
@@ -514,7 +511,7 @@ html body .main-content .main-content__body .open-source .open-source__buton {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 208, ../sass/main.scss */
+/* line 206, ../sass/main.scss */
 html body .main-content .main-content__body .open-source .open-source__buton .heart-icon {
   display: inline-block;
   height: 57px;
@@ -523,34 +520,37 @@ html body .main-content .main-content__body .open-source .open-source__buton .he
   background: url("../images/icons/heart-full-icon.png") no-repeat;
 }
 @media (max-width: 767px) {
-  /* line 196, ../sass/main.scss */
+  /* line 194, ../sass/main.scss */
   html body .main-content .main-content__body .open-source .open-source__buton {
     flex-direction: column;
   }
-  /* line 219, ../sass/main.scss */
+  /* line 217, ../sass/main.scss */
   html body .main-content .main-content__body .open-source .open-source__buton .heart-icon {
     margin: 10px 0;
   }
 }
-/* line 226, ../sass/main.scss */
+/* line 224, ../sass/main.scss */
 html body .main-content .main-content__body .open-source .open-source__menu {
   margin-bottom: 70px;
 }
-/* line 229, ../sass/main.scss */
+/* line 227, ../sass/main.scss */
 html body .main-content .main-content__body .open-source .open-source__menu .open-source__item {
   padding-top: 10px;
   background: url("../images/icons/tile-icon.png") no-repeat;
   background-position: right top;
 }
 @media (max-width: 991px) {
-  /* line 229, ../sass/main.scss */
+  /* line 227, ../sass/main.scss */
   html body .main-content .main-content__body .open-source .open-source__menu .open-source__item {
     margin-bottom: 20px;
   }
 }
-/* line 239, ../sass/main.scss */
+/* line 237, ../sass/main.scss */
 html body .main-content .main-content__body .open-source .open-source__menu .open-source__item .open-source__item-title h2 {
   margin-bottom: 15px;
+}
+/* line 239, ../sass/main.scss */
+html body .main-content .main-content__body .open-source .open-source__menu .open-source__item .open-source__item-title h2 a {
   color: #a893c7;
   font-family: "Katahdin Round";
   font-size: 16px;
@@ -563,6 +563,10 @@ html body .main-content .main-content__body .open-source .open-source__menu .ope
   line-height: 25px;
 }
 /* line 257, ../sass/main.scss */
+html body .main-content .main-content__body .open-source .open-source-documentation__buton a {
+  text-decoration: none;
+}
+/* line 263, ../sass/main.scss */
 html body .main-content .main-content__body .hiring {
   padding-top: 75px;
   padding-bottom: 50px;
@@ -571,7 +575,7 @@ html body .main-content .main-content__body .hiring {
   background-repeat: no-repeat;
 }
 @media (max-width: 991px) {
-  /* line 257, ../sass/main.scss */
+  /* line 263, ../sass/main.scss */
   html body .main-content .main-content__body .hiring {
     padding-bottom: 325px;
     background-size: 80%;
@@ -579,7 +583,7 @@ html body .main-content .main-content__body .hiring {
   }
 }
 @media (max-width: 767px) {
-  /* line 257, ../sass/main.scss */
+  /* line 263, ../sass/main.scss */
   html body .main-content .main-content__body .hiring {
     padding-bottom: 185px;
     background-size: 300px;
@@ -587,18 +591,18 @@ html body .main-content .main-content__body .hiring {
   }
 }
 @media (min-width: 992px) {
-  /* line 257, ../sass/main.scss */
+  /* line 263, ../sass/main.scss */
   html body .main-content .main-content__body .hiring {
     background-position: 140% bottom;
   }
 }
 @media (min-width: 1200px) {
-  /* line 257, ../sass/main.scss */
+  /* line 263, ../sass/main.scss */
   html body .main-content .main-content__body .hiring {
     background-position: 105% bottom;
   }
 }
-/* line 284, ../sass/main.scss */
+/* line 290, ../sass/main.scss */
 html body .main-content .main-content__body .hiring .hiring__title {
   margin-bottom: 10px;
   color: #a0d8d5;
@@ -607,7 +611,7 @@ html body .main-content .main-content__body .hiring .hiring__title {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 293, ../sass/main.scss */
+/* line 299, ../sass/main.scss */
 html body .main-content .main-content__body .hiring .hiring__description {
   margin-bottom: 40px;
   color: #7b6f6f;

@@ -1,0 +1,326 @@
+.parameter-content-type {
+	display: none;
+}
+
+#swagger-ui-container h1 {
+	padding-top: 0;
+}
+
+.swagger-section #api_selector {
+	float: none;
+
+	.input {
+		margin-bottom: 10px;
+	}
+
+	label {
+		font-weight: normal;
+	}
+
+	input {
+		width: 300px !important;
+	}
+}
+
+#resource_Analysis .heading {
+	padding: 10px 0 0;
+	h2 {
+		float: left !important;
+	}
+}
+
+body .main-content .right-content .right-content__body .right-content__body-content table > tbody > tr td {
+	vertical-align: middle;
+}
+
+.swagger-section .swagger-ui-wrap .code,
+.swagger-section .swagger-ui-wrap ul#resources {
+	font-family: 'Titillium';
+}
+
+.swagger-section .swagger-ui-wrap ul#resources li.resource {
+	ul.endpoints li.endpoint ul.operations li.operation.get div.heading {
+		background-color: #fff;
+	  border: 1px solid transparent;
+	}
+
+	div.heading ul.options {
+		 margin: 0 !important;
+		 li a {
+			font-size: 14px;
+		}
+	}
+
+	ul.endpoints li.endpoint ul.operations li.operation {
+		margin: 0;
+
+		&.get {
+			div.heading {
+				h3 span.http_method a {
+					background-color: #6D578E;
+				}
+			}
+			div.content {
+				background: #fff;
+			}
+		}
+
+		div.heading {
+			background-color: #fff !important;
+			border: 1px solid transparent !important;
+		}
+
+		div.content {
+			margin: 0 !important;
+			padding: 0 !important;
+			padding-bottom: 10px !important;
+			border: none !important;
+			border-radius: 0 !important;
+
+			h4 {
+				padding-top: 5px !important;
+			}
+
+			table {
+				.markdown p {
+					padding: 0;
+				}
+			}
+
+			.sandbox_header {
+				margin-bottom: 10px;
+			}
+
+			.response-class {
+				h4 {
+					margin-top: 10px;
+				}
+
+				.signature-nav {
+					padding: 0 !important;
+				}
+			}
+		}
+
+		div.heading h3 span.path a {
+			font-size: 12px;
+		}
+	}
+}
+
+ul {
+	&#resources, &.endpoints, &.signature-nav, &.options {
+		list-style: none !important;
+	}
+
+	&.operations {
+		padding: 0 !important;
+	}
+}
+.swagger-section .swagger-ui-wrap ul#resources li.resource div.heading h2 a,
+.swagger-section .swagger-ui-wrap ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.content h4 {
+	color: #776295;
+}
+.swagger-section .swagger-ui-wrap {
+	.body-textarea {
+		width: 200px;
+	}
+
+	.model-signature pre {
+		max-height: 400px;
+	}
+}
+
+.swagger-btn {
+  padding: 6px 8px !important;
+  color: #fff !important;
+  font-size: 13px !important;
+  font-weight: bold;
+  text-align: center;
+  background: #a07cd5;
+  border-bottom: 4px solid #956fc7;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 0 !important;
+  outline: 0;
+  margin-right: 10px;
+}
+
+.endpoint {
+	border-bottom: 1px solid #c3d9ec !important;
+	& + .endpoint {
+		margin-top: 5px;
+	}
+}
+
+.endpoints {
+	padding: 0 !important;
+
+	.endpoint:last-child {
+		border-bottom: 0 !important;
+	}
+}
+
+.topHeading {
+	padding: 5px;
+
+	.httpMethod,
+	.operationId {
+		display: inline-block;
+
+		a {
+			color: #000;
+			padding: 3px 5px;
+	    display: inline-block;
+	    min-width: 50px;
+	    text-align: center;
+	    border-radius: 5px;
+	    font-weight: bold;
+		}
+	}
+
+	.httpMethod {
+		line-height: 22px;
+	  text-transform: uppercase;
+
+		&.get {
+			a {
+				color: #fff !important;
+				background: #776295;
+			}
+		}
+
+		&.post {
+			a {
+				color: #fff !important;
+				background: #5DDA8D;
+			}
+		}
+	}
+
+	.operationId {
+		a {
+			color: #000 !important;
+		}
+	}
+
+}
+.content {
+	.path {
+		h3 {
+			a {
+				font-family: helvetica;
+				font-size: 13px !important;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+
+select {
+  padding: 5px !important;
+	background: #fff !important;
+  border: none !important;
+  border: solid 2px #c9c9c9 !important;
+  transition: border 0.3s !important;
+  outline: 0 !important;
+}
+
+input[type="text"] {
+	width: 200px !important;
+  padding: 10px !important;
+  border: none !important;
+  border-bottom: solid 2px #C6B5DD !important;
+  transition: border 0.3s !important;
+  outline: 0 !important;
+}
+input[type="text"]:focus,
+input[type="text"].focus {
+  border-bottom: solid 2px #776295 !important;
+}
+
+
+/*
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+
+pre {
+	padding: 0 !important;
+}
+
+.block pre,
+pre code {
+  display: block !important;
+  overflow-x: auto !important;
+  padding: 0.5em !important;
+  background: #251E2F !important;
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace !important;
+  font-size: 12px !important;
+  color: #f8f8f2 !important;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.attribute {
+  color: #f92672 !important;
+  line-height: 20px !important;
+}
+
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.value .integer, .value .number, .integer, .number {
+	color: greenyellow !important;
+}
+
+.value .string, .string {
+	color: darkturquoise !important;
+}
+
+.value .date, .date {
+	color: darkorange !important;
+}
+
+.value .boolean, .value .literal, .boolean, .literal {
+  color: deeppink !important;
+}
