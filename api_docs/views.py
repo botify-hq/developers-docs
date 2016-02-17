@@ -37,7 +37,9 @@ class DatamodelView(TemplateView):
         return {
             "datamodel_api_url": settings.DATAMODEL_API_URL,
             "properties": {
-                "menu_item": "datamodel"
+                "menu_item": "urls-datamodel",
+                "breadcrumb": [],
+                "title": "URLs Datamodel"
             }
         }
 
@@ -49,6 +51,8 @@ class SwaggerUiView(TemplateView):
         return {
             "api_url": settings.SWAGGER_API_URL,
             "properties": {
-                "menu_item": "reference"
+                "menu_item": "reference",
+                "breadcrumb": [],
+                "title": "Reference"
             }
         }
