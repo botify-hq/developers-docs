@@ -73,7 +73,9 @@
             hljs.highlightBlock(e)
           });
 
-          $('#resource_Analysis').addClass('active').find('.endpoints').css({'display': 'block'});
+          $('.resource').addClass('active')
+            .find('.endpoints')
+            .css({'display': 'block'});
 
           $('[data-toggle="tooltip"]').tooltip({
             html: true,
