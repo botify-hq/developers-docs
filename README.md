@@ -74,4 +74,12 @@ And then open your brower at http://localhost:8001/_output/
 
 
 ### Deploy Production
-@TODO How to deploy to a s3 bucket
+You need to have AWS environment variables to be able to deploy. You can add the following two lignes in your `~/.bashrc`
+```SH
+export AWS_ACCESS_KEY_ID=xxxxxxxx
+export AWS_SECRET_ACCESS_KEY=xxxxxxxx
+```
+Then run the deploy prod command **within a virtual env**.
+```SH
+./script/deploy_prod
+# => answer 'yes'
