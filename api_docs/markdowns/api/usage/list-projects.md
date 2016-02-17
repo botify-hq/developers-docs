@@ -4,7 +4,7 @@ Botify API can return the list of projects for a given user.
 
 ## Endpoint
 
-- Operation: [[getProjects;reference#!/Project/getProjects]]
+- Operation: [[getProjects;reference#/Project/getProjects]]
 - Path: `analyses/{username}/{project_slug}`
 - HTTP Verb: GET
 - Response: `Array<Project>`

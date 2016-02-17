@@ -4,7 +4,7 @@ Botify API allows you to get in information collected by Botify on analysed URLs
 
 ## Endpoint
 
-- Operation: [[getUrlDetail;reference#!/Analysis/getUrlDetail]]
+- Operation: [[getUrlDetail;reference#/Analysis/getUrlDetail]]
 - Path: `analyses/{username}/{project_slug}/{analysis_slug}/urls/{url}`
 - HTTP Verb: GET
 - Response: `Object`
