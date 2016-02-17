@@ -1600,8 +1600,8 @@ pre code {
 .string {
   color: darkturquoise !important;
 }
-.value .date,
-.date {
+.value .datetime,
+.datetime {
   color: darkorange !important;
 }
 .value .boolean,
