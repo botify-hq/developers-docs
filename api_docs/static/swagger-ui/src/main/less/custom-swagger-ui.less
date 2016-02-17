@@ -64,9 +64,6 @@ body .main-content .right-content .right-content__body .right-content__body-cont
 					background-color: #6D578E;
 				}
 			}
-			div.content {
-				background: #fff;
-			}
 		}
 
 		div.heading {
@@ -80,6 +77,7 @@ body .main-content .right-content .right-content__body .right-content__body-cont
 			padding-bottom: 10px !important;
 			border: none !important;
 			border-radius: 0 !important;
+			background-color: #fff !important;
 
 			h4 {
 				padding-top: 5px !important;
@@ -253,6 +251,12 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 
 pre {
 	padding: 0 !important;
+	border: none !important;
+	background-color: transparent !important;
+
+	&:hover {
+		background-color: transparent !important;
+	}
 }
 
 .block pre,
