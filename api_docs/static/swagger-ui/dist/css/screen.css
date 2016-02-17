@@ -1462,9 +1462,8 @@ ul.operations {
 }
 .content .path h3 a {
   font-family: helvetica;
-  font-size: 14px !important;
+  font-size: 13px !important;
   font-weight: bold;
-  text-transform: lowercase;
 }
 select {
   padding: 5px !important;
