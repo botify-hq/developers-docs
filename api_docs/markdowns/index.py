@@ -7,7 +7,8 @@ PAGES = [
         "properties": {
             "menu_item": "introduction",
             "breadcrumb": [],
-            "title": "Getting Started"
+            "title": "Getting Started",
+            "description": "Getting started with the Botify API."
         }
     },
     {
@@ -17,7 +18,8 @@ PAGES = [
         "properties": {
             "menu_item": "authentication",
             "breadcrumb": [],
-            "title": "Authentication"
+            "title": "Authentication",
+            "description": "Botify API, Authentication"
         }
     },
     {
@@ -27,7 +29,8 @@ PAGES = [
         "properties": {
             "menu_item": "error-codes",
             "breadcrumb": [],
-            "title": "Error Codes"
+            "title": "Error Codes",
+            "description": "Botify API, Errors Codes list"
         }
     },
     {
@@ -37,7 +40,8 @@ PAGES = [
         "properties": {
             "menu_item": "rate-limit",
             "breadcrumb": [],
-            "title": "Rate Limit"
+            "title": "Rate Limit",
+            "description": "Botify API, Rate Limit"
         }
     },
     {
@@ -47,7 +51,8 @@ PAGES = [
         "properties": {
             "menu_item": "jobs",
             "breadcrumb": [],
-            "title": "Jobs"
+            "title": "Jobs",
+            "description": "Botify API, Jobs workflow"
         }
     },
     # Usage
@@ -58,7 +63,8 @@ PAGES = [
         "properties": {
             "menu_item": "usage",
             "breadcrumb": [],
-            "title": "Usage"
+            "title": "Usage",
+            "description": "Botify API Usages"
         }
     },
     {
@@ -68,7 +74,8 @@ PAGES = [
         "properties": {
             "menu_item": "usage-list-projects",
             "breadcrumb": ["usage"],
-            "title": "List projects"
+            "title": "List projects",
+            "description": "List projects with Botify API"
         }
     },
     {
@@ -78,7 +85,8 @@ PAGES = [
         "properties": {
             "menu_item": "usage-list-analyses",
             "breadcrumb": ["usage"],
-            "title": "List analyses"
+            "title": "List analyses",
+            "description": "List analyses with Botify API"
         }
     },
     {
@@ -88,7 +96,8 @@ PAGES = [
         "properties": {
             "menu_item": "usage-get-url-detail",
             "breadcrumb": ["usage"],
-            "title": "Get URL Detail"
+            "title": "Get URL Detail",
+            "description": "Get detail on a given URL with Botify API"
         }
     },
     {
@@ -98,7 +107,8 @@ PAGES = [
         "properties": {
             "menu_item": "usage-query-urls",
             "breadcrumb": ["usage"],
-            "title": "Query URLs"
+            "title": "Query URLs",
+            "description": "Query URLs with Botify API"
         }
     },
     {
@@ -108,7 +118,8 @@ PAGES = [
         "properties": {
             "menu_item": "usage-aggregate-urls",
             "breadcrumb": ["usage"],
-            "title": "Aggregate URLs"
+            "title": "Aggregate URLs",
+            "description": "Aggregate URLs with Botify API"
         }
     },
     {
@@ -118,7 +129,8 @@ PAGES = [
         "properties": {
             "menu_item": "usage-csv-export",
             "breadcrumb": ["usage"],
-            "title": "CSV Export"
+            "title": "CSV Export",
+            "description": "Make a CSV Export with Botify API"
         }
     },
     {
@@ -128,7 +140,8 @@ PAGES = [
         "properties": {
             "menu_item": "usage-other-usages",
             "breadcrumb": ["usage"],
-            "title": "Other usages"
+            "title": "Other usages",
+            "description": "Botify API, others usages"
         }
     },
     # BQL
@@ -139,7 +152,8 @@ PAGES = [
         "properties": {
             "menu_item": "bql",
             "breadcrumb": [],
-            "title": "Botify Query DSL"
+            "title": "Botify Query Language",
+            "description": "Botify API, Botify Query Language (BQL) introduction"
         }
     },
     {
@@ -149,7 +163,8 @@ PAGES = [
         "properties": {
             "menu_item": "bql-query",
             "breadcrumb": ["bql"],
-            "title": "BQLQuery"
+            "title": "BQLQuery",
+            "description": "Botify API, BQLQuery Object Reference"
         }
     },
     {
@@ -159,7 +174,8 @@ PAGES = [
         "properties": {
             "menu_item": "bql-aggs-query",
             "breadcrumb": ["bql"],
-            "title": "BQLAggsQuery"
+            "title": "BQLAggsQuery",
+            "description": "Botify API, BQLAggsQuery Object Reference"
         }
     },
     {
@@ -169,7 +185,8 @@ PAGES = [
         "properties": {
             "menu_item": "bql-filter",
             "breadcrumb": ["bql"],
-            "title": "BQLFilter"
+            "title": "BQLFilter",
+            "description": "Botify API, BQLFilter Object Reference"
         }
     },
     # SDKs
@@ -180,7 +197,8 @@ PAGES = [
         "properties": {
             "menu_item": "sdks",
             "breadcrumb": [],
-            "title": "SDKs"
+            "title": "SDKs",
+            "description": "Botify API, SDKs"
         }
     },
 ]

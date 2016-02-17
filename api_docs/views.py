@@ -39,7 +39,8 @@ class DatamodelView(TemplateView):
             "properties": {
                 "menu_item": "urls-datamodel",
                 "breadcrumb": [],
-                "title": "URLs Datamodel"
+                "title": "URLs Datamodel",
+                "description": "Botify API, URLs Datamodel"
             }
         }
 
@@ -53,6 +54,7 @@ class SwaggerUiView(TemplateView):
             "properties": {
                 "menu_item": "reference",
                 "breadcrumb": [],
-                "title": "Reference"
+                "title": "Reference",
+                "description": "Botify API Reference"
             }
         }
