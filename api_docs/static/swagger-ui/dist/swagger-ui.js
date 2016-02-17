@@ -301,7 +301,7 @@ Handlebars.registerHelper('definitionJSON', function(param) {
 
 
 this["Handlebars"]["templates"]["main"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-  return "<h1>Reference</h1>\n<form id='api_selector'>\n  <div class='input'>\n    <label for=\"input_apiKey\">Your token here: </label>\n    <input placeholder=\"token\" id=\"input_apiKey\" name=\"apiKey\" type=\"text\"/>\n  </div>\n</form>\n<div id=\"message-bar\" class=\"swagger-ui-wrap\" data-sw-translate>&nbsp;</div>\n<div id='resources_container'>\n  <ul id='resources'></ul>\n</div>\n";
+  return "<form id='api_selector'>\n  <div class='input'>\n    <label for=\"input_apiKey\">Your token here: </label>\n    <input placeholder=\"token\" id=\"input_apiKey\" name=\"apiKey\" type=\"text\"/>\n  </div>\n</form>\n<div id=\"message-bar\" class=\"swagger-ui-wrap\" data-sw-translate>&nbsp;</div>\n<div id='resources_container'>\n  <ul id='resources'></ul>\n</div>\n";
 },"useData":true});
 this["Handlebars"]["templates"]["operation"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
   return "deprecated";
