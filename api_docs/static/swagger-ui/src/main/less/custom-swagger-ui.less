@@ -10,10 +10,48 @@
 	float: none;
 
 	.input {
-		margin-bottom: 10px;
+		position: fixed;
+		top: 15px;
+		right: 7%;
+    width: 270px;
 
-		label {
-			font-weight: bold;
+    @media(max-width: 992px) {
+      right: 7.2%;
+    }
+
+    @media(max-width: 767px) {
+      right: 2%;
+    }
+
+		.show-hide-button {
+			background: #C6B5DD;
+	    color: #fff;
+	    border-color: #C6B5DD;
+	    border-bottom-left-radius: 0;
+	    border-bottom-right-radius: 0;
+	    float: right;
+		}
+
+		.token-panel {
+			border: solid 2px #C6B5DD !important;
+			padding: 10px;
+			background: #fff;
+
+			input {
+				width: 100% !important;
+				border: solid 2px #C6B5DD !important;
+				padding: 10px !important;
+				transition: 0.5s all !important;
+
+				&.error {
+					border-bottom-color: #E45F5F !important;
+					background-color: rgba(241, 194, 194, 0.1);
+				}
+			}
+
+			p {
+				line-height: 20px !important;
+			}
 		}
 	}
 
