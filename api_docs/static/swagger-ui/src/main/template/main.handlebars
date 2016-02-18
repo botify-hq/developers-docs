@@ -15,11 +15,16 @@
   {{/if}}
 </div>
 --}}
-<h1>Reference</h1>
 <form id='api_selector'>
-  <div class='input'>
-    <label for="input_apiKey">Your token here: </label>
-    <input placeholder="token" id="input_apiKey" name="apiKey" type="text"/>
+  <div class='authenticatePanel open initialPosition'>
+    <button type="button" class="btn btn-default show-hide-button">
+      Authenticate
+    </button>
+    <div class="clearfix"></div>
+    <div class="token-panel">
+      <p>You must provide your token in order to test the API</p>
+      <input class="form-control" placeholder="Put your API's Token Here" id="input_apiKey" name="apiKey" type="text" >
+    </div>
   </div>
 </form>
 <div id="message-bar" class="swagger-ui-wrap" data-sw-translate>&nbsp;</div>

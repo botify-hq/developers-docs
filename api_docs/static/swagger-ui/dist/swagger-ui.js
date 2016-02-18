@@ -301,7 +301,7 @@ Handlebars.registerHelper('definitionJSON', function(param) {
 
 
 this["Handlebars"]["templates"]["main"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-  return "<h1>Reference</h1>\n<form id='api_selector'>\n  <div class='input'>\n    <label for=\"input_apiKey\">Your token here: </label>\n    <input placeholder=\"token\" id=\"input_apiKey\" name=\"apiKey\" type=\"text\"/>\n  </div>\n</form>\n<div id=\"message-bar\" class=\"swagger-ui-wrap\" data-sw-translate>&nbsp;</div>\n<div id='resources_container'>\n  <ul id='resources'></ul>\n</div>\n";
+  return "<form id='api_selector'>\n  <div class='authenticatePanel open initialPosition'>\n    <button type=\"button\" class=\"btn btn-default show-hide-button\">\n      Authenticate\n    </button>\n    <div class=\"clearfix\"></div>\n    <div class=\"token-panel\">\n      <p>You must provide your token in order to test the API</p>\n      <input class=\"form-control\" placeholder=\"Put your API's Token Here\" id=\"input_apiKey\" name=\"apiKey\" type=\"text\" >\n    </div>\n  </div>\n</form>\n<div id=\"message-bar\" class=\"swagger-ui-wrap\" data-sw-translate>&nbsp;</div>\n<div id='resources_container'>\n  <ul id='resources'></ul>\n</div>\n";
 },"useData":true});
 this["Handlebars"]["templates"]["operation"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
   return "deprecated";
@@ -26744,7 +26744,7 @@ SwaggerUi.partials.signature = (function () {
         output = schema.default;
       } else if (type === 'string') {
         if (format === 'date-time') {
-          output = useValueSamples ? new Date().toISOString() : "date time";
+          output = useValueSamples ? new Date().toISOString() : "datetime";
         } else if (format === 'date') {
           output = useValueSamples ? new Date().toISOString().split('T')[0] : "date";
         } else {

@@ -42,9 +42,9 @@ html {
       }
 
       .main-content__header {
-        .inner-wrapper {
-          position: relative;
+        position: relative;
 
+        .inner-wrapper {
           .main-content__header-left {
             display: flex;
             flex-direction: column;
@@ -76,49 +76,6 @@ html {
             position: absolute;
             top: 0;
             right: 0;
-
-            .back-to-botify {
-              display: flex;
-              align-items: center;
-              width: 176px;
-              color: #644F87;
-              font-family: "Katahdin Round";
-              font-size: 10px;
-              background: #eaf7f6;
-              border-bottom: 4px solid #dfeae8;
-              border-radius: 20px;
-              text-decoration: none;
-              cursor: pointer;
-
-              .back-icon {
-                width: 33px;
-                height: 20px;
-                margin-left: 13px;
-                background: url('../images/icons/back-icon.png') no-repeat;
-              }
-
-              .back-text {
-                width: 135px;
-                padding: 15px 0 13px 17px;
-                -webkit-box-shadow: inset 8px 0px 5px -5px #cde9e5;
-                -moz-box-shadow: inset 8px 0px 5px -5px #cde9e5;
-                box-shadow: inset 8px 0px 5px -5px #cde9e5;
-              }
-
-              @media(max-width: 767px) {
-                width: 120px;
-                font-size: 7px;
-
-                .back-icon {
-                  height: 14px;
-                  background-size: 70%;
-                }
-
-                .back-text {
-                  padding: 10px 0 8px 10px;
-                }
-              }
-            }
           }
         }
       }

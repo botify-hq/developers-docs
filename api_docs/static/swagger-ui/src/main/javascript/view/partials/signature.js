@@ -506,7 +506,7 @@ SwaggerUi.partials.signature = (function () {
         output = schema.default;
       } else if (type === 'string') {
         if (format === 'date-time') {
-          output = useValueSamples ? new Date().toISOString() : "date time";
+          output = useValueSamples ? new Date().toISOString() : "datetime";
         } else if (format === 'date') {
           output = useValueSamples ? new Date().toISOString().split('T')[0] : "date";
         } else {

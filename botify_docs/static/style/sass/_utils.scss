@@ -19,6 +19,23 @@
   cursor: pointer;
 }
 
+.back-to-botify {
+  padding: 5px 0;
+  color: #fff;
+  font-family: "Katahdin Round";
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #fff;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+    color: #f9f9f9;
+  }
+}
+
 .bold {
   font-weight: bold;
 }

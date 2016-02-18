@@ -1,3 +1,4 @@
+
 .parameter-content-type {
 	display: none;
 }
@@ -9,8 +10,54 @@
 .swagger-section #api_selector {
 	float: none;
 
-	.input {
-		margin-bottom: 10px;
+	.authenticatePanel {
+    width: 270px;
+		right: 7%;
+
+    &.initialPosition {
+    	position: static !important;
+    	display: block !important;
+    	float: right;
+		}
+
+    @media(max-width: 992px) {
+      right: 7.2%;
+    }
+
+    @media(max-width: 767px) {
+      right: 2%;
+    }
+
+		.show-hide-button {
+			background: #C6B5DD;
+	    color: #fff;
+	    border-color: #C6B5DD;
+	    border-bottom-left-radius: 0;
+	    border-bottom-right-radius: 0;
+	    float: right;
+		}
+
+		.token-panel {
+			border: solid 2px #C6B5DD !important;
+			padding: 10px;
+			background: #fff;
+
+			input {
+				width: 100% !important;
+				border: solid 2px #C6B5DD !important;
+				padding: 10px !important;
+				transition: 0.5s all !important;
+
+				&.error {
+					border-bottom-color: #E45F5F !important;
+					background-color: rgba(241, 194, 194, 0.1);
+				}
+			}
+
+			p {
+				line-height: 20px !important;
+			}
+		}
 	}
 
 	label {
@@ -60,9 +107,6 @@ body .main-content .right-content .right-content__body .right-content__body-cont
 					background-color: #6D578E;
 				}
 			}
-			div.content {
-				background: #fff;
-			}
 		}
 
 		div.heading {
@@ -74,8 +118,10 @@ body .main-content .right-content .right-content__body .right-content__body-cont
 			margin: 0 !important;
 			padding: 0 !important;
 			padding-bottom: 10px !important;
+			padding-left: 10px !important;
 			border: none !important;
 			border-radius: 0 !important;
+			background-color: #fff !important;
 
 			h4 {
 				padding-top: 5px !important;
@@ -122,6 +168,9 @@ ul {
 	color: #776295;
 }
 .swagger-section .swagger-ui-wrap {
+	max-width: inherit;
+	font-family: 'Titillium';
+
 	.body-textarea {
 		width: 200px;
 	}
@@ -207,8 +256,9 @@ ul {
 		h3 {
 			a {
 				font-family: helvetica;
-				font-size: 13px !important;
+				font-size: 14px !important;
 				font-weight: bold;
+				text-transform: lowercase;
 			}
 		}
 	}
@@ -246,6 +296,12 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 
 pre {
 	padding: 0 !important;
+	border: none !important;
+	background-color: transparent !important;
+
+	&:hover {
+		background-color: transparent !important;
+	}
 }
 
 .block pre,
@@ -314,7 +370,7 @@ pre code {
 	color: darkturquoise !important;
 }
 
-.value .date, .date {
+.value .datetime, .datetime {
 	color: darkorange !important;
 }
 
