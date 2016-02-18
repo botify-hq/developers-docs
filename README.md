@@ -54,8 +54,11 @@ You can define a different host and port if you need to
 ./script/run 0.0.0.0:8080
 ```
 
-### Build CSS
-@TODO
+### Watch SASS
+```
+compass watch botify_docs/static/style
+```
+
 
 ### Deploy locally
 
