@@ -1311,6 +1311,7 @@
 .swagger-section #api_selector {
   float: none;
 }
+<<<<<<< HEAD
 .swagger-section #api_selector .input {
 <<<<<<< HEAD
   margin-bottom: 10px;
@@ -1321,19 +1322,28 @@
   position: fixed;
   top: 15px;
   right: 7%;
+=======
+.swagger-section #api_selector .authenticatePanel {
+>>>>>>> add botify button
   width: 270px;
+  right: 7%;
+}
+.swagger-section #api_selector .authenticatePanel.initialPosition {
+  position: static !important;
+  display: block !important;
+  float: right;
 }
 @media (max-width: 992px) {
-  .swagger-section #api_selector .input {
+  .swagger-section #api_selector .authenticatePanel {
     right: 7.2%;
   }
 }
 @media (max-width: 767px) {
-  .swagger-section #api_selector .input {
+  .swagger-section #api_selector .authenticatePanel {
     right: 2%;
   }
 }
-.swagger-section #api_selector .input .show-hide-button {
+.swagger-section #api_selector .authenticatePanel .show-hide-button {
   background: #C6B5DD;
   color: #fff;
   border-color: #C6B5DD;
@@ -1341,22 +1351,22 @@
   border-bottom-right-radius: 0;
   float: right;
 }
-.swagger-section #api_selector .input .token-panel {
+.swagger-section #api_selector .authenticatePanel .token-panel {
   border: solid 2px #C6B5DD !important;
   padding: 10px;
   background: #fff;
 }
-.swagger-section #api_selector .input .token-panel input {
+.swagger-section #api_selector .authenticatePanel .token-panel input {
   width: 100% !important;
   border: solid 2px #C6B5DD !important;
   padding: 10px !important;
   transition: 0.5s all !important;
 }
-.swagger-section #api_selector .input .token-panel input.error {
+.swagger-section #api_selector .authenticatePanel .token-panel input.error {
   border-bottom-color: #E45F5F !important;
   background-color: rgba(241, 194, 194, 0.1);
 }
-.swagger-section #api_selector .input .token-panel p {
+.swagger-section #api_selector .authenticatePanel .token-panel p {
   line-height: 20px !important;
 >>>>>>> show auth panel
 }
@@ -1403,6 +1413,7 @@ body .main-content .right-content .right-content__body .right-content__body-cont
   margin: 0 !important;
   padding: 0 !important;
   padding-bottom: 10px !important;
+  padding-left: 10px !important;
   border: none !important;
   border-radius: 0 !important;
   background-color: #fff !important;

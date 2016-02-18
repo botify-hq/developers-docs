@@ -110,22 +110,40 @@ table {
 }
 
 /* line 22, ../sass/_utils.scss */
+.back-to-botify {
+  padding: 5px 0;
+  color: #fff;
+  font-family: "Katahdin Round";
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* line 33, ../sass/_utils.scss */
+.back-to-botify:hover {
+  text-decoration: none;
+  color: #f9f9f9;
+}
+
+/* line 39, ../sass/_utils.scss */
 .bold {
   font-weight: bold;
 }
 
-/* line 26, ../sass/_utils.scss */
+/* line 43, ../sass/_utils.scss */
 .no-pad-r {
   padding-right: 0 !important;
 }
 
-/* line 30, ../sass/_utils.scss */
+/* line 47, ../sass/_utils.scss */
 .no-pad {
   padding: 0 !important;
 }
 
 /* ======= Footer ======= */
-/* line 35, ../sass/_utils.scss */
+/* line 52, ../sass/_utils.scss */
 .footer {
   background: #c6b5dd;
   background: #253340;
@@ -135,7 +153,7 @@ table {
   position: relative;
   z-index: 20;
 }
-/* line 44, ../sass/_utils.scss */
+/* line 61, ../sass/_utils.scss */
 .footer h2 {
   font-size: 30px;
   font-weight: 300;
@@ -143,58 +161,58 @@ table {
   padding-bottom: 35px;
   padding-left: 15px;
 }
-/* line 52, ../sass/_utils.scss */
+/* line 69, ../sass/_utils.scss */
 .footer p {
   -webkit-opacity: 0.5;
   -moz-opacity: 0.5;
   opacity: 0.5;
 }
-/* line 58, ../sass/_utils.scss */
+/* line 75, ../sass/_utils.scss */
 .footer .btn-cta,
 .footer a.btn-cta {
   padding: 9px 10px;
 }
-/* line 65, ../sass/_utils.scss */
+/* line 82, ../sass/_utils.scss */
 .footer .footer-col.links .fa {
   margin-right: 5px;
 }
-/* line 69, ../sass/_utils.scss */
+/* line 86, ../sass/_utils.scss */
 .footer .footer-col.links li {
   margin-bottom: 10px;
 }
-/* line 72, ../sass/_utils.scss */
+/* line 89, ../sass/_utils.scss */
 .footer .footer-col.connect .social {
   margin-bottom: 15px;
   overflow: hidden;
 }
-/* line 77, ../sass/_utils.scss */
+/* line 94, ../sass/_utils.scss */
 .footer .footer-col.connect .social li {
   margin-right: 10px;
 }
-/* line 81, ../sass/_utils.scss */
+/* line 98, ../sass/_utils.scss */
 .footer .footer-col.connect .social li a .fa {
   color: #b3b3b3;
   font-size: 22px;
 }
-/* line 86, ../sass/_utils.scss */
+/* line 103, ../sass/_utils.scss */
 .footer .footer-col.connect .social li a:hover .fa {
   color: #47c9af;
 }
-/* line 90, ../sass/_utils.scss */
+/* line 107, ../sass/_utils.scss */
 .footer .footer-col.connect .btn-cta-primary {
   background: #5d80a1;
   border-color: #5d80a1;
 }
-/* line 95, ../sass/_utils.scss */
+/* line 112, ../sass/_utils.scss */
 .footer .footer-col.connect .btn-cta-primary:hover {
   background: #4a6781;
   border-color: #4a6781;
 }
-/* line 101, ../sass/_utils.scss */
+/* line 118, ../sass/_utils.scss */
 .footer .free-trial {
   margin-bottom: 20px;
 }
-/* line 105, ../sass/_utils.scss */
+/* line 122, ../sass/_utils.scss */
 .footer .footer-col .title {
   color: #fff;
   font-weight: normal;
@@ -205,50 +223,50 @@ table {
   -moz-opacity: 0.9;
   opacity: 0.9;
 }
-/* line 116, ../sass/_utils.scss */
+/* line 133, ../sass/_utils.scss */
 .footer .footer-col p {
   color: #fff;
 }
-/* line 120, ../sass/_utils.scss */
+/* line 137, ../sass/_utils.scss */
 .footer .footer-col a {
   color: #6d8dab;
 }
-/* line 124, ../sass/_utils.scss */
+/* line 141, ../sass/_utils.scss */
 .footer .footer-col a:hover {
   color: #8da6bd;
 }
-/* line 128, ../sass/_utils.scss */
+/* line 145, ../sass/_utils.scss */
 .footer .footer-col a.btn-cta-primary {
   color: #fff;
 }
-/* line 132, ../sass/_utils.scss */
+/* line 149, ../sass/_utils.scss */
 .footer .footer-col .navbar-form {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 137, ../sass/_utils.scss */
+/* line 154, ../sass/_utils.scss */
 .footer .footer-col .navbar-form .form-control {
   -webkit-opacity: 0.9;
   -moz-opacity: 0.9;
   opacity: 0.9;
 }
-/* line 143, ../sass/_utils.scss */
+/* line 160, ../sass/_utils.scss */
 .footer .footer-col .navbar-form .form-control:focus {
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
 }
-/* line 149, ../sass/_utils.scss */
+/* line 166, ../sass/_utils.scss */
 .footer .has-divider {
   border-top: 1px solid #2b3b4a;
   padding-top: 30px;
   padding-bottom: 30px;
 }
-/* line 155, ../sass/_utils.scss */
+/* line 172, ../sass/_utils.scss */
 .footer .download .download-list li {
   margin-bottom: 15px;
 }
-/* line 159, ../sass/_utils.scss */
+/* line 176, ../sass/_utils.scss */
 .footer .download .download-list li .btn-ghost {
   text-align: left;
   -webkit-opacity: 0.6;
@@ -256,41 +274,41 @@ table {
   opacity: 0.6;
   width: 230px;
 }
-/* line 167, ../sass/_utils.scss */
+/* line 184, ../sass/_utils.scss */
 .footer .download .download-list li .btn-ghost:hover {
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
 }
-/* line 173, ../sass/_utils.scss */
+/* line 190, ../sass/_utils.scss */
 .footer .contact p {
   -webkit-opacity: 0.5;
   -moz-opacity: 0.5;
   opacity: 0.5;
 }
-/* line 179, ../sass/_utils.scss */
+/* line 196, ../sass/_utils.scss */
 .footer .contact p a {
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
 }
-/* line 185, ../sass/_utils.scss */
+/* line 202, ../sass/_utils.scss */
 .footer .contact .fa {
   margin-right: 10px;
   font-size: 20px;
 }
-/* line 190, ../sass/_utils.scss */
+/* line 207, ../sass/_utils.scss */
 .footer .contact .email .fa {
   font-size: 16px;
 }
-/* line 194, ../sass/_utils.scss */
+/* line 211, ../sass/_utils.scss */
 .footer .bottom-bar {
   background: #1e1e1e;
   color: #b3b3b3;
   font-size: 14px;
   padding: 10px 0;
 }
-/* line 201, ../sass/_utils.scss */
+/* line 218, ../sass/_utils.scss */
 .footer .bottom-bar .copyright {
   line-height: 1.6;
 }
@@ -303,65 +321,114 @@ body {
   background: -webkit-linear-gradient(left, rgba(104, 81, 137, 0.9), rgba(104, 81, 137, 0.9)), url("../images/commun-pattern.png");
   background: -o-linear-gradient(left, rgba(104, 81, 137, 0.9), rgba(104, 81, 137, 0.9)), url("../images/commun-pattern.png");
   background: linear-gradient(to right, rgba(104, 81, 137, 0.9), rgba(104, 81, 137, 0.9)), url("../images/commun-pattern.png");
+  background-size: 1000px;
 }
-/* line 14, ../sass/common.scss */
+/* line 15, ../sass/common.scss */
 body .container {
   width: calc(100% - 30px);
 }
 @media (max-width: 767px) {
-  /* line 14, ../sass/common.scss */
+  /* line 15, ../sass/common.scss */
   body .container {
     padding: 0;
   }
 }
-/* line 22, ../sass/common.scss */
+/* line 23, ../sass/common.scss */
 body .inner-wrapper {
   width: 90%;
   height: inherit;
   margin: auto;
 }
 @media (max-width: 767px) {
-  /* line 22, ../sass/common.scss */
+  /* line 23, ../sass/common.scss */
   body .inner-wrapper {
     width: 100%;
   }
 }
+<<<<<<< HEAD
 /* line 32, ../sass/common.scss */
 body .header {
   margin-top: 65px;
 }
 /* line 35, ../sass/common.scss */
+=======
+/* line 33, ../sass/common.scss */
+body .tooltip-inner a {
+  padding: 0 !important;
+}
+/* line 37, ../sass/common.scss */
+body .btn-disabled {
+  opacity: 0.4;
+  cursor: not-allowed !important;
+}
+/* line 42, ../sass/common.scss */
+body .header {
+  margin-top: 65px;
+}
+/* line 45, ../sass/common.scss */
+>>>>>>> add botify button
 body .header .botify-developer-logo {
   width: 241px;
   height: 50px;
   background: url("../images/botify-developers-logo.png") no-repeat;
 }
+<<<<<<< HEAD
 /* line 42, ../sass/common.scss */
 body .top-menu {
   margin-top: 30px;
 }
 /* line 45, ../sass/common.scss */
+=======
+/* line 51, ../sass/common.scss */
+body .header .inner-wrapper {
+  position: relative;
+}
+/* line 55, ../sass/common.scss */
+body .header .main-content__header-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* line 62, ../sass/common.scss */
+body .top-menu {
+  margin-top: 30px;
+}
+/* line 65, ../sass/common.scss */
+>>>>>>> add botify button
 body .top-menu .botify-developer-logo {
   width: 241px;
   height: 50px;
   background: url("../images/botify-developers-logo.png") no-repeat;
 }
+<<<<<<< HEAD
 /* line 51, ../sass/common.scss */
+=======
+/* line 71, ../sass/common.scss */
+>>>>>>> add botify button
 body .top-menu .navbar-custom {
   margin-bottom: 0;
   border: 0;
   background: transparent;
 }
+<<<<<<< HEAD
 /* line 56, ../sass/common.scss */
 body .top-menu .navbar-custom .icon-bar {
   background-color: #fff;
 }
 /* line 60, ../sass/common.scss */
+=======
+/* line 76, ../sass/common.scss */
+body .top-menu .navbar-custom .icon-bar {
+  background-color: #fff;
+}
+/* line 80, ../sass/common.scss */
+>>>>>>> add botify button
 body .top-menu .navbar-custom .navbar-collapse {
   border: 0;
   box-shadow: none;
 }
 @media (min-width: 768px) {
+<<<<<<< HEAD
   /* line 66, ../sass/common.scss */
   body .top-menu .navbar-custom .container-fluid {
     padding: 0;
@@ -371,10 +438,22 @@ body .top-menu .navbar-custom .navbar-collapse {
     padding: 0 15px;
   }
   /* line 73, ../sass/common.scss */
+=======
+  /* line 86, ../sass/common.scss */
+  body .top-menu .navbar-custom .container-fluid {
+    padding: 0;
+  }
+  /* line 89, ../sass/common.scss */
+  body .top-menu .navbar-custom .container-fluid .navbar-header {
+    padding: 0 15px;
+  }
+  /* line 93, ../sass/common.scss */
+>>>>>>> add botify button
   body .top-menu .navbar-custom .container-fluid .navbar-collapse {
     padding: 65px 0 0;
   }
 }
+<<<<<<< HEAD
 /* line 82, ../sass/common.scss */
 body .top-menu .navbar-custom .navbar-nav > li.active > a {
   color: #777;
@@ -392,59 +471,115 @@ body .top-menu .navbar-custom .navbar-nav .open > a {
   color: #333 !important;
 }
 /* line 103, ../sass/common.scss */
+=======
+/* line 102, ../sass/common.scss */
+body .top-menu .navbar-custom .navbar-nav > li.active > a {
+  color: #777;
+}
+/* line 107, ../sass/common.scss */
+body .top-menu .navbar-custom .navbar-nav > li:not(.active) > a {
+  color: #fff;
+}
+/* line 110, ../sass/common.scss */
+body .top-menu .navbar-custom .navbar-nav > li:not(.active) > a:hover {
+  color: #C6B5DD;
+}
+/* line 117, ../sass/common.scss */
+body .top-menu .navbar-custom .navbar-nav .open > a {
+  color: #333 !important;
+}
+/* line 123, ../sass/common.scss */
+>>>>>>> add botify button
 body .top-menu .navbar-custom .navbar-nav .open .dropdown-menu li:not(.active) a {
   color: #fff;
 }
 @media (min-width: 768px) {
+<<<<<<< HEAD
   /* line 103, ../sass/common.scss */
+=======
+  /* line 123, ../sass/common.scss */
+>>>>>>> add botify button
   body .top-menu .navbar-custom .navbar-nav .open .dropdown-menu li:not(.active) a {
     color: #333;
   }
 }
+<<<<<<< HEAD
 /* line 109, ../sass/common.scss */
 body .top-menu .navbar-custom .navbar-nav .open .dropdown-menu li:not(.active) a:hover {
   color: #C6B5DD;
 }
 /* line 116, ../sass/common.scss */
+=======
+/* line 129, ../sass/common.scss */
+body .top-menu .navbar-custom .navbar-nav .open .dropdown-menu li:not(.active) a:hover {
+  color: #C6B5DD;
+}
+/* line 136, ../sass/common.scss */
+>>>>>>> add botify button
 body .top-menu .navbar-custom .navbar-nav .open .dropdown-menu > .active > a {
   background-color: #776295;
 }
 @media (max-width: 767px) {
+<<<<<<< HEAD
   /* line 116, ../sass/common.scss */
+=======
+  /* line 136, ../sass/common.scss */
+>>>>>>> add botify button
   body .top-menu .navbar-custom .navbar-nav .open .dropdown-menu > .active > a {
     background: transparent;
     color: #fff;
     font-weight: bold;
   }
 }
+<<<<<<< HEAD
 /* line 132, ../sass/common.scss */
+=======
+/* line 152, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content {
   display: flex;
   margin-top: 40px;
   background-color: #fff;
 }
 @media (max-width: 991px) {
+<<<<<<< HEAD
   /* line 132, ../sass/common.scss */
+=======
+  /* line 152, ../sass/common.scss */
+>>>>>>> add botify button
   body .main-content {
     display: block;
   }
 }
+<<<<<<< HEAD
 /* line 141, ../sass/common.scss */
+=======
+/* line 161, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .sidebar {
   max-width: 315px;
   padding: 80px 0 100px 60px;
   background: #f8f5f5;
 }
+<<<<<<< HEAD
 /* line 146, ../sass/common.scss */
 body .main-content .sidebar .sidebar__header {
   margin-bottom: 20px;
 }
 /* line 148, ../sass/common.scss */
+=======
+/* line 166, ../sass/common.scss */
+body .main-content .sidebar .sidebar__header {
+  margin-bottom: 20px;
+}
+/* line 168, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .sidebar .sidebar__header a {
   color: #cebae9;
   font-family: "Katahdin Round";
   font-size: 20px;
 }
+<<<<<<< HEAD
 /* line 155, ../sass/common.scss */
 body .main-content .sidebar .sidebar__menu {
   padding-right: 20px;
@@ -458,16 +593,36 @@ body .main-content .sidebar .sidebar__menu .sidebar__group + .sidebar__group {
   margin-top: 10px;
 }
 /* line 165, ../sass/common.scss */
+=======
+/* line 175, ../sass/common.scss */
+body .main-content .sidebar .sidebar__menu {
+  padding-right: 20px;
+}
+/* line 178, ../sass/common.scss */
+body .main-content .sidebar .sidebar__menu .sidebar__group {
+  cursor: pointer;
+}
+/* line 181, ../sass/common.scss */
+body .main-content .sidebar .sidebar__menu .sidebar__group + .sidebar__group {
+  margin-top: 10px;
+}
+/* line 185, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-header {
   padding-bottom: 9px;
   margin-bottom: 10px;
   border-bottom: 1px solid #e4dbeb;
 }
+<<<<<<< HEAD
 /* line 170, ../sass/common.scss */
+=======
+/* line 190, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-header a {
   font-weight: bold;
   color: #3e3a3a;
 }
+<<<<<<< HEAD
 /* line 176, ../sass/common.scss */
 body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-header.active a {
   color: #685189 !important;
@@ -489,10 +644,34 @@ body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-body 
   display: none;
 }
 /* line 201, ../sass/common.scss */
+=======
+/* line 196, ../sass/common.scss */
+body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-header.active a {
+  color: #685189 !important;
+}
+/* line 203, ../sass/common.scss */
+body .main-content .sidebar .sidebar__menu .sidebar__group.open + .sidebar__group {
+  margin-top: 40px;
+}
+/* line 208, ../sass/common.scss */
+body .main-content .sidebar .sidebar__menu .sidebar__group.open .sidebar__group-header a {
+  color: #cebae9;
+}
+/* line 212, ../sass/common.scss */
+body .main-content .sidebar .sidebar__menu .sidebar__group.open .sidebar__group-body {
+  display: block;
+}
+/* line 217, ../sass/common.scss */
+body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-body {
+  display: none;
+}
+/* line 221, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-body .sidebar__group-item a {
   color: #978e8e;
   font-weight: bold;
 }
+<<<<<<< HEAD
 /* line 206, ../sass/common.scss */
 body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-body .sidebar__group-item + .sidebar__group-item {
   margin-top: 20px;
@@ -502,66 +681,116 @@ body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-body 
   color: #685189;
 }
 /* line 222, ../sass/common.scss */
+=======
+/* line 226, ../sass/common.scss */
+body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-body .sidebar__group-item + .sidebar__group-item {
+  margin-top: 20px;
+}
+/* line 232, ../sass/common.scss */
+body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-body .sidebar__group-item.active a, body .main-content .sidebar .sidebar__menu .sidebar__group .sidebar__group-body .sidebar__group-item:hover a {
+  color: #685189;
+}
+/* line 242, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .right-content {
   padding-top: 80px;
   margin-left: 20px;
 }
 @media (max-width: 991px) {
+<<<<<<< HEAD
   /* line 222, ../sass/common.scss */
+=======
+  /* line 242, ../sass/common.scss */
+>>>>>>> add botify button
   body .main-content .right-content {
     padding-top: 10px;
     margin-left: 0px;
   }
 }
+<<<<<<< HEAD
 /* line 232, ../sass/common.scss */
+=======
+/* line 252, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .right-content .right-content__breadcrumb .breadcrumb {
   background-color: transparent;
   margin: 0;
+  padding-top: 0;
   padding-left: 0;
 }
+<<<<<<< HEAD
 /* line 237, ../sass/common.scss */
+=======
+/* line 258, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .right-content .right-content__breadcrumb .breadcrumb a {
   color: #c1b3b3;
 }
 @media (max-width: 991px) {
+<<<<<<< HEAD
   /* line 245, ../sass/common.scss */
+=======
+  /* line 266, ../sass/common.scss */
+>>>>>>> add botify button
   body .main-content .right-content .right-content__header > .col-xs-12 {
     padding-top: 0 !important;
   }
 }
+<<<<<<< HEAD
 /* line 250, ../sass/common.scss */
+=======
+/* line 271, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .right-content .right-content__header .right-content__icon {
   width: 66px;
   height: 113px;
   background: url("../images/icons/getting-started-icon.png") no-repeat;
 }
+<<<<<<< HEAD
 /* line 257, ../sass/common.scss */
+=======
+/* line 278, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .right-content .right-content__body {
   padding: 0 40px 100px 15px;
 }
 @media (max-width: 991px) {
+<<<<<<< HEAD
   /* line 260, ../sass/common.scss */
+=======
+  /* line 281, ../sass/common.scss */
+>>>>>>> add botify button
   body .main-content .right-content .right-content__body .right-content__body-content {
     padding-left: 0;
   }
 }
+<<<<<<< HEAD
 /* line 266, ../sass/common.scss */
+=======
+/* line 287, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .right-content .right-content__body .right-content__body-content h1, body .main-content .right-content .right-content__body .right-content__body-content h2, body .main-content .right-content .right-content__body .right-content__body-content h3, body .main-content .right-content .right-content__body .right-content__body-content h4, body .main-content .right-content .right-content__body .right-content__body-content h5 {
   color: #ce4a57;
   font-family: "Katahdin Round";
   text-transform: uppercase;
 }
+<<<<<<< HEAD
 /* line 272, ../sass/common.scss */
+=======
+/* line 293, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .right-content .right-content__body .right-content__body-content h1 {
+  padding-top: 0 !important;
   padding-bottom: 25px;
   padding-left: 15px;
   margin-bottom: 20px;
   border-bottom: 1px solid #e8e1f1;
-  color: #c6b5dd;
+  color: #A88BD0;
   font-family: "Katahdin Round";
   font-size: 50px;
   text-transform: uppercase;
 }
+<<<<<<< HEAD
 /* line 283, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content h2 {
   font-size: 16px;
@@ -579,30 +808,69 @@ body .main-content .right-content .right-content__body .right-content__body-cont
   font-size: 12px;
 }
 /* line 299, ../sass/common.scss */
+=======
+/* line 305, ../sass/common.scss */
+body .main-content .right-content .right-content__body .right-content__body-content h2 {
+  font-size: 16px;
+}
+/* line 309, ../sass/common.scss */
+body .main-content .right-content .right-content__body .right-content__body-content h3 {
+  font-size: 14px;
+}
+/* line 313, ../sass/common.scss */
+body .main-content .right-content .right-content__body .right-content__body-content h4 {
+  font-size: 13px;
+}
+/* line 317, ../sass/common.scss */
+body .main-content .right-content .right-content__body .right-content__body-content h5 {
+  font-size: 12px;
+}
+/* line 321, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .right-content .right-content__body .right-content__body-content ul {
   list-style-type: square;
   list-style-position: inside;
 }
+<<<<<<< HEAD
 /* line 304, ../sass/common.scss */
+=======
+/* line 326, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .right-content .right-content__body .right-content__body-content p, body .main-content .right-content .right-content__body .right-content__body-content ul {
   color: #463f3f;
   line-height: 25px;
 }
+<<<<<<< HEAD
 /* line 308, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content p a, body .main-content .right-content .right-content__body .right-content__body-content ul a {
   color: #e85d6b;
 }
 /* line 315, ../sass/common.scss */
+=======
+/* line 330, ../sass/common.scss */
+body .main-content .right-content .right-content__body .right-content__body-content p a, body .main-content .right-content .right-content__body .right-content__body-content ul a {
+  color: #e85d6b;
+}
+/* line 337, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .right-content .right-content__body .right-content__body-content .pagination .active a {
   background-color: #C6B5DD;
   border-color: #C6B5DD;
 }
+<<<<<<< HEAD
 /* line 321, ../sass/common.scss */
+=======
+/* line 343, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .right-content .right-content__body .right-content__body-content .pagination a {
   color: #776295;
   outline: 0;
 }
+<<<<<<< HEAD
 /* line 327, ../sass/common.scss */
+=======
+/* line 349, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .right-content .right-content__body .right-content__body-content p + h2,
 body .main-content .right-content .right-content__body .right-content__body-content p + h3,
 body .main-content .right-content .right-content__body .right-content__body-content p + h4,
@@ -612,7 +880,11 @@ body .main-content .right-content .right-content__body .right-content__body-cont
 body .main-content .right-content .right-content__body .right-content__body-content p + pre {
   margin-top: 15px;
 }
+<<<<<<< HEAD
 /* line 337, ../sass/common.scss */
+=======
+/* line 359, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .right-content .right-content__body .right-content__body-content p + p,
 body .main-content .right-content .right-content__body .right-content__body-content pre + h2,
 body .main-content .right-content .right-content__body .right-content__body-content pre + h3,
@@ -623,12 +895,17 @@ body .main-content .right-content .right-content__body .right-content__body-cont
 body .main-content .right-content .right-content__body .right-content__body-content table + p {
   margin-top: 10px;
 }
+<<<<<<< HEAD
 /* line 348, ../sass/common.scss */
+=======
+/* line 370, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .right-content .right-content__body .right-content__body-content h1, body .main-content .right-content .right-content__body .right-content__body-content h2, body .main-content .right-content .right-content__body .right-content__body-content h3,
 body .main-content .right-content .right-content__body .right-content__body-content h4, body .main-content .right-content .right-content__body .right-content__body-content h5,
 body .main-content .right-content .right-content__body .right-content__body-content ul {
   padding: 10px 0;
 }
+<<<<<<< HEAD
 /* line 355, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content table {
   border-collapse: collapse;
@@ -638,23 +915,43 @@ body .main-content .right-content .right-content__body .right-content__body-cont
   font-weight: bold;
 }
 /* line 362, ../sass/common.scss */
+=======
+/* line 377, ../sass/common.scss */
+body .main-content .right-content .right-content__body .right-content__body-content table {
+  border-collapse: collapse;
+}
+/* line 380, ../sass/common.scss */
+body .main-content .right-content .right-content__body .right-content__body-content table th {
+  font-weight: bold;
+}
+/* line 384, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .right-content .right-content__body .right-content__body-content table th,
 body .main-content .right-content .right-content__body .right-content__body-content table td {
   border: 1px solid #ddd;
   background-color: #fff;
 }
+<<<<<<< HEAD
 /* line 368, ../sass/common.scss */
+=======
+/* line 390, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .right-content .right-content__body .right-content__body-content table > thead > tr > th, body .main-content .right-content .right-content__body .right-content__body-content table > tbody > tr > th, body .main-content .right-content .right-content__body .right-content__body-content table > tfoot > tr > th, body .main-content .right-content .right-content__body .right-content__body-content table > thead > tr > td, body .main-content .right-content .right-content__body .right-content__body-content table > tbody > tr > td, body .main-content .right-content .right-content__body .right-content__body-content table > tfoot > tr > td {
   padding: 8px;
   line-height: 1.42857143;
   vertical-align: top;
   border-top: 1px solid #ddd;
 }
+<<<<<<< HEAD
 /* line 380, ../sass/common.scss */
+=======
+/* line 402, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .right-content .right-content__body .right-content__body-content table > thead > tr > th {
   vertical-align: bottom;
   border-bottom: 2px solid #ddd;
 }
+<<<<<<< HEAD
 /* line 385, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content table > tbody > tr:nth-child(odd) {
   background-color: #f9f9f9;
@@ -668,21 +965,48 @@ body .main-content .right-content .right-content__body .right-content__body-cont
   max-width: 100%;
 }
 /* line 400, ../sass/common.scss */
+=======
+/* line 407, ../sass/common.scss */
+body .main-content .right-content .right-content__body .right-content__body-content table > tbody > tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+/* line 410, ../sass/common.scss */
+body .main-content .right-content .right-content__body .right-content__body-content table > tbody > tr:nth-child(odd) td {
+  background-color: #f9f9f9;
+}
+/* line 416, ../sass/common.scss */
+body .main-content .right-content .right-content__body .right-content__body-content img {
+  max-width: 100%;
+}
+/* line 422, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .right-content .hljs-string,
 body .main-content .right-content .hljs-attr {
   line-height: 20px;
 }
+<<<<<<< HEAD
 /* line 406, ../sass/common.scss */
 body .main-content .right-content #datamodel .datamodel-table {
   margin-bottom: 0;
 }
 /* line 409, ../sass/common.scss */
+=======
+/* line 428, ../sass/common.scss */
+body .main-content .right-content #datamodel .datamodel-table {
+  margin-bottom: 0;
+}
+/* line 431, ../sass/common.scss */
+>>>>>>> add botify button
 body .main-content .right-content #datamodel .datamodel-table td, body .main-content .right-content #datamodel .datamodel-table th {
   word-break: break-all;
   min-width: 120px;
 }
 @media (max-width: 767px) {
+<<<<<<< HEAD
   /* line 416, ../sass/common.scss */
+=======
+  /* line 438, ../sass/common.scss */
+>>>>>>> add botify button
   body .main-content .right-content #datamodel .dataTables_length {
     padding: 10px 0;
   }

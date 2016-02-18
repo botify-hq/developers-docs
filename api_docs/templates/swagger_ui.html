@@ -92,7 +92,7 @@
           });
 
           $('.show-hide-button').click(function() {
-            $('#api_selector .input').toggleClass('open');
+            $('#api_selector .authenticatePanel').toggleClass('open');
             $('.token-panel').slideToggle();
           });
 
@@ -108,7 +108,21 @@
             } else {
               $('.swagger-btn').addClass('btn-disabled');
             }
-          })
+          });
+
+          var elementPosition = $('.authenticatePanel').offset();
+
+          $(window).scroll(function(){
+            console.log('$(window).scrollTop()', $(window).scrollTop(), 'elementPosition.top', elementPosition.top);
+            if($(window).scrollTop() + 100 > elementPosition.top){
+              $('.authenticatePanel').removeClass('initialPosition').css({
+                'position': 'fixed',
+                'top': '0'
+              })
+            } else {
+              $('.authenticatePanel').addClass('initialPosition')
+            }
+          });
 
           addApiKeyAuthorization();
         },
@@ -135,9 +149,12 @@
 
       window.swaggerUi.load();
 
-      $('#api_selector').submit(function(ev){
-        addApiKeyAuthorization();
-        ev.preventDefault();
+      $('#api_selector').submit(function(ev) {
+        var val = $('#input_apiKey').val();
+        if (val) {
+          addApiKeyAuthorization();
+          ev.preventDefault();
+        }
       });
 
       function log() {

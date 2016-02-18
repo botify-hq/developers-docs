@@ -10,6 +10,7 @@ body {
   background: -webkit-linear-gradient(left, rgba(104, 81, 137, 0.9), rgba(104, 81, 137, 0.9)), url("../images/commun-pattern.png");
   background: -o-linear-gradient(left, rgba(104, 81, 137, 0.9), rgba(104, 81, 137, 0.9)), url("../images/commun-pattern.png");
   background: linear-gradient(to right, rgba(104, 81, 137, 0.9), rgba(104, 81, 137, 0.9)), url("../images/commun-pattern.png");
+  background-size: 1000px;
 
   .container {
     width: calc(100% - 30px);
@@ -36,6 +37,16 @@ body {
       width: 241px;
       height: 50px;
       background: url('../images/botify-developers-logo.png') no-repeat;
+    }
+
+    .inner-wrapper {
+      position: relative;
+    }
+
+    .main-content__header-right {
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 
@@ -232,6 +243,7 @@ body {
         .breadcrumb {
           background-color: transparent;
           margin: 0;
+          padding-top: 0;
           padding-left: 0;
 
           a {
@@ -270,11 +282,12 @@ body {
           }
 
           h1 {
+            padding-top: 0 !important;
             padding-bottom: 25px;
             padding-left: 15px;
             margin-bottom: 20px;
             border-bottom: 1px solid #e8e1f1;
-            color: #c6b5dd;
+            color: #A88BD0;
             font-family: "Katahdin Round";
             font-size: 50px;
             text-transform: uppercase;
