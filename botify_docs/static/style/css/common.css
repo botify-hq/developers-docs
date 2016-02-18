@@ -687,3 +687,13 @@ body .main-content .right-content #datamodel .datamodel-table td, body .main-con
     padding: 10px 0;
   }
 }
+
+body .inscription-button {
+  display: inline-block;
+  margin: 5px 0;
+  padding: 5px 10px;
+  background-color: #ce4a57;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 5px;
+}

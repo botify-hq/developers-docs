@@ -420,4 +420,14 @@ body {
       }
     }
   }
+
+  .inscription-button {
+    display: inline-block;
+    margin: 5px 0;
+    padding: 5px 10px;
+    background-color: #ce4a57;
+    color: white !important;
+    font-weight: bold;
+    border-radius: 5px;
+  }
 }
