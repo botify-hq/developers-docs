@@ -12,15 +12,21 @@
 
 	.authenticatePanel {
     width: 270px;
-		right: 7%;
+		right: 8.5%;
 
     &.initialPosition {
-    	position: static !important;
+    	position: absolute !important;
     	display: block !important;
     	float: right;
+    	top: -80px !important;
+			right: -9.5% !important;
 		}
 
     @media(max-width: 992px) {
+    	&.initialPosition {
+    		top: -10px !important;
+				right: -7.5% !important;
+			}
       right: 7.2%;
     }
 
@@ -29,22 +35,23 @@
     }
 
 		.show-hide-button {
-			background: #C6B5DD;
+			background: #776295;
 	    color: #fff;
-	    border-color: #C6B5DD;
-	    border-bottom-left-radius: 0;
-	    border-bottom-right-radius: 0;
+	    border-color: #776295;
+	    border-radius: 0;
 	    float: right;
+	    outline: 0;
 		}
 
 		.token-panel {
-			border: solid 2px #C6B5DD !important;
+			display: none;
+			border: solid 2px #776295 !important;
 			padding: 10px;
 			background: #fff;
 
 			input {
 				width: 100% !important;
-				border: solid 2px #C6B5DD !important;
+				border: solid 2px #776295 !important;
 				padding: 10px !important;
 				transition: 0.5s all !important;
 
