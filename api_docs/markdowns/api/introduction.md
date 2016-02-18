@@ -2,7 +2,7 @@
 
 Botify provides a REST API in order to integrate Botify in third-party applications and allowing to use almost everything available in the Botify Analytics and the Chrome Extension.
 
-<a href="https://docs.google.com/forms/d/1T6D588024flDKHS6q_IMlVMS-q8rmRvgzBIc8EZdyDo/viewform" class="inscription-button">Request your Limited Preview of Alpha Botify API</a>
+<a href="https://docs.google.com/forms/d/1T6D588024flDKHS6q_IMlVMS-q8rmRvgzBIc8EZdyDo/viewform" class="inscription-button" target="_blank">Request access to the alpha version of the Botify API</a>
 
 ## Use examples
 - Get the list of your projects and analyses.
@@ -13,7 +13,7 @@ Botify provides a REST API in order to integrate Botify in third-party applicati
 - Get information about top external domains, orphan URLs, lost pagerank, sitemaps, etc.
 - Create CSV Exports.
 - ... and much more
-
+dans Request your Preview of Alpha Botify API
 
 ## Topics
 - [[Authentication;authentication]]
