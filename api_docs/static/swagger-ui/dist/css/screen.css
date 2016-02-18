@@ -1313,16 +1313,22 @@
 }
 .swagger-section #api_selector .authenticatePanel {
   width: 270px;
-  right: 7%;
+  right: 8.5%;
 }
 .swagger-section #api_selector .authenticatePanel.initialPosition {
-  position: static !important;
+  position: absolute !important;
   display: block !important;
   float: right;
+  top: -80px !important;
+  right: -9.5% !important;
 }
 @media (max-width: 992px) {
   .swagger-section #api_selector .authenticatePanel {
     right: 7.2%;
+  }
+  .swagger-section #api_selector .authenticatePanel.initialPosition {
+    top: -10px !important;
+    right: -7.5% !important;
   }
 }
 @media (max-width: 767px) {
@@ -1331,30 +1337,37 @@
   }
 }
 .swagger-section #api_selector .authenticatePanel .show-hide-button {
-  background: #C6B5DD;
+  background: #776295;
   color: #fff;
-  border-color: #C6B5DD;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-color: #776295;
+  border-radius: 0;
   float: right;
+  outline: 0;
 }
 .swagger-section #api_selector .authenticatePanel .token-panel {
-  border: solid 2px #C6B5DD !important;
+  display: none;
+}
+.swagger-section #api_selector .authenticatePanel .token-panel .token-panel-body {
   padding: 10px;
   background: #fff;
+  border: solid 2px #776295 !important;
 }
-.swagger-section #api_selector .authenticatePanel .token-panel input {
+.swagger-section #api_selector .authenticatePanel .token-panel .token-panel-body input {
   width: 100% !important;
-  border: solid 2px #C6B5DD !important;
+  border: solid 2px #776295 !important;
   padding: 10px !important;
   transition: 0.5s all !important;
 }
-.swagger-section #api_selector .authenticatePanel .token-panel input.error {
+.swagger-section #api_selector .authenticatePanel .token-panel .token-panel-body input.error {
   border-bottom-color: #E45F5F !important;
   background-color: rgba(241, 194, 194, 0.1);
 }
-.swagger-section #api_selector .authenticatePanel .token-panel p {
+.swagger-section #api_selector .authenticatePanel .token-panel .token-panel-body p {
   line-height: 20px !important;
+}
+.swagger-section #api_selector .authenticatePanel .token-panel .token-panel-body .inscription-button {
+  margin: 10px 0 0;
+  text-align: center;
 }
 .swagger-section #api_selector label {
   font-weight: normal;
@@ -1370,6 +1383,9 @@
 }
 body .main-content .right-content .right-content__body .right-content__body-content table > tbody > tr td {
   vertical-align: middle;
+}
+.swagger-section #message-bar {
+  min-height: auto;
 }
 .swagger-section .swagger-ui-wrap .code,
 .swagger-section .swagger-ui-wrap ul#resources {

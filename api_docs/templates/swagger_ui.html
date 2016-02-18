@@ -114,7 +114,7 @@
 
           $(window).scroll(function(){
             console.log('$(window).scrollTop()', $(window).scrollTop(), 'elementPosition.top', elementPosition.top);
-            if($(window).scrollTop() + 100 > elementPosition.top){
+            if($(window).scrollTop() > elementPosition.top){
               $('.authenticatePanel').removeClass('initialPosition').css({
                 'position': 'fixed',
                 'top': '0'
