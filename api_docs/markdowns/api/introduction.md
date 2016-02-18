@@ -13,7 +13,6 @@ Botify provides a REST API in order to integrate Botify in third-party applicati
 - Get information about top external domains, orphan URLs, lost pagerank, sitemaps, etc.
 - Create CSV Exports.
 - ... and much more
-dans Request your Preview of Alpha Botify API
 
 ## Topics
 - [[Authentication;authentication]]
