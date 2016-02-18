@@ -1384,6 +1384,9 @@
 body .main-content .right-content .right-content__body .right-content__body-content table > tbody > tr td {
   vertical-align: middle;
 }
+.swagger-section #message-bar {
+  min-height: auto;
+}
 .swagger-section .swagger-ui-wrap .code,
 .swagger-section .swagger-ui-wrap ul#resources {
   font-family: 'Titillium';
