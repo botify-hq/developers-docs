@@ -135,8 +135,24 @@ html {
         }
 
         .main-info {
-          padding-bottom: 50px;
-          background: #f0f9f9;
+          padding: 10px 0 70px;
+          background: #fff;
+
+          .main-info__header {
+            margin-bottom: 40px;
+
+            a {
+              text-decoration: none;
+
+              h1 {
+                color: #a0d8d5;
+                font-family: "Katahdin Round";
+                font-size: 54px;
+                text-align: center;
+                text-transform: uppercase;
+              }
+            }
+          }
 
           .main-info__item {
             padding-left: 82px;
