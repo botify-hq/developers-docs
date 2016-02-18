@@ -1311,20 +1311,7 @@
 .swagger-section #api_selector {
   float: none;
 }
-<<<<<<< HEAD
-.swagger-section #api_selector .input {
-<<<<<<< HEAD
-  margin-bottom: 10px;
-}
-.swagger-section #api_selector .input label {
-  font-weight: bold;
-=======
-  position: fixed;
-  top: 15px;
-  right: 7%;
-=======
 .swagger-section #api_selector .authenticatePanel {
->>>>>>> add botify button
   width: 270px;
   right: 7%;
 }
@@ -1368,7 +1355,6 @@
 }
 .swagger-section #api_selector .authenticatePanel .token-panel p {
   line-height: 20px !important;
->>>>>>> show auth panel
 }
 .swagger-section #api_selector label {
   font-weight: normal;
@@ -1516,8 +1502,9 @@ ul.operations {
 }
 .content .path h3 a {
   font-family: helvetica;
-  font-size: 13px !important;
+  font-size: 14px !important;
   font-weight: bold;
+  text-transform: lowercase;
 }
 select {
   padding: 5px !important;
