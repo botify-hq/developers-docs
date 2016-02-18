@@ -45,24 +45,32 @@
 
 		.token-panel {
 			display: none;
-			border: solid 2px #776295 !important;
-			padding: 10px;
-			background: #fff;
 
-			input {
-				width: 100% !important;
+			.token-panel-body {
+				padding: 10px;
+				background: #fff;
 				border: solid 2px #776295 !important;
-				padding: 10px !important;
-				transition: 0.5s all !important;
 
-				&.error {
-					border-bottom-color: #E45F5F !important;
-					background-color: rgba(241, 194, 194, 0.1);
+				input {
+					width: 100% !important;
+					border: solid 2px #776295 !important;
+					padding: 10px !important;
+					transition: 0.5s all !important;
+
+					&.error {
+						border-bottom-color: #E45F5F !important;
+						background-color: rgba(241, 194, 194, 0.1);
+					}
 				}
-			}
 
-			p {
-				line-height: 20px !important;
+				p {
+					line-height: 20px !important;
+				}
+
+				.inscription-button {
+					margin: 10px 0 0;
+					text-align: center;
+				}
 			}
 		}
 	}
