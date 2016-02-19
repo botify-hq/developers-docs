@@ -84,13 +84,6 @@
             }
           });
 
-          $('#input_apiKey').blur(function() {
-            var val = $('#input_apiKey').val();
-            if (val) {
-              $('.token-panel').slideUp();
-            }
-          });
-
           $('.show-hide-button').click(function() {
             $('#api_selector .authenticatePanel').toggleClass('open');
             $('.token-panel').slideToggle();
@@ -99,6 +92,14 @@
           if(!$('#input_apiKey').val()) {
             $('.swagger-btn').addClass('btn-disabled');
           }
+
+          $('html').click(function() {
+            $('.token-panel').slideUp();
+          });
+
+          $('#api_selector').click(function(event){
+              event.stopPropagation();
+          });
 
           $('#input_apiKey').keyup(function(e) {
             var val = $(this).val();
