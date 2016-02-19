@@ -111,29 +111,28 @@
           });
 
           // Position authenticatePanel
-          var $authenticatePanel = $('.authenticatePanel');
-          var authenticatePanelIntialTopOffset = $authenticatePanel.offset().top;
-          var authenticatePanelRightOffset = function() {
-            return $(window).width() - ($authenticatePanel.offset().left + $authenticatePanel.outerWidth());
-          }
+          var $authPanel = $('.authenticatePanel');
+          var authPanelContainer = $('.main-content');
+          var authPanelIntialRightPosition = parseInt($authPanel.css('right'), 10);
+          var authPanelIntialTopOffset = $authPanel.offset().top;
+
           var positionPanel = function () {
-            if($(window).scrollTop() > authenticatePanelIntialTopOffset){
-              $authenticatePanel.css({
+            if($(window).scrollTop() > authPanelIntialTopOffset) { // if scroll enough
+              // Compute right position according to container
+              var containerRightOffset = $(window).width() - (authPanelContainer.offset().left + authPanelContainer.outerWidth());
+              $authPanel.css({
                 position: 'fixed',
                 top: 0,
-                right: authenticatePanelRightOffset(),
+                right: containerRightOffset + authPanelIntialRightPosition,
               }).removeClass('initialPosition');
             } else {
-              $authenticatePanel.addClass('initialPosition')
+              // absolute (the easy way)
+              $authPanel.addClass('initialPosition')
             }
           }
 
           $(window).scroll(positionPanel);
-          $(window).resize(function() {
-            $authenticatePanel.css({
-              right: authenticatePanelRightOffset(),
-            });
-          });
+          $(window).resize(positionPanel);
           positionPanel();
 
           addApiKeyAuthorization();
