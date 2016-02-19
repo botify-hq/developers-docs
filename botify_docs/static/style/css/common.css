@@ -553,7 +553,7 @@ body .main-content .right-content {
 @media (max-width: 991px) {
   /* line 240, ../sass/common.scss */
   body .main-content .right-content {
-    padding-top: 10px;
+    padding-top: 30px;
     margin-left: 0px;
   }
 }
