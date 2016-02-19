@@ -1,0 +1,16 @@
+{% extends "base/inside_page.html" %}
+{% load pipeline %}
+{% load staticfiles %}
+
+{% block style %}
+  {% stylesheet 'common_style' %}
+  {% stylesheet 'swagger_ui' %}
+{% endblock %}
+
+{% block right_content %}
+  <h1>404</h1>
+  <img src="{% static 'images/robot_sad.png' %}"/>
+  <h2>Not all those who wander are lost, J.R.R. Tolkien.<h2>
+{% endblock %}
+
+
