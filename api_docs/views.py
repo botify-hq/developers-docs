@@ -58,3 +58,14 @@ class SwaggerUiView(TemplateView):
                 "description": "Botify API Reference"
             }
         }
+
+class NotFoundView(TemplateView):
+    template_name = "404.html"
+
+    def get_context_data(self, *args, **kwargs):
+        return {
+            "properties": {
+                "title": "404 - Page Not Found",
+                "description": "Not all those who wander are lost, J.R.R. Tolkien."
+            }
+        }
