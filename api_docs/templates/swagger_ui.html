@@ -31,7 +31,7 @@
   <div id="message-bar" class="swagger-ui-wrap" data-sw-translate>&nbsp;</div>
   -->
   <h1>Reference</h1>
-  <div id="swagger-ui-container" class="swagger-ui-wrap"></div>  
+  <div id="swagger-ui-container" class="swagger-ui-wrap"></div>
 </div>
 {% endblock %}
 
@@ -42,9 +42,9 @@
 {% block extra_script %}
 <script type="text/javascript">
     $(function () {
-      
+
       url = "{{ api_url }}";
-      
+
       // Pre load translate...
       if(window.SwaggerTranslator) {
         window.SwaggerTranslator.translate();
@@ -110,19 +110,31 @@
             }
           });
 
-          var elementPosition = $('.authenticatePanel').offset();
-
-          $(window).scroll(function(){
-            console.log('$(window).scrollTop()', $(window).scrollTop(), 'elementPosition.top', elementPosition.top);
-            if($(window).scrollTop() > elementPosition.top){
-              $('.authenticatePanel').removeClass('initialPosition').css({
-                'position': 'fixed',
-                'top': '0'
-              })
+          // Position authenticatePanel
+          var $authenticatePanel = $('.authenticatePanel');
+          var authenticatePanelIntialTopOffset = $authenticatePanel.offset().top;
+          var authenticatePanelRightOffset = function() {
+            return $(window).width() - ($authenticatePanel.offset().left + $authenticatePanel.outerWidth());
+          }
+          var positionPanel = function () {
+            if($(window).scrollTop() > authenticatePanelIntialTopOffset){
+              $authenticatePanel.css({
+                position: 'fixed',
+                top: 0,
+                right: authenticatePanelRightOffset(),
+              }).removeClass('initialPosition');
             } else {
-              $('.authenticatePanel').addClass('initialPosition')
+              $authenticatePanel.addClass('initialPosition')
             }
+          }
+
+          $(window).scroll(positionPanel);
+          $(window).resize(function() {
+            $authenticatePanel.css({
+              right: authenticatePanelRightOffset(),
+            });
           });
+          positionPanel();
 
           addApiKeyAuthorization();
         },
