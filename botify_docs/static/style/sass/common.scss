@@ -148,6 +148,7 @@ body {
 
   .main-content {
     display: flex;
+    position: relative;
     margin-top: 40px;
     background-color: #fff;
 
@@ -237,6 +238,7 @@ body {
     }
 
     .right-content {
+      position: static;
       padding-top: 80px;
       margin-left: 20px;
 

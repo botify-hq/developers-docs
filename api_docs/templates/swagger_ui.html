@@ -31,7 +31,7 @@
   <div id="message-bar" class="swagger-ui-wrap" data-sw-translate>&nbsp;</div>
   -->
   <h1>Reference</h1>
-  <div id="swagger-ui-container" class="swagger-ui-wrap"></div>  
+  <div id="swagger-ui-container" class="swagger-ui-wrap"></div>
 </div>
 {% endblock %}
 
@@ -42,9 +42,9 @@
 {% block extra_script %}
 <script type="text/javascript">
     $(function () {
-      
+
       url = "{{ api_url }}";
-      
+
       // Pre load translate...
       if(window.SwaggerTranslator) {
         window.SwaggerTranslator.translate();
@@ -110,19 +110,30 @@
             }
           });
 
-          var elementPosition = $('.authenticatePanel').offset();
+          // Position authenticatePanel
+          var $authPanel = $('.authenticatePanel');
+          var authPanelContainer = $('.main-content');
+          var authPanelIntialRightPosition = parseInt($authPanel.css('right'), 10);
+          var authPanelIntialTopOffset = $authPanel.offset().top;
 
-          $(window).scroll(function(){
-            console.log('$(window).scrollTop()', $(window).scrollTop(), 'elementPosition.top', elementPosition.top);
-            if($(window).scrollTop() > elementPosition.top){
-              $('.authenticatePanel').removeClass('initialPosition').css({
-                'position': 'fixed',
-                'top': '0'
-              })
+          var positionPanel = function () {
+            if($(window).scrollTop() > authPanelIntialTopOffset) { // if scroll enough
+              // Compute right position according to container
+              var containerRightOffset = $(window).width() - (authPanelContainer.offset().left + authPanelContainer.outerWidth());
+              $authPanel.css({
+                position: 'fixed',
+                top: 0,
+                right: containerRightOffset + authPanelIntialRightPosition,
+              }).removeClass('initialPosition');
             } else {
-              $('.authenticatePanel').addClass('initialPosition')
+              // absolute (the easy way)
+              $authPanel.addClass('initialPosition')
             }
-          });
+          }
+
+          $(window).scroll(positionPanel);
+          $(window).resize(positionPanel);
+          positionPanel();
 
           addApiKeyAuthorization();
         },

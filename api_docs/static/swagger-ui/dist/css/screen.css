@@ -1313,28 +1313,11 @@
 }
 .swagger-section #api_selector .authenticatePanel {
   width: 270px;
-  right: 8.5%;
 }
 .swagger-section #api_selector .authenticatePanel.initialPosition {
   position: absolute !important;
-  display: block !important;
-  float: right;
-  top: -80px !important;
-  right: -9.5% !important;
-}
-@media (max-width: 992px) {
-  .swagger-section #api_selector .authenticatePanel {
-    right: 7.2%;
-  }
-  .swagger-section #api_selector .authenticatePanel.initialPosition {
-    top: -10px !important;
-    right: -7.5% !important;
-  }
-}
-@media (max-width: 767px) {
-  .swagger-section #api_selector .authenticatePanel {
-    right: 2%;
-  }
+  top: 15px !important;
+  right: 15px !important;
 }
 .swagger-section #api_selector .authenticatePanel .show-hide-button {
   background: #776295;
