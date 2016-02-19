@@ -89,7 +89,9 @@
             $('.token-panel').slideToggle();
           });
 
-          if(!$('#input_apiKey').val()) {
+          var $tokenInput = $('#input_apiKey');
+
+          if(!$tokenInput.val()) {
             $('.swagger-btn').addClass('btn-disabled');
           }
 
@@ -101,13 +103,24 @@
               event.stopPropagation();
           });
 
-          $('#input_apiKey').keyup(function(e) {
+          $tokenInput.keyup(function(e) {
             var val = $(this).val();
             if (val) {
+              addApiKeyAuthorization();
               $('.swagger-btn').tooltip('hide');
               $('.swagger-btn').removeClass('btn-disabled');
             } else {
               $('.swagger-btn').addClass('btn-disabled');
+            }
+          });
+
+          $tokenInput.keydown(function(e) {
+            if (e.keyCode === 13) { // enter
+              var val = $('#input_apiKey').val();
+              if (val) {
+                addApiKeyAuthorization();
+                $('.token-panel').slideUp();
+              }
             }
           });
 
@@ -160,14 +173,6 @@
       $('#input_apiKey').change(addApiKeyAuthorization);
 
       window.swaggerUi.load();
-
-      $('#api_selector').submit(function(ev) {
-        var val = $('#input_apiKey').val();
-        if (val) {
-          addApiKeyAuthorization();
-          ev.preventDefault();
-        }
-      });
 
       function log() {
         if ('console' in window) {
