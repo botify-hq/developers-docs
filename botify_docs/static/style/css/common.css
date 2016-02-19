@@ -732,7 +732,50 @@ body .main-content .right-content #datamodel .datamodel-table td, body .main-con
     padding: 10px 0;
   }
 }
-/* line 444, ../sass/common.scss */
+/* line 443, ../sass/common.scss */
+body .main-content .page-404 {
+  padding: 80px 15px 150px;
+  width: 100%;
+  text-align: center;
+}
+/* line 448, ../sass/common.scss */
+body .main-content .page-404 h1 {
+  padding-top: 0 !important;
+  padding-bottom: 25px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e8e1f1;
+  color: #A88BD0;
+  font-family: "Katahdin Round";
+  font-size: 50px;
+  text-transform: uppercase;
+}
+/* line 459, ../sass/common.scss */
+body .main-content .page-404 .image-404 {
+  display: block;
+  margin: auto;
+  box-shadow: 0px 16px 6px -13px rgba(0, 0, 0, 0.55);
+}
+/* line 465, ../sass/common.scss */
+body .main-content .page-404 .citation {
+  padding-top: 35px;
+  display: inline-block;
+  margin: auto;
+}
+/* line 470, ../sass/common.scss */
+body .main-content .page-404 .citation span {
+  display: block;
+}
+/* line 473, ../sass/common.scss */
+body .main-content .page-404 .citation span.quote {
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-style: italic;
+}
+/* line 478, ../sass/common.scss */
+body .main-content .page-404 .citation span.author {
+  text-align: right;
+}
+/* line 486, ../sass/common.scss */
 body .inscription-button {
   display: inline-block;
   margin: 5px 0;

@@ -1,4 +1,4 @@
-{% extends "base/inside_page.html" %}
+{% extends "base/common_page.html" %}
 {% load pipeline %}
 {% load staticfiles %}
 
@@ -7,10 +7,15 @@
   {% stylesheet 'swagger_ui' %}
 {% endblock %}
 
-{% block right_content %}
-  <h1>404</h1>
-  <img src="{% static 'images/robot_sad.png' %}"/>
-  <h2>Not all those who wander are lost, J.R.R. Tolkien.<h2>
+{% block main_content %}
+<div class="page-404">
+  <h1>Page not found</h1>
+  <img class="image-404" src="{% static 'images/robot_sad.png' %}"/>
+  <div class="citation">
+    <span class="quote">Not all those who wander are lost.</span>
+    <span class="author">J.R.R. Tolkien.</span>
+  </div>
+</div>
 {% endblock %}
 
 
