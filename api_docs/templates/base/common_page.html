@@ -44,14 +44,14 @@
           {% block main_content %}
           {% endblock %}
         </div>
+        <footer class="footer">
+          <div class="container">
+            {% include "partials/footer.html" %}
+          </div>
+        </footer>
       </div>
     </div>
   </div>
-  <footer class="footer">
-    <div class="container">
-      {% include "partials/footer.html" %}
-    </div>
-  </footer>
   {% block script %}
     {% javascript 'common_script' %}
   {% endblock %}
