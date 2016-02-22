@@ -1,6 +1,6 @@
 # SDKs
 
-We provide API clients to allow you to start using the Botify API within minutes! If you'd like us to provide others SDKs, please contact us at [support@botify.com](mailto:support@botify.com).
+We provide API clients to allow you to start using the Botify API within minutes! If you'd like us to provide others SDKs, tell us on [Botify API Group](https://groups.google.com/forum/#!forum/botify-api).
 
 
 ## [Javascript SDK](https://github.com/botify-labs/botify-sdk-js)
