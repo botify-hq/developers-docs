@@ -49,20 +49,24 @@ The following example of [[BQLAggsQuery;bql#urlsaggsquery]] compute the number o
 ```
 
 ### Response
-A sample result would be the following. Requested metrics are returned in the same order they were set in the query.
+A sample result would be the following. `status` is the status code of the request: 200 OK, 400 client error (query is invalid).
+When everything went fine, aggregation response is in the `data` key. Requested metrics are returned in the same order they were set in the query.
 
 ```JSON
 [
   {
-    "count": 37,
-    "aggs": [
-      {
-        "metrics": [
-          37,
-          118.52380952380952
-        ]
-      }
-    ]
+    "status": 200,
+    "data": {
+      "count": 37,
+      "aggs": [
+        {
+          "metrics": [
+            37,
+            118.52380952380952
+          ]
+        }
+      ]
+    }
   }
 ]
 ```
@@ -101,40 +105,43 @@ This example returns 3 groups: the URLs with HTTP code 200, the URLs with HTTP c
 ```JSON
 [
   {
-    "count": 37,
-    "aggs": [
-      {
-        "groups": [
-          {
-            "key": [
-              200
-            ],
-            "metrics": [
-              28,
-              157.25
-            ]
-          },
-          {
-            "key": [
-              201
-            ],
-            "metrics": [
-              2,
-              751.25
-            ]
-          },
-          {
-            "key": [
-              404
-            ],
-            "metrics": [
-              7,
-              1809.8
-            ]
-          }
-        ]
-      }
-    ]
+    "status": 200,
+    "data": {
+      "count": 37,
+      "aggs": [
+        {
+          "groups": [
+            {
+              "key": [
+                200
+              ],
+              "metrics": [
+                28,
+                157.25
+              ]
+            },
+            {
+              "key": [
+                201
+              ],
+              "metrics": [
+                2,
+                751.25
+              ]
+            },
+            {
+              "key": [
+                404
+              ],
+              "metrics": [
+                7,
+                1809.8
+              ]
+            }
+          ]
+        }
+      ]
+    }
   }
 ]
 ```
@@ -188,47 +195,50 @@ It creates a group for each combination of group-bys: the fast 200 URLs, the slo
 ```JSON
 [
   {
-    "count": 25,
-    "aggs": [
-      {
-        "groups": [
-          {
-            "key": [
-              200,
-              {
-                "from": 0,
-                "to": 1000
-              }
-            ],
-            "metrics": [
-              4
-            ]
-          },
-          {
-            "key": [
-              200,
-              {
-                "from": 1000
-              }
-            ],
-            "metrics": [
-              19
-            ]
-          },
-          {
-            "key": [
-              201,
-              {
-                "from": 1000
-              }
-            ],
-            "metrics": [
-              2
-            ]
-          }
-        ]
-      }
-    ]
+    "status": 200,
+    "data": {
+      "count": 25,
+      "aggs": [
+        {
+          "groups": [
+            {
+              "key": [
+                200,
+                {
+                  "from": 0,
+                  "to": 1000
+                }
+              ],
+              "metrics": [
+                4
+              ]
+            },
+            {
+              "key": [
+                200,
+                {
+                  "from": 1000
+                }
+              ],
+              "metrics": [
+                19
+              ]
+            },
+            {
+              "key": [
+                201,
+                {
+                  "from": 1000
+                }
+              ],
+              "metrics": [
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    }
   }
 ]
 ```
