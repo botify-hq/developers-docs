@@ -21,7 +21,7 @@ curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_
 The following url returns the fields `http_code`, `delay_last_byte` and `outlinks_internal` of the url `http://www.nytimes.com/` (note that the url needs to be encoded).
 
 ```SH
-https://api.botify.com/analyses/adam_warlock/demo-project/20150929/urls/http%3A%2F%2Fwww.nytimes.com%2F?fields=http_code,delay_last_byte,outlinks_internal
+https://api.botify.com/v1/analyses/adam_warlock/demo-project/20150929/urls/http%3A%2F%2Fwww.nytimes.com%2F?fields=http_code,delay_last_byte,outlinks_internal
 ```
 
 A sample result would be the following. Requested fields and their children are returned. If would have only needed to get the number of unique internal outlinks, we should have requested `outlinks_internal.nb.unique` in the fields list instead of the parent `outlinks_internal`.
