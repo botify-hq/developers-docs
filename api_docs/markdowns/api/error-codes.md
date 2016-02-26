@@ -13,6 +13,7 @@ When a client error occurs, a 4xx HTTP status code is returned with the followin
 ## List
 Error Code | Message
 --- | ---
+1000 | Unknown error
 1001 | Not Authorized
 1002 | Permission denied
 1004 | Analysis not found
