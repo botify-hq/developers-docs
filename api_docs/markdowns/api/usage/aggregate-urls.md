@@ -188,7 +188,7 @@ The following example of [[BQLAggsQuery;bql#urlsaggsquery]] groups URLs by HTTP 
 ### Response
 A sample result would be the following. It returns the total number of URLs matching the filter and the result of the aggregation.
 
-It creates a group for each combination of group-bys: the fast 200 URLs, the slow 200 URLs and the slow 201 URLs. **Note that combinations resulting to 0 URLs (fast 201 URLs) are not returned.**
+It creates a group for each combination of group-bys: the fast 200 URLs, the slow 200 URLs and the slow 201 URLs. **Note that combinations resulting in 0 URLs (fast 201 URLs) are not returned.**
 
 **The default `metric` is `count`.**
 
