@@ -27,7 +27,7 @@ Botify provides a REST API to integrate Botify into third-party applications and
 - [[SDKs;sdks]]
 
 ## Demo
-You can find a little demo of the API [there](https://jsfiddle.net/8k20pbua/11/).
+You can find a little demo of the API [there](https://jsfiddle.net/8k20pbua/12/).
 But the best API demo you can have is the **Botify Analytics Application**, as it is using the API to display/modify (almost) every thing.
 
 ## Complex aggregations and filtering
