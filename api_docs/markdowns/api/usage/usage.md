@@ -5,8 +5,8 @@ Botify API allow you to do almost everything available in the Botify Analytics a
 ## Usages
 - [[List projects;usage-list-projects]]
 - [[List analyses;usage-list-analyses]]
-- [[Get detail on any analysed URL;usage-get-url-detail]] like status code, response time, visits, etc
+- [[Get detail on any analyzed URL;usage-get-url-detail]] like status code, response time, visits, etc
 - [[Search for URLs matching complex filters;usage-query-urls]]
-- [[Perform complex aggregations on analysed URL;usage-aggregate-urls]]
+- [[Perform complex aggregations on analyzed URL;usage-aggregate-urls]]
 - [[Create CSV Exports;usage-csv-export]]
 - [[and much more;usage-other-usages]]
