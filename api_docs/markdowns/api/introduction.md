@@ -35,7 +35,7 @@ The Botify API isn't working in a way where you would request a specific chart. 
 It means that **it's much more powerful** because you are able to **compute any metric and generate any chart you want** including some that aren't in the Botify interface.
 
 ## Coming soon
-- Allow to get **daily search engine crawl and organic visits data from the logs** (from Botify Log Analyzer)
+- Allow to get **daily search engine crawl and organic visits data** (from Botify Log Analyzer)
 - Allow to launch Botify Analytics crawls
 - SDKs for other languages
 
