@@ -5,16 +5,16 @@ Botify provides a REST API to integrate Botify into third-party applications and
 <a href="https://docs.google.com/forms/d/1T6D588024flDKHS6q_IMlVMS-q8rmRvgzBIc8EZdyDo/viewform" class="inscription-button" target="_blank">Request access to the alpha version of the Botify API</a>
 
 ## Use examples
-- **Integrate Botify Data into existing dashboard**.
+- **Integrate Botify Data into existing dashboards**.
 - Create dashboards showing an **overview of all your websites**.
-- Create **product and engineering team reporting**
-- **Complete Botify data with other sources** like Search Console, Majestic SEO or even sales results, products inventory, etc
-- **Automate exports** after each crawl to get list of error pages (404, 500, ...), most visited pages, extracted data, etc
-- ... and you?
+- Create **reporting for the product or engineering team**
+- **Complement Botify data with other sources** like Google Search Console, Majestic SEO or even sales results, products inventory, etc.
+- **Automate exports** after each crawl to get list of error pages (404, 500, ...), most visited pages, extracted data, etc.
+- ... What are your own ideas?
 
 ## Possibilities
-For now, Botify API is **only pulling data from Botify Analytics**, leading that **you can get any data related to an analysis**.
-But you aren't not able to get data from Botify Log Analyzer **yet**; though you can get search engine crawled information as shown in the Botify Analytics search engines tab.
+For now, the Botify API is **only pulling data from Botify Analytics**, meaning that **you can get any data related to an analysis**.
+It is not possible to get data from the Botify Log Analyzer dashboard **yet**; however, you can get search engine crawl information shown in the Botify Analytics report's Search Engines tab.
 
 Current technical possibilities of the Botify API includes:
 - **List** your Botify Analytics **projects and analyses**.
@@ -31,15 +31,15 @@ Current technical possibilities of the Botify API includes:
 - ... and more
 
 #### Data Aggregation
-The Botify API isn't working in a way where you would ask for a specific chart. Instead you'll use **[[BQL;bql]]** (Botify Query Language) to perform aggregations and filters on analyzed URLs.
-It means that **it's much more powerful** because you are able to **compute any metric and chart you want** including some that aren't in the Botify interface.
+The Botify API isn't working in a way where you would request a specific chart. Instead you'll use **[[BQL;bql]]** (Botify Query Language) to perform aggregations and filters on analyzed URLs.
+It means that **it's much more powerful** because you are able to **compute any metric and generate any chart you want** including some that aren't in the Botify interface.
 
-## Ongoing
-- Allow to get **daily logs data** (from Botify Log Analyzer)
-- Launch crawls
+## Coming soon
+- Allow to get **daily search engine crawl and organic visits data from the logs** (from Botify Log Analyzer)
+- Allow to launch Botify Analytics crawls
 - SDKs for other languages
 
 
 ## Demo
 You can find a little demo of the API [there](https://jsfiddle.net/8k20pbua/12/).
-But the best API demo you can have is the **Botify Analytics Application**, as it is using the API to display/modify (almost) every thing.
+But the best API demo is the **Botify Analytics Application** itself, as it is using the API to display/modify (almost) everything.
