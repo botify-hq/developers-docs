@@ -27,12 +27,12 @@ An extract of the response could be:
 {
   "features": {
     "ganalytics": {
-        "ganalytics_site_id": 111513424,
-        "date_start": "2016-02-08",
+      "ganalytics_site_id": 111513424,
+      "date_start": "2016-02-08",
       "date_end": "2016-03-09",
       "sampled": true,
       "sample_size": 30227156,
-      "sample_percent": "72.89999999999999"
+      "sample_percent": "72.89999999999999",
       "unknown": {
         "organic": {
           "all": {
@@ -61,7 +61,7 @@ An extract of the response could be:
           "facebook": {
             "nb_urls": 300,
             "nb_visits": 38437
-          }
+          },
           "twitter": {
             "nb_urls": 48,
             "nb_visits": 525
