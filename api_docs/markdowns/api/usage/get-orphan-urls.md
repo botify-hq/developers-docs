@@ -7,7 +7,7 @@ Orphan URLs are URLs which are **not in your website structure** (or in the scop
 
 ### Get count
 
-To get the count of Orphan URLs which recevied either organic or social visits (according to Google Analytics), you have to request the main analysis data using [[getAnalysisSummary;reference#/Analysis/getAnalysisSummary]].
+To get the number of Orphan URLs which recevied either organic or social visits (according to Google Analytics), you have to request the main analysis data using [[getAnalysisSummary;reference#/Analysis/getAnalysisSummary]].
 
 - Operation: [[getAnalysisSummary;reference#/Analysis/getAnalysisSummary]]
 - Path: `analyses/{username}/{project_slug}/{analysis_slug}`
@@ -122,9 +122,13 @@ The response could be the following. You can at most get a sample of 1000 orphan
 
 ## Search Engines' Crawl Orphan URLs
 
+Search engines' crawl orphan URLs are shown the following chart avalaible in the Search Engines tab of the Botify Analytics report. Indeed, orphan URLs are the URLs only crawled by Google/Bing (the red part).
+
+![crawls venn diagramm](https://cloud.githubusercontent.com/assets/1886834/13709330/a0160116-e7b3-11e5-9166-896b2a4753cf.png)
+
 ### Get count
 
-To get the count of Orphan URLs which were crawled by a search engine (according to your logs), you have to request the main analysis data using [[getAnalysisSummary;reference#/Analysis/getAnalysisSummary]].
+To get the number of Orphan URLs which were crawled by a search engine (according to your logs), you have to request the main analysis data using [[getAnalysisSummary;reference#/Analysis/getAnalysisSummary]].
 
 - Operation: [[getAnalysisSummary;reference#/Analysis/getAnalysisSummary]]
 - Path: `analyses/{username}/{project_slug}/{analysis_slug}`
@@ -180,4 +184,6 @@ So for instance the number of total number of orphans URLs for Google can be fou
 
 
 
-### Get sample of Orphan URLs
+### Get Orphan URLs
+
+You can't get the list of orphan URLs yet, which explains why you can't click on the red part in the Botify Analytics Application. Be noticed that we are developing a way to query these orphan URLs.
