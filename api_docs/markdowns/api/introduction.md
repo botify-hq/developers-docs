@@ -14,7 +14,6 @@ Botify provides a REST API to integrate Botify into third-party applications and
 
 ## Possibilities
 For now, the Botify API is **only pulling data from Botify Analytics**, meaning that **you can get any data related to an analysis**.
-It is not possible to get data from the Botify Log Analyzer dashboard **yet**; however, you can get search engine crawl information shown in the Botify Analytics report's Search Engines tab.
 
 Current technical possibilities of the Botify API includes:
 - **List** your Botify Analytics **projects and analyses**.
@@ -29,6 +28,10 @@ Current technical possibilities of the Botify API includes:
 &nbsp;&nbsp;- **URLs found in your sitemaps**.
 - **Export URLs**
 - ... and more
+
+#### Current limitations
+It is not possible to get data from the Botify Log Analyzer dashboard **yet**, thus you can't get the number of unique/total crawls day by day for now.
+However, you can get search engines crawl data as shown in the Botify Analytics report's Search Engines tab. This data is computed on the last of 30 days of logs and is avalaible only for analyzed URLs (URLs in your Botify Analytics project's crawl scope).
 
 #### Data Aggregation
 The Botify API isn't working in a way where you would request a specific chart. Instead you'll use **[[BQL;bql]]** (Botify Query Language) to perform aggregations and filters on analyzed URLs.
