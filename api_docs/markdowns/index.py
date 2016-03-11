@@ -123,6 +123,17 @@ PAGES = [
         }
     },
     {
+        "url_name": "usage-get-orphan-urls",
+        "markdown_file": "api/usage/get-orphan-urls.md",
+        "path": "api/usage/get-orphan-urls",
+        "properties": {
+            "menu_item": "usage-get-orphan-urls",
+            "breadcrumb": ["usage"],
+            "title": "Get Orphan URLs",
+            "description": "Get Google Analytics and Search Engines' Crawl Orphans URLs"
+        }
+    },
+    {
         "url_name": "usage-csv-export",
         "markdown_file": "api/usage/csv-export.md",
         "path": "api/usage/csv-export",

@@ -44,6 +44,9 @@
       <div class="sidebar__group-item {% ifequal properties.menu_item "usage-aggregate-urls" %}active{% endifequal %}">
         <a href="{% url 'md-page' 'api/usage/aggregate-urls' %}">Aggregate URLs</a>
       </div>
+      <div class="sidebar__group-item {% ifequal properties.menu_item "usage-get-orphan-urls" %}active{% endifequal %}">
+        <a href="{% url 'md-page' 'api/usage/get-orphan-urls' %}">Get Orphan URLs</a>
+      </div>
       <div class="sidebar__group-item {% ifequal properties.menu_item "usage-csv-export" %}active{% endifequal %}">
         <a href="{% url 'md-page' 'api/usage/csv-export' %}">CSV Export</a>
       </div>
