@@ -9,7 +9,7 @@ Botify API allows you to **filter the dataset of analyzed URLs** and return any 
 - Path: `analyses/{username}/{project_slug}/{analysis_slug}/urls`
 - HTTP Verb: POST
 - Body : `Array<BQLQuery>`
-- Response: `Array<BQLResult>`
+- Response: `Pagination<BQLResult>`
 
 Please refer to [[BQLQuery;bql-query]] documentation for information about input.
 
