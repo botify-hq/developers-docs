@@ -37,7 +37,7 @@ class DatamodelView(TemplateView):
         return {
             "datamodel_api_url": settings.DATAMODEL_API_URL,
             "properties": {
-                "menu_item": "urls-datamodel",
+                "menu_item": "analysis-urls-datamodel",
                 "breadcrumb": [],
                 "title": "URLs Datamodel",
                 "description": "Botify API, URLs Datamodel"
