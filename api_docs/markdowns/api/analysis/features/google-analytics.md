@@ -1,6 +1,6 @@
 # Google Analytics
 
-Google Analytics feature is used to compute number of visits by URL, therefore whenever an URL is active or not. This data is mainly used for the **Visits** tab of Botify Analytics Report.
+Google Analytics is used to compute number of visits by URL, therefore whenever an URL is active or not. This data is mainly used for the **Visits** tab of Botify Analytics Report.
 It also introduce Google Analytics orphan URLs which are URLs **not in your website structure** (or in the scope of your crawl) but which received visits according to Google Analytics.
 
 
