@@ -111,14 +111,36 @@ PAGES = [
         }
     },
     {
-        "url_name": "analysis-get-orphan-urls",
-        "markdown_file": "api/analysis/get-orphan-urls.md",
-        "path": "api/analysis/get-orphan-urls",
+        "url_name": "analysis-features",
+        "markdown_file": "api/analysis/features/features.md",
+        "path": "api/analysis/features",
         "properties": {
-            "menu_item": "analysis-get-orphan-urls",
+            "menu_item": "analysis-features",
             "breadcrumb": ["analysis"],
-            "title": "Get Orphan URLs",
-            "description": "Get Google Analytics and Search Engines' Crawl Orphans URLs"
+            "title": "Analysis Features",
+            "description": "Analysis Features with Botify API"
+        }
+    },
+    {
+        "url_name": "analysis-features-google-analytics",
+        "markdown_file": "api/analysis/features/google-analytics.md",
+        "path": "api/analysis/features/google-analytics",
+        "properties": {
+            "menu_item": "analysis-features-google-analytics",
+            "breadcrumb": ["analysis", "analysis-features"],
+            "title": "Analysis Feature Google Analytics",
+            "description": "Analysis Feature Google Analytics with Botify API"
+        }
+    },
+    {
+        "url_name": "analysis-features-search-engines",
+        "markdown_file": "api/analysis/features/search-engines.md",
+        "path": "api/analysis/features/search-engines",
+        "properties": {
+            "menu_item": "analysis-features-search-engines",
+            "breadcrumb": ["analysis", "analysis-features"],
+            "title": "Analysis Feature Search Engines",
+            "description": "Analysis Feature Search Engines with Botify API"
         }
     },
     {

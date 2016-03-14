@@ -173,8 +173,7 @@ body {
       .sidebar__menu {
         padding-right: 20px;
 
-        .sidebar__group {
-          cursor: pointer;
+        > .sidebar__group {
 
           & + .sidebar__group {
             margin-top: 10px;
@@ -183,7 +182,6 @@ body {
           .sidebar__group-header {
             padding-bottom: 9px;
             margin-bottom: 10px;
-            border-bottom: 1px solid #e4dbeb;
 
             a {
               font-weight: bold;
@@ -195,6 +193,10 @@ body {
                 color: #685189 !important;
               }
             }
+          }
+
+          > .sidebar__group-header {
+            border-bottom: 1px solid #e4dbeb;
           }
 
           &.open {
@@ -225,12 +227,14 @@ body {
                 margin-top: 20px;
               }
 
-              &.active,
-              &:hover {
-                a {
-                  color: #685189;
-                }
+              &.active a,
+              a:hover {
+                color: #685189;
               }
+            }
+
+            .sidebar__group-body {
+              margin-left: 10px;
             }
           }
         }
