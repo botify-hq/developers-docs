@@ -1,6 +1,6 @@
 # BQLQuery
 
-`BQLQuery` is used for [[Urls Filtering;usage-query-urls]] to define fields selection, filter to operate and sort to apply on result.
+`BQLQuery` is used for [[Urls Filtering;analysis-search-for-urls]] to define fields selection, filter to operate and sort to apply on result.
 
 ## Format
 ```JSON
@@ -41,4 +41,4 @@ Please refer to [[BQLFilter;bql-filter]] documentation.
 
 
 ## Example
-Full example in [[Urls Filtering documentation;usage-query-urls#example]].
+Full example in [[Urls Filtering documentation;analysis-search-for-urls#example]].

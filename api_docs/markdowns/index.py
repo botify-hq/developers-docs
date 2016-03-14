@@ -89,14 +89,14 @@ PAGES = [
         }
     },
     {
-        "url_name": "analysis-query-urls",
-        "markdown_file": "api/analysis/query-urls.md",
-        "path": "api/analysis/query-urls",
+        "url_name": "analysis-search-for-urls",
+        "markdown_file": "api/analysis/search-for-urls.md",
+        "path": "api/analysis/search-for-urls",
         "properties": {
-            "menu_item": "analysis-query-urls",
+            "menu_item": "analysis-search-for-urls",
             "breadcrumb": ["analysis"],
-            "title": "Query URLs",
-            "description": "Query URLs with Botify API"
+            "title": "Search for URLs",
+            "description": "Search for URLs with Botify API"
         }
     },
     {

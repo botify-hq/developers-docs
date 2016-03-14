@@ -1,6 +1,6 @@
 # BQLAggsQuery
 
-`BQLAggsQuery` is used for [[Urls Aggregation;usage-aggregate-urls]] to define aggregation to perform, metrics to compute, and filter to operate.
+`BQLAggsQuery` is used for [[Urls Aggregation;analysis-aggregate-urls]] to define aggregation to perform, metrics to compute, and filter to operate.
 
 ## Format
 ```JSON
@@ -83,4 +83,4 @@ Please refer to [[BQLFilter;bql-filter]] documentation.
 
 
 ## Examples
-Full examples in [[Urls Aggregation documentation;usage-aggregate-urls#example-aggregation-on-filtered-dataset]].
+Full examples in [[Urls Aggregation documentation;analysis-aggregate-urls#example-aggregation-on-filtered-dataset]].
