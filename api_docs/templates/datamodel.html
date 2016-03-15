@@ -33,6 +33,8 @@
 {% block extra_script %}
 <script type="text/javascript">
   $(function () {
+    var initialFilter = url('?') && url('?').filter;
+
     var datamodel = $('#datamodel table').DataTable({
       "processing": true,
       "ajax": {
@@ -53,13 +55,12 @@
         { "data": "group" },
       ],
       "scrollX": true,
+      "search": {
+        "regex": true,
+        "search": initialFilter || undefined,
+      },
       "pagingType": "numbers"
     });
-
-    var filter = url('?') && url('?').filter;
-    if(filter) {
-      datamodel.search(filter).draw();
-    }
   });
 </script>
 
