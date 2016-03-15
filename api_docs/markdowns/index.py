@@ -117,7 +117,7 @@ PAGES = [
         "properties": {
             "menu_item": "analysis-features",
             "breadcrumb": ["analysis"],
-            "title": "Analysis Features",
+            "title": "Features",
             "description": "Analysis Features with Botify API"
         }
     },
@@ -128,7 +128,7 @@ PAGES = [
         "properties": {
             "menu_item": "analysis-features-google-analytics",
             "breadcrumb": ["analysis", "analysis-features"],
-            "title": "Analysis Feature Google Analytics",
+            "title": "Google Analytics",
             "description": "Analysis Feature Google Analytics with Botify API"
         }
     },
@@ -139,7 +139,7 @@ PAGES = [
         "properties": {
             "menu_item": "analysis-features-search-engines",
             "breadcrumb": ["analysis", "analysis-features"],
-            "title": "Analysis Feature Search Engines",
+            "title": "Search Engines",
             "description": "Analysis Feature Search Engines with Botify API"
         }
     },
