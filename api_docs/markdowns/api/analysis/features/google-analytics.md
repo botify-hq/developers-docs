@@ -4,7 +4,7 @@ Google Analytics is used to compute number of visits by URL, therefore whenever 
 It also introduce Google Analytics orphan URLs which are URLs **not in your website structure** (or in the scope of your crawl) but which received visits according to Google Analytics.
 
 
-## Get feature metadata
+## Get metadata
 
 Google Analytics feature metadata includes:
 - imported data timeframe.

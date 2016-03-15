@@ -7,7 +7,7 @@ It also introduce Search Engines orphan URLs which are URLs **not in your websit
 ![crawls venn diagramm](https://cloud.githubusercontent.com/assets/1886834/13709330/a0160116-e7b3-11e5-9166-896b2a4753cf.png)
 
 
-## Get feature metadata
+## Get metadata
 
 Google Analytics feature metadata includes:
 - imported data timeframe.
@@ -74,7 +74,7 @@ Plus, you can get orphan URLs count with the `orphans` property. For instance, t
 
 
 
-### Get Orphan URLs
+## Get Orphan URLs
 
 **Not available yet.**
 You can't get the list of orphan URLs yet, which explains why you can't click on the red part in the Botify Analytics Application.
