@@ -39,21 +39,21 @@ curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_
 The response will have the following format.
 If a feature is enabled, the feature property is present and not equal to `null`. For most of features, additional data (like configuration, or prefetch results) is stored can be found in its value. For more details, please refer to the related documentation section.
 
-```JS
+```JSON
 {
-  features: {
-    segments: ?Object,
-    ganalytics: ?Object,
-    search_engines: ?Object,
-    sitemaps: ?Object,
-    extract: ?Object,
-    comparison: ?Object
-    links: {
-      page_rank: ?Boolean,
-      top_domains: ?Boolean,
-      prev_next: ?Boolean,
+  "features": {
+    "segments": ?Object,
+    "ganalytics": ?Object,
+    "search_engines": ?Object,
+    "sitemaps": ?Object,
+    "extract": ?Object,
+    "comparison": ?Object,
+    "links": {
+      "page_rank": ?Boolean,
+      "top_domains": ?Boolean,
+      "prev_next": ?Boolean,
     },
-    rel: ?Boolean
+    "rel": ?Boolean
   },
   ...
 }
