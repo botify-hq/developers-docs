@@ -7,9 +7,9 @@ It also introduce Google Analytics orphan URLs which are URLs **not in your webs
 ## Get metadata
 
 Google Analytics feature metadata includes:
-- imported data timeframe.
+- imported **data timeframe**.
 - data sample info.
-- orphans URLs counts.
+- **orphans URLs counts**.
 
 ### Request
 

@@ -10,8 +10,8 @@ It also introduce Search Engines orphan URLs which are URLs **not in your websit
 ## Get metadata
 
 Google Analytics feature metadata includes:
-- imported data timeframe.
-- orphans URLs counts.
+- imported **data timeframe**.
+- **orphans URLs counts**.
 
 ### Request
 
