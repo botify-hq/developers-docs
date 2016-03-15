@@ -4,7 +4,7 @@ According to analysis configuration and set up integrations, some features can b
 
 Features includes:
 
-- **segments**: Custom website segmentation (by pagetype, etc)
+- [[**segments**;analysis-features-segments]]: Custom website segmentation (by pagetype, etc)
 - [[**ganalytics**;analysis-features-google-analytics]]: Data imported from Google Analytics to compute visits
 - [[**search_engines**;analysis-features-search-engines]]: Data imported from Logs to compute search engines' crawl and organic visits.
 - **sitemaps**: Data imported from your sitemaps

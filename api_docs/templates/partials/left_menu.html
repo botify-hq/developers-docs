@@ -43,6 +43,9 @@
           <a href="{% url 'md-page' 'api/analysis/features' %}">Features</a>
         </div>
         <div class="sidebar__group-body">
+          <div class="sidebar__group-item {% ifequal properties.menu_item "analysis-features-segments" %}active{% endifequal %}">
+            <a href="{% url 'md-page' 'api/analysis/features/segments' %}">Segments</a>
+          </div>
           <div class="sidebar__group-item {% ifequal properties.menu_item "analysis-features-google-analytics" %}active{% endifequal %}">
             <a href="{% url 'md-page' 'api/analysis/features/google-analytics' %}">Google Analytics</a>
           </div>

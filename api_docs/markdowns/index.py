@@ -110,6 +110,7 @@ PAGES = [
             "description": "Aggregate URLs with Botify API"
         }
     },
+    # Analysis Features
     {
         "url_name": "analysis-features",
         "markdown_file": "api/analysis/features/features.md",
@@ -119,6 +120,17 @@ PAGES = [
             "breadcrumb": ["analysis"],
             "title": "Features",
             "description": "Analysis Features with Botify API"
+        }
+    },
+    {
+        "url_name": "analysis-features-segments",
+        "markdown_file": "api/analysis/features/segments.md",
+        "path": "api/analysis/features/segments",
+        "properties": {
+            "menu_item": "analysis-features-segments",
+            "breadcrumb": ["analysis", "analysis-features"],
+            "title": "Segments",
+            "description": "Analysis Feature Segments with Botify API"
         }
     },
     {
