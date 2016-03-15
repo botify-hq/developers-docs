@@ -23,9 +23,9 @@ Current technical possibilities of the Botify API includes:
 - **Search for URLs** matching a filter, based on any indicator or URL patterns.
 - Get **information about any URL crawled by Botify Analytics**: HTTP status code, load  time performance, number of inlinks, of outlinks, of organic visits, presence in sitemaps, internal pagerank, etc.
 - Get **information about** other URLs including:
-&nbsp;&nbsp;- **orphan URLs**: URLs which are **not in your website structure** (or in the scope of the crawl) but which were **crawled by a search engine** or **received visits**.
-&nbsp;&nbsp;- **top external domains** your website links to.
-&nbsp;&nbsp;- **URLs found in your sitemaps**.
+    - **orphan URLs**: URLs which are **not in your website structure** (or in the scope of the crawl) but which were **crawled by a search engine** or **received visits**.
+    - **top external domains** your website links to.
+    - **URLs found in your sitemaps**.
 - **Export URLs**
 - ... and more
 

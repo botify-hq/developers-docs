@@ -373,6 +373,11 @@ body {
           h4, h5,
           ul {
             padding: 10px 0;
+
+            ul {
+              margin-left: 10px;
+              padding: 0;
+            }
           }
 
 
