@@ -3,7 +3,7 @@
 `BQLFilter` allows to define the filter to perform on URLs fields. It can be composed using boolean conditions (and, or, not).
 
 ## FieldFilter
-A field filter allows to describe a predicate to apply on a given field. **Full list of fields** can be found in [[URLs Datamodel;analysis-urls-datamodel]].
+A field filter allows to describe a predicate to apply on a given field. **Full list of filterable fields** can be found in [[URLs Datamodel;analysis-urls-datamodel?filter=filters]].
 ```JSON
 {
   "predicate": string,
