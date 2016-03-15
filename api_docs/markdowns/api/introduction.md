@@ -14,8 +14,8 @@ Botify provides a REST API to integrate Botify into third-party applications and
 
 ## Possibilities
 For now, the Botify API is **only pulling data from Botify Analytics**, meaning that **you can get any data related to an analysis**.
-
 Current technical possibilities of the Botify API includes:
+
 - **List** your Botify Analytics **projects and analyses**.
 - Get **live statistics** while Botify Analytics is crawling your website.
 - **Compute insights**: ie: number of compliant URLs, number of active URLs, number of pages crawled by Google, average depth, etc.
