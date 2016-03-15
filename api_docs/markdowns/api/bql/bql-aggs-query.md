@@ -1,6 +1,6 @@
 # BQLAggsQuery
 
-`BQLAggsQuery` is used for [[Urls Aggregation;usage-aggregate-urls]] to define aggregation to perform, metrics to compute, and filter to operate.
+`BQLAggsQuery` is used for [[Urls Aggregation;analysis-aggregate-urls]] to define aggregation to perform, metrics to compute, and filter to operate.
 
 ## Format
 ```JSON
@@ -23,7 +23,7 @@ A group-by is defined by:
   - some optional `ranges` that define buckets for the group-by operation.
 
 #### Simple GroupBy
-Only [[aggregables fields;urls-datamodel?filter=agg:]] can be used for group by operations.
+Only [[aggregables fields;analysis-urls-datamodel?filter=agg:]] can be used for group by operations.
 
 **Example**
 The following groups URLs by their `http_code`.
@@ -34,7 +34,7 @@ The following groups URLs by their `http_code`.
 ```
 
 #### Range GroupBy
-Only [[numerical fields;urls-datamodel?filter=agg:numerical]] can be used for range group by operations.
+Only [[numerical fields;analysis-urls-datamodel?filter=agg:numerical]] can be used for range group by operations.
 
 **Example**
 The following groups URLs by their `delay_last_byte` on two ranges (fast and slow URLs)
@@ -83,4 +83,4 @@ Please refer to [[BQLFilter;bql-filter]] documentation.
 
 
 ## Examples
-Full examples in [[Urls Aggregation documentation;usage-aggregate-urls#example-aggregation-on-filtered-dataset]].
+Full examples in [[Urls Aggregation documentation;analysis-aggregate-urls#example-aggregation-on-filtered-dataset]].

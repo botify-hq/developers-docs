@@ -55,104 +55,125 @@ PAGES = [
             "description": "Botify API, Jobs workflow"
         }
     },
-    # Usage
+    # Analysis
     {
-        "url_name": "usage",
-        "markdown_file": "api/usage/usage.md",
-        "path": "api/usage",
+        "url_name": "analysis",
+        "markdown_file": "api/analysis/analysis.md",
+        "path": "api/analysis",
         "properties": {
-            "menu_item": "usage",
-            "breadcrumb": [],
-            "title": "Usage",
-            "description": "Botify API Usages"
+            "menu_item": "analysis",
+            "title": "Analysis",
+            "description": "Botify API, Analysis"
         }
     },
     {
-        "url_name": "usage-list-projects",
-        "markdown_file": "api/usage/list-projects.md",
-        "path": "api/usage/list-projects",
+        "url_name": "analysis-list-analyses",
+        "markdown_file": "api/analysis/list-analyses.md",
+        "path": "api/analysis/list-analyses",
         "properties": {
-            "menu_item": "usage-list-projects",
-            "breadcrumb": ["usage"],
-            "title": "List projects",
-            "description": "List projects with Botify API"
-        }
-    },
-    {
-        "url_name": "usage-list-analyses",
-        "markdown_file": "api/usage/list-analyses.md",
-        "path": "api/usage/list-analyses",
-        "properties": {
-            "menu_item": "usage-list-analyses",
-            "breadcrumb": ["usage"],
+            "menu_item": "analysis-list-analyses",
+            "breadcrumb": ["analysis"],
             "title": "List analyses",
-            "description": "List analyses with Botify API"
+            "description": "List your analyses with Botify API"
         }
     },
     {
-        "url_name": "usage-get-url-detail",
-        "markdown_file": "api/usage/get-url-detail.md",
-        "path": "api/usage/get-url-detail",
+        "url_name": "analysis-get-url-detail",
+        "markdown_file": "api/analysis/get-url-detail.md",
+        "path": "api/analysis/get-url-detail",
         "properties": {
-            "menu_item": "usage-get-url-detail",
-            "breadcrumb": ["usage"],
+            "menu_item": "analysis-get-url-detail",
+            "breadcrumb": ["analysis"],
             "title": "Get URL Detail",
             "description": "Get detail on a given URL with Botify API"
         }
     },
     {
-        "url_name": "usage-query-urls",
-        "markdown_file": "api/usage/query-urls.md",
-        "path": "api/usage/query-urls",
+        "url_name": "analysis-search-for-urls",
+        "markdown_file": "api/analysis/search-for-urls.md",
+        "path": "api/analysis/search-for-urls",
         "properties": {
-            "menu_item": "usage-query-urls",
-            "breadcrumb": ["usage"],
-            "title": "Query URLs",
-            "description": "Query URLs with Botify API"
+            "menu_item": "analysis-search-for-urls",
+            "breadcrumb": ["analysis"],
+            "title": "Search for URLs",
+            "description": "Search for URLs with Botify API"
         }
     },
     {
-        "url_name": "usage-aggregate-urls",
-        "markdown_file": "api/usage/aggregate-urls.md",
-        "path": "api/usage/aggregate-urls",
+        "url_name": "analysis-aggregate-urls",
+        "markdown_file": "api/analysis/aggregate-urls.md",
+        "path": "api/analysis/aggregate-urls",
         "properties": {
-            "menu_item": "usage-aggregate-urls",
-            "breadcrumb": ["usage"],
+            "menu_item": "analysis-aggregate-urls",
+            "breadcrumb": ["analysis"],
             "title": "Aggregate URLs",
             "description": "Aggregate URLs with Botify API"
         }
     },
     {
-        "url_name": "usage-get-orphan-urls",
-        "markdown_file": "api/usage/get-orphan-urls.md",
-        "path": "api/usage/get-orphan-urls",
+        "url_name": "analysis-features",
+        "markdown_file": "api/analysis/features/features.md",
+        "path": "api/analysis/features",
         "properties": {
-            "menu_item": "usage-get-orphan-urls",
-            "breadcrumb": ["usage"],
-            "title": "Get Orphan URLs",
-            "description": "Get Google Analytics and Search Engines' Crawl Orphans URLs"
+            "menu_item": "analysis-features",
+            "breadcrumb": ["analysis"],
+            "title": "Analysis Features",
+            "description": "Analysis Features with Botify API"
         }
     },
     {
-        "url_name": "usage-csv-export",
-        "markdown_file": "api/usage/csv-export.md",
-        "path": "api/usage/csv-export",
+        "url_name": "analysis-features-google-analytics",
+        "markdown_file": "api/analysis/features/google-analytics.md",
+        "path": "api/analysis/features/google-analytics",
         "properties": {
-            "menu_item": "usage-csv-export",
-            "breadcrumb": ["usage"],
+            "menu_item": "analysis-features-google-analytics",
+            "breadcrumb": ["analysis", "analysis-features"],
+            "title": "Analysis Feature Google Analytics",
+            "description": "Analysis Feature Google Analytics with Botify API"
+        }
+    },
+    {
+        "url_name": "analysis-features-search-engines",
+        "markdown_file": "api/analysis/features/search-engines.md",
+        "path": "api/analysis/features/search-engines",
+        "properties": {
+            "menu_item": "analysis-features-search-engines",
+            "breadcrumb": ["analysis", "analysis-features"],
+            "title": "Analysis Feature Search Engines",
+            "description": "Analysis Feature Search Engines with Botify API"
+        }
+    },
+    {
+        "url_name": "analysis-csv-export",
+        "markdown_file": "api/analysis/csv-export.md",
+        "path": "api/analysis/csv-export",
+        "properties": {
+            "menu_item": "analysis-csv-export",
+            "breadcrumb": ["analysis"],
             "title": "CSV Export",
             "description": "Make a CSV Export with Botify API"
         }
     },
+    # Project
     {
-        "url_name": "usage-other-usages",
-        "markdown_file": "api/usage/other-usages.md",
-        "path": "api/usage/other-usages",
+        "url_name": "project",
+        "markdown_file": "api/project/project.md",
+        "path": "api/project",
         "properties": {
-            "menu_item": "usage-other-usages",
-            "breadcrumb": ["usage"],
-            "title": "Other usages",
-            "description": "Botify API, others usages"
+            "menu_item": "project",
+            "title": "Project",
+            "description": "Botify API, Project"
+        }
+    },
+    {
+        "url_name": "project-list-projects",
+        "markdown_file": "api/project/list-projects.md",
+        "path": "api/project/list-projects",
+        "properties": {
+            "menu_item": "project-list-projects",
+            "breadcrumb": ["project"],
+            "title": "List projects",
+            "description": "List your projects with Botify API"
         }
     },
     # BQL
