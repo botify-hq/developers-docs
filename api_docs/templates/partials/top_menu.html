@@ -62,7 +62,7 @@
           </ul>
         </li>
         <li class="dropdown {% if properties.menu_item == "project" or properties.breadcrumb.0 == "project" %}active{% endif %}">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Project <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li class="{% ifequal properties.menu_item "project" %}active{% endifequal %}">
               <a href="{% url 'md-page' 'api/project' %}">Project</a>
