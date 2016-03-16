@@ -3,5 +3,8 @@
 # Will copy all the static files into the ./staticfiles folder
 python ./manage.py collectstatic --settings botify_docs.settings.deploy_prod
 
-# run django medusa to generate the html files into the ./_output folder
+# run django medusa to generate the html files into the ./_site folder
 python ./manage.py staticsitegen --settings botify_docs.settings.deploy_prod
+
+#sync with S3
+cd _site; s4cmd sync --sync-check --recursive . s3://botify.test/adele/

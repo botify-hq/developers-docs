@@ -31,7 +31,7 @@ export LC_ALL="en_US.UTF-8"
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-and then `source ~/.bashrc`. For other OS read the installation guide on 
+and then `source ~/.bashrc`. For other OS read the installation guide on
 http://virtualenvwrapper.readthedocs.org/en/latest/install.html#installation
 
 ### Installation
@@ -73,7 +73,7 @@ Then you may want to serve them through HTTP with:
 python -m SimpleHTTPServer 8001
 ```
 
-And then open your brower at http://localhost:8001/_output/
+And then open your brower at http://localhost:8001/_site/
 
 
 ### Deploy Production
