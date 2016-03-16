@@ -7,4 +7,4 @@ python ./manage.py collectstatic --settings botify_docs.settings.deploy_prod
 python ./manage.py staticsitegen --settings botify_docs.settings.deploy_prod
 
 #sync with S3
-cd _site; s4cmd sync --sync-check --delete-removed --recursive . s3://com.botify.saas.production.developer-docs/
+cd _site; s3cmd sync --access_key=$AWS_ACCESS_KEY_ID --secret_key=$AWS_SECRET_ACCESS_KEY --skip-existing --delete-removed --recursive . s3://com.botify.saas.production.developer-docs/ --add-header='Cache-Control':'max-age=2592000, must-revalidate' --add-header='Expires':$(($(date +%s) + 2592000))
