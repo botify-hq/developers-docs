@@ -17,28 +17,35 @@
     <div class="form-group">
       <label>Comparison: </label>
       <select name="selectCompGroup" class="form-control input-sm">
-        <option value="current">Current</option>
+        <option value="current" >Current</option>
         <option value="previous">Previous</option>
         <option value="diff">Diff</option>
       </select>
     </div>
     <div class="form-group">
+      <label>Feature: </label>
+      <select name="selectFeature" class="form-control input-sm">
+        <option value="all" selected>all</option>
+      </select>
+    </div>
+    <div class="form-group">
       <label>Group: </label>
       <select name="selectGroup" class="form-control input-sm">
-        <option value="all">all</option>
+        <option value="all" selected>all</option>
       </select>
     </div>
   </form>
   <table class="table datamodel-table">
     <thead>
       <tr>
-        <th>Group</th>
+        <th>Feature</th>
         <th>Id</th>
         <th>Name</th>
         <th>Permissions</th>
         <th>Type</th>
         <th>SubType</th>
         <th>Multiple</th>
+        <th>Group</th>
       </tr>
     </thead>
   </table>
@@ -51,27 +58,85 @@
   $(function () {
     var initialFilter = url('?') && url('?').filter;
     var initialCompGroup = url('?') && url('?').comparison;
+    var initialFeature = url('?') && url('?').feature;
     var initialGroup = url('?') && url('?').group;
 
     var compGroupFilter = $('select[name=selectCompGroup]');
+    var featureFilter = $('select[name=selectFeature]');
     var groupFilter = $('select[name=selectGroup]');
 
-    var groups = {
-      current: [],
-      previous: [],
-      diff: [],
+    var groupsByFeature = {
+      main: [
+        "main",
+        "scheme",
+        "semantic_metadata",
+        "canonical"
+      ],
+      links: [
+        "inlinks",
+        "inlinks_nofollow",
+        "outlinks_internal",
+        "outlinks_internal_nofollow",
+        "outlinks_external",
+        "outlinks_external_nofollow",
+        "redirects",
+        "duplicate_query_kvs",
+        "page_rank"
+      ],
+      segments: [
+        "segments"
+      ],
+      ganalytics: [
+        "visits.organic.all",
+        "visits.organic.aol",
+        "visits.organic.ask",
+        "visits.organic.baidu",
+        "visits.organic.bing",
+        "visits.organic.google",
+        "visits.organic.naver",
+        "visits.organic.yahoo",
+        "visits.organic.yandex",
+        "visits.social.all",
+        "visits.social.facebook",
+        "visits.social.google+",
+        "visits.social.linkedin",
+        "visits.social.pinterest",
+        "visits.social.reddit",
+        "visits.social.tumblr",
+        "visits.social.twitter"
+      ],
+      search_engines: [
+        "search_engines",
+      ],
+      sitemaps: [
+        "sitemaps"
+      ],
+      extract: [
+        "extract"
+      ],
+      rel: [
+        "hreflang_incoming",
+        "hreflang_outgoing"
+      ]
     };
+    var features = Object.keys(groupsByFeature);
+
+    var groups = [];
 
     // Init datable
     $.fn.dataTable.ext.search.push(
       function( settings, data, dataIndex ) {
         var compGroup = compGroupFilter.val();
+        var feature = featureFilter.val();
         var group = groupFilter.val();
-        var rowGroup = data[0];
 
-        return group !== 'all' && rowGroup === group ? true
-             : group === 'all' && groups[compGroup].indexOf(rowGroup) !== -1 ? true
-             : false;
+        var rowCompGroup = data[8];
+        var rowFeature = data[0];
+        var rowGroup = data[7];
+
+        return (compGroup === rowCompGroup)
+            && (feature === 'all' ? true : feature === rowFeature)
+            && (group === 'all' ? true : group === rowGroup);
       }
     );
 
@@ -83,19 +148,39 @@
         dataSrc: function(json) {
           // Populate groups
           json.groups.forEach(function(group) {
-            var compGroup = getCompGroup(group.id);
-            if (groups[compGroup].indexOf(group.id) === -1) {
-              groups[compGroup].push(group.id);
+            if (groups.indexOf(group.id) === -1) {
+              groups.push(group.id);
             }
           });
-          updateGroupFilter();
+          featureFilter.val(initialFeature || 'all');
           groupFilter.val(initialGroup || 'all');
+          updateGroupFilter();
+
+          // Compute compGroup && feature
+          json.fields.forEach(function(field) {
+            features.every(function(feature) {
+              groupsByFeature[feature].every(function (group) {
+                if(field.group.indexOf(group) !== -1) {
+                  field.feature = feature;
+                  return false;
+                }
+                return true;
+              });
+              return !field.feature;
+            });
+
+            field.feature = field.feature || 'other';
+            field.compGroup = getCompGroup(field.group);
+            field.group = field.compGroup  === 'previous' ? field.group.substring(9)
+                        : field.compGroup  === 'diff' ? field.group.substring(5)
+                        : field.group;
+          });
 
           return json.fields;
         },
       },
       columns: [
-        { data: "group" },
+        { data: "feature" },
         { data: "id" },
         { data: "name" },
         {
@@ -105,20 +190,35 @@
         { data: "type" },
         { data: "subtype" },
         { data: "multiple" },
+        { data: "group" },
+        { data: "compGroup" },
+      ],
+      columnDefs: [
+        {
+          targets: [8],
+          visible: false
+        }
       ],
       scrollX: true,
       search: {
         regex: true,
         search: initialFilter || undefined,
       },
+      order: [],
       pagingType: "numbers",
     });
 
     // Init filter
     compGroupFilter.val(initialCompGroup || 'current');
+    updateFeatureFilter();
 
     // Bind events
     compGroupFilter.change( function() {
+      updateGroupFilter();
+      datamodel.draw();
+    });
+
+    featureFilter.change( function() {
       updateGroupFilter();
       datamodel.draw();
     });
@@ -135,18 +235,31 @@
 
     function updateGroupFilter() {
       var compGroup = compGroupFilter.val();
+      var feature = featureFilter.val();
+
       groupFilter.empty();
       groupFilter.append($('<option>', {
         value: 'all',
         text: 'all'
       }));
-      groups[compGroup].forEach(function(group) {
+
+      var _groups = feature === 'all' ? groups : groupsByFeature[feature];
+      _groups.forEach(function(group) {
         groupFilter.append($('<option>', {
           value: group,
           text: group
         }));
       });
       groupFilter.val('all');
+    }
+
+    function updateFeatureFilter() {
+      features.forEach(function(group) {
+        featureFilter.append($('<option>', {
+          value: group,
+          text: group
+        }));
+      });
     }
   });
 

@@ -4,6 +4,88 @@ Google Analytics is used to compute number of visits by URL, therefore whenever 
 It also introduce Google Analytics orphan URLs which are URLs **not in your website structure** (or in the scope of your crawl) but which received visits according to Google Analytics.
 
 
+## URLs datamodel fields
+
+[[Google Analytics feature's fields;analysis-urls-datamodel?feature=ganalytics]].
+
+
+## Examples of Aggregation
+
+The following examples uses [[URLs aggregation;analysis-aggregate-urls]] to metrics regarding main data.
+**Note**: All the following results are only computed on analyzed URLs (URLs crawled by Botify)
+
+### Number of active URLs
+
+```JSON
+[
+  {
+    "filters": {
+      "field": "visits.organic.all.nb",
+      "predicate": "gt",
+      "value": 0
+    }
+  }
+]
+```
+
+### Average follow inlinks for active or not active URLs
+
+```JSON
+[
+  {
+    "aggs": [
+      {
+        "group_by": [
+          {
+            "range": {
+              "field": "visits.organic.all.nb",
+              "ranges": [
+                { "from": 1 }, // Active
+                { "from": 0, "to": 1 } // Not Active
+              ]
+            }
+          }
+        ],
+        "metrics": [
+          {
+            "avg": "inlinks_internal.nb.follow.unique"
+          }
+        ]
+      }
+    ]
+  }
+]
+```
+
+### Number of active/not active URLs by depth
+
+```JSON
+[
+  {
+    "aggs": [
+      {
+        "group_by": [
+          {
+            "range": {
+              "field": "depth"
+            }
+          },
+          {
+            "range": {
+              "field": "visits.organic.all.nb",
+              "ranges": [
+                { "from": 1 },  // Active
+                { "from": 0, "to": 1 }  // Active
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
+```
+
 ## Get metadata
 
 Google Analytics feature metadata includes:

@@ -4,16 +4,15 @@ According to analysis configuration and set up integrations, some features can b
 
 Features includes:
 
+- [[**main**;analysis-features-main]]: Depth, Load Time, HTTP Codes, HTML Tags
+- [[**links**;analysis-features-links]]: Inlinks/Outlinks, Internal Pagerank, Top Domains, Prev/next
 - [[**segments**;analysis-features-segments]]: Custom website segmentation (by pagetype, etc)
 - [[**ganalytics**;analysis-features-google-analytics]]: Data imported from Google Analytics to compute visits
 - [[**search_engines**;analysis-features-search-engines]]: Data imported from Logs to compute search engines' crawl and organic visits.
 - **sitemaps**: Data imported from your sitemaps
 - **extract**: HTML Extract
-- **comparison**: Comparison to previous analysis
-- **links.page_rank**: Internal Pagerank
-- **links.top_domains**: Top External Outlinks
-- **links.prev_next**: Prev/next pagination tags
 - **rel:** Hreflang tags
+- **comparison**: Comparison to previous analysis
 
 
 ## List enabled features

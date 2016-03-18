@@ -123,6 +123,28 @@ PAGES = [
         }
     },
     {
+        "url_name": "analysis-features-main",
+        "markdown_file": "api/analysis/features/main.md",
+        "path": "api/analysis/features/main",
+        "properties": {
+            "menu_item": "analysis-features-main",
+            "breadcrumb": ["analysis", "analysis-features"],
+            "title": "Main",
+            "description": "Analysis Feature Main with Botify API"
+        }
+    },
+    {
+        "url_name": "analysis-features-links",
+        "markdown_file": "api/analysis/features/links.md",
+        "path": "api/analysis/features/links",
+        "properties": {
+            "menu_item": "analysis-features-links",
+            "breadcrumb": ["analysis", "analysis-features"],
+            "title": "Links",
+            "description": "Analysis Feature Links with Botify API"
+        }
+    },
+    {
         "url_name": "analysis-features-segments",
         "markdown_file": "api/analysis/features/segments.md",
         "path": "api/analysis/features/segments",

@@ -7,6 +7,91 @@ It also introduce Search Engines orphan URLs which are URLs **not in your websit
 ![crawls venn diagramm](https://cloud.githubusercontent.com/assets/1886834/13709330/a0160116-e7b3-11e5-9166-896b2a4753cf.png)
 
 
+## URLs datamodel fields
+
+[[Search Engines feature's fields;analysis-urls-datamodel?feature=search_engines]].
+
+
+## Examples of Aggregation
+
+The following examples uses [[URLs aggregation;analysis-aggregate-urls]] to metrics regarding main data.
+**Note**: All the following results are only computed on analyzed URLs (URLs crawled by Botify)
+
+### Number of crawled/not crawled URLs by Google
+
+```JSON
+[
+  {
+    "aggs": [
+      {
+        "group_by": [
+          {
+            "range": {
+              "field": "search_engines.google.crawls.count",
+              "ranges": [
+                { "from": 1 }, // Crawled
+                { "from": 0, "to": 1 } // Not Crawled
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
+```
+
+### Number of crawled URLs by Google bot
+
+```JSON
+[
+  {
+    "aggs": [
+      {
+        "metrics": [
+          {
+            "sum": "search_engines.google.crawls.search.count",
+            "sum": "search_engines.google.crawls.smartphone.count",
+            "sum": "search_engines.google.crawls.ads.count",
+            "sum": "search_engines.google.crawls.other.count"
+          }
+        ]
+      }
+    ]
+  }
+]
+```
+
+### Number of crawled/not crawled URLs by Google by depth
+
+```JSON
+[
+  {
+    "aggs": [
+      {
+        "group_by": [
+          {
+            "range": {
+              "field": "depth"
+            }
+          },
+          {
+            "range": {
+              "field": "search_engines.google.crawls.count",
+              "ranges": [
+                { "from": 1 }, // Crawled
+                { "from": 0, "to": 1 } // Not Crawled
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
+```
+
+
 ## Get metadata
 
 Google Analytics feature metadata includes:
