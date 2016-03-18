@@ -13,6 +13,16 @@
 {% block right_content %}
 <h1>URLs Datamodel</h1>
 <div id="datamodel">
+  <form class="form-inline">
+    <div class="form-group">
+      <label>Comparison Group:</label>
+      <select name="selectFieldGroup" class="form-control input-sm">
+        <option value="current" selected>Current</option>
+        <option value="previous">Previous</option>
+        <option value="diff">Diff</option>
+      </select>
+    </div>
+  </form>
   <table class="table datamodel-table">
     <thead>
       <tr>
@@ -32,35 +42,56 @@
 
 {% block extra_script %}
 <script type="text/javascript">
+  $.fn.dataTable.ext.search.push(
+    function( settings, data, dataIndex ) {
+        var comparisonGroup = $('select[name=selectFieldGroup]').val();
+        var group = data[6];
+        if (comparisonGroup === 'current') {
+          if (group.indexOf('previous.') !== 0 && group.indexOf('diff.') !== 0){
+            return true;
+          }
+        } else {
+          if (group.indexOf(comparisonGroup + '.') === 0) {
+            return true;
+          }
+        }
+        return false;
+    }
+  );
+
   $(function () {
     var initialFilter = url('?') && url('?').filter;
 
     var datamodel = $('#datamodel table').DataTable({
-      "processing": true,
-      "ajax": {
-        "url": "{{ datamodel_api_url }}",
-        "dataType": "json",
-        "dataSrc": "fields"
+      processing: true,
+      ajax: {
+        url: "{{ datamodel_api_url }}",
+        dataType: "json",
+        dataSrc: "fields",
       },
-      "columns": [
-        { "data": "id" },
-        { "data": "name" },
+      columns: [
+        { data: "id" },
+        { data: "name" },
         {
-          "data": "permissions",
-          "render": "[, ]"
+          data: "permissions",
+          render: "[, ]"
         },
-        { "data": "type" },
-        { "data": "subtype" },
-        { "data": "multiple" },
-        { "data": "group" },
+        { data: "type" },
+        { data: "subtype" },
+        { data: "multiple" },
+        { data: "group" },
       ],
-      "scrollX": true,
-      "search": {
-        "regex": true,
-        "search": initialFilter || undefined,
+      scrollX: true,
+      search: {
+        regex: true,
+        search: initialFilter || undefined,
       },
-      "pagingType": "numbers"
+      pagingType: "numbers",
     });
+
+    $('select[name=selectFieldGroup]').change( function() {
+        datamodel.draw();
+    } );
   });
 </script>
 
