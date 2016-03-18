@@ -11,8 +11,8 @@ Features includes:
 - [[**search_engines**;analysis-features-search-engines]]: Data imported from Logs to compute search engines' crawl and organic visits.
 - **sitemaps**: Data imported from your sitemaps
 - **extract**: HTML Extract
-- **comparison**: Comparison to previous analysis
 - **rel:** Hreflang tags
+- **comparison**: Comparison to previous analysis
 
 
 ## List enabled features
