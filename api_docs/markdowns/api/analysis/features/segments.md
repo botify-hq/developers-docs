@@ -77,7 +77,6 @@ In the following example, we assume that the first segment is pagetype.
 
 ### Number of URLs by pagetype
 
-#### Request
 ```JSON
 [
   {
@@ -92,44 +91,8 @@ In the following example, we assume that the first segment is pagetype.
 ]
 ```
 
-#### Response
-The response could be the following. The number of URLs for each segment value is in the corresponding metrics key.
-
-```JSON
-[
-  {
-    "status": 200,
-    "data": {
-      "aggs": [
-        {
-          "groups": [
-            {
-              "key": [
-                "books/arts"
-              ],
-              "metrics": [
-                33766
-              ]
-            },
-            {
-              "key": [
-                "books/novel"
-              ],
-              "metrics": [
-                68973
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  }
-]
-```
-
 ### Total number of visits by pagetype (only on first depth)
 
-#### Request
 ```JSON
 [
   {
@@ -149,37 +112,8 @@ The response could be the following. The number of URLs for each segment value i
 ]
 ```
 
-#### Response
-The response could be the following. The number of visits for each segment value is in the corresponding metrics key.
-
-```JSON
-[
-  {
-    "status": 200,
-    "data": {
-      "aggs": [
-        {
-          "groups": [
-            {
-              "key": [
-                "books"
-              ],
-              "metrics": [
-                4658441
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  }
-]
-```
-
-
 ### Number of compliant URLs by pagetype by depth
 
-#### Request
 ```JSON
 [
   {
@@ -207,85 +141,6 @@ The response could be the following. The number of visits for each segment value
       "field": "compliant.is_compliant",
       "predicate": "eq",
       "value": true
-    }
-  }
-]
-```
-
-#### Response
-The response could be the following. The number of URLs for each combinasion of depth and segment value is in the corresponding metrics key.
-
-```JSON
-[
-  {
-    "status": 200,
-    "data": {
-      "count": 102739,
-      "aggs": [
-        {
-          "groups": [
-            {
-              "key": [
-                {
-                  "from": 1,
-                  "to": 2
-                },
-                "books"
-              ],
-              "metrics": [
-                27
-              ]
-            },
-            {
-              "key": [
-                {
-                  "from": 2,
-                  "to": 3
-                },
-                "books"
-              ],
-              "metrics": [
-                378
-              ]
-            },
-            {
-              "key": [
-                {
-                  "from": 3,
-                  "to": 4
-                },
-                "books"
-              ],
-              "metrics": [
-                976
-              ]
-            },
-            {
-              "key": [
-                {
-                  "from": 4,
-                  "to": 5
-                },
-                "books"
-              ],
-              "metrics": [
-                13419
-              ]
-            },
-            {
-              "key": [
-                {
-                  "from": 5
-                },
-                "books"
-              ],
-              "metrics": [
-                7819
-              ]
-            }
-          ]
-        }
-      ]
     }
   }
 ]
