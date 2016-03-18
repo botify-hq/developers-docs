@@ -13,16 +13,32 @@
 {% block right_content %}
 <h1>URLs Datamodel</h1>
 <div id="datamodel">
+  <form class="form-inline">
+    <div class="form-group">
+      <label>Comparison: </label>
+      <select name="selectCompGroup" class="form-control input-sm">
+        <option value="current">Current</option>
+        <option value="previous">Previous</option>
+        <option value="diff">Diff</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Group: </label>
+      <select name="selectGroup" class="form-control input-sm">
+        <option value="all">all</option>
+      </select>
+    </div>
+  </form>
   <table class="table datamodel-table">
     <thead>
       <tr>
-        <th>Field Id</th>
+        <th>Group</th>
+        <th>Id</th>
         <th>Name</th>
         <th>Permissions</th>
         <th>Type</th>
         <th>SubType</th>
         <th>Multiple</th>
-        <th>Group</th>
       </tr>
     </thead>
   </table>
@@ -33,34 +49,107 @@
 {% block extra_script %}
 <script type="text/javascript">
   $(function () {
+    var initialFilter = url('?') && url('?').filter;
+    var initialCompGroup = url('?') && url('?').comparison;
+    var initialGroup = url('?') && url('?').group;
+
+    var compGroupFilter = $('select[name=selectCompGroup]');
+    var groupFilter = $('select[name=selectGroup]');
+
+    var groups = {
+      current: [],
+      previous: [],
+      diff: [],
+    };
+
+    // Init datable
+    $.fn.dataTable.ext.search.push(
+      function( settings, data, dataIndex ) {
+        var compGroup = compGroupFilter.val();
+        var group = groupFilter.val();
+        var rowGroup = data[0];
+
+        return group !== 'all' && rowGroup === group ? true
+             : group === 'all' && groups[compGroup].indexOf(rowGroup) !== -1 ? true
+             : false;
+      }
+    );
+
     var datamodel = $('#datamodel table').DataTable({
-      "processing": true,
-      "ajax": {
-        "url": "{{ datamodel_api_url }}",
-        "dataType": "json",
-        "dataSrc": "fields"
-      },
-      "columns": [
-        { "data": "id" },
-        { "data": "name" },
-        {
-          "data": "permissions",
-          "render": "[, ]"
+      processing: true,
+      ajax: {
+        url: "{{ datamodel_api_url }}",
+        dataType: "json",
+        dataSrc: function(json) {
+          // Populate groups
+          json.groups.forEach(function(group) {
+            var compGroup = getCompGroup(group.id);
+            if (groups[compGroup].indexOf(group.id) === -1) {
+              groups[compGroup].push(group.id);
+            }
+          });
+          updateGroupFilter();
+          groupFilter.val(initialGroup || 'all');
+
+          return json.fields;
         },
-        { "data": "type" },
-        { "data": "subtype" },
-        { "data": "multiple" },
-        { "data": "group" },
+      },
+      columns: [
+        { data: "group" },
+        { data: "id" },
+        { data: "name" },
+        {
+          data: "permissions",
+          render: "[, ]"
+        },
+        { data: "type" },
+        { data: "subtype" },
+        { data: "multiple" },
       ],
-      "scrollX": true,
-      "pagingType": "numbers"
+      scrollX: true,
+      search: {
+        regex: true,
+        search: initialFilter || undefined,
+      },
+      pagingType: "numbers",
     });
 
-    var filter = url('?') && url('?').filter;
-    if(filter) {
-      datamodel.search(filter).draw();
+    // Init filter
+    compGroupFilter.val(initialCompGroup || 'current');
+
+    // Bind events
+    compGroupFilter.change( function() {
+      updateGroupFilter();
+      datamodel.draw();
+    });
+
+    groupFilter.change( function() {
+      datamodel.draw();
+    });
+
+    function getCompGroup(group) {
+      return group.indexOf('previous.') === 0 ? 'previous'
+          : group.indexOf('diff.') === 0 ? 'diff'
+          : 'current';
+    }
+
+    function updateGroupFilter() {
+      var compGroup = compGroupFilter.val();
+      groupFilter.empty();
+      groupFilter.append($('<option>', {
+        value: 'all',
+        text: 'all'
+      }));
+      groups[compGroup].forEach(function(group) {
+        groupFilter.append($('<option>', {
+          value: group,
+          text: group
+        }));
+      });
+      groupFilter.val('all');
     }
   });
+
 </script>
 
 <script>hljs.initHighlightingOnLoad();</script>
