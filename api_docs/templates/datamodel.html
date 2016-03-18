@@ -17,7 +17,7 @@
     <div class="form-group">
       <label>Comparison: </label>
       <select name="selectCompGroup" class="form-control input-sm">
-        <option value="current" selected>Current</option>
+        <option value="current">Current</option>
         <option value="previous">Previous</option>
         <option value="diff">Diff</option>
       </select>
@@ -25,7 +25,7 @@
     <div class="form-group">
       <label>Group: </label>
       <select name="selectGroup" class="form-control input-sm">
-        <option value="all" selected>all</option>
+        <option value="all">all</option>
       </select>
     </div>
   </form>
@@ -50,6 +50,8 @@
 <script type="text/javascript">
   $(function () {
     var initialFilter = url('?') && url('?').filter;
+    var initialCompGroup = url('?') && url('?').comparison;
+    var initialGroup = url('?') && url('?').group;
 
     var compGroupFilter = $('select[name=selectCompGroup]');
     var groupFilter = $('select[name=selectGroup]');
@@ -60,6 +62,7 @@
       diff: [],
     };
 
+    // Init datable
     $.fn.dataTable.ext.search.push(
       function( settings, data, dataIndex ) {
         var compGroup = compGroupFilter.val();
@@ -86,6 +89,7 @@
             }
           });
           updateGroupFilter();
+          groupFilter.val(initialGroup || 'all');
 
           return json.fields;
         },
@@ -110,6 +114,10 @@
       pagingType: "numbers",
     });
 
+    // Init filter
+    compGroupFilter.val(initialCompGroup || 'current');
+
+    // Bind events
     compGroupFilter.change( function() {
       updateGroupFilter();
       datamodel.draw();
