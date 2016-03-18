@@ -47,7 +47,7 @@ You can find the list of set up segments name at `features.segments.names`.
 
 ## Segments fields
 
-Segment features provides 4* main fields in the [[URL datamodel;analysis-urls-datamodel?filter=segments]]:
+Segment features provides 4* main fields in the [[URL datamodel;analysis-urls-datamodel?group=segments]]:
 
 - segments.segment_X.value
 - segments.segment_X.depth_1
