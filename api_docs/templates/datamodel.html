@@ -171,6 +171,9 @@
 
             field.feature = field.feature || 'other';
             field.compGroup = getCompGroup(field.group);
+            field.group = field.compGroup  === 'previous' ? field.group.substring(9)
+                        : field.compGroup  === 'diff' ? field.group.substring(5)
+                        : field.group;
           });
 
           return json.fields;
