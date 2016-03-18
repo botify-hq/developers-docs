@@ -1,6 +1,6 @@
 # Segments
 
-This feature allows you to deeply segment your website pages into several sections (ie: in the segment pagetype, we could have article pages, navigation pages, user pages etdc).
+This feature allows you to deeply segment your website pages into several sections (ie: in the segment pagetype, we could have article pages, navigation pages, user pages etc).
 The segments can be configured in your project settings.
 
 
@@ -72,7 +72,7 @@ So for an URL with a pagetype `books/food` the field would have the following va
 
 ## Examples of Aggregation
 
-The following examples uses [[URLs aggregation;analysis-aggregate-urls]] to compute distribution URLs of visits in segments.
+The following examples uses [[URLs aggregation;analysis-aggregate-urls]] to metrics regarding segments.
 In the following example, we assume that the first segment is pagetype.
 
 ### Number of URLs by pagetype

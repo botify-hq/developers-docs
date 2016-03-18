@@ -43,6 +43,12 @@
           <a href="{% url 'md-page' 'api/analysis/features' %}">Features</a>
         </div>
         <div class="sidebar__group-body">
+          <div class="sidebar__group-item {% ifequal properties.menu_item "analysis-features-main" %}active{% endifequal %}">
+            <a href="{% url 'md-page' 'api/analysis/features/main' %}">Main</a>
+          </div>
+          <div class="sidebar__group-item {% ifequal properties.menu_item "analysis-features-links" %}active{% endifequal %}">
+            <a href="{% url 'md-page' 'api/analysis/features/links' %}">Links</a>
+          </div>
           <div class="sidebar__group-item {% ifequal properties.menu_item "analysis-features-segments" %}active{% endifequal %}">
             <a href="{% url 'md-page' 'api/analysis/features/segments' %}">Segments</a>
           </div>
