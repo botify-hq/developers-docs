@@ -51,7 +51,7 @@ In the following example, we assume that the first segment is pagetype.
 ]
 ```
 
-### Total number of visits by pagetype (only on first depth)
+### Total number of visits by main pagetype
 
 ```JSON
 [
@@ -72,7 +72,7 @@ In the following example, we assume that the first segment is pagetype.
 ]
 ```
 
-### Number of compliant URLs by pagetype by depth
+### Number of crawled/not crawled URLs by Google by main pagetype
 
 ```JSON
 [
@@ -80,28 +80,19 @@ In the following example, we assume that the first segment is pagetype.
     "aggs": [
       {
         "group_by": [
+          "segments.segment_1.depth_1",
           {
             "range": {
-              "field": "depth",
+              "field": "search_engines.google.crawls.count",
               "ranges": [
-                { "from": 0, "to": 1 },
-                { "from": 1, "to": 2 },
-                { "from": 2, "to": 3 },
-                { "from": 3, "to": 4 },
-                { "from": 4, "to": 5 },
-                { "from": 5 }
+                { "from": 1 }, // Crawled
+                { "from": 0, "to": 1 } // Not Crawled
               ]
             }
-          },
-          "segments.segment_1.depth_1"
+          }
         ]
       }
-    ],
-    "filters": {
-      "field": "compliant.is_compliant",
-      "predicate": "eq",
-      "value": true
-    }
+    ]
   }
 ]
 ```
