@@ -46,7 +46,6 @@
         <th>SubType</th>
         <th>Multiple</th>
         <th>Group</th>
-        <th>CompGroup</th>
       </tr>
     </thead>
   </table>
@@ -190,6 +189,12 @@
         { data: "multiple" },
         { data: "group" },
         { data: "compGroup" },
+      ],
+      columnDefs: [
+        {
+          targets: [8],
+          visible: false
+        }
       ],
       scrollX: true,
       search: {
