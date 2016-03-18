@@ -3,6 +3,11 @@
 The links feature is repsonsible for computing inlinks/outlinks for each URL, internal pagerank, internal follow outlinks destination, external follow outlinks destination (Top Domains), prev/next tags.
 
 
+## URLs datamodel fields
+
+[[Links feature's fields;analysis-urls-datamodel?feature=links]].
+
+
 ## Examples of Aggregation
 
 The following examples uses [[URLs aggregation;analysis-aggregate-urls]] to metrics regarding main data.

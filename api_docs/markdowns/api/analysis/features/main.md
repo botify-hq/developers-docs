@@ -2,6 +2,10 @@
 
 The main feature extracts every primary data from crawled URLs including depth, load time, HTTP codes, HTML tags, content type, language, no-index etc.
 
+## URLs datamodel fields
+
+[[Main feature's fields;analysis-urls-datamodel?feature=main]].
+
 
 ## Examples of Aggregation
 

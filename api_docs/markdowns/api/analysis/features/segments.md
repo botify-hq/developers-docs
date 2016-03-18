@@ -4,50 +4,10 @@ This feature allows you to deeply segment your website pages into several sectio
 The segments can be configured in your project settings.
 
 
-## Get metadata
+## URLs datamodel fields
 
-Google Analytics feature metadata includes:
-- **list of configured segments** (limited to the first two because Botify Analytics can only handle two segments at most).
-- segment config
-
-### Request
-
-- Operation: [[getAnalysisSummary;reference#/Analysis/getAnalysisSummary]]
-- Path: `analyses/{username}/{project_slug}/{analysis_slug}`
-- HTTP Verb: GET
-- Response: `Analysis`
-
-```SH
-curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}' \
-     -X GET \
-     -H 'Authorization: Token ${API_KEY}' \
-     -H 'Content-type: application/json'
-```
-
-### Response
-
-An extract of the response could be the following.
-**Note:** If feature is not enabled, `features.segments` resolves to `null`.
-
-You can find the list of set up segments name at `features.segments.names`.
-
-```JSON
-{
-  "features": {
-    "segments": {
-      "rules_raw": "[dim:pagetype]\n\n@articles\n\n[dim:lang]\n\n@us",
-      "names": ["pagetype", "lang"]
-    },
-    ...
-  },
-  ...
-}
-```
-
-
-## Segments fields
-
-Segment features provides 4* main fields in the [[URL datamodel;analysis-urls-datamodel?group=segments]]:
+[[Segment feature's fields;analysis-urls-datamodel?feature=segments]].
+Segments feature provides 4 main fields:
 
 - segments.segment_X.value
 - segments.segment_X.depth_1
@@ -144,4 +104,45 @@ In the following example, we assume that the first segment is pagetype.
     }
   }
 ]
+```
+
+
+## Get metadata
+
+Google Analytics feature metadata includes:
+- **list of configured segments** (limited to the first two because Botify Analytics can only handle two segments at most).
+- segment config
+
+### Request
+
+- Operation: [[getAnalysisSummary;reference#/Analysis/getAnalysisSummary]]
+- Path: `analyses/{username}/{project_slug}/{analysis_slug}`
+- HTTP Verb: GET
+- Response: `Analysis`
+
+```SH
+curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}' \
+     -X GET \
+     -H 'Authorization: Token ${API_KEY}' \
+     -H 'Content-type: application/json'
+```
+
+### Response
+
+An extract of the response could be the following.
+**Note:** If feature is not enabled, `features.segments` resolves to `null`.
+
+You can find the list of set up segments name at `features.segments.names`.
+
+```JSON
+{
+  "features": {
+    "segments": {
+      "rules_raw": "[dim:pagetype]\n\n@articles\n\n[dim:lang]\n\n@us",
+      "names": ["pagetype", "lang"]
+    },
+    ...
+  },
+  ...
+}
 ```
