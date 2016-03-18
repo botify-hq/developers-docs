@@ -12,6 +12,7 @@ It also introduce Google Analytics orphan URLs which are URLs **not in your webs
 ## Examples of Aggregation
 
 The following examples uses [[URLs aggregation;analysis-aggregate-urls]] to metrics regarding main data.
+**Note**: All the following results are only computed on analyzed URLs (URLs crawled by Botify)
 
 ### Number of active URLs
 
