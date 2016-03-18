@@ -432,6 +432,14 @@ body {
       }
 
       #datamodel {
+        form {
+          margin-bottom: 10px;
+
+          .form-group {
+            margin-right: 10px
+          }
+        }
+
         .datamodel-table {
           margin-bottom: 0;
 
