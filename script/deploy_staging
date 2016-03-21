@@ -1,0 +1,17 @@
+#!/bin/bash
+set -e
+
+# Will copy all the static files into the ./staticfiles folder
+python ./manage.py collectstatic --settings botify_docs.settings.deploy_staging
+
+# run django medusa to generate the html files into the ./_site folder
+python ./manage.py staticsitegen --settings botify_docs.settings.deploy_staging
+
+#sync with S3
+s3cmd sync --access_key=$AWS_ACCESS_KEY_ID --secret_key=$AWS_SECRET_ACCESS_KEY --acl-public --skip-existing --delete-removed --recursive ./_site/ s3://com.botify.saas.staging.developer-docs/
+
+#yay
+echo
+echo "Done!"
+echo
+echo "Open http://com.botify.saas.staging.developer-docs.s3-website-eu-west-1.amazonaws.com/"
