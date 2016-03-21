@@ -8,7 +8,7 @@ python ./manage.py collectstatic --settings botify_docs.settings.deploy_staging
 python ./manage.py staticsitegen --settings botify_docs.settings.deploy_staging
 
 #sync with S3
-s3cmd sync --access_key=$AWS_ACCESS_KEY_ID --secret_key=$AWS_SECRET_ACCESS_KEY --acl-public --skip-existing --delete-removed --recursive ./_site/ s3://com.botify.saas.staging.developer-docs/
+s3cmd sync --access_key=$AWS_ACCESS_KEY_ID --secret_key=$AWS_SECRET_ACCESS_KEY --acl-public --recursive ./_site/ s3://com.botify.saas.staging.developer-docs/
 
 #yay
 echo
