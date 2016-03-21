@@ -3,4 +3,4 @@ venv
 staticfiles
 /botify_docs/settings/local.py
 .sass-cache/
-_output/
+_site/
