@@ -41,18 +41,14 @@ If a feature is enabled, the feature property is present and not equal to `null`
 ```JSON
 {
   "features": {
+    "links": ?Object,
     "segments": ?Object,
     "ganalytics": ?Object,
     "search_engines": ?Object,
     "sitemaps": ?Object,
     "extract": ?Object,
-    "comparison": ?Object,
-    "links": {
-      "page_rank": ?Boolean,
-      "top_domains": ?Boolean,
-      "prev_next": ?Boolean,
-    },
-    "rel": ?Boolean
+    "rel": ?Boolean,
+    "comparison": ?Object
   },
   ...
 }
