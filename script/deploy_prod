@@ -2,10 +2,10 @@
 set -e
 
 # Will copy all the static files into the ./staticfiles folder
-python ./manage.py collectstatic --settings botify_docs.settings.deploy_prod
+python ./manage.py collectstatic --settings botify_docs.settings.prod
 
 # run django medusa to generate the html files into the ./_site folder
-python ./manage.py staticsitegen --settings botify_docs.settings.deploy_prod
+python ./manage.py staticsitegen --settings botify_docs.settings.prod
 
 #sync with S3
 s3cmd sync --access_key=$AWS_ACCESS_KEY_ID --secret_key=$AWS_SECRET_ACCESS_KEY --acl-public --delete-removed --no-mime-magic --guess-mime-type --recursive ./_site/ s3://com.botify.saas.production.developer-docs/ --add-header='Cache-Control':'max-age=2592000, must-revalidate' --add-header='Expires':$(($(date +%s) + 2592000))
