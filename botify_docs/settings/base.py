@@ -218,12 +218,3 @@ PIPELINE = {
 
 PIPELINE['CSS_COMPRESSOR'] = 'pipeline.compressors.NoopCompressor'
 PIPELINE['JS_COMPRESSOR'] = 'pipeline.compressors.NoopCompressor'
-
-REDIRECTS = (
-    ('api/usage/aggregate-urls/', '/api/analysis/aggregate-urls/'),
-    ('api/usage/csv-export/', '/api/analysis/csv-export/'),
-    ('api/usage/get-url-detail/', '/api/analysis/get-url-detail/'),
-    ('api/usage/list-analyses/', '/api/analysis/list-analyses/'),
-    ('api/usage/query-urls/', '/api/analysis/search-for-urls/'),
-    ('api/usage/list-projects/', '/api/project/list-projects/'),
-)
