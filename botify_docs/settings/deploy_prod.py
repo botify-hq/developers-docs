@@ -4,7 +4,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['testserver']
 
-STATIC_URL = 'https://developers.botify.com/staticfiles/'
+STATIC_URL = '/staticfiles/'
 
 MEDUSA_RENDERER_CLASS = "django_medusa.renderers.DiskStaticSiteRenderer"
 MEDUSA_DEPLOY_DIR = os.path.join(
