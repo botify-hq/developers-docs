@@ -34,8 +34,8 @@ class MarkdownPageView(TemplateView):
         if 'markdown_file' in self.page:
             context['content'] = load_md_file(self.page['markdown_file'])
 
-        if 'redirect_url' in self.page:
-            context['redirect_url'] = '/%s/' % self.page['redirect_url']
+        if 'redirect_path' in self.page:
+            context['redirect_path'] = '/%s/' % self.page['redirect_path']
 
         return context
 

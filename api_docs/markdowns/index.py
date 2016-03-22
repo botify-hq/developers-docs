@@ -271,31 +271,31 @@ PAGES = [
     {
         "url_name": "usage-aggregate-urls",
         "path": "api/usage/aggregate-urls",
-        "redirect_url": "api/analysis/aggregate-urls"
+        "redirect_path": "api/analysis/aggregate-urls"
     },
     {
         "url_name": "usage-csv-export",
         "path": "api/usage/csv-export",
-        "redirect_url": "api/analysis/csv-export"
+        "redirect_path": "api/analysis/csv-export"
     },
     {
         "url_name": "usage-get-url-detail",
         "path": "api/usage/get-url-detail",
-        "redirect_url": "api/analysis/get-url-detail"
+        "redirect_path": "api/analysis/get-url-detail"
     },
     {
         "url_name": "usage-list-analyses",
         "path": "api/usage/list-analyses",
-        "redirect_url": "api/analysis/list-analyses"
+        "redirect_path": "api/analysis/list-analyses"
     },
     {
         "url_name": "usage-query-urls",
         "path": "api/usage/query-urls",
-        "redirect_url": "api/analysis/search-for-urls"
+        "redirect_path": "api/analysis/search-for-urls"
     },
     {
         "url_name": "usage-list-projects",
         "path": "api/usage/list-projects",
-        "redirect_url": "api/project/list-projects"
+        "redirect_path": "api/project/list-projects"
     },
 ]
