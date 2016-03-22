@@ -18,16 +18,26 @@ class MarkdownPageView(TemplateView):
         breadcrumb = []
         for page_name in properties.get('breadcrumb', []):
             page = get_page_by_attr('url_name', page_name)
-            title = page['properties']['title'] if 'properties' in page and 'title' in page['properties'] else ""
+            title = (page['properties']['title']
+                     if 'properties' in page and 'title' in page['properties']
+                     else "")
             breadcrumb.append({
                 'link': reverse_page(page_name),
                 'name': title
             })
-        return {
-            "content": load_md_file(self.page['markdown_file']),
+
+        context = {
             "properties": properties,
             "breadcrumb": breadcrumb
         }
+
+        if 'markdown_file' in self.page:
+            context['content'] = load_md_file(self.page['markdown_file'])
+
+        if 'redirect_url' in self.page:
+            context['redirect_url'] = '/%s/' % self.page['redirect_url']
+
+        return context
 
 
 class DatamodelView(TemplateView):
@@ -58,6 +68,7 @@ class SwaggerUiView(TemplateView):
                 "description": "Botify API Reference"
             }
         }
+
 
 class NotFoundView(TemplateView):
     template_name = "404.html"

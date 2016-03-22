@@ -16,6 +16,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ properties.description }}">
   <meta property="og:image" content="{% static 'images/og_image_logo.png' %}" />
+
+  {% if redirect_url %}
+    <meta http-equiv="refresh" content="0; url={{ redirect_url }}">
+  {% endif %}
+
   {% block style %}
     {% stylesheet 'common_style' %}
   {% endblock %}
