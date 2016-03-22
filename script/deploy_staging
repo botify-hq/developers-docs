@@ -8,7 +8,7 @@ python ./manage.py collectstatic --settings botify_docs.settings.deploy_staging
 python ./manage.py staticsitegen --settings botify_docs.settings.deploy_staging
 
 #sync with S3
-s3cmd sync --access_key=$AWS_ACCESS_KEY_ID --secret_key=$AWS_SECRET_ACCESS_KEY --acl-public --no-mime-magic --guess-mime-type --recursive ./_site/ s3://com.botify.saas.staging.developer-docs/ --add-header='Cache-Control':'max-age=2592000, must-revalidate' --add-header='Expires':$(($(date +%s) + 2592000))
+s3cmd sync --access_key=$AWS_ACCESS_KEY_ID --secret_key=$AWS_SECRET_ACCESS_KEY --acl-public --skip-existing --delete-removed --no-mime-magic --guess-mime-type --recursive ./_site/ s3://com.botify.saas.staging.developer-docs/ --add-header='Cache-Control':'max-age=2592000, must-revalidate' --add-header='Expires':$(($(date +%s) + 2592000))
 
 #yay
 echo
