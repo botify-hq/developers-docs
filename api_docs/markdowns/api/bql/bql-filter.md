@@ -98,7 +98,7 @@ Can be applied on categorical fields including `string`, `boolean` and `tree` fi
 #### Starts with
 ```JSON
 {
-  "predicate": "start",
+  "predicate": "starts",
   "field": "url",
   "value": "https"
 }
