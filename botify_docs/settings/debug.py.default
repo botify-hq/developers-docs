@@ -1,10 +1,7 @@
 from .base import *  # NOQA
 
-STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
 ALLOWED_HOSTS = ['localhost', 'testserver']
-
-SWAGGER_API_URL = "http://api.botify.fr:8000/v1/swagger.json"
-DATAMODEL_API_URL = "http://api.botify.fr:8000/v1/analyses/datamodel"
+STATIC_URL = '/staticfiles/'
 
 DEBUG = True
 
@@ -26,3 +23,4 @@ LOGGING = {
         },
     },
 }
+
