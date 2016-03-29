@@ -28,12 +28,12 @@ class MarkdownPageView(TemplateView):
 
         context = {
             "properties": properties,
-            "breadcrumb": breadcrumb,
-            "markdown_file": self.page['markdown_file']
+            "breadcrumb": breadcrumb
         }
 
         if 'markdown_file' in self.page:
             context['content'] = load_md_file(self.page['markdown_file'])
+            context['markdown_file'] = self.page['markdown_file']
 
         if 'redirect_path' in self.page:
             context['redirect_path'] = '/%s/' % self.page['redirect_path']
