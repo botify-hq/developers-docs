@@ -1,10 +1,19 @@
 {% extends "base/inside_page.html" %}
+{% load staticfiles %}
 
 {% block breadcrumb %}
 <div class="right-content__breadcrumb">
-  <div class="col-xs-11 no-pad-r">
+  <div class="col-xs-12 no-pad-r">
     {% include "partials/breadcrumb.html" %}
   </div>
+  <div class="edit-page-button">
+    <a href="https://github.com/botify-hq/developers-docs/edit/master/api_docs/markdowns/{{ markdown_file }}">
+      <div title="Edit this page">
+        <img src="{% static 'images/edit-icon.png' %}"><span class="hidden-sm hidden-xs">Edit this page</span>
+      </div>
+    </a>
+  </div>
+  <div class="clearfix"></div>
 </div>
 {% endblock %}
 

@@ -1,5 +1,7 @@
 {% extends "base/inside_page.html" %}
 {% load markdown_content %}
+{% load staticfiles %}
+
 {% block breadcrumb %}
 <div class="right-content__breadcrumb">
   <div class="col-xs-11 no-pad-r">
@@ -49,6 +51,14 @@
       </tr>
     </thead>
   </table>
+</div>
+
+<div class="edit-page-button">
+  <a href="https://github.com/botify-hq/developers-docs/edit/master/api_docs/markdowns/partials/urls-datamodel.md">
+    <div title="Edit this page">
+      <img src="{% static 'images/edit-icon.png' %}"><span class="hidden-sm hidden-xs">Edit this page</span>
+    </div>
+  </a>
 </div>
 {% md_content "partials/urls-datamodel.md" %}
 {% endblock %}

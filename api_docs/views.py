@@ -28,7 +28,8 @@ class MarkdownPageView(TemplateView):
 
         context = {
             "properties": properties,
-            "breadcrumb": breadcrumb
+            "breadcrumb": breadcrumb,
+            "markdown_file": self.page['markdown_file']
         }
 
         if 'markdown_file' in self.page:
