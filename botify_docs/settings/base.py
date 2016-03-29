@@ -126,6 +126,7 @@ STATICFILES_FINDERS = (
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 # STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
 
 
 MEDUSA_RENDERER_CLASS = "django_medusa.renderers.S3StaticSiteRenderer"
@@ -218,3 +219,9 @@ PIPELINE = {
 
 PIPELINE['CSS_COMPRESSOR'] = 'pipeline.compressors.NoopCompressor'
 PIPELINE['JS_COMPRESSOR'] = 'pipeline.compressors.NoopCompressor'
+
+
+MEDUSA_RENDERER_CLASS = "django_medusa.renderers.DiskStaticSiteRenderer"
+MEDUSA_DEPLOY_DIR = os.path.join(
+    BASE_DIR, '..', "_site"
+)
