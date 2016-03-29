@@ -131,7 +131,7 @@ Returns given value and all its children. For instance, the following could  ret
 ```JSON
 {
   "predicate": "with_childre",
-  "field": "segment.segment_1.value",
+  "field": "segments.segment_1.value",
   "value": "foo"
 }
 ```
@@ -141,7 +141,7 @@ Returns matching value excludind children. For instance, the following could  on
 ```JSON
 {
   "predicate": "without_children",
-  "field": "segment.segment_1.value",
+  "field": "segments.segment_1.value",
   "value": "foo"
 }
 ```
@@ -151,7 +151,7 @@ Returns matching children excluding parent. For instance, the following could  r
 ```JSON
 {
   "predicate": "only_children",
-  "field": "segment.segment_1.value",
+  "field": "segments.segment_1.value",
   "value": "foo"
 }
 ```
