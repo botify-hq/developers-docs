@@ -1,6 +1,6 @@
 # Links
 
-The links feature is repsonsible for computing inlinks/outlinks for each URL, internal pagerank, internal follow outlinks destination, external follow outlinks destination (Top Domains), prev/next tags.
+The links feature is responsible for computing inlinks/outlinks for each URL, internal pagerank, internal follow outlinks destination, external follow outlinks destination (Top Domains), prev/next tags.
 
 
 ## URLs datamodel fields
