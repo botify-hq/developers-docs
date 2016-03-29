@@ -456,10 +456,6 @@ body {
             padding: 10px 0;
           }
         }
-
-        .edit-page-button {
-          margin-top: 30px;
-        }
       }
     }
 
@@ -507,12 +503,11 @@ body {
   }
 
   .edit-page-button {
-    position: absolute;
-    right: 50px;
-    float: left;
+    float: right;
 
-    @media(max-width: 991px) {
-      right: 30px;
+    &.edit-datamodel {
+      position: relative;
+      top: 30px;
     }
 
     a {
