@@ -2,7 +2,7 @@
 set -e
 
 # Will copy all the static files into the ./staticfiles folder
-python ./manage.py collectstatic --settings botify_docs.settings.prod
+python ./manage.py collectstatic --noinput --settings botify_docs.settings.prod
 
 # run django medusa to generate the html files into the ./_site folder
 python ./manage.py staticsitegen --settings botify_docs.settings.prod
