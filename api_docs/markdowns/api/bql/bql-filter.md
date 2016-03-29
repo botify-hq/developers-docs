@@ -130,7 +130,7 @@ Can be applied on categorical fields including `string`, `boolean` and `tree` fi
 Returns given value and all its children. For instance, the following could  returns `foo`, `foo/bar`, `foo/baz`.
 ```JSON
 {
-  "predicate": "with_childre",
+  "predicate": "with_children",
   "field": "segments.segment_1.value",
   "value": "foo"
 }
