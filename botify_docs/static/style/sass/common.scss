@@ -245,6 +245,7 @@ body {
       position: static;
       padding-top: 80px;
       margin-left: 20px;
+      margin-right: 20px;
 
       @media(max-width: 991px) {
         padding-top: 30px;
@@ -279,7 +280,7 @@ body {
       }
 
       .right-content__body {
-        padding: 0 40px 100px 15px;
+        padding: 0 15px 100px 15px;
 
         .right-content__body-content {
 
@@ -498,6 +499,30 @@ body {
           }
         }
       }
+    }
+  }
+
+  .edit-page-button {
+    float: right;
+
+    &.edit-datamodel {
+      position: relative;
+      top: 30px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    span {
+      color: #c1b3b3;
+      position: relative;
+      top: -5px;
+    }
+
+    img {
+      height: 22px;
+      opacity: 0.30;
     }
   }
 

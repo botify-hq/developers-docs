@@ -553,6 +553,7 @@ body .main-content .right-content {
   position: static;
   padding-top: 80px;
   margin-left: 20px;
+  margin-right: 20px;
 }
 @media (max-width: 991px) {
   /* line 244, ../sass/common.scss */
@@ -561,45 +562,45 @@ body .main-content .right-content {
     margin-left: 0px;
   }
 }
-/* line 255, ../sass/common.scss */
+/* line 256, ../sass/common.scss */
 body .main-content .right-content .right-content__breadcrumb .breadcrumb {
   background-color: transparent;
   margin: 0;
   padding-top: 0;
   padding-left: 0;
 }
-/* line 261, ../sass/common.scss */
+/* line 262, ../sass/common.scss */
 body .main-content .right-content .right-content__breadcrumb .breadcrumb a {
   color: #c1b3b3;
 }
 @media (max-width: 991px) {
-  /* line 269, ../sass/common.scss */
+  /* line 270, ../sass/common.scss */
   body .main-content .right-content .right-content__header > .col-xs-12 {
     padding-top: 0 !important;
   }
 }
-/* line 274, ../sass/common.scss */
+/* line 275, ../sass/common.scss */
 body .main-content .right-content .right-content__header .right-content__icon {
   width: 66px;
   height: 113px;
   background: url("../images/icons/getting-started-icon.png") no-repeat;
 }
-/* line 281, ../sass/common.scss */
+/* line 282, ../sass/common.scss */
 body .main-content .right-content .right-content__body {
-  padding: 0 40px 100px 15px;
+  padding: 0 15px 100px 15px;
 }
 @media (max-width: 991px) {
-  /* line 284, ../sass/common.scss */
+  /* line 285, ../sass/common.scss */
   body .main-content .right-content .right-content__body .right-content__body-content {
     padding-left: 0;
   }
 }
-/* line 290, ../sass/common.scss */
+/* line 291, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content h1, body .main-content .right-content .right-content__body .right-content__body-content h2, body .main-content .right-content .right-content__body .right-content__body-content h3, body .main-content .right-content .right-content__body .right-content__body-content h4, body .main-content .right-content .right-content__body .right-content__body-content h5 {
   color: #ce4a57;
   font-weight: bold;
 }
-/* line 295, ../sass/common.scss */
+/* line 296, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content h1 {
   padding-top: 0 !important;
   padding-bottom: 25px;
@@ -611,48 +612,48 @@ body .main-content .right-content .right-content__body .right-content__body-cont
   font-size: 50px;
   text-transform: uppercase;
 }
-/* line 307, ../sass/common.scss */
+/* line 308, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content h2 {
   padding-top: 30px !important;
   font-size: 18px;
 }
-/* line 312, ../sass/common.scss */
+/* line 313, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content h3 {
   font-size: 16px;
 }
-/* line 316, ../sass/common.scss */
+/* line 317, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content h4 {
   font-size: 15px;
 }
-/* line 320, ../sass/common.scss */
+/* line 321, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content h5 {
   font-size: 14px;
 }
-/* line 324, ../sass/common.scss */
+/* line 325, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content ul {
   list-style-type: square;
   list-style-position: inside;
 }
-/* line 329, ../sass/common.scss */
+/* line 330, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content p, body .main-content .right-content .right-content__body .right-content__body-content ul {
   color: #463f3f;
   line-height: 25px;
 }
-/* line 333, ../sass/common.scss */
+/* line 334, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content p a, body .main-content .right-content .right-content__body .right-content__body-content ul a {
   color: #e85d6b;
 }
-/* line 340, ../sass/common.scss */
+/* line 341, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content .pagination .active a {
   background-color: #AD8BDA;
   border-color: #AD8BDA;
 }
-/* line 346, ../sass/common.scss */
+/* line 347, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content .pagination a {
   color: #776295;
   outline: 0;
 }
-/* line 352, ../sass/common.scss */
+/* line 353, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content p + h2,
 body .main-content .right-content .right-content__body .right-content__body-content p + h3,
 body .main-content .right-content .right-content__body .right-content__body-content p + h4,
@@ -662,7 +663,7 @@ body .main-content .right-content .right-content__body .right-content__body-cont
 body .main-content .right-content .right-content__body .right-content__body-content p + pre {
   margin-top: 15px;
 }
-/* line 362, ../sass/common.scss */
+/* line 363, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content p + p,
 body .main-content .right-content .right-content__body .right-content__body-content pre + h2,
 body .main-content .right-content .right-content__body .right-content__body-content pre + h3,
@@ -673,92 +674,92 @@ body .main-content .right-content .right-content__body .right-content__body-cont
 body .main-content .right-content .right-content__body .right-content__body-content table + p {
   margin-top: 10px;
 }
-/* line 373, ../sass/common.scss */
+/* line 374, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content h1, body .main-content .right-content .right-content__body .right-content__body-content h2, body .main-content .right-content .right-content__body .right-content__body-content h3,
 body .main-content .right-content .right-content__body .right-content__body-content h4, body .main-content .right-content .right-content__body .right-content__body-content h5,
 body .main-content .right-content .right-content__body .right-content__body-content ul {
   padding: 10px 0;
 }
-/* line 378, ../sass/common.scss */
+/* line 379, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content h1 ul, body .main-content .right-content .right-content__body .right-content__body-content h2 ul, body .main-content .right-content .right-content__body .right-content__body-content h3 ul,
 body .main-content .right-content .right-content__body .right-content__body-content h4 ul, body .main-content .right-content .right-content__body .right-content__body-content h5 ul,
 body .main-content .right-content .right-content__body .right-content__body-content ul ul {
   margin-left: 10px;
   padding: 0;
 }
-/* line 385, ../sass/common.scss */
+/* line 386, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content table {
   border-collapse: collapse;
 }
-/* line 388, ../sass/common.scss */
+/* line 389, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content table th {
   font-weight: bold;
 }
-/* line 392, ../sass/common.scss */
+/* line 393, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content table th,
 body .main-content .right-content .right-content__body .right-content__body-content table td {
   border: 1px solid #ddd;
   background-color: #fff;
 }
-/* line 398, ../sass/common.scss */
+/* line 399, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content table > thead > tr > th, body .main-content .right-content .right-content__body .right-content__body-content table > tbody > tr > th, body .main-content .right-content .right-content__body .right-content__body-content table > tfoot > tr > th, body .main-content .right-content .right-content__body .right-content__body-content table > thead > tr > td, body .main-content .right-content .right-content__body .right-content__body-content table > tbody > tr > td, body .main-content .right-content .right-content__body .right-content__body-content table > tfoot > tr > td {
   padding: 8px;
   line-height: 1.42857143;
   vertical-align: top;
   border-top: 1px solid #ddd;
 }
-/* line 410, ../sass/common.scss */
+/* line 411, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content table > thead > tr > th {
   vertical-align: bottom;
   border-bottom: 2px solid #ddd;
 }
-/* line 415, ../sass/common.scss */
+/* line 416, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content table > tbody > tr:nth-child(odd) {
   background-color: #f9f9f9;
 }
-/* line 418, ../sass/common.scss */
+/* line 419, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content table > tbody > tr:nth-child(odd) td {
   background-color: #f9f9f9;
 }
-/* line 424, ../sass/common.scss */
+/* line 425, ../sass/common.scss */
 body .main-content .right-content .right-content__body .right-content__body-content img {
   max-width: 100%;
 }
-/* line 430, ../sass/common.scss */
+/* line 431, ../sass/common.scss */
 body .main-content .right-content .hljs-string,
 body .main-content .right-content .hljs-attr {
   line-height: 20px;
 }
-/* line 436, ../sass/common.scss */
+/* line 437, ../sass/common.scss */
 body .main-content .right-content #datamodel form {
   margin-bottom: 10px;
 }
-/* line 439, ../sass/common.scss */
+/* line 440, ../sass/common.scss */
 body .main-content .right-content #datamodel form .form-group {
   margin-right: 10px;
 }
-/* line 444, ../sass/common.scss */
+/* line 445, ../sass/common.scss */
 body .main-content .right-content #datamodel .datamodel-table {
   margin-bottom: 0;
 }
-/* line 447, ../sass/common.scss */
+/* line 448, ../sass/common.scss */
 body .main-content .right-content #datamodel .datamodel-table td, body .main-content .right-content #datamodel .datamodel-table th {
   word-break: break-all;
   min-width: 120px;
 }
 @media (max-width: 767px) {
-  /* line 454, ../sass/common.scss */
+  /* line 455, ../sass/common.scss */
   body .main-content .right-content #datamodel .dataTables_length {
     padding: 10px 0;
   }
 }
-/* line 461, ../sass/common.scss */
+/* line 462, ../sass/common.scss */
 body .main-content .page-404 {
   padding: 80px 15px 150px;
   width: 100%;
   text-align: center;
 }
-/* line 466, ../sass/common.scss */
+/* line 467, ../sass/common.scss */
 body .main-content .page-404 h1 {
   padding-top: 0 !important;
   padding-bottom: 25px;
@@ -769,33 +770,57 @@ body .main-content .page-404 h1 {
   font-size: 50px;
   text-transform: uppercase;
 }
-/* line 477, ../sass/common.scss */
+/* line 478, ../sass/common.scss */
 body .main-content .page-404 .image-404 {
   display: block;
   margin: auto;
   box-shadow: 0px 16px 6px -13px rgba(0, 0, 0, 0.55);
 }
-/* line 483, ../sass/common.scss */
+/* line 484, ../sass/common.scss */
 body .main-content .page-404 .citation {
   padding-top: 35px;
   display: inline-block;
   margin: auto;
 }
-/* line 488, ../sass/common.scss */
+/* line 489, ../sass/common.scss */
 body .main-content .page-404 .citation span {
   display: block;
 }
-/* line 491, ../sass/common.scss */
+/* line 492, ../sass/common.scss */
 body .main-content .page-404 .citation span.quote {
   margin-bottom: 8px;
   font-size: 18px;
   font-style: italic;
 }
-/* line 496, ../sass/common.scss */
+/* line 497, ../sass/common.scss */
 body .main-content .page-404 .citation span.author {
   text-align: right;
 }
-/* line 504, ../sass/common.scss */
+/* line 505, ../sass/common.scss */
+body .edit-page-button {
+  float: right;
+}
+/* line 508, ../sass/common.scss */
+body .edit-page-button.edit-datamodel {
+  position: relative;
+  top: 30px;
+}
+/* line 513, ../sass/common.scss */
+body .edit-page-button a {
+  text-decoration: none;
+}
+/* line 517, ../sass/common.scss */
+body .edit-page-button span {
+  color: #c1b3b3;
+  position: relative;
+  top: -5px;
+}
+/* line 523, ../sass/common.scss */
+body .edit-page-button img {
+  height: 22px;
+  opacity: 0.30;
+}
+/* line 529, ../sass/common.scss */
 body .inscription-button {
   display: inline-block;
   margin: 5px 0;
