@@ -26110,6 +26110,7 @@ SwaggerUi.Views.ParameterView = Backbone.View.extend({
 
     var signatureModel = {
       sampleJSON: isJSON ? SwaggerUi.partials.signature.createParameterJSONSample(modelType, modelDefinitions) : false,
+      modelJSON: isJSON ? SwaggerUi.partials.signature.createParameterJSONSample(modelType, modelDefinitions, {}, false) : false,
       sampleXML: isXML ? SwaggerUi.partials.signature.createXMLSample(schema, modelDefinitions, true) : false,
       isParam: true,
       signature: SwaggerUi.partials.signature.getParameterModelSignature(modelType, modelDefinitions),
@@ -26854,7 +26855,7 @@ SwaggerUi.partials.signature = (function () {
   };
 
   // copy-pasted from swagger-js
-  var createParameterJSONSample = function (type, models) {
+  var createParameterJSONSample = function (type, models, modelsToIgnore, useValueSamples) {
     var listType, sampleJson, innerType;
     models = models || {};
 
@@ -26862,9 +26863,9 @@ SwaggerUi.partials.signature = (function () {
     innerType = listType ? type[0] : type;
 
     if(models[innerType]) {
-      sampleJson = createJSONSample(models[innerType]);
+      sampleJson = createJSONSample(models[innerType], modelsToIgnore, useValueSamples);
     } else if (getInlineModel(innerType)){
-      sampleJson = createJSONSample(getInlineModel(innerType)); // may return null, if type isn't correct
+      sampleJson = createJSONSample(getInlineModel(innerType), modelsToIgnore, useValueSamples); // may return null, if type isn't correct
     }
 
 
