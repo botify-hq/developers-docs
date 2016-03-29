@@ -4,10 +4,10 @@ python:
 # install dependencies
 install: "pip install -r requirements.txt"
 # build after each commit
-script: scripts/build
+script: script/build
 # auto deploy on when merge on master
 deploy:
   provider: script
-  script: scripts/deploy_prod
+  script: script/deploy_prod
   on:
     branch: master
