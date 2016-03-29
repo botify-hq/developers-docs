@@ -3,8 +3,8 @@ python:
   - "2.7"
 # install dependencies
 install: "pip install -r requirements.txt"
-# deploy locally after each commit
-script: scripts/deploy_local
+# build after each commit
+script: scripts/build
 # auto deploy on when merge on master
 deploy:
   provider: script
