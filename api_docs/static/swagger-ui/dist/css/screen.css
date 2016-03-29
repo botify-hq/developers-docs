@@ -1412,6 +1412,15 @@ body .main-content .right-content .right-content__body .right-content__body-cont
 .swagger-section .swagger-ui-wrap ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation div.content .sandbox_header {
   margin-bottom: 10px;
 }
+.swagger-section .swagger-ui-wrap ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation div.content .sandbox table tbody.operation-params td {
+  position: relative;
+}
+.swagger-section .swagger-ui-wrap ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation div.content .sandbox table tbody.operation-params td .body-textarea {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  height: inherit;
+}
 .swagger-section .swagger-ui-wrap ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation div.content .response-class h4 {
   margin-top: 10px;
 }
