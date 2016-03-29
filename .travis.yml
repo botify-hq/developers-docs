@@ -1,3 +1,10 @@
+language: python
+python:
+  - "2.7"
+# install dependencies
+install: "pip install -r requirements.txt"
+script: scripts/deploy_local
+# auto deploy on when merge on master
 deploy:
   provider: script
   script: scripts/deploy_prod
