@@ -156,6 +156,11 @@ body {
       display: block;
     }
 
+    code {
+      word-break: break-all;
+      word-wrap: break-word;
+    }
+
     .sidebar {
       max-width: 315px;
       padding: 80px 0 100px 60px;
@@ -503,18 +508,21 @@ body {
   }
 
   .edit-page-button {
-    float: right;
+    position: relative;
 
-    &.edit-datamodel {
-      position: relative;
-      top: 30px;
+    &.edit-datamodel a {
+      top: 28px;
     }
 
     a {
+      position: absolute;
+      right: 0;
+      top: -25px;
       text-decoration: none;
     }
 
     span {
+      margin-left: 3px;
       color: #c1b3b3;
       position: relative;
       top: -5px;
