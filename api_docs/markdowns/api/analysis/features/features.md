@@ -9,6 +9,7 @@ Features includes:
 - [[**segments**;analysis-features-segments]]: Custom website segmentation (by pagetype, etc)
 - [[**ganalytics**;analysis-features-google-analytics]]: Data imported from Google Analytics to compute visits
 - [[**search_engines**;analysis-features-search-engines]]: Data imported from Logs to compute search engines' crawl and organic visits.
+- **content_quality**: Pages' content quality (unicity, similarity)
 - **sitemaps**: Data imported from your sitemaps
 - **extract**: HTML Extract
 - **rel:** Hreflang tags
