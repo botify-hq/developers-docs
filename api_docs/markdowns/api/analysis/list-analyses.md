@@ -17,7 +17,7 @@ curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}' \
 ```
 
 ## Example of response
-The response contains the list of analyses which belongs to the project. For each analysis, several information are given including analysis slug, launch and finished date, related user, list of enabled **features** and their options, crawl configuration.
+The response contains the list of analyses which belongs to the project. For each analysis, information is given, including analysis slug, launch and finished date, related user, list of enabled **features** and their options, crawl configuration.
 
 ```JSON
 {

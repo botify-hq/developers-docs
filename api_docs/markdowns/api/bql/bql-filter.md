@@ -3,7 +3,7 @@
 `BQLFilter` allows to define the filter to perform on URLs fields. It can be composed using boolean conditions (and, or, not).
 
 ## FieldFilter
-A field filter allows to describe a predicate to apply on a given field. **Full list of filterable fields** can be found in [[URLs Datamodel;analysis-urls-datamodel?filter=filters]].
+A field filter allows to describe a predicate to apply for a given field. **Full list of filterable fields** can be found in [[URLs Datamodel;analysis-urls-datamodel?filter=filters]].
 ```JSON
 {
   "predicate": string,
@@ -16,7 +16,7 @@ A field filter allows to describe a predicate to apply on a given field. **Full 
 According to the field type, several predicates can be applied.
 
 ### Numerical Predicates
-Can be aplied on numerical fields including `integer`, `long`, `float`, `double`, `date` and `datetime` fields.
+Can be applied to numerical fields, including `integer`, `long`, `float`, `double`, `date` and `datetime` fields.
 
 #### Equals
 ```JSON
@@ -71,11 +71,11 @@ Can be aplied on numerical fields including `integer`, `long`, `float`, `double`
   "value": [200, 300]
 }
 ```
-**Note**: Lower bondary is inclusive whereas **upper bondary is exclusive**, ie the above example means `200 <= http_code < 300`.
+**Note**: Lower boundary is inclusive whereas **upper boundary is exclusive**. For instance the above example means `200 <= http_code < 300`.
 
 
 ### Categorical Predicates
-Can be applied on categorical fields including `string`, `boolean` and `tree` fields.
+Can be applied to categorical fields, including `string`, `boolean` and `tree` fields.
 
 #### Equals
 ```JSON
@@ -127,7 +127,7 @@ Can be applied on categorical fields including `string`, `boolean` and `tree` fi
 `tree` fields can use both categorical predicates and some extra predicates making it easy to filter on their children. Tree fields are saved as flat strings like `for/bar`.
 
 #### With children
-Returns given value and all its children. For instance, the following could  returns `foo`, `foo/bar`, `foo/baz`.
+Returns given value and all its children. For instance, the following filter could returns `foo`, `foo/bar` and `foo/baz`.
 ```JSON
 {
   "predicate": "with_children",
@@ -137,7 +137,7 @@ Returns given value and all its children. For instance, the following could  ret
 ```
 
 #### Without children
-Returns matching value excludind children. For instance, the following could  only returns `foo`.
+Returns matching value excluding children. For instance, the following filter could only returns `foo`.
 ```JSON
 {
   "predicate": "without_children",
@@ -147,7 +147,7 @@ Returns matching value excludind children. For instance, the following could  on
 ```
 
 #### Only children
-Returns matching children excluding parent. For instance, the following could  returns `foo/bar`, `foo/baz`.
+Returns matching children excluding parent. For instance, the following filter could returns `foo/bar` and `foo/baz`.
 ```JSON
 {
   "predicate": "only_children",
@@ -166,7 +166,7 @@ The `exists` predicate takes no value and tests if the field exists in the docum
 ```
 
 ### Multiple Prefix Predicates
-Some fields can contains a list of values, they are called **multiple** fields. For instance, `query_string_keys` could be equal to `['page', 'length']` on a URL with pagination.
+Some fields can contain a list of values, they are called **multiple** fields. For instance, `query_string_keys` could be equal to `['page', 'length']` on a URL with pagination.
 
 To filter on these fields, **predicates must be prefixed** by `any.` For instance, the following filters URLs on these having a query string key that is equal to "page".
 

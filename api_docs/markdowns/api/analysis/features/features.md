@@ -1,12 +1,12 @@
 # Features
 
-According to analysis configuration and set up integrations, some features can be enabled or not (ie: Search Engines feature is only available if you subscribe to the Log Analyzer option).
+According to analysis configuration and set up integrations, some features can be enabled or not (for instance Search Engines feature is only available if you subscribe to the Log Analyzer option).
 
-Features includes:
+Features include:
 
 - [[**main**;analysis-features-main]]: Depth, Load Time, HTTP Codes, HTML Tags
 - [[**links**;analysis-features-links]]: Inlinks/Outlinks, Internal Pagerank, Top Domains, Prev/next
-- [[**segments**;analysis-features-segments]]: Custom website segmentation (by pagetype, etc)
+- [[**segments**;analysis-features-segments]]: Custom website segmentation (by pagetype, etc.)
 - [[**ganalytics**;analysis-features-google-analytics]]: Data imported from Google Analytics to compute visits
 - [[**search_engines**;analysis-features-search-engines]]: Data imported from Logs to compute search engines' crawl and organic visits.
 - **content_quality**: Pages' content quality (unicity, similarity)

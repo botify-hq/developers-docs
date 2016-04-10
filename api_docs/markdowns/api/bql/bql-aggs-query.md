@@ -1,6 +1,6 @@
 # BQLAggsQuery
 
-`BQLAggsQuery` is used for [[Urls Aggregation;analysis-aggregate-urls]] to define aggregation to perform, metrics to compute, and filter to operate.
+`BQLAggsQuery` is used for [[Urls Aggregation;analysis-aggregate-urls]] to define aggregations to perform, metrics to compute, and filter to operate.
 
 ## Format
 ```JSON
@@ -15,7 +15,7 @@
 }
 ```
 
-A `BQLAggsQuery` is composed of a list of `BQLAggregate` and an optional `BQLFilter`. An `BQLAggregate` defines some `BQLMetric` to compute. `BQLGroupBy` can be used to group URLs and compute metrics on each groups.
+A `BQLAggsQuery` is composed of a list of `BQLAggregate` and an optional `BQLFilter`. An `BQLAggregate` defines some `BQLMetric` to compute. `BQLGroupBy` can be used to group URLs and compute metrics on each group.
 
 ### Group-Bys
 A group-by is defined by:
@@ -65,7 +65,7 @@ Metrics define the operation to compute. Except for `count`, a field on which th
 Note: The default metric is `count`.
 
 **Examples**
-count of URLs
+Count of URLs
 ```JSON
 "count"
 ```

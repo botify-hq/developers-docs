@@ -10,7 +10,7 @@ The links feature is responsible for computing inlinks/outlinks for each URL, in
 
 ## Examples of Aggregation
 
-The following examples uses [[URLs aggregation;analysis-aggregate-urls]] to metrics regarding main data.
+The following examples use [[URLs aggregation;analysis-aggregate-urls]] to metrics regarding main data.
 
 ### Number of internal inlinks by URL
 
@@ -30,7 +30,7 @@ The following examples uses [[URLs aggregation;analysis-aggregate-urls]] to metr
   }
 ]
 ```
-**Note**: `unique` suffix means that 2 links to the same URL will be count only once. You can also compute the total number of inlinks by replacing `unique` suffix by `total`.
+**Note**: `unique` suffix means that 2 links to the same URL will be counted only once. You can also compute the total number of inlinks by replacing the suffix `unique` by `total`.
 
 
 ### Number of internal/external outlinks by URL
@@ -53,7 +53,7 @@ The following examples uses [[URLs aggregation;analysis-aggregate-urls]] to metr
   }
 ]
 ```
-**Note**: `unique` suffix means that 2 links to the same URL will be count only once. You can also compute the total number of inlinks by replacing `unique` suffix by `total`.
+**Note**: `unique` suffix means that 2 links to the same URL will be counted only once. You can also compute the total number of inlinks by replacing the suffix `unique` by `total`.
 
 
 ### Number of internal outlinks to Bad HTTP Code URLs

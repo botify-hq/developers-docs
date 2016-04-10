@@ -17,7 +17,7 @@ curl 'https://api.botify.com/v1/projects/${username}' \
 ```
 
 ## Example of response
-The response contains the list of project which belongs to the user. For each project, several information are given including project slug, related user and project settings.
+The response contains the list of projects which belongs to the user. For each project, information is given, including project's slug, related user and project settings.
 
 ```JSON
 {
