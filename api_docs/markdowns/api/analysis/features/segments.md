@@ -1,6 +1,6 @@
 # Segments
 
-This feature allows you to deeply segment your website pages into several sections such as pagetype in which we could define article pages, navigation pages, user pages, etc.
+This feature allows you to deeply segment your website pages into several sections such as page type, in which we could define article pages, navigation pages, user pages, etc.
 The segments can be configured in your project settings.
 
 

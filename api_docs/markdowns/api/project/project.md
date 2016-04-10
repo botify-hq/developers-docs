@@ -1,6 +1,6 @@
 # Project
 
-The project is the basic container for a website analysis. Think of it as a folder.
+A project is the basic container for a website analysis. Think of it as a folder.
 
 - An analysis is started on a project, and the next analysis started on this project will have its results automatically compared to the previous analysis' results.
 - Repeat analyses are scheduled within a project.
