@@ -1,6 +1,6 @@
 # Aggregate URLs
 
-Using Botify API, you can **aggregate analyzed URLs** to compute metrics like sum of inlinks, avegare load time, etc. You can also **group URLs** on any aggregable field and compute metrics on each group. Full list of aggregable fields can be found in [[URLs Datamodel;analysis-urls-datamodel?filter=agg:]].
+Using Botify API, you can **aggregate analyzed URLs** to compute metrics like sum of inlinks, average load time, etc. You can also **group URLs** on any aggregable field and compute metrics on each group. Full list of aggregable fields can be found in [[URLs Datamodel;analysis-urls-datamodel?filter=agg:]].
 
 ## Endpoint
 
@@ -23,7 +23,7 @@ curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_
 
 ## Example: Aggregation on filtered dataset
 
-The following example of [[BQLAggsQuery;bql#urlsaggsquery]] compute the number of compliant URLs and their average response time.
+The following example of [[BQLAggsQuery;bql#urlsaggsquery]] computes the number of compliant URLs and their average response time.
 
 ### Request
 ```JSON

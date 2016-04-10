@@ -1,7 +1,7 @@
 # Google Analytics
 
-Google Analytics is used to compute number of visits by URL, therefore whenever an URL is active or not. This data is mainly used for the **Visits** tab of Botify Analytics Report.
-It also introduce Google Analytics orphan URLs which are URLs **not in your website structure** (or in the scope of your crawl) but which received visits according to Google Analytics.
+Google Analytics is used to compute the number of visits by URL, therefore whenever an URL is active or not. This data is mainly used for the **Visits** tab of the Botify Analytics Report.
+It also introduces Google Analytics orphan URLs which are URLs **not in your website structure** (or in the scope of your crawl) but which received visits according to Google Analytics.
 
 
 ## URLs datamodel fields
@@ -11,7 +11,7 @@ It also introduce Google Analytics orphan URLs which are URLs **not in your webs
 
 ## Examples of Aggregation
 
-The following examples uses [[URLs aggregation;analysis-aggregate-urls]] to metrics regarding main data.
+The following examples use [[URLs aggregation;analysis-aggregate-urls]] to metrics regarding main data.
 **Note**: All the following results are only computed on analyzed URLs (URLs crawled by Botify)
 
 ### Number of active URLs
@@ -113,7 +113,7 @@ An extract of the response could be the following.
 **Note:** If feature is not enabled, `features.ganalytics` resolves to `null`.
 
 In the response, you can find the imported google analytics timeframe with `date_start` and `date_end` properties.
-Plus, you can get orphan URLs count with the `unknown` property. For instance, the number of orphan URLs for Google can be found at `features.ganalytics.unknown.organic.google.nb_urls`.
+Plus, you can get the number of orphan URLs with the `unknown` property. For instance, the number of orphan URLs for Google can be found in `features.ganalytics.unknown.organic.google.nb_urls`.
 
 ```JSON
 {
@@ -168,7 +168,7 @@ Plus, you can get orphan URLs count with the `unknown` property. For instance, t
 
 
 
-### Get sample of Orphan URLs
+### Get a sample of the Orphan URLs
 
 - Operation: [[getGanalyticsOrphanURLs;reference#/Analysis/getGanalyticsOrphanURLs]]
 - Path: `analyses/{username}/{project_slug}/{analysis_slug}/features/ganalytics/orphan_urls/{medium}/{source}`

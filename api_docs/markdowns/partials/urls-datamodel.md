@@ -1,5 +1,5 @@
 ## Permissions
-Describes list of operations the field can be used for. The rights may include the following:
+Describes the list of operations the field can be used for. The rights may include the following:
 - **select:** can be used in [[BQLQuery;bql-query]] fields.
 - **filters:** can be used in [[BQLFilter;bql-filter]].
 - **filters_exist:** can **only** be used with a [[exist predicate;bql-filter#exists-predicate]] in a BQLFilter.
@@ -24,13 +24,13 @@ string
 ```
 
 ### image_url
-Url of an image
+URL of an image
 ```JSON
 string
 ```
 
 ### url_status
-Url with its crawled state. If not crawled, no information can be obtained using the URLs endpoint.
+URL with its crawled state. If not crawled, no information can be obtained using the URLs endpoint.
 ```JSON
 {
   "url": string,
@@ -39,7 +39,7 @@ Url with its crawled state. If not crawled, no information can be obtained using
 ```
 
 ### url_link_status
-Url with its crawled state and its follow/nofollow status
+URL with its crawled state and its follow/nofollow status
 ```JSON
 {
   "status": string,
@@ -51,7 +51,7 @@ Url with its crawled state and its follow/nofollow status
 ```
 
 ### url_http_code
-Url with its HTTP status code
+URL with its HTTP status code
 ```JSON
 [string, string] // [URL, HTTP Status Code]
 ```
@@ -117,14 +117,14 @@ ERROR_DEST_NOT_COMPLIANT | URL referenced by hreflang tag is not compliant.
 
 
 ## Multiple
-Some fields can contains a list of values, they are called **multiple** fields. For instance, `query_string_keys` could be equal to `['page', 'length']` on a URL with pagination.
+Some fields can contain a list of values, they are called **multiple** fields. For instance, `query_string_keys` could be equal to `['page', 'length']` on a URL with pagination.
 
 
 ## Area
 In almost every **analysis** operation dealing with URL Data model, an **area parameter** is present (its default value is `current`). It refers to the subset of URL to compute on:
 
-![screenshot from 2016-01-08 11 49 14](https://cloud.githubusercontent.com/assets/1886834/12196436/df1d2632-b5fe-11e5-9f7a-04197d49a49f.png)
-*URLs distribution chart available in movements tab of analysis report.*
+![URLs distribution between areas](https://cloud.githubusercontent.com/assets/1886834/12196436/df1d2632-b5fe-11e5-9f7a-04197d49a49f.png)
+*URLs distribution chart available in movements tab of the analysis report.*
 
 - **current**: URLs that were crawled in the current analysis (blue and purple part)
 - **new**: URLs crawled in the current analysis but not in the previous analysis (blue part)

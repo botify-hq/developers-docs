@@ -8,17 +8,17 @@ Botify provides a REST API to integrate Botify into third-party applications and
 - **Integrate Botify Data into existing dashboards**.
 - Create dashboards showing an **overview of all your websites**.
 - Create **reporting for the product or engineering team**
-- **Complement Botify data with other sources** like Google Search Console, Majestic SEO or even sales results, products inventory, etc.
+- **Complement Botify data with other sources** like Google Search Console, Majestic SEO or even sales results, product inventory, etc.
 - **Automate exports** after each crawl to get list of error pages (404, 500, ...), most visited pages, extracted data, etc.
 - ... What are your own ideas?
 
 ## Possibilities
 For now, the Botify API is **only pulling data from Botify Analytics**, meaning that **you can get any data related to an analysis**.
-Current technical possibilities of the Botify API includes:
+Current technical possibilities of the Botify API include:
 
 - **List** your Botify Analytics **projects and analyses**.
 - Get **live statistics** while Botify Analytics is crawling your website.
-- **Compute insights**: ie: number of compliant URLs, number of active URLs, number of pages crawled by Google, average depth, etc.
+- **Compute insights**: i.e. number of compliant URLs, number of active URLs, number of pages crawled by Google, average depth, etc.
 - **Aggregate URLs data** to create custom charts and metrics.
 - **Search for URLs** matching a filter, based on any indicator or URL patterns.
 - Get **information about any URL crawled by Botify Analytics**: HTTP status code, load  time performance, number of inlinks, of outlinks, of organic visits, presence in sitemaps, internal pagerank, etc.
@@ -31,10 +31,10 @@ Current technical possibilities of the Botify API includes:
 
 #### Current limitations
 It is not possible to get data from the Botify Log Analyzer dashboard **yet**, thus you can't get the number of unique/total crawls day by day for now.
-However, you can get search engines crawl data as shown in the Botify Analytics report's Search Engines tab. This data is computed on the last of 30 days of logs and is avalaible only for analyzed URLs (URLs in your Botify Analytics project's crawl scope).
+However, you can get search engines crawl data as shown in the Botify Analytics report's Search Engines tab. This data is computed on the last of 30 days of logs and is available only for analyzed URLs (URLs in your Botify Analytics project's crawl scope).
 
 #### Data Aggregation
-The Botify API isn't working in a way where you would request a specific chart. Instead you'll use **[[BQL;bql]]** (Botify Query Language) to perform aggregations and filters on analyzed URLs.
+The Botify API isn't working in a way where you would request a specific chart. Instead, you'll use **[[BQL;bql]]** (Botify Query Language) to perform aggregations and filters on analyzed URLs.
 It means that **it's much more powerful** because you are able to **compute any metric and generate any chart you want** including some that aren't in the Botify interface.
 
 ## Coming soon

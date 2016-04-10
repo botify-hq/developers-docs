@@ -4,12 +4,12 @@
 This repo contains sources to build the Botify Developers **static website** using Django Medusa.
 
 - `botify_docs` app contains main templates, styles, statics and homepage.
-- `api_docs` contains mostly markdown files that are used to generated documentation pages.
+- `api_docs` contains mostly markdown files that are used to generate documentation pages.
 
 
 ## Add / Update api documentation pages
 
-`api_docs/markdown/index.py` describes pages path and their relative markdown file.
+`api_docs/markdown/index.py` describes pages' path and their relative markdown file.
 
 ## Development
 
@@ -33,7 +33,7 @@ export LC_ALL="en_US.UTF-8"
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-and then `source ~/.bashrc`. For other OS read the installation guide on
+Then `source ~/.bashrc`. For other OS read the installation guide on
 http://virtualenvwrapper.readthedocs.org/en/latest/install.html#installation
 
 ### Installation
@@ -44,7 +44,7 @@ pip install -r requirements.txt
 ```
 
 ### Run Server
-be sure to be on the virtual env `workon docs`
+Be sure to be on the virtual env `workon docs`
 
 ```SH
 ./script/run
@@ -75,12 +75,12 @@ Then you may want to serve them through HTTP with:
 python -m SimpleHTTPServer 8001
 ```
 
-And then open your brower at http://localhost:8001/_site/
+And then open your browser at http://localhost:8001/_site/
 
 
 ### Deploy Staging
 
-You need to have AWS environment variables to be able to deploy. You can add the following two lignes in your `~/.bashrc`
+You need to have AWS environment variables to be able to deploy. You can add the following two lignes in your `~/.bashrc`:
 ```SH
 export AWS_ACCESS_KEY_ID=xxxxxxxx
 export AWS_SECRET_ACCESS_KEY=xxxxxxxx
@@ -88,12 +88,12 @@ export AWS_SECRET_ACCESS_KEY=xxxxxxxx
 Then run the deploy staging command **within a virtual env**.
 ```SH
 ./script/deploy_staging
-# => answer 'yes'
+```
 
 
 ### Deploy Production
 
-You need to have AWS environment variables to be able to deploy. You can add the following two lignes in your `~/.bashrc`
+You need to have AWS environment variables to be able to deploy. You can add the following two lines in your `~/.bashrc`:
 ```SH
 export AWS_ACCESS_KEY_ID=xxxxxxxx
 export AWS_SECRET_ACCESS_KEY=xxxxxxxx
@@ -101,4 +101,4 @@ export AWS_SECRET_ACCESS_KEY=xxxxxxxx
 Then run the deploy prod command **within a virtual env**.
 ```SH
 ./script/deploy_prod
-# => answer 'yes'
+```

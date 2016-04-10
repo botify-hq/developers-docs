@@ -9,7 +9,7 @@ The main feature extracts every primary data from crawled URLs including depth, 
 
 ## Examples of Aggregation
 
-The following examples uses [[URLs aggregation;analysis-aggregate-urls]] to metrics regarding main data.
+The following examples use [[URLs aggregation;analysis-aggregate-urls]] to metrics regarding main data.
 
 ### Number of compliant / not compliant URLs
 
