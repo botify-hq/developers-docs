@@ -14,5 +14,5 @@ Check the documentation, the source code and issue tracker on [Github](https://g
 The Google Sheets SDK allows you to easily retrieve Botify API data directly in any spreadsheets.
 Note that, currently only a small subset of the API is supported by this SDK. Feel free to customize our scripts or contributing to the project.
 
-Check the documentation, the source code and issue tracker on [Github](google-sheets).
+Check the documentation, the source code and issue tracker on [Github](https://github.com/botify-labs/botify-sdk-google-sheets).
 
