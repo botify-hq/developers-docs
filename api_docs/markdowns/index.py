@@ -7,8 +7,8 @@ PAGES = [
         "properties": {
             "menu_item": "introduction",
             "breadcrumb": [],
-            "title": "Getting Started",
-            "description": "Getting started with the Botify API."
+            "title": "Introduction",
+            "description": "Botify API Introduction"
         }
     },
     {
