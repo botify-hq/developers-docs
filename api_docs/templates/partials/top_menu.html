@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="{% ifequal properties.menu_item "introduction" %}active{% endifequal %}">
-          <a href="{% url 'md-page' 'api' %}">Getting Started <span class="sr-only">(current)</span></a>
+          <a href="{% url 'md-page' 'api' %}">Introduction<span class="sr-only">(current)</span></a>
         </li>
         <li class="{% ifequal properties.menu_item "authentication" %}active{% endifequal %}">
           <a href="{% url 'md-page' 'api/authentication' %}">Authentication</a>
@@ -94,6 +94,9 @@
             </li>
             <li>
               <a href="https://github.com/botify-labs/botify-sdk-js" target="_blank">Javascript SDK</a>
+            </li>
+            <li>
+              <a href="https://github.com/botify-labs/botify-sdk-google-sheets" target="_blank">Google Sheets SDK</a>
             </li>
           </ul>
         </li>
