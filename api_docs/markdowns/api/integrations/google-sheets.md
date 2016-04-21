@@ -77,7 +77,7 @@ BOTIFY_ANALYSIS_GET_URL_DETAIL(apiToken, username, projectSlug, analysisSlug, ur
 ## FAQ
 
 ### How to get my API token?
-You can get your API token in your user account page as explained [[there;authentication#get-your-api-token]].
+You can get your API token in your user account page as explained [[there;authentication]].
 
 ### How to get my projectSlug and analysisSlug?
 An easy way to get your projectSlug and analysisSlug is with the URL of your analysis report.
@@ -101,4 +101,4 @@ The source code of the Botify Google Sheets addon is open source and available o
 
 The HTTP Status Code 429 means that you reached the Botify API rate limit.
 Keep in mind that each cell using a Botify Macro is requesting the Botify API on background, thus an excessive usage of Botify Macros may reach the limit.
-Refer to [[Rate Limit documentation;rate-limit]] for more details.
+Please refer to [[Rate Limit documentation;rate-limit]] for more details.
