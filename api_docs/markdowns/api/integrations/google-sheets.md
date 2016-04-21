@@ -70,7 +70,7 @@ BOTIFY_ANALYSIS_GET_URL_DETAIL(apiToken, username, projectSlug, analysisSlug, ur
 ```
 
 ##### Example
-![image](https://cloud.githubusercontent.com/assets/1886834/14713188/6d05d4d4-07e0-11e6-8328-f3ab83c6b399.png)
+![image](https://cloud.githubusercontent.com/assets/1886834/14713306/e33628a2-07e0-11e6-93e4-944d68d13527.png)
 
 
 ## FAQ
