@@ -89,3 +89,12 @@ A full list of available fields to display or compute metrics on can be found in
 
 ### How to get the source code of the macros?
 The source code of the Botify Google Sheets addon is open source and available on [Github](https://github.com/botify-labs/botify-sdk-google-sheets). Feel free to customize our macros or contributing to the project.
+
+
+## Troubleshooting
+
+### I'm getting an #ERROR! with the code **429**
+
+The HTTP Status Code 429 means that you reached the Botify API rate limit.
+Keep in mind that each cell using a Botify Macro is requesting the Botify API on background, thus an excessive usage of Botify Macros may reach the limit.
+Refer to [[Rate Limit documentation;rate-limit]] for more details.
