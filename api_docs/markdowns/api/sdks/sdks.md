@@ -9,10 +9,10 @@ The Javascript SDK is open-source and works either on NodeJS or in browsers.
 Check the documentation, the source code and issue tracker on [Github](https://github.com/botify-labs/botify-sdk-js).
 
 
-## [Google Sheets SDK](https://github.com/botify-labs/botify-sdk-google-sheets)
+## [[Google Sheets Addon;sdks-google-sheets]]
 
-The Google Sheets SDK allows you to easily retrieve Botify API data directly in any spreadsheets.
-Note that, currently only a small subset of the API is supported by this SDK. Feel free to customize our scripts or contributing to the project.
+**Botify for Google Sheets** allows you to easily get Botify data in your spreadsheets.
+Note that, currently only a small subset of the API is supported by this addon.
 
-Check the documentation, the source code and issue tracker on [Github](https://github.com/botify-labs/botify-sdk-google-sheets).
+Check the documentation, the source code and issue tracker on [Github](https://github.com/botify-labs/botify-sdk-google-sheets). Feel free to customize our macros or contributing to the project.
 

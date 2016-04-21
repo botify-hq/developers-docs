@@ -258,13 +258,24 @@ PAGES = [
     # SDKs
     {
         "url_name": "sdks",
-        "markdown_file": "api/sdks.md",
+        "markdown_file": "api/sdks/sdks.md",
         "path": "api/sdks",
         "properties": {
             "menu_item": "sdks",
             "breadcrumb": [],
             "title": "SDKs",
             "description": "Botify API, SDKs"
+        }
+    },
+    {
+        "url_name": "sdks-google-sheets",
+        "markdown_file": "api/sdks/google-sheets.md",
+        "path": "api/sdks/google-sheets",
+        "properties": {
+            "menu_item": "sdk-google-sheetss",
+            "breadcrumb": ["sdks"],
+            "title": "Botify for Google Sheets",
+            "description": "Use Botify API through Botify addon for Google Sheets"
         }
     },
     # REDIRECTS
