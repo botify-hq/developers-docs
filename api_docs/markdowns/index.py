@@ -255,6 +255,29 @@ PAGES = [
             "description": "Botify API, BQLFilter Object Reference"
         }
     },
+    # INTEGRATIONS
+    {
+        "url_name": "integrations",
+        "markdown_file": "api/integrations/integrations.md",
+        "path": "api/integrations",
+        "properties": {
+            "menu_item": "integrations",
+            "breadcrumb": [],
+            "title": "Integrations",
+            "description": "Botify Integrations"
+        }
+    },
+    {
+        "url_name": "integrations-google-sheets",
+        "markdown_file": "api/integrations/google-sheets.md",
+        "path": "api/integrations/google-sheets",
+        "properties": {
+            "menu_item": "sdk-google-sheetss",
+            "breadcrumb": ["integrations"],
+            "title": "Botify for Google Sheets",
+            "description": "Use Botify API through Botify addon for Google Sheets"
+        }
+    },
     # SDKs
     {
         "url_name": "sdks",
@@ -265,17 +288,6 @@ PAGES = [
             "breadcrumb": [],
             "title": "SDKs",
             "description": "Botify API, SDKs"
-        }
-    },
-    {
-        "url_name": "sdks-google-sheets",
-        "markdown_file": "api/sdks/google-sheets.md",
-        "path": "api/sdks/google-sheets",
-        "properties": {
-            "menu_item": "sdk-google-sheetss",
-            "breadcrumb": ["sdks"],
-            "title": "Botify for Google Sheets",
-            "description": "Use Botify API through Botify addon for Google Sheets"
         }
     },
     # REDIRECTS

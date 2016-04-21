@@ -86,17 +86,25 @@
             </li>
           </ul>
         </li>
+        <li class="dropdown {% if properties.menu_item == "integrations" or properties.breadcrumb.0 == "integrations" %}active{% endif %}">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Integrations<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li class="{% ifequal properties.menu_item "integrations" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'api/integrations' %}" target="_blank">Integrations</a>
+            </li>
+            <li>
+              <a href="{% url 'md-page' 'api/integrations/google-sheets' %}">Google Sheets</a>
+            </li>
+          </ul>
+        </li>
         <li class="dropdown {% if properties.menu_item == "sdks" or properties.breadcrumb.0 == "sdks" %}active{% endif %}">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SDKs <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SDKs<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li class="{% ifequal properties.menu_item "sdks" %}active{% endifequal %}">
               <a href="{% url 'md-page' 'api/sdks' %}" target="_blank">SDKs</a>
             </li>
             <li>
               <a href="https://github.com/botify-labs/botify-sdk-js" target="_blank">Javascript SDK</a>
-            </li>
-            <li>
-              <a href="{% url 'md-page' 'api/sdks/google-sheets' %}">Google Sheets SDK</a>
             </li>
           </ul>
         </li>

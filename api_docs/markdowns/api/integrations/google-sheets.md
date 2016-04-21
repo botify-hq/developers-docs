@@ -25,7 +25,7 @@ Every macro is prefixed by Botify, thus typing `=BOTIFY` in a cell formula  shou
  * @return {Array} The list of analyses.
  * @customfunction
  */
-BOTIFY_PROJECT_LIST_ANALYSES(apiToken, username, projectSlug, nbAnalyses) {
+BOTIFY_PROJECT_LIST_ANALYSES(apiToken, username, projectSlug, nbAnalyses)
 ```
 
 ##### Example
@@ -88,7 +88,7 @@ In the following example, `adam_warlock` is the username, `demo-project` is the 
 A full list of available fields to display or compute metrics on can be found in the [[Urls Datamodel;analysis-urls-datamodel]].
 
 ### How to get the source code of the macros?
-The source code of the Botify Google Sheets addon is open source and available on [Github](https://github.com/botify-labs/botify-sdk-google-sheets). Feel free to customize our macros or contributing to the project.
+The source code of the Botify Google Sheets addon is open source and available on [Github](https://github.com/botify-labs/botify-integration-google-sheets). Feel free to customize our macros or contributing to the project.
 
 
 ## Troubleshooting
