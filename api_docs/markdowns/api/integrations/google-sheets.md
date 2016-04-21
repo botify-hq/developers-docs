@@ -15,7 +15,7 @@ Note that, currently only a small subset of the API is supported by this SDK. Fe
 Every macro is prefixed by Botify, thus typing `=BOTIFY` in a cell formula  should show you the available macros thanks to the autocompletion.
 
 ### Get latest project's analyses
-```
+```JS
 /**
  * Return the latest analyses of a given project.
  * @param {String} apiToken Botify API token
