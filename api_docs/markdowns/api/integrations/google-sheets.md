@@ -29,7 +29,7 @@ BOTIFY_PROJECT_LIST_ANALYSES(apiToken, username, projectSlug, nbAnalyses)
 ```
 
 ##### Example
-![image](https://cloud.githubusercontent.com/assets/1886834/14710250/ec3efac0-07d4-11e6-83fb-a202a5cc2558.png)
+![image](https://cloud.githubusercontent.com/assets/1886834/14713052/e3dfa7e8-07df-11e6-9f23-52d7c9275a94.png)
 
 
 ### Aggregate analysis URLs data
@@ -50,7 +50,7 @@ BOTIFY_ANALYSIS_AGGREGATE_URLS(apiToken, username, projectSlug, analysisSlug, ur
 For more information about how to define aggregation queries please refer to the [[BQLAggsQuery documentation;bql-aggs-query]].
 
 ##### Example
-![image](https://cloud.githubusercontent.com/assets/1886834/14710196/ac0f7dda-07d4-11e6-8dcb-c624c597fb42.png)
+![image](https://cloud.githubusercontent.com/assets/1886834/14712989/ac889e62-07df-11e6-8da3-fe548f0d9b0c.png)
 
 
 ### Get detail on a specific URL
@@ -70,7 +70,7 @@ BOTIFY_ANALYSIS_GET_URL_DETAIL(apiToken, username, projectSlug, analysisSlug, ur
 ```
 
 ##### Example
-![image](https://cloud.githubusercontent.com/assets/1886834/14710345/5ac5da54-07d5-11e6-8be2-36a318c0fdea.png)
+![image](https://cloud.githubusercontent.com/assets/1886834/14713188/6d05d4d4-07e0-11e6-8328-f3ab83c6b399.png)
 
 
 ## FAQ
