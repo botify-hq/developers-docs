@@ -62,16 +62,20 @@ For more information about how to define aggregation queries, please refer to th
  * @param {String} username Username of the project owner
  * @param {String} projectSlug Project's slug of the analysis
  * @param {String} analysisSlug Analysis's slug
- * @param {String} url Url to get detail on
- * @param {Range}  Range of fields to fetch (ex A1:A4)
+ * @param {Range} urls Urls to get detail on
+ * @param {Range} fields Range of fields to fetch (ex A1:A4)
  * @param {Boolean} showHeaders Show Groups and Metrics headers (default: true)
  * @return {Array} The value of the fields
+ * @customfunction
  */
-BOTIFY_ANALYSIS_GET_URL_DETAIL(apiToken, username, projectSlug, analysisSlug, url, fields, showHeaders)
+BOTIFY_ANALYSIS_GET_URLS_DETAIL(apiToken, username, projectSlug, analysisSlug, urls, fields, showHeaders)
 ```
-
+This macro allow you to retrieve fields data for a list of URLs.
+To get a faster response, **we highly recommend to give a list of URLs to a single cell formula** (as in the following example) instead of using this macro URL by URL because it's much more faster this way.
+Note a google script must respond within 30 seconds, thus if the list of URLs is too long, some URLs fields might not be computed, We recommend to give **at most 10,000 URLs**.
 ##### Example
-![image](https://cloud.githubusercontent.com/assets/1886834/14713306/e33628a2-07e0-11e6-93e4-944d68d13527.png)
+![image](https://cloud.githubusercontent.com/assets/1886834/14742239/625eb72e-089b-11e6-95c2-d0897355982e.png)
+
 
 
 ## FAQ
