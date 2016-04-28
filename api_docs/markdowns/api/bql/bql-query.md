@@ -23,6 +23,7 @@ The fields to fetch. Default field is `url`. This is equivalent to the `select` 
 ### Sort
 
 Requires the result to be sorted on a certain set of fields. Sort criteria are not necessarily part of the fetched fields.
+Order can be either `desc` or `asc`.
 
 **Example:**
 ```JSON
