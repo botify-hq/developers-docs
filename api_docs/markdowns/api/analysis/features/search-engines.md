@@ -49,12 +49,10 @@ The following examples use [[URLs aggregation;analysis-aggregate-urls]] to metri
     "aggs": [
       {
         "metrics": [
-          {
-            "sum": "search_engines.google.crawls.search.count",
-            "sum": "search_engines.google.crawls.smartphone.count",
-            "sum": "search_engines.google.crawls.ads.count",
-            "sum": "search_engines.google.crawls.other.count"
-          }
+          { "sum": "search_engines.google.crawls.search.count" },
+          { "sum": "search_engines.google.crawls.smartphone.count" },
+          { "sum": "search_engines.google.crawls.ads.count" },
+          { "sum": "search_engines.google.crawls.other.count" }
         ]
       }
     ]
