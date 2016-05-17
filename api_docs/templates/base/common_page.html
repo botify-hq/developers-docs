@@ -4,11 +4,7 @@
 <html xmlns:og="http://opengraphprotocol.org/schema/">
 <head>
   <title>
-    Botify API |
-    {% for page in breadcrumb %}
-      {{ page.name }} |
-    {% endfor %}
-    {{ properties.title }}
+    Botify API | {% for page in breadcrumb %}{{ page.name }} | {% endfor %}{{ properties.title }}
   </title>
   <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}"/>
   <meta charset="UTF-8">
