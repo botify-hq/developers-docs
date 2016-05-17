@@ -6,7 +6,7 @@ Note that, currently only a small subset of the API is supported by this SDK. Fe
 
 ## Install
 
-- Open the [addon page](https://chrome.google.com/webstore/detail/botify-for-google-sheets/albleinfohecbdikaabneehekfmdgimk?authuser=0).
+- Open the [addon page](https://chrome.google.com/webstore/detail/botify-macros/albleinfohecbdikaabneehekfmdgimk).
 - Click on Add
 
 
