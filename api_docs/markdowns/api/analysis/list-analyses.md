@@ -1,10 +1,10 @@
-# List analyses
+# List Project Analyses
 
 Botify API can return the list of analyses for a given project.
 
 ## Endpoint
 
-- Operation: [[getAnalyses;reference#/Analysis/getAnalyses]]
+- Operation: [[getAnalyses;reference#/Project/getProjectAnalyses]]
 - Path: `analyses/{username}/{project_slug}`
 - HTTP Verb: GET
 - Response: `Array<Analysis>`
@@ -29,6 +29,7 @@ The response contains the list of analyses which belongs to the project. For eac
       "id": 35180,
       "slug": "20160115",
       "name": "2016 Jan. 15th",
+      "status": "success",
       "url": "https://app.botify.com/adam_warlock/demo-project/20160115/",
       "urls_done": 500000,
       "urls_in_queue": 4915522,
