@@ -1,4 +1,4 @@
-# List Project Analyses
+# List Project's Analyses
 
 Botify API can return the list of analyses for a given project.
 
