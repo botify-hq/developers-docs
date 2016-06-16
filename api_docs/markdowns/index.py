@@ -44,17 +44,6 @@ PAGES = [
             "description": "Botify API, Rate Limit"
         }
     },
-    {
-        "url_name": "jobs",
-        "markdown_file": "api/jobs.md",
-        "path": "api/jobs",
-        "properties": {
-            "menu_item": "jobs",
-            "breadcrumb": [],
-            "title": "Jobs",
-            "description": "Botify API, Jobs workflow"
-        }
-    },
     # Analysis
     {
         "url_name": "analysis",
