@@ -29,6 +29,9 @@
         <li class="{% ifequal properties.menu_item "rate-limit" %}active{% endifequal %}">
           <a href="{% url 'md-page' 'api/rate-limit' %}">Rate Limit</a>
         </li>
+        <li class="{% ifequal properties.menu_item "faq" %}active{% endifequal %}">
+          <a href="{% url 'md-page' 'api/faq' %}">FAQ</a>
+        </li>
         <li class="dropdown {% if properties.menu_item == "analysis" or properties.breadcrumb.0 == "analysis" %}active{% endif %}">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Analysis <span class="caret"></span></a>
           <ul class="dropdown-menu">

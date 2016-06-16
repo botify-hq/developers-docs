@@ -16,6 +16,9 @@
       <div class="sidebar__group-item {% ifequal properties.menu_item "rate-limit" %}active{% endifequal %}">
         <a href="{% url 'md-page' 'api/rate-limit' %}">Rate Limit</a>
       </div>
+      <div class="sidebar__group-item {% ifequal properties.menu_item "faq" %}active{% endifequal %}">
+        <a href="{% url 'md-page' 'api/faq' %}">FAQ</a>
+      </div>
     </div>
   </div><!-- END SideBar Group -->
   <div class="sidebar__group open">
