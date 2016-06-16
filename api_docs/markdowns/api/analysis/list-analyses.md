@@ -12,8 +12,7 @@ Botify API can return the list of analyses for a given project.
 ```SH
 curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}' \
      -X GET \
-     -H 'Authorization: Token ${API_KEY}' \
-     -H 'Content-type: application/json'
+     -H 'Authorization: Token ${API_KEY}'
 ```
 
 ## Example of response
