@@ -188,6 +188,15 @@ PAGES = [
             "description": "Make a CSV Export with Botify API"
         }
     },
+    {
+        "url_name": "analysis-csv-export-preview",
+        "markdown_file": "api/analysis/csv-export-preview.md",
+        "path": "api/analysis/csv-export-preview",
+        "properties": {
+            "title": "CSV Export",
+            "description": "Make a CSV Export with Botify API"
+        }
+    },
     # Project
     {
         "url_name": "project",
