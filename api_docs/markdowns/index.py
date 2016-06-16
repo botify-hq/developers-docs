@@ -44,6 +44,17 @@ PAGES = [
             "description": "Botify API, Rate Limit"
         }
     },
+    {
+        "url_name": "faq",
+        "markdown_file": "api/faq.md",
+        "path": "api/faq",
+        "properties": {
+            "menu_item": "faq",
+            "breadcrumb": [],
+            "title": "FAQ",
+            "description": "FAQ: Frequently Asked Questions"
+        }
+    },
     # Analysis
     {
         "url_name": "analysis",
