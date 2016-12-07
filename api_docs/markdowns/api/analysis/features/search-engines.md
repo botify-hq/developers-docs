@@ -92,7 +92,7 @@ The following examples use [[URLs aggregation;analysis-aggregate-urls]] to metri
 
 ## Get metadata
 
-Google Analytics feature metadata includes:
+Search Engines feature metadata includes:
 - imported **data timeframe**.
 - **orphans URLs counts**.
 

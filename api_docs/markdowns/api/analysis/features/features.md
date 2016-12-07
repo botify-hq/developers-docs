@@ -7,7 +7,7 @@ Features include:
 - [[**main**;analysis-features-main]]: Depth, Load Time, HTTP Codes, HTML Tags
 - [[**links**;analysis-features-links]]: Inlinks/Outlinks, Internal Pagerank, Top Domains, Prev/next
 - [[**segments**;analysis-features-segments]]: Custom website segmentation (by pagetype, etc.)
-- [[**ganalytics**;analysis-features-google-analytics]]: Data imported from Google Analytics to compute visits
+- [[**visits**;analysis-features-visits]]: Data imported from Google Analytics to compute visits
 - [[**search_engines**;analysis-features-search-engines]]: Data imported from Logs to compute search engines' crawl and organic visits.
 - **content_quality**: Pages' content quality (unicity, similarity)
 - **sitemaps**: Data imported from your sitemaps
@@ -44,7 +44,7 @@ If a feature is enabled, the feature property is present and not equal to `null`
   "features": {
     "links": ?Object,
     "segments": ?Object,
-    "ganalytics": ?Object,
+    "visits": ?Object,
     "search_engines": ?Object,
     "sitemaps": ?Object,
     "extract": ?Object,

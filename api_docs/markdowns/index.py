@@ -156,14 +156,14 @@ PAGES = [
         }
     },
     {
-        "url_name": "analysis-features-google-analytics",
-        "markdown_file": "api/analysis/features/google-analytics.md",
-        "path": "api/analysis/features/google-analytics",
+        "url_name": "analysis-features-visits",
+        "markdown_file": "api/analysis/features/visits.md",
+        "path": "api/analysis/features/visits",
         "properties": {
-            "menu_item": "analysis-features-google-analytics",
+            "menu_item": "analysis-features-visits",
             "breadcrumb": ["analysis", "analysis-features"],
-            "title": "Google Analytics",
-            "description": "Analysis Feature Google Analytics with Botify API"
+            "title": "Visits",
+            "description": "Analysis Feature Visits with Botify API"
         }
     },
     {
@@ -320,6 +320,11 @@ PAGES = [
         "url_name": "usage-query-urls",
         "path": "api/usage/query-urls",
         "redirect_path": "api/analysis/search-for-urls"
+    },
+    {
+        "url_name": "analysis-features-google-analytics",
+        "path": "api/analysis/features/google-analytics",
+        "redirect_path": "api/analysis/features/visits"
     },
     {
         "url_name": "usage-list-projects",
