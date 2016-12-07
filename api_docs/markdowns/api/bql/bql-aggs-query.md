@@ -17,6 +17,7 @@
 
 A `BQLAggsQuery` is composed of a list of `BQLAggregate` and an optional `BQLFilter`. An `BQLAggregate` defines some `BQLMetric` to compute. `BQLGroupBy` can be used to group URLs and compute metrics on each group.
 
+
 ### Group-Bys
 A group-by is defined by:
   - a `field` on which the group-by is performed.
@@ -28,9 +29,7 @@ Only [[aggregables fields;analysis-urls-datamodel?filter=agg:]] can be used for 
 **Example**
 The following groups URLs by their `http_code`.
 ```JSON
-{
-  "field": "http_code"
-}
+"http_code"
 ```
 
 #### Range GroupBy
@@ -71,9 +70,7 @@ Count of URLs
 ```
 Sum of internal inlinks nofollow
 ```JSON
-{
-  "sum": "inlinks_internal.nb.follow.total"
-}
+{ "sum": "inlinks_internal.nb.follow.total" }
 ```
 
 
