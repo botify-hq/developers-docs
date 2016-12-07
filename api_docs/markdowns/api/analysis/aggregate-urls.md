@@ -10,7 +10,7 @@ Using Botify API, you can **aggregate analyzed URLs** to compute metrics like su
 - Body : `Array<BQLAggsQuery>`
 - Response: `Array<BQLAggsResult>`
 
-Please refer to [[BQLAggsQuery;bql#urlsaggsquery]] documentation for information about input.
+Please refer to [[BQLAggsQuery;bql#urlsaggsquery]] documentation for information about input or refer to the following request examples.
 
 ```SH
 curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}/urls/aggs' \
