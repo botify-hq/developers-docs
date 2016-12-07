@@ -36,9 +36,7 @@ The following examples use [[URLs aggregation;analysis-aggregate-urls]] to metri
     "aggs": [
       {
         "group_by": [
-          { 
-            "field": "visits.organic.all.active"
-          }
+           "visits.organic.all.active"
         ],
         "metrics": [
           {
@@ -59,12 +57,8 @@ The following examples use [[URLs aggregation;analysis-aggregate-urls]] to metri
     "aggs": [
       {
         "group_by": [
-          {
-            "field": "depth"
-          },
-          { 
-            "field": "visits.organic.all.active"
-          }
+          "depth",
+          "visits.organic.all.active"
         ]
       }
     ]
