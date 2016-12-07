@@ -68,11 +68,7 @@ The following examples use [[URLs aggregation;analysis-aggregate-urls]] to metri
     "aggs": [
       {
         "group_by": [
-          {
-            "range": {
-              "field": "depth"
-            }
-          },
+          "depth",
           {
             "range": {
               "field": "search_engines.google.crawls.count",
