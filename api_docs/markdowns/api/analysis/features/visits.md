@@ -36,14 +36,8 @@ The following examples use [[URLs aggregation;analysis-aggregate-urls]] to metri
     "aggs": [
       {
         "group_by": [
-          {
-            "range": {
-              "field": "visits.organic.all.nb",
-              "ranges": [
-                { "from": 1 }, // Active
-                { "from": 0, "to": 1 } // Not Active
-              ]
-            }
+          { 
+            "field": "visits.organic.all.active"
           }
         ],
         "metrics": [
@@ -66,18 +60,10 @@ The following examples use [[URLs aggregation;analysis-aggregate-urls]] to metri
       {
         "group_by": [
           {
-            "range": {
-              "field": "depth"
-            }
+            "field": "depth"
           },
-          {
-            "range": {
-              "field": "visits.organic.all.nb",
-              "ranges": [
-                { "from": 1 },  // Active
-                { "from": 0, "to": 1 }  // Active
-              ]
-            }
+          { 
+            "field": "visits.organic.all.active"
           }
         ]
       }
