@@ -48,7 +48,7 @@ Error Code | Message
 1033 | Crawl data file (S3) is missing
 1034 | The requested feature is disabled
 1035 | The comparison feature is disabled
-1036 | The Google Analytics feature is disabled
+1036 | The Visits feature is disabled
 1037 | The requested task failed
 1038 | Cannot delete a scheduled crawl which already started
 1039 | Method not allowed

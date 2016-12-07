@@ -100,7 +100,7 @@ In the following example, we assume that the first segment is pagetype.
 
 ## Get metadata
 
-Google Analytics feature metadata includes:
+Segments feature metadata includes:
 - **list of configured segments** (limited to the first two because Botify Analytics can only handle two segments at most).
 - segment config
 

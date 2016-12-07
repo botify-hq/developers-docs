@@ -80,7 +80,7 @@
         "main",
         "scheme",
         "semantic_metadata",
-        "canonical"
+        "canonical",
       ],
       links: [
         "inlinks",
@@ -91,12 +91,12 @@
         "outlinks_external_nofollow",
         "redirects",
         "duplicate_query_kvs",
-        "page_rank"
+        "page_rank",
       ],
       segments: [
-        "segments"
+        "segments",
       ],
-      ganalytics: [
+      visits: [
         "visits.organic.all",
         "visits.organic.aol",
         "visits.organic.ask",
@@ -113,31 +113,35 @@
         "visits.social.pinterest",
         "visits.social.reddit",
         "visits.social.tumblr",
-        "visits.social.twitter"
+        "visits.social.twitter",
+        "visits",
       ],
       search_engines: [
-        "search_engines.google",
-        "search_engines.google.search",
-        "search_engines.google.smartphone",
-        "search_engines.google.ads",
-        "search_engines.google.other",
-        "search_engines.bing",
-        "search_engines.bing.search",
-        "search_engines.bing.other",
+        "search_engines.google.crawls.all",
+        "search_engines.google.crawls.search",
+        "search_engines.google.crawls.smartphone",
+        "search_engines.google.crawls.ads",
+        "search_engines.google.crawls.other",
+        "search_engines.google.visits",
+        "search_engines.bing.crawls.all",
+        "search_engines.bing.crawls.search",
+        "search_engines.bing.crawls.other",
+        "search_engines.bing.visits",
       ],
       content_quality: [
         "content_quality",
       ],
       sitemaps: [
-        "sitemaps"
+        "sitemaps",
       ],
       extract: [
-        "extract"
+        "extract",
       ],
       rel: [
         "hreflang_incoming",
-        "hreflang_outgoing"
-      ]
+        "hreflang_outgoing",
+      ],
+      other: [],
     };
     var features = Object.keys(groupsByFeature);
 
