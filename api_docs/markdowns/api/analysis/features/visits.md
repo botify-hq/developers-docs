@@ -119,7 +119,7 @@ Plus, you can get the number of orphan URLs with the `unknown` property. For ins
 {
   "features": {
     "visits": {
-      "visits_site_id": 111513424,
+      "ganalytics_site_id": 111513424,
       "date_start": "2016-02-08",
       "date_end": "2016-03-09",
       "sampled": true,
