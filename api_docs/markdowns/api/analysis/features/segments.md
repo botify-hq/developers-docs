@@ -14,17 +14,14 @@ The segments feature provides 4 main fields:
 - segments.segment_X.depth_2
 - segments.segment_X.depth_3
 
-**Note:** `X` refers to the segment number, `segment_1` would be `pagetype` in the previous example whereas `segments_2` would be `lang`.
-
-`depth_X` fields are meant to be used to aggregate on the first, second and third depth of their value.
+**Note:** `X` is the segment number as defined in your project configuration (refers to [Get Metadata](#get-metadata))
+**Note:** `depth_X` fields are meant to be used to aggregate on the first, second and third depth of their value.
 
 ### Example
 
-Remember that segments can be defined in deep, for instance the `pagetype` could take the following values: books/arts, books/food, books/novel, books/law, home, ads.
+If `pagetype` is your first segment, an URL with a pagetype `books/food` would have the following field values: 
 
-So for an URL with a pagetype `books/food` the field would have the following values:
-
-- **segments.segment_X.value:** `books/food` (full value)
+- **segments.segment_1.value:** `books/food` (full value)
 - **segments.segment_1.depth_1:** `books`
 - **segments.segment_1.depth_2:** `food`
 - **segments.segment_1.depth_3:** `null` (no depth 3)
@@ -32,7 +29,7 @@ So for an URL with a pagetype `books/food` the field would have the following va
 
 ## Examples of Aggregation
 
-The following examples use [[URLs aggregation;analysis-aggregate-urls]] to metrics regarding segments.
+The following examples use [[URLs aggregation;analysis-aggregate-urls]] to compute metrics on segments.
 In the following example, we assume that the first segment is pagetype.
 
 ### Number of URLs by pagetype
@@ -101,7 +98,7 @@ In the following example, we assume that the first segment is pagetype.
 ## Get metadata
 
 Segments feature metadata includes:
-- **list of configured segments** (limited to the first two because Botify Analytics can only handle two segments at most).
+- **list of configured segments** (limited to two).
 - segment config
 
 ### Request
