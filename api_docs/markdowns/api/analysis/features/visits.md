@@ -17,53 +17,47 @@ The following examples use [[URLs aggregation;analysis-aggregate-urls]] to metri
 ### Number of active URLs
 
 ```JSON
-[
-  {
-    "filters": {
-      "field": "visits.organic.all.nb",
-      "predicate": "gt",
-      "value": 0
-    }
+{
+  "filters": {
+    "field": "visits.organic.all.nb",
+    "predicate": "gt",
+    "value": 0
   }
-]
+}
 ```
 
 ### Average follow inlinks for active or not active URLs
 
 ```JSON
-[
-  {
-    "aggs": [
-      {
-        "group_by": [
-           "visits.organic.all.active"
-        ],
-        "metrics": [
-          {
-            "avg": "inlinks_internal.nb.follow.unique"
-          }
-        ]
-      }
-    ]
-  }
-]
+{
+  "aggs": [
+    {
+      "group_by": [
+         "visits.organic.all.active"
+      ],
+      "metrics": [
+        {
+          "avg": "inlinks_internal.nb.follow.unique"
+        }
+      ]
+    }
+  ]
+}
 ```
 
 ### Number of active/not active URLs by depth
 
 ```JSON
-[
-  {
-    "aggs": [
-      {
-        "group_by": [
-          "depth",
-          "visits.organic.all.active"
-        ]
-      }
-    ]
-  }
-]
+{
+  "aggs": [
+    {
+      "group_by": [
+        "depth",
+        "visits.organic.all.active"
+      ]
+    }
+  ]
+}
 ```
 
 ## Get metadata

@@ -14,58 +14,52 @@ The following examples use [[URLs aggregation;analysis-aggregate-urls]] to metri
 ### Number of compliant / not compliant URLs
 
 ```JSON
-[
-  {
-    "aggs": [
-      {
-        "group_by": [
-          "compliant.is_compliant"
-        ]
-      }
-    ]
-  }
-]
+{
+  "aggs": [
+    {
+      "group_by": [
+        "compliant.is_compliant"
+      ]
+    }
+  ]
+}
 ```
 
 ### Number of URLs by depth
 
 ```JSON
-[
-  {
-    "aggs": [
-      {
-        "group_by": [
-          "depth"
-        ]
-      }
-    ]
-  }
-]
+{
+  "aggs": [
+    {
+      "group_by": [
+        "depth"
+      ]
+    }
+  ]
+}
 ```
 
 ### Number of URLs by group of HTTP code
 
 ```JSON
-[
-  {
-    "aggs": [
-      {
-        "group_by": [
-          {
-            "range": {
-              "field": "http_code",
-              "ranges": [
-                { "from": 200, "to": 300 },
-                { "from": 300, "to": 400 },
-                { "from": 400, "to": 500 },
-                { "from": 500 },
-                { "to": 200 }
-              ]
-            }
+{
+  "aggs": [
+    {
+      "group_by": [
+        {
+          "range": {
+            "field": "http_code",
+            "ranges": [
+              { "from": 200, "to": 300 },
+              { "from": 300, "to": 400 },
+              { "from": 400, "to": 500 },
+              { "from": 500 },
+              { "to": 200 }
+            ]
           }
-        ]
-      }
-    ]
-  }
-]
+        }
+      ]
+    }
+  ]
+}
 ```

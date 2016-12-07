@@ -35,63 +35,57 @@ In the following example, we assume that the first segment is pagetype.
 ### Number of URLs by pagetype
 
 ```JSON
-[
-  {
-    "aggs": [
-      {
-        "group_by": [
-          "segments.segment_1.value"
-        ]
-      }
-    ]
-  }
-]
+{
+  "aggs": [
+    {
+      "group_by": [
+        "segments.segment_1.value"
+      ]
+    }
+  ]
+}
 ```
 
 ### Total number of visits by main pagetype
 
 ```JSON
-[
-  {
-    "aggs": [
-      {
-        "group_by": [
-          "segments.segment_1.depth_1",
-        ],
-        "metrics": [
-          {
-            "sum": "visits.organic.all.nb"
-          }
-        ]
-      }
-    ]
-  }
-]
+{
+  "aggs": [
+    {
+      "group_by": [
+        "segments.segment_1.depth_1",
+      ],
+      "metrics": [
+        {
+          "sum": "visits.organic.all.nb"
+        }
+      ]
+    }
+  ]
+}
 ```
 
 ### Number of crawled/not crawled URLs by Google by main pagetype
 
 ```JSON
-[
-  {
-    "aggs": [
-      {
-        "group_by": [
-          "segments.segment_1.depth_1",
-          {
-            "range": {
-              "field": "search_engines.google.crawls.count",
-              "ranges": [
-                { "from": 1 }, // Crawled
-                { "from": 0, "to": 1 } // Not Crawled
-              ]
-            }
+{
+  "aggs": [
+    {
+      "group_by": [
+        "segments.segment_1.depth_1",
+        {
+          "range": {
+            "field": "search_engines.google.crawls.count",
+            "ranges": [
+              { "from": 1 }, // Crawled
+              { "from": 0, "to": 1 } // Not Crawled
+            ]
           }
-        ]
-      }
-    ]
-  }
-]
+        }
+      ]
+    }
+  ]
+}
 ```
 
 

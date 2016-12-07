@@ -20,69 +20,63 @@ The following examples use [[URLs aggregation;analysis-aggregate-urls]] to metri
 ### Number of crawled/not crawled URLs by Google
 
 ```JSON
-[
-  {
-    "aggs": [
-      {
-        "group_by": [
-          {
-            "range": {
-              "field": "search_engines.google.crawls.count",
-              "ranges": [
-                { "from": 1 }, // Crawled
-                { "from": 0, "to": 1 } // Not Crawled
-              ]
-            }
+{
+  "aggs": [
+    {
+      "group_by": [
+        {
+          "range": {
+            "field": "search_engines.google.crawls.count",
+            "ranges": [
+              { "from": 1 }, // Crawled
+              { "from": 0, "to": 1 } // Not Crawled
+            ]
           }
-        ]
-      }
-    ]
-  }
-]
+        }
+      ]
+    }
+  ]
+}
 ```
 
 ### Number of crawled URLs by Google bot
 
 ```JSON
-[
-  {
-    "aggs": [
-      {
-        "metrics": [
-          { "sum": "search_engines.google.crawls.search.count" },
-          { "sum": "search_engines.google.crawls.smartphone.count" },
-          { "sum": "search_engines.google.crawls.ads.count" },
-          { "sum": "search_engines.google.crawls.other.count" }
-        ]
-      }
-    ]
-  }
-]
+{
+  "aggs": [
+    {
+      "metrics": [
+        { "sum": "search_engines.google.crawls.search.count" },
+        { "sum": "search_engines.google.crawls.smartphone.count" },
+        { "sum": "search_engines.google.crawls.ads.count" },
+        { "sum": "search_engines.google.crawls.other.count" }
+      ]
+    }
+  ]
+}
 ```
 
 ### Number of crawled/not crawled URLs by Google by depth
 
 ```JSON
-[
-  {
-    "aggs": [
-      {
-        "group_by": [
-          "depth",
-          {
-            "range": {
-              "field": "search_engines.google.crawls.count",
-              "ranges": [
-                { "from": 1 }, // Crawled
-                { "from": 0, "to": 1 } // Not Crawled
-              ]
-            }
+{
+  "aggs": [
+    {
+      "group_by": [
+        "depth",
+        {
+          "range": {
+            "field": "search_engines.google.crawls.count",
+            "ranges": [
+              { "from": 1 }, // Crawled
+              { "from": 0, "to": 1 } // Not Crawled
+            ]
           }
-        ]
-      }
-    ]
-  }
-]
+        }
+      ]
+    }
+  ]
+}
 ```
 
 

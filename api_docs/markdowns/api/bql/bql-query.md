@@ -28,11 +28,7 @@ Order can be either `desc` or `asc`.
 **Example:**
 ```JSON
 [
-  {
-    "http_code": {
-      "order": "desc"
-    }
-  }
+  { "http_code": { "order": "desc" } }
 ]
 ```
 
