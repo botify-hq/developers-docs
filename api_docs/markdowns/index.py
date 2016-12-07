@@ -163,7 +163,7 @@ PAGES = [
             "menu_item": "analysis-features-visits",
             "breadcrumb": ["analysis", "analysis-features"],
             "title": "Visits",
-            "description": "Analysis Feature Visits with Botify API"
+            "description": "Analysis Feature Visits with Botify API (Google Analytics)"
         }
     },
     {

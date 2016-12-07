@@ -109,11 +109,12 @@ curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_
 
 ### Response
 
-An extract of the response could be the following.
-**Note:** If feature is not enabled, `features.visits` resolves to `null`.
-
 In the response, you can find the imported visits timeframe with `date_start` and `date_end` properties.
 Plus, you can get the number of orphan URLs with the `unknown` property. For instance, the number of orphan URLs for Google can be found in `features.visits.unknown.organic.google.nb_urls`.
+**Note:** If feature is not enabled, `features.visits` resolves to `null`.
+**Note:** For analyses prior to August 2016, the feature is named ganalytics. Related information can be found in `features.ganalytics`.
+
+An extract of the response could be the following.
 
 ```JSON
 {
