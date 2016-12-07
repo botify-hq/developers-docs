@@ -120,10 +120,10 @@ curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_
 
 ### Response
 
-An extract of the response could be the following.
+You can find the list of the segment names at `features.segments.names` and the config in `features.segments.rules_raw`.
 **Note:** If feature is not enabled, `features.segments` resolves to `null`.
 
-You can find the list of the segment names at `features.segments.names`.
+An extract of the response could be the following.
 
 ```JSON
 {
