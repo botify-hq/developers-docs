@@ -4,8 +4,8 @@ Describes the list of operations the field can be used for. The rights may inclu
 - **filters:** can be used in [[BQLFilter;bql-filter]].
 - **filters_exist:** can **only** be used with a [[exist predicate;bql-filter#exists-predicate]] in a BQLFilter.
 - **sort:** can be used in BQLFilter [[sort;bql-query]].
-- **agg:numerical:** can be used in BQLAggsQuery [[groupby;bql-aggs-query#]].
-- **agg:categorical:** can be used in BQLAggsQuery [[simple groupby;bql-aggs-query#simple-groupby]].
+- **agg:categorical:** can be used in BQLAggsQuery [[groupby;bql-aggs-query#simple-groupby]].
+- **agg:numerical:** can be used in BQLAggsQuery [[range groupby;bql-aggs-query#range-groupby]].
 
 
 ## Type

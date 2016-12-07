@@ -10,7 +10,7 @@ Using Botify API, you can **aggregate analyzed URLs** to compute metrics like su
 - Body : `Array<BQLAggsQuery>`
 - Response: `Array<BQLAggsResult>`
 
-Please refer to [[BQLAggsQuery;bql#urlsaggsquery]] documentation for information about input or refer to the following request examples.
+Please refer to [[BQLAggsQuery;bql-aggs-query]] documentation for information about input or refer to the following request examples.
 
 ```SH
 curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}/urls/aggs' \
@@ -23,7 +23,7 @@ curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_
 
 ## Example: Aggregation on filtered dataset
 
-The following example of [[BQLAggsQuery;bql#urlsaggsquery]] computes the number of compliant URLs and their average response time.
+The following example of [[BQLAggsQuery;bql-aggs-query]] computes the number of compliant URLs and their average response time.
 
 ### Request
 ```JSON
@@ -74,7 +74,7 @@ When everything went fine, aggregation response is in the `data` key. Requested 
 
 ## Example: Simple Group-By with two Metrics
 
-The following example of [[BQLAggsQuery;bql#urlsaggsquery]] groups URLs by HTTP Code. Using `metrics` key, we request the number of URLs and average response time for each group.
+The following example of [[BQLAggsQuery;bql-aggs-query]] groups URLs by HTTP Code. Using `metrics` key, we request the number of URLs and average response time for each group.
 
 ### Request
 ```JSON
@@ -149,7 +149,7 @@ This example returns 3 groups: the URLs with HTTP code 200, the URLs with HTTP c
 
 ## Example: Simple and Range Group-By
 
-The following example of [[BQLAggsQuery;bql#urlsaggsquery]] groups URLs by HTTP code and response time on 2 ranges (fast and slow URLs). The URLs dataset is filtered on compliant URLs using `filters` key.
+The following example of [[BQLAggsQuery;bql-aggs-query]] groups URLs by HTTP code and response time on 2 ranges (fast and slow URLs). The URLs dataset is filtered on compliant URLs using `filters` key.
 
 ### Request
 ```JSON
