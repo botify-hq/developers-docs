@@ -360,6 +360,6 @@ PAGES = [
     {
         "url_name": "analysis-search-for-urls",
         "path": "api/analysis/search-for-urls",
-        "redirect_path": "api/analysis/search-for-urls"
+        "redirect_path": "api/analysis/list-urls"
     },
 ]
