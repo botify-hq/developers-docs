@@ -1,4 +1,4 @@
-# Get URL Detail
+# Get URL Information
 
 Botify API allows you to **get information on any URL analyzed** by Botify Analytics. Full list of requestable fields can be found in [[URLs Datamodel;analysis-urls-datamodel]].
 

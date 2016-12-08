@@ -12,7 +12,7 @@ An easy way to get your projectSlug and analysisSlug is with the URL of your ana
 In the following example, `adam_warlock` is the username, `demo-project` is the projectSlug and `20160308` is the analysisSlug.
 ![image](https://cloud.githubusercontent.com/assets/1886834/14709625/e8aadb52-07d1-11e6-92f0-21dda26a6331.png)
 
-An other way is by using [[getUserProjects;project-list-projects]] and [[getProjectAnalyses;analysis-list-analyses]] operations.
+An other way is by using [[getUserProjects;user-list-projects]] and [[getProjectAnalyses;project-list-analyses]] operations.
 
 
 ### How to get the list of available fields?

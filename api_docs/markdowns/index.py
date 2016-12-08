@@ -67,36 +67,25 @@ PAGES = [
         }
     },
     {
-        "url_name": "analysis-list-analyses",
-        "markdown_file": "api/analysis/list-analyses.md",
-        "path": "api/analysis/list-analyses",
+        "url_name": "analysis-get-url-info",
+        "markdown_file": "api/analysis/get-url-info.md",
+        "path": "api/analysis/get-url-info",
         "properties": {
-            "menu_item": "analysis-list-analyses",
+            "menu_item": "analysis-get-url-info",
             "breadcrumb": ["analysis"],
-            "title": "List analyses",
-            "description": "List your analyses with Botify API"
+            "title": "Get URL Info",
+            "description": "Get information on a given URL with Botify API"
         }
     },
     {
-        "url_name": "analysis-get-url-detail",
-        "markdown_file": "api/analysis/get-url-detail.md",
-        "path": "api/analysis/get-url-detail",
+        "url_name": "analysis-list-urls",
+        "markdown_file": "api/analysis/list-urls.md",
+        "path": "api/analysis/list-urls",
         "properties": {
-            "menu_item": "analysis-get-url-detail",
+            "menu_item": "analysis-list-urls",
             "breadcrumb": ["analysis"],
-            "title": "Get URL Detail",
-            "description": "Get detail on a given URL with Botify API"
-        }
-    },
-    {
-        "url_name": "analysis-search-for-urls",
-        "markdown_file": "api/analysis/search-for-urls.md",
-        "path": "api/analysis/search-for-urls",
-        "properties": {
-            "menu_item": "analysis-search-for-urls",
-            "breadcrumb": ["analysis"],
-            "title": "Search for URLs",
-            "description": "Search for URLs with Botify API"
+            "title": "List URLs",
+            "description": "List ans filter URLs with Botify API"
         }
     },
     {
@@ -200,12 +189,34 @@ PAGES = [
         }
     },
     {
-        "url_name": "project-list-projects",
-        "markdown_file": "api/project/list-projects.md",
-        "path": "api/project/list-projects",
+        "url_name": "project-list-analyses",
+        "markdown_file": "api/project/list-analyses.md",
+        "path": "api/project/list-analyses",
         "properties": {
-            "menu_item": "project-list-projects",
+            "menu_item": "project-list-analyses",
             "breadcrumb": ["project"],
+            "title": "List analyses",
+            "description": "List your analyses with Botify API"
+        }
+    },
+    # User
+    {
+        "url_name": "user",
+        "markdown_file": "api/user/user.md",
+        "path": "api/user",
+        "properties": {
+            "menu_item": "user",
+            "title": "User",
+            "description": "Botify API, User"
+        }
+    },
+    {
+        "url_name": "user-list-projects",
+        "markdown_file": "api/user/list-projects.md",
+        "path": "api/user/list-projects",
+        "properties": {
+            "menu_item": "user-list-projects",
+            "breadcrumb": ["user"],
             "title": "List projects",
             "description": "List your projects with Botify API"
         }
@@ -302,11 +313,6 @@ PAGES = [
         "redirect_path": "api/analysis/csv-export"
     },
     {
-        "url_name": "analysis-csv-export-preview",
-        "path": "api/analysis/csv-export-preview",
-        "redirect_path": "api/analysis/csv-export"
-    },
-    {
         "url_name": "usage-get-url-detail",
         "path": "api/usage/get-url-detail",
         "redirect_path": "api/analysis/get-url-detail"
@@ -319,7 +325,17 @@ PAGES = [
     {
         "url_name": "usage-query-urls",
         "path": "api/usage/query-urls",
-        "redirect_path": "api/analysis/search-for-urls"
+        "redirect_path": "api/analysis/list-urls"
+    },
+    {
+        "url_name": "usage-list-projects",
+        "path": "api/usage/list-projects",
+        "redirect_path": "api/project/list-projects"
+    },
+    {
+        "url_name": "analysis-csv-export-preview",
+        "path": "api/analysis/csv-export-preview",
+        "redirect_path": "api/analysis/csv-export"
     },
     {
         "url_name": "analysis-features-google-analytics",
@@ -327,8 +343,23 @@ PAGES = [
         "redirect_path": "api/analysis/features/visits"
     },
     {
-        "url_name": "usage-list-projects",
-        "path": "api/usage/list-projects",
-        "redirect_path": "api/project/list-projects"
+        "url_name": "analysis-list-analyses",
+        "path": "api/analysis/list-analyses",
+        "redirect_path": "api/project/list-analyses"
+    },
+    {
+        "url_name": "project-list-projects",
+        "path": "api/project/list-projects",
+        "redirect_path": "api/user/list-projects"
+    },
+    {
+        "url_name": "analysis-get-url-detail",
+        "path": "api/analysis/get-url-detail",
+        "redirect_path": "api/analysis/get-url-info"
+    },
+    {
+        "url_name": "analysis-search-for-urls",
+        "path": "api/analysis/search-for-urls",
+        "redirect_path": "api/analysis/list-urls"
     },
 ]
