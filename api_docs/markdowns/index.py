@@ -199,6 +199,17 @@ PAGES = [
             "description": "List your analyses with Botify API"
         }
     },
+    {
+        "url_name": "project-aggregate-analyses-urls",
+        "markdown_file": "api/project/aggregate-analyses-urls.md",
+        "path": "api/project/aggregate-analyses-urls",
+        "properties": {
+            "menu_item": "project-aggregate-analyses-urls",
+            "breadcrumb": ["project"],
+            "title": "Aggregate Project's Analyses URLs",
+            "description": "Aggregate Project's Analyses URLs with Botify API"
+        }
+    },
     # User
     {
         "url_name": "user",

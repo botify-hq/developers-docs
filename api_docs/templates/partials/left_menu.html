@@ -70,6 +70,9 @@
       <div class="sidebar__group-item {% ifequal properties.menu_item "project-list-analyses" %}active{% endifequal %}">
         <a href="{% url 'md-page' 'api/project/list-analyses' %}">List Analyses</a>
       </div>
+      <div class="sidebar__group-item {% ifequal properties.menu_item "project-aggregate-analyses-urls" %}active{% endifequal %}">
+        <a href="{% url 'md-page' 'api/project/aggregate-analyses-urls' %}">Aggregate Analyses URLs</a>
+      </div>
     </div>
   </div><!-- END SideBar Group -->
   <div class="sidebar__group {% if properties.menu_item == "user" or properties.breadcrumb.0 == "user" %}open{% endif %}">
