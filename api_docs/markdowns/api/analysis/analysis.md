@@ -5,8 +5,8 @@ According to project configuration and set up integrations, some features can be
 
 Botify API allow you to **get any data related to one of your Analysis**. A complete list of operations can be found in the **[[reference;reference#/Analysis]]**.
 
-- [[Get detail on any analyzed URL;analysis-get-url-detail]]
-- [[Search for URLs;analysis-search-for-urls]]
+- [[Get detail on any analyzed URL;analysis-get-url-info]]
+- [[List and filter URLs;analysis-list-urls]]
 - [[Aggregate analyzed URL data;analysis-aggregate-urls]]
 - [[Features;analysis-features]]
 - [[Create CSV Exports;analysis-csv-export]]

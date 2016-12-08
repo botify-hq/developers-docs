@@ -78,14 +78,14 @@ PAGES = [
         }
     },
     {
-        "url_name": "analysis-search-for-urls",
-        "markdown_file": "api/analysis/search-for-urls.md",
-        "path": "api/analysis/search-for-urls",
+        "url_name": "analysis-list-urls",
+        "markdown_file": "api/analysis/list-urls.md",
+        "path": "api/analysis/list-urls",
         "properties": {
-            "menu_item": "analysis-search-for-urls",
+            "menu_item": "analysis-list-urls",
             "breadcrumb": ["analysis"],
-            "title": "Search for URLs",
-            "description": "Search for URLs with Botify API"
+            "title": "List URLs",
+            "description": "List ans filter URLs with Botify API"
         }
     },
     {
@@ -325,7 +325,7 @@ PAGES = [
     {
         "url_name": "usage-query-urls",
         "path": "api/usage/query-urls",
-        "redirect_path": "api/analysis/search-for-urls"
+        "redirect_path": "api/analysis/list-urls"
     },
     {
         "url_name": "usage-list-projects",
@@ -343,18 +343,23 @@ PAGES = [
         "redirect_path": "api/analysis/features/visits"
     },
     {
-        "url_name": "api-analysis-list-analyses",
+        "url_name": "analysis-list-analyses",
         "path": "api/analysis/list-analyses",
         "redirect_path": "api/project/list-analyses"
     },
     {
-        "url_name": "api-project-list-projects",
+        "url_name": "project-list-projects",
         "path": "api/project/list-projects",
         "redirect_path": "api/user/list-projects"
     },
     {
-        "url_name": "api-analysis-get-url-detail",
+        "url_name": "analysis-get-url-detail",
         "path": "api/analysis/get-url-detail",
         "redirect_path": "api/analysis/get-url-info"
+    },
+    {
+        "url_name": "analysis-search-for-urls",
+        "path": "api/analysis/search-for-urls",
+        "redirect_path": "api/analysis/search-for-urls"
     },
 ]
