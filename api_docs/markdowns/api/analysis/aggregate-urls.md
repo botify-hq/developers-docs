@@ -199,7 +199,7 @@ Note that **groups may not be in the same order you specified in ranges** becaus
 
 ## Example: Two group-bys
 
-The following example of [[BQLAggsQuery;bql-aggs-query]] groups URLs by HTTP code and depth. The URLs dataset is filtered on compliant URLs using `filters` key.
+The following example of [[BQLAggsQuery;bql-aggs-query]] groups URLs by HTTP code and depth.
 **Note:** The default `metric` is `count`.
 
 ### Request
@@ -213,12 +213,7 @@ The following example of [[BQLAggsQuery;bql-aggs-query]] groups URLs by HTTP cod
           "depth"
         ]
       }
-    ],
-    "filters": {
-      "field": "compliant.is_compliant",
-      "predicate": "eq",
-      "value": true
-    }
+    ]
   }
 ]
 ```
