@@ -21,8 +21,8 @@
       </div>
     </div>
   </div><!-- END SideBar Group -->
-  <div class="sidebar__group open">
-    <div class="sidebar__group-header {% if properties.menu_item == "analysis" or properties.breadcrumb.0 == "analysis" %}active{% endif %}">
+  <div class="sidebar__group {% if properties.menu_item == "analysis" or properties.breadcrumb.0 == "analysis" %}open{% endif %}">
+    <div class="sidebar__group-header">
       <a href="{% url 'md-page' 'api/analysis' %}">Analysis</a>
     </div>
     <div class="sidebar__group-body">
@@ -62,8 +62,8 @@
       </div>
     </div>
   </div><!-- END SideBar Group -->
-  <div class="sidebar__group open">
-    <div class="sidebar__group-header {% if properties.menu_item == "project" or properties.breadcrumb.0 == "project" %}active{% endif %}">
+  <div class="sidebar__group {% if properties.menu_item == "project" or properties.breadcrumb.0 == "project" %}open{% endif %}">
+    <div class="sidebar__group-header">
       <a href="{% url 'md-page' 'api/project' %}">Project</a>
     </div>
     <div class="sidebar__group-body">
@@ -72,8 +72,8 @@
       </div>
     </div>
   </div><!-- END SideBar Group -->
-  <div class="sidebar__group open">
-    <div class="sidebar__group-header {% if properties.menu_item == "user" or properties.breadcrumb.0 == "user" %}active{% endif %}">
+  <div class="sidebar__group {% if properties.menu_item == "user" or properties.breadcrumb.0 == "user" %}open{% endif %}">
+    <div class="sidebar__group-header">
       <a href="{% url 'md-page' 'api/user' %}">User</a>
     </div>
     <div class="sidebar__group-body">
@@ -82,8 +82,8 @@
       </div>
     </div>
   </div><!-- END SideBar Group -->
-  <div class="sidebar__group open">
-    <div class="sidebar__group-header {% if properties.menu_item == "bql" or properties.breadcrumb.0 == "bql" %}active{% endif %}">
+  <div class="sidebar__group {% if properties.menu_item == "bql" or properties.breadcrumb.0 == "bql" %}open{% endif %}">
+    <div class="sidebar__group-header">
       <a href="{% url 'md-page' 'api/bql' %}">BQL</a>
     </div>
     <div class="sidebar__group-body">
@@ -98,8 +98,8 @@
       </div>
     </div>
   </div><!-- END SideBar Group -->
-  <div class="sidebar__group open">
-    <div class="sidebar__group-header {% if properties.menu_item == "integrations" or properties.breadcrumb.0 == "integrations" %}active{% endif %}">
+  <div class="sidebar__group {% if properties.menu_item == "integrations" or properties.breadcrumb.0 == "integrations" %}open{% endif %}">
+    <div class="sidebar__group-header">
       <a href="{% url 'md-page' 'api/integrations' %}">Integrations</a>
     </div>
     <div class="sidebar__group-body">
@@ -108,8 +108,8 @@
       </div>
     </div>
   </div><!-- END SideBar Group -->
-  <div class="sidebar__group open">
-    <div class="sidebar__group-header {% if properties.menu_item == "sdks" or properties.breadcrumb.0 == "sdks" %}active{% endif %}">
+  <div class="sidebar__group {% if properties.menu_item == "sdks" or properties.breadcrumb.0 == "sdks" %}open{% endif %}">
+    <div class="sidebar__group-header">
       <a href="{% url 'md-page' 'api/sdks' %}">SDKs</a>
     </div>
     <div class="sidebar__group-body">
@@ -118,19 +118,17 @@
       </div>
     </div>
   </div><!-- END SideBar Group -->
-  <div class="sidebar__group">
-    <div class="sidebar__group-header">
-      <a href="https://groups.google.com/forum/#!forum/botify-api" target="_blank">News &amp; Support</a>
-    </div>
-  </div><!-- END SideBar Group -->
-  <div class="sidebar__group">
-    <div class="sidebar__group-header">
-      <a href="https://github.com/botify-labs" target="_blank">Open Source</a>
-    </div>
-  </div><!-- END SideBar Group -->
-  <div class="sidebar__group">
-    <div class="sidebar__group-header">
-      <a href="https://www.botify.com/jobs">We are Hiring</a>
+  <div class="sidebar__group open">
+    <div class="sidebar__group-body">
+      <div class="sidebar__group-item">
+        <a href="https://groups.google.com/forum/#!forum/botify-api" target="_blank">News &amp; Support</a>
+      </div>
+      <div class="sidebar__group-item">
+        <a href="https://github.com/botify-labs" target="_blank">Open Source</a>
+      </div>
+      <div class="sidebar__group-item">
+        <a href="https://www.botify.com/jobs">We are Hiring</a>
+      </div>
     </div>
   </div><!-- END SideBar Group -->
 </div>

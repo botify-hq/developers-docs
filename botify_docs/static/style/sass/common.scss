@@ -190,7 +190,7 @@ body {
 
             a {
               font-weight: bold;
-              color: #3e3a3a;
+              color: #978e8e;
             }
 
             &.active {
@@ -205,9 +205,8 @@ body {
           }
 
           &.open {
-            & + .sidebar__group {
-              margin-top: 40px;
-            }
+            margin-top: 30px;
+            margin-bottom: 35px;
 
             .sidebar__group-header {
               a {
