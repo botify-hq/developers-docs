@@ -15,7 +15,7 @@ Botify API allow you to **get any data related to one of your Analysis**. A comp
 
 ## Get Summary
 
-Botify API allow you to get metadata of an analysis, including analysis **slug**, statuc, start and finish date, owner, crawl configuration and list of enabled **features** with their configuration.
+Botify API allow you to get metadata of an analysis, including analysis **slug**, status, start and finish date, owner, crawl configuration and list of enabled **features** with their configuration.
 
 ### Request
 
@@ -75,4 +75,4 @@ The response will have the following format.
 - `user` is the **owner** of the analysis's project.
 - `features` is the **list of enabled features** and their configuration. For more information about features, please refer to the [[Features;analysis-features]] documentation.
 - `failures` is the list of failed features (by name).
-- `config` contains project configuration as set up in Project Advanced Settings including **scope** (start URL(s), allowed domains, robot.txt, pages limits) and **crawler configuration** (speed, authentication, headers) and **integrations** (Google Analytics, Sitemaps, etc).
+- `config` contains project configuration as set up in Project Advanced Settings including **scope** (start URL(s), allowed domains, robot.txt, max number of URLs) and **crawler configuration** (speed, authentication, headers) and **integrations** (Google Analytics, Sitemaps, etc).
