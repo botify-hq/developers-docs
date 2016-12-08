@@ -67,14 +67,14 @@ PAGES = [
         }
     },
     {
-        "url_name": "analysis-get-url-detail",
-        "markdown_file": "api/analysis/get-url-detail.md",
-        "path": "api/analysis/get-url-detail",
+        "url_name": "analysis-get-url-info",
+        "markdown_file": "api/analysis/get-url-info.md",
+        "path": "api/analysis/get-url-info",
         "properties": {
-            "menu_item": "analysis-get-url-detail",
+            "menu_item": "analysis-get-url-info",
             "breadcrumb": ["analysis"],
-            "title": "Get URL Detail",
-            "description": "Get detail on a given URL with Botify API"
+            "title": "Get URL Info",
+            "description": "Get information on a given URL with Botify API"
         }
     },
     {
@@ -351,5 +351,10 @@ PAGES = [
         "url_name": "api-project-list-projects",
         "path": "api/project/list-projects",
         "redirect_path": "api/user/list-projects"
+    },
+    {
+        "url_name": "api-analysis-get-url-detail",
+        "path": "api/analysis/get-url-detail",
+        "redirect_path": "api/analysis/get-url-info"
     },
 ]

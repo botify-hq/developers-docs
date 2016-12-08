@@ -38,17 +38,17 @@
             <li class="{% ifequal properties.menu_item "analysis" %}active{% endifequal %}">
               <a href="{% url 'md-page' 'api/analysis' %}">Analysis</a>
             </li>
-            <li class="{% ifequal properties.menu_item "analysis-get-url-detail" %}active{% endifequal %}">
-              <a href="{% url 'md-page' 'api/analysis/get-url-detail' %}">Get URL Detail</a>
-            </li>
-            <li class="{% ifequal properties.menu_item "analysis-search-for-urls" %}active{% endifequal %}">
-              <a href="{% url 'md-page' 'api/analysis/search-for-urls' %}">Search for URLs</a>
+             <li class="{% ifequal properties.menu_item "analysis-features" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'api/analysis/features' %}">Features</a>
             </li>
             <li class="{% ifequal properties.menu_item "analysis-aggregate-urls" %}active{% endifequal %}">
               <a href="{% url 'md-page' 'api/analysis/aggregate-urls' %}">Aggregate URLs</a>
             </li>
-            <li class="{% ifequal properties.menu_item "analysis-features" %}active{% endifequal %}">
-              <a href="{% url 'md-page' 'api/analysis/features' %}">Features</a>
+            <li class="{% ifequal properties.menu_item "analysis-search-for-urls" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'api/analysis/search-for-urls' %}">Search for URLs</a>
+            </li>
+            <li class="{% ifequal properties.menu_item "analysis-get-url-info" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'api/analysis/get-url-info' %}">Get URL Info</a>
             </li>
             <li class="{% ifequal properties.menu_item "analysis-csv-export" %}active{% endifequal %}">
               <a href="{% url 'md-page' 'api/analysis/csv-export' %}">CSV Export</a>
