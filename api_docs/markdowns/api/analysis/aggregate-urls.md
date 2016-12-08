@@ -21,7 +21,15 @@ curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_
 ```
 
 
-## Example: Aggregation on filtered dataset
+## Examples
+
+- [Two metrics on a filtered dataset](#example-two-metrics-on-a-filtered-dataset)
+- [Group-by with two metrics](#example-group-by-with-two-metrics)
+- [Range group-by](#example-range-group-by)
+- [Two group-bys](#example-two-group-bys)
+
+
+## Example: Two metrics on a filtered dataset
 
 The following example of [[BQLAggsQuery;bql-aggs-query]] computes the number of compliant URLs and their average response time.
 
@@ -33,9 +41,7 @@ The following example of [[BQLAggsQuery;bql-aggs-query]] computes the number of 
       {
         "metrics": [
           "count",
-          {
-            "avg": "delay_last_byte"
-          }
+          { "avg": "delay_last_byte" }
         ]
       }
     ],
@@ -60,10 +66,7 @@ When everything went fine, aggregation response is in the `data` key. Requested 
       "count": 37,
       "aggs": [
         {
-          "metrics": [
-            37,
-            118.52380952380952
-          ]
+          "metrics": [37, 118.52380952380952]
         }
       ]
     }
@@ -72,7 +75,7 @@ When everything went fine, aggregation response is in the `data` key. Requested 
 ```
 
 
-## Example: Simple Group-By with two Metrics
+## Example: Group-by with two metrics
 
 The following example of [[BQLAggsQuery;bql-aggs-query]] groups URLs by HTTP Code. Using `metrics` key, we request the number of URLs and average response time for each group.
 
@@ -87,9 +90,7 @@ The following example of [[BQLAggsQuery;bql-aggs-query]] groups URLs by HTTP Cod
         ],
         "metrics": [
           "count",
-          {
-            "avg": "delay_last_byte"
-          }
+          { "avg": "delay_last_byte" }
         ]
       }
     ]
@@ -100,7 +101,11 @@ The following example of [[BQLAggsQuery;bql-aggs-query]] groups URLs by HTTP Cod
 ### Response
 A sample result would be the following. It returns the total number of URLs and the result of the aggregation.
 
-This example returns 3 groups: the URLs with HTTP code 200, the URLs with HTTP code 201 and the URLs with HTTP code 404. For each group, requested metrics are returned in the same order they were set in the query.
+This example returns 2 groups:
+- the URLs with HTTP code 200
+- the URLs with HTTP code 301
+
+For each group, requested metrics are returned in the same order they were in the query.
 
 ```JSON
 [
@@ -112,31 +117,12 @@ This example returns 3 groups: the URLs with HTTP code 200, the URLs with HTTP c
         {
           "groups": [
             {
-              "key": [
-                200
-              ],
-              "metrics": [
-                28,
-                157.25
-              ]
+              "key": [200],
+              "metrics": [28, 157.25]
             },
             {
-              "key": [
-                201
-              ],
-              "metrics": [
-                2,
-                751.25
-              ]
-            },
-            {
-              "key": [
-                404
-              ],
-              "metrics": [
-                7,
-                1809.8
-              ]
+              "key": [301],
+              "metrics": [2, 751.25]
             }
           ]
         }
@@ -147,9 +133,10 @@ This example returns 3 groups: the URLs with HTTP code 200, the URLs with HTTP c
 ```
 
 
-## Example: Simple and Range Group-By
+## Example: Range group-by
 
-The following example of [[BQLAggsQuery;bql-aggs-query]] groups URLs by HTTP code and response time on 2 ranges (fast and slow URLs). The URLs dataset is filtered on compliant URLs using `filters` key.
+The following example of [[BQLAggsQuery;bql-aggs-query]] groups URLs by response time in 2 groups (fast and slow URLs). The URLs dataset is filtered on compliant URLs using `filters` key.
+**Note:** The default `metric` is `count`.
 
 ### Request
 ```JSON
@@ -158,18 +145,12 @@ The following example of [[BQLAggsQuery;bql-aggs-query]] groups URLs by HTTP cod
     "aggs": [
       {
         "group_by": [
-          "http_code",
           {
             "range": {
               "field": "delay_last_byte",
               "ranges": [
-                {
-                  "from": 0,
-                  "to": 1000
-                },
-                {
-                  "from": 1000
-                }
+                {"from": 0, "to": 1000},
+                {"from": 1000}
               ]
             }
           }
@@ -186,11 +167,9 @@ The following example of [[BQLAggsQuery;bql-aggs-query]] groups URLs by HTTP cod
 ```
 
 ### Response
-A sample result would be the following. It returns the total number of URLs matching the filter and the result of the aggregation.
+A sample result would be the following. It returns the total number of URLs matching the filter and the result of the aggregation. The response returns the number of URLs for slow and fast URLs as request.
 
-It creates a group for each combination of group-bys: the fast 200 URLs, the slow 200 URLs and the slow 201 URLs. **Note that combinations resulting in 0 URLs (fast 201 URLs) are not returned.**
-
-**The default `metric` is `count`.**
+Note that **groups may not be in the same order you specified in ranges** because of multiple aggregation capabilities, cf bellow (ie. even you specified in the query slow then fast URLs, responses can give result for fast then slow URLs)
 
 ```JSON
 [
@@ -202,38 +181,78 @@ It creates a group for each combination of group-bys: the fast 200 URLs, the slo
         {
           "groups": [
             {
-              "key": [
-                200,
-                {
-                  "from": 0,
-                  "to": 1000
-                }
-              ],
-              "metrics": [
-                4
-              ]
+              "key": [{"from": 0, "to": 1000}],
+              "metrics": [4]
             },
             {
-              "key": [
-                200,
-                {
-                  "from": 1000
-                }
-              ],
-              "metrics": [
-                19
-              ]
+              "key": [{"from": 1000}],
+              "metrics": [19]
+            },
+          ]
+        }
+      ]
+    }
+  }
+]
+```
+
+
+## Example: Two group-bys
+
+The following example of [[BQLAggsQuery;bql-aggs-query]] groups URLs by HTTP code and depth. The URLs dataset is filtered on compliant URLs using `filters` key.
+**Note:** The default `metric` is `count`.
+
+### Request
+```JSON
+[
+  {
+    "aggs": [
+      {
+        "group_by": [
+          "http_code",
+          "depth"
+        ]
+      }
+    ],
+    "filters": {
+      "field": "compliant.is_compliant",
+      "predicate": "eq",
+      "value": true
+    }
+  }
+]
+```
+
+### Response
+A sample result would be the following. It returns the total number of URLs matching the filter and the result of the aggregation.
+
+It creates a group for each combination. For instance:
+- the URLS on depth 1 which respond in 200.
+- the URLS on depth 2 which respond in 200.
+- the URLS on depth 1 which respond in 301.
+
+**Note that combinations resulting in 0 URLs (fast 201 URLs) are not returned.**
+
+```JSON
+[
+  {
+    "status": 200,
+    "data": {
+      "count": 25,
+      "aggs": [
+        {
+          "groups": [
+            {
+              "key": [200, 1],
+              "metrics": [4]
             },
             {
-              "key": [
-                201,
-                {
-                  "from": 1000
-                }
-              ],
-              "metrics": [
-                2
-              ]
+              "key": [200, 2],
+              "metrics": [19]
+            },
+            {
+              "key": [301, 1],
+              "metrics": [2]
             }
           ]
         }
