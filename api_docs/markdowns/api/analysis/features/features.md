@@ -18,30 +18,14 @@ Features include:
 
 ## List enabled features
 
-To list enabled features, you need to request the analysis summary.
+To list enabled features, you need to request the [[analysis summary;analysis]]. The response contains the list of enabled features with their configuration.
 
-### Request
-
-- Operation: [[getAnalysisSummary;reference#/Analysis/getAnalysisSummary]]
-- Path: `analyses/{username}/{project_slug}/{analysis_slug}`
-- HTTP Verb: GET
-- Response: `Analysis`
-
-```SH
-curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}' \
-     -X GET \
-     -H 'Authorization: Token ${API_KEY}' \
-     -H 'Content-type: application/json'
-```
-
-### Response
-
-The response will have the following format.
-If a feature is enabled, the feature property is present and not equal to `null`. For most of features, additional data (like configuration, or prefetch results) is stored can be found in its value. For more details, please refer to the related documentation section.
+If a feature is enabled, the feature property is present and not equal to `null`. For most of features, additional data (like **configuration or prefetch results**) is available in feature value. For more details, please refer to the related documentation section.
 
 ```JSON
 {
   "features": {
+    "main": ?Object,
     "links": ?Object,
     "segments": ?Object,
     "visits": ?Object,

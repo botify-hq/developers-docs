@@ -15,7 +15,7 @@ Botify API allow you to **get any data related to one of your Analysis**. A comp
 
 ## Get Summary
 
-Botify API allow you to get metadata of an analysis, including analysis **slug**, statuc, start and finish date, owner, crawl configuration and list of enabled **features** with their options.
+Botify API allow you to get metadata of an analysis, including analysis **slug**, statuc, start and finish date, owner, crawl configuration and list of enabled **features** with their configuration.
 
 ### Request
 
