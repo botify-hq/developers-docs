@@ -109,7 +109,7 @@
       <a href="{% url 'md-page' 'api/integrations' %}">Integrations</a>
     </div>
     <div class="sidebar__group-body">
-      <div class="sidebar__group-item">
+      <div class="sidebar__group-item {% ifequal properties.menu_item "integrations-google-sheets" %}active{% endifequal %}">
         <a href="{% url 'md-page' 'api/integrations/google-sheets' %}">Google Sheets</a>
       </div>
     </div>

@@ -109,7 +109,7 @@
             <li class="{% ifequal properties.menu_item "integrations" %}active{% endifequal %}">
               <a href="{% url 'md-page' 'api/integrations' %}" target="_blank">Integrations</a>
             </li>
-            <li>
+            <li class=" {% ifequal properties.menu_item "integrations-google-sheets" %}active{% endifequal %}">
               <a href="{% url 'md-page' 'api/integrations/google-sheets' %}">Google Sheets</a>
             </li>
           </ul>

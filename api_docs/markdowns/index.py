@@ -305,7 +305,7 @@ PAGES = [
         "markdown_file": "api/integrations/google-sheets.md",
         "path": "api/integrations/google-sheets",
         "properties": {
-            "menu_item": "sdk-google-sheetss",
+            "menu_item": "integrations-google-sheets",
             "breadcrumb": ["integrations"],
             "title": "Botify for Google Sheets",
             "description": "Use Botify API through Botify addon for Google Sheets"
