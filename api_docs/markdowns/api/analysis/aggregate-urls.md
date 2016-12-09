@@ -77,7 +77,7 @@ When everything went fine, aggregation response is in the `data` key. Requested 
 
 ## Example: Group-by with two metrics
 
-The following example of [[BQLAggsQuery;bql-aggs-query]] groups URLs by HTTP Code. Using `metrics` key, we request the number of URLs and average response time for each group.
+The following example of [[BQLAggsQuery;bql-aggs-query]] groups URLs by HTTP Code. Using `metrics` key, we request the number of URLs and average response time for each group of HTTP Code.
 
 ### Request
 ```JSON
@@ -169,7 +169,7 @@ The following example of [[BQLAggsQuery;bql-aggs-query]] groups URLs by response
 ### Response
 A sample result would be the following. It returns the total number of URLs matching the filter and the result of the aggregation. The response returns the number of URLs for slow and fast URLs as request.
 
-Note that **groups may not be in the same order you specified in ranges** because of multiple aggregation capabilities, cf bellow (ie. even you specified in the query slow then fast URLs, responses can give result for fast then slow URLs)
+Note that **groups may not be in the same order you specified in ranges** due to multiple groupby capability, cf. bellow (ie. in the query, even you defined slow then fast URLs, responses can give the result for fast then slow URLs)
 
 ```JSON
 [
@@ -199,7 +199,7 @@ Note that **groups may not be in the same order you specified in ranges** becaus
 
 ## Example: Two group-bys
 
-The following example of [[BQLAggsQuery;bql-aggs-query]] groups URLs by HTTP code and depth.
+The following example of [[BQLAggsQuery;bql-aggs-query]] groups URLs by depth and HTTP code.
 **Note:** The default `metric` is `count`.
 
 ### Request
@@ -209,8 +209,8 @@ The following example of [[BQLAggsQuery;bql-aggs-query]] groups URLs by HTTP cod
     "aggs": [
       {
         "group_by": [
-          "http_code",
-          "depth"
+          "depth",
+          "http_code"
         ]
       }
     ]
@@ -222,11 +222,11 @@ The following example of [[BQLAggsQuery;bql-aggs-query]] groups URLs by HTTP cod
 A sample result would be the following. It returns the total number of URLs matching the filter and the result of the aggregation.
 
 It creates a group for each combination. For instance:
-- the URLS on depth 1 which respond in 200.
-- the URLS on depth 2 which respond in 200.
-- the URLS on depth 1 which respond in 301.
+- the URLS on depth 1 with a 200 HTTP code.
+- the URLS on depth 1 with a 301 HTTP code.
+- the URLS on depth 2 with a 200 HTTP code.
 
-**Note that combinations resulting in 0 URLs (fast 201 URLs) are not returned.**
+**Note that combinations resulting to 0 URLs (ex: 301s on depth 2) are not returned.**
 
 ```JSON
 [
@@ -238,16 +238,16 @@ It creates a group for each combination. For instance:
         {
           "groups": [
             {
-              "key": [200, 1],
+              "key": [1, 200],
               "metrics": [4]
             },
             {
-              "key": [200, 2],
-              "metrics": [19]
+              "key": [1, 301],
+              "metrics": [2]
             },
             {
-              "key": [301, 1],
-              "metrics": [2]
+              "key": [2, 200],
+              "metrics": [19]
             }
           ]
         }
