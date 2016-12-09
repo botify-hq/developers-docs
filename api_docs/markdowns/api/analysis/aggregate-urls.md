@@ -156,7 +156,7 @@ The following example of [[BQLAggsQuery;bql-aggs-query]] groups active URLs by r
           }
         ]
       }
-    ]
+    ],
     "filters": {
       "field": "visits.organic.all.active",
       "predicate": "eq",
