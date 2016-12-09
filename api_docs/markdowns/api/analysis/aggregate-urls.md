@@ -135,7 +135,7 @@ For each group, requested metrics are returned in the same order they were in th
 
 ## Example: Range group-by
 
-The following example of [[BQLAggsQuery;bql-aggs-query]] groups URLs by response time in 2 groups (fast and slow URLs). The URLs dataset is filtered on compliant URLs using `filters` key.
+The following example of [[BQLAggsQuery;bql-aggs-query]] groups active URLs by response time in 2 groups (fast and slow URLs). The URLs dataset is filtered on compliant URLs using `filters` key.
 **Note:** The default `metric` is `count`.
 
 ### Request
@@ -158,7 +158,7 @@ The following example of [[BQLAggsQuery;bql-aggs-query]] groups URLs by response
       }
     ],
     "filters": {
-      "field": "compliant.is_compliant",
+      "field": "visits.organic.all.active",
       "predicate": "eq",
       "value": true
     }
