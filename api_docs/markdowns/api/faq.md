@@ -5,9 +5,7 @@
 The basic idea of the API is to give you the pieces you need to integrate Botify into your own solutions or build specific program designed for you. There is plenty of things you can do with the Botify API, you can get some examples [[there;introduction#use-examples]] but it's mostly up to you and your company.
 
 ### How to get my API token?
-If you requested access to the Botify API, you can get your API token on your user account page as explained [[there;authentication]].
-
-<a href="https://docs.google.com/forms/d/1T6D588024flDKHS6q_IMlVMS-q8rmRvgzBIc8EZdyDo/viewform" class="inscription-button" target="_blank">Request access to the alpha version of the Botify API</a>
+You can get your API token on your user account page. Please refer to [[authentication;authentication]] section.
 
 
 ### I'd like to get some data about my analyses, where do I start ?

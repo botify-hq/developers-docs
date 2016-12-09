@@ -2,8 +2,6 @@
 
 Botify provides a REST API to integrate Botify into third-party applications and allow to use almost any data available in the Botify interface or via the Botify Chrome Extension.
 
-<a href="https://docs.google.com/forms/d/1T6D588024flDKHS6q_IMlVMS-q8rmRvgzBIc8EZdyDo/viewform" class="inscription-button" target="_blank">Request access to the alpha version of the Botify API</a>
-
 ## Use cases
 The basic idea of the API is to give you the pieces you need to **integrate Botify into your own solutions** to keep your website optimized and your team focussed on improving your SEO performance.
 

@@ -15,4 +15,4 @@ Once the limit is reached, the API responds with a **[429 HTTP Code](https://too
 
 ## Need more?
 
-If you need limits to be raised, please contact us at [support@botify.com](mailto:support@botify.com).
+If you need limits to be raised, please contact your account manager.

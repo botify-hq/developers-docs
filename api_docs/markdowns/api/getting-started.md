@@ -9,9 +9,14 @@ The purpose of this page is to guide you in the Botify API capabilities.
 - [SDK](#sdk)
 
 
+## Get API access
+
+To use the API, you need an active **user account with the API feature enabled**. To do so, either contact your account manager or [start a free trial](https://app.botify.com/request_free_trial/).
+
+
 ## Get your token
 
-To use the API, you need an active user account with the API feature enabled. Once the API enabled you can get your token in your [profile settings](https://app.botify.com/account).
+Once the API is enabled, you can get your token in your [profile settings](https://app.botify.com/account).
 
 
 ## Get my projects and analyses
