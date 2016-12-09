@@ -4,13 +4,19 @@ Botify provides a REST API to integrate Botify into third-party applications and
 
 <a href="https://docs.google.com/forms/d/1T6D588024flDKHS6q_IMlVMS-q8rmRvgzBIc8EZdyDo/viewform" class="inscription-button" target="_blank">Request access to the alpha version of the Botify API</a>
 
-## Use examples
-- **Integrate Botify Data into existing dashboards**.
-- Create dashboards showing an **overview of all your websites**.
-- Create **reporting for the product or engineering team**
+## Use cases
+The basic idea of the API is to give you the pieces you need to **integrate Botify into your own solutions** to keep your website optimized and your team focussed on improving your SEO performance.
+
+- **Go deeper into the analysis** of your website as the API allows you to get the metrics YOU want that could be not available in the Botify application.
+- **Keep your internal dashboards up-to-date** with the most recent data on your website.
+- Get an **overview of all your websites**.
 - **Complement Botify data with other sources** like Google Search Console, Majestic SEO or even sales results, product inventory, etc.
-- **Automate exports** after each crawl to get list of error pages (404, 500, ...), most visited pages, extracted data, etc.
-- ... What are your own ideas?
+- **Show alerts in your CMS** regarding some page's content to keep your SEO optimized.
+- **Create reports** for your marketing, product or engineering team.
+- Automatically **generate sitemaps** to make Google awared of new URLs or newly updated or fixed URLs.
+- **Rise some alerts** in internal monitoring solutions when new issues occurs on your website (increase of errors, unexpected changes in internal linking, etc).
+- Develop some **non regression systems** to ensure that evolutions on your website won't effect your SEO performance.
+- ... and more, it's up to you!
 
 ## Possibilities
 For now, the Botify API is **only pulling data from Botify Analytics**, meaning that **you can get any data related to an analysis**.
@@ -22,10 +28,7 @@ Current technical possibilities of the Botify API include:
 - **Aggregate URLs data** to create custom charts and metrics.
 - **Search for URLs** matching a filter, based on any indicator or URL patterns.
 - Get **information about any URL crawled by Botify Analytics**: HTTP status code, load  time performance, number of inlinks, of outlinks, of organic visits, presence in sitemaps, internal pagerank, etc.
-- Get **information about** other URLs including:
-    - **orphan URLs**: URLs which are **not in your website structure** (or in the scope of the crawl) but which were **crawled by a search engine** or **received visits**.
-    - **top external domains** your website links to.
-    - **URLs found in your sitemaps**.
+- Get **information about** other URLs including **orphan URLs**, **top external domains** your website links to, **URLs found in your sitemaps**.
 - **Export URLs**
 - ... and more
 
