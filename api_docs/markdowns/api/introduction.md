@@ -44,5 +44,5 @@ It means that **it's much more powerful** because you are able to **compute any 
 
 
 ## Demo
-You can find a little demo of the API [there](https://jsfiddle.net/8k20pbua/12/).
+You can find a demo of the API [there](https://jsfiddle.net/8k20pbua/12/).
 But the best API demo is the **Botify Analytics Application** itself, as it is using the API to display/modify (almost) everything.
