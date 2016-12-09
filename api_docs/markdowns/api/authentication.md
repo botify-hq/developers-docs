@@ -16,6 +16,8 @@ curl 'https://api.botify.com/v1/projects/${username}' \
 
 ### Get your API Token
 You can get your **API Auth Token** at [https://app.botify.com/account](https://app.botify.com/account).
+If you don't see an API Auth Token section in you profile settings, you might not have access to the Botify API yet.
+
 
 ### Regenerate your Token
 You can regenerate your Token at [https://app.botify.com/account](https://app.botify.com/account).
