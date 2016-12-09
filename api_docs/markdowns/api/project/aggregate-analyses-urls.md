@@ -98,4 +98,4 @@ Analyses are ordered from the latest to the oldest. For each one, their analysis
 
 ## Further examples
 
-For further examples of aggregation including multiple groupby and filtering please refer to [[Aggregate URLs documentation;analysis-aggregate-urls]].
+For further examples of aggregation including multiple groupby and filtering please refer to [[Aggregate URLs documentation;analysis-aggregate-urls#examples]].
