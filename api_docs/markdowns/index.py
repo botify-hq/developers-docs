@@ -12,6 +12,17 @@ PAGES = [
         }
     },
     {
+        "url_name": "getting-started",
+        "markdown_file": "api/getting-started.md",
+        "path": "api/getting-started",
+        "properties": {
+            "menu_item": "getting-started",
+            "breadcrumb": [],
+            "title": "Getting Started",
+            "description": "Getting Started with Botify API"
+        }
+    },
+    {
         "url_name": "authentication",
         "markdown_file": "api/authentication.md",
         "path": "api/authentication",
@@ -52,7 +63,7 @@ PAGES = [
             "menu_item": "faq",
             "breadcrumb": [],
             "title": "FAQ",
-            "description": "FAQ: Frequently Asked Questions"
+            "description": "FAQ: Frequently Asked Questions about Botify API"
         }
     },
     # Analysis
