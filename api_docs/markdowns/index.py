@@ -211,6 +211,17 @@ PAGES = [
         }
     },
     {
+        "url_name": "logs-get-summary",
+        "markdown_file": "api/logs/get-summary.md",
+        "path": "api/logs/get-summary",
+        "properties": {
+            "menu_item": "logs-get-summary",
+            "breadcrumb": ["logs"],
+            "title": "Get Summary",
+            "description": "Get logs summary with Botify API"
+        }
+    },
+    {
         "url_name": "logs-list-urls",
         "markdown_file": "api/logs/list-urls.md",
         "path": "api/logs/list-urls",
