@@ -29,7 +29,7 @@ Once the API is enabled, you can get your token in your [profile settings](https
 ## Get data about my analyses
 
 In the Botify API, you use **[[BQL;bql]]** (Botify Query Language) to perform operations on analyzed URLs.
-This language allow you define fields you want to **compute metrics on**, **group on**, **filter on**, or **select**. List of fields is available in [[Urls Datamodel;analysis-datamodel]].
+This language allow you define fields you want to **compute metrics on**, **group on**, **filter on**, or **select**. List of fields is available in [[Analysis Datamodel;analysis-datamodel]].
 
 - Get some metrics (ex: number of visits, links) for an analysis: [[getUrlsAggs;analysis-aggregate-urls]]
 - Get the evolution of metrics on your last analyses: [[getProjectUrlsAggs;analysis-aggregate-urls]]
@@ -49,8 +49,8 @@ Note that this demo is using the [[Javascript SDK;sdks]] which offers an easier 
 ## Further reading
 
 - [[API Reference;reference]]
-- [[URL Datamodel;analysis-datamodel]]
 - [[Analysis;analysis]]
 - [[Analysis Features;analysis-features]]
+- [[Analysis Datamodel;analysis-datamodel]]
 - [[Project;project]]
 - [[BQL;bql]]

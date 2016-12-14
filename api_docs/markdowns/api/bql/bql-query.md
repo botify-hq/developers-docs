@@ -13,7 +13,7 @@
 
 ### Fields
 
-The fields to fetch. Default field is `url`. This is equivalent to the `select` clause in SQL. List of selectable fields in [[URLs Datamodel;analysis-datamodel?filter=select]].
+The fields to fetch. Default field is `url`. This is equivalent to the `select` clause in SQL. List of selectable fields in [[Analysis Datamodel;analysis-datamodel?filter=select]].
 
 **Example:**
 ```JSON

@@ -1,6 +1,6 @@
 # List and filter URLs
 
-Botify API allows you to **filter the dataset of analyzed URLs** and return any available information. Full list of requestable fields can be found in [[URLs Datamodel;analysis-datamodel]].
+Botify API allows you to **filter the dataset of analyzed URLs** and return any available information. Full list of requestable fields can be found in [[Analysis Datamodel;analysis-datamodel]].
 
 
 ## Endpoint
