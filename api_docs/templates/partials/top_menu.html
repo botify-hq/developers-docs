@@ -64,6 +64,26 @@
             </li>
           </ul>
         </li>
+        <li class="dropdown {% if properties.menu_item == "logs" or properties.breadcrumb.0 == "logs" %}active{% endif %}">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Logs<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li class="{% ifequal properties.menu_item "logs" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'api/logs' %}">Logs</a>
+            </li>
+            <li class="{% ifequal properties.menu_item "logs-aggregate-urls" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'api/logs/aggregate-urls' %}">Aggregate URLs</a>
+            </li>
+            <li class="{% ifequal properties.menu_item "logs-list-urls" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'api/logs/list-urls' %}">List and Filter URLs</a>
+            </li>
+            <li class="{% ifequal properties.menu_item "logs-csv-export" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'api/logs/csv-export' %}">CSV Export</a>
+            </li>
+            <li class="{% ifequal properties.menu_item "logs-datamodel" %}active{% endifequal %}">
+              <a href="{% url 'logs-datamodel' %}">Datamodel</a>
+            </li>
+          </ul>
+        </li>
         <li class="dropdown {% if properties.menu_item == "project" or properties.breadcrumb.0 == "project" %}active{% endif %}">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Project<span class="caret"></span></a>
           <ul class="dropdown-menu">
