@@ -9,7 +9,7 @@ It also introduces Search Engines orphan URLs which are URLs **not in your websi
 
 ## URLs datamodel fields
 
-[[Search Engines feature's fields;analysis-urls-datamodel?feature=search_engines]].
+[[Search Engines feature's fields;analysis-datamodel?feature=search_engines]].
 
 
 ## Examples of Aggregation

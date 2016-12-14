@@ -121,6 +121,17 @@ PAGES = [
             "description": "Aggregate URLs with Botify API"
         }
     },
+    {
+        "url_name": "analysis-csv-export",
+        "markdown_file": "api/analysis/csv-export.md",
+        "path": "api/analysis/csv-export",
+        "properties": {
+            "menu_item": "analysis-csv-export",
+            "breadcrumb": ["analysis"],
+            "title": "CSV Export",
+            "description": "Make a CSV Export with Botify API"
+        }
+    },
     # Analysis Features
     {
         "url_name": "analysis-features",
@@ -188,15 +199,48 @@ PAGES = [
             "description": "Analysis Feature Search Engines with Botify API"
         }
     },
+    # Logs
     {
-        "url_name": "analysis-csv-export",
-        "markdown_file": "api/analysis/csv-export.md",
-        "path": "api/analysis/csv-export",
+        "url_name": "logs",
+        "markdown_file": "api/logs/logs.md",
+        "path": "api/logs",
         "properties": {
-            "menu_item": "analysis-csv-export",
-            "breadcrumb": ["analysis"],
-            "title": "CSV Export",
-            "description": "Make a CSV Export with Botify API"
+            "menu_item": "logs",
+            "title": "Logs",
+            "description": "Botify API, Logs"
+        }
+    },
+    {
+        "url_name": "logs-list-urls",
+        "markdown_file": "api/logs/list-urls.md",
+        "path": "api/logs/list-urls",
+        "properties": {
+            "menu_item": "logs-list-urls",
+            "breadcrumb": ["logs"],
+            "title": "List Logs URLs",
+            "description": "List and filter Logs URLs with Botify API"
+        }
+    },
+    {
+        "url_name": "logs-aggregate-urls",
+        "markdown_file": "api/logs/aggregate-urls.md",
+        "path": "api/logs/aggregate-urls",
+        "properties": {
+            "menu_item": "logs-aggregate-urls",
+            "breadcrumb": ["logs"],
+            "title": "Aggregate Logs URLs",
+            "description": "Aggregate Logs URLs with Botify API"
+        }
+    },
+    {
+        "url_name": "logs-csv-export",
+        "markdown_file": "api/logs/csv-export.md",
+        "path": "api/logs/csv-export",
+        "properties": {
+            "menu_item": "logs-csv-export",
+            "breadcrumb": ["logs"],
+            "title": "Logs CSV Export",
+            "description": "Make a Logs CSV Export with Botify API"
         }
     },
     # Project

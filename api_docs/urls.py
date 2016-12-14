@@ -7,9 +7,13 @@ urlpatterns = [
         views.SwaggerUiView.as_view(),
         name='reference'),
 
-    url(r'api/analysis/urls-datamodel/$',
-        views.DatamodelView.as_view(),
-        name='analysis-urls-datamodel'),
+    url(r'api/analysis/datamodel/$',
+        views.AnalysisDatamodelView.as_view(),
+        name='analysis-datamodel'),
+
+    url(r'api/logs/datamodel/$',
+        views.LogsDatamodelView.as_view(),
+        name='logs-datamodel'),
 
     url(r'404/$',
         views.NotFoundView.as_view(),

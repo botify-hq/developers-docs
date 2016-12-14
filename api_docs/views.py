@@ -41,17 +41,31 @@ class MarkdownPageView(TemplateView):
         return context
 
 
-class DatamodelView(TemplateView):
-    template_name = "datamodel.html"
+class AnalysisDatamodelView(TemplateView):
+    template_name = "analysis_datamodel.html"
 
     def get_context_data(self, *args, **kwargs):
         return {
             "datamodel_api_url": settings.DATAMODEL_API_URL,
             "properties": {
-                "menu_item": "analysis-urls-datamodel",
+                "menu_item": "analysis-datamodel",
                 "breadcrumb": ["analysis"],
                 "title": "Analysis | URLs Datamodel",
                 "description": "Botify API, URLs Datamodel"
+            }
+        }
+
+class LogsDatamodelView(TemplateView):
+    template_name = "logs_datamodel.html"
+
+    def get_context_data(self, *args, **kwargs):
+        return {
+            "datamodel_api_url": settings.DATAMODEL_API_URL,
+            "properties": {
+                "menu_item": "logs-datamodel",
+                "breadcrumb": ["logs"],
+                "title": "Logs | URLs & Segments Datamodel",
+                "description": "Botify API, URLs & Segments Datamodel"
             }
         }
 

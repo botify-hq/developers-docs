@@ -6,7 +6,7 @@ Visits Orphan URLs are URLs **not in your website structure** (or in the scope o
 
 ## URLs datamodel fields
 
-[[Visits feature's fields;analysis-urls-datamodel?feature=visits]].
+[[Visits feature's fields;analysis-datamodel?feature=visits]].
 
 
 ## Examples of Aggregation

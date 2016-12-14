@@ -1,0 +1,30 @@
+{% extends "base/inside_page.html" %}
+{% load markdown_content %}
+{% load staticfiles %}
+
+{% block breadcrumb %}
+<div class="right-content__breadcrumb">
+  <div class="col-xs-11 no-pad-r">
+    <ol class="breadcrumb">
+      <li><a href="/api/logs/">Logs</a></li>
+    </ol>
+  </div>
+</div>
+{% endblock %}
+
+{% block right_content %}
+<h1>Logs Datamodel</h1>
+
+<div class="edit-page-button edit-datamodel">
+  <a href="https://github.com/botify-hq/developers-docs/edit/master/api_docs/markdowns/partials/logs-datamodel.md" target="_blank">
+    <div title="Edit this page">
+      <img src="{% static 'images/edit-icon.png' %}"><span>Edit this page</span>
+    </div>
+  </a>
+</div>
+{% md_content "partials/logs-datamodel.md" %}
+{% endblock %}
+
+{% block extra_script %}
+
+{% endblock %}

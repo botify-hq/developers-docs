@@ -4,7 +4,7 @@ The main feature extracts every primary data from crawled URLs including depth, 
 
 ## URLs datamodel fields
 
-[[Main feature's fields;analysis-urls-datamodel?feature=main]].
+[[Main feature's fields;analysis-datamodel?feature=main]].
 
 
 ## Examples of Aggregation

@@ -24,7 +24,7 @@ A group-by is defined by:
   - some optional `ranges` that define buckets for the group-by operation.
 
 #### Simple GroupBy
-Only [[aggregables fields;analysis-urls-datamodel?filter=agg:]] can be used for group by operations.
+Only [[aggregables fields;analysis-datamodel?filter=agg:]] can be used for group by operations.
 
 **Example**
 The following groups URLs by their `http_code`.
@@ -33,7 +33,7 @@ The following groups URLs by their `http_code`.
 ```
 
 #### Range GroupBy
-Only [[numerical fields;analysis-urls-datamodel?filter=agg:numerical]] can be used for range group by operations.
+Only [[numerical fields;analysis-datamodel?filter=agg:numerical]] can be used for range group by operations.
 
 **Example**
 The following groups URLs by their `delay_last_byte` on two ranges (fast and slow URLs)

@@ -1,6 +1,6 @@
 # CSV Export
 
-Botify API allows you to export your crawled URLs (and their metadata) as a CSV file. Crawled URLs can be filtered in order to export only a subset of URLs. Full list of requestable fields can be found in [[URLs Datamodel;analysis-urls-datamodel]].
+Botify API allows you to export your crawled URLs (and their metadata) as a CSV file. Crawled URLs can be filtered in order to export only a subset of URLs. Full list of requestable fields can be found in [[URLs Datamodel;analysis-datamodel]].
 
 Be noticed that CSV exports are **by default limited to 100,000 URLs**. Contact your account manager if you need to increase this limit.
 

@@ -63,8 +63,27 @@
       <div class="sidebar__group-item {% ifequal properties.menu_item "analysis-csv-export" %}active{% endifequal %}">
         <a href="{% url 'md-page' 'api/analysis/csv-export' %}">CSV Export</a>
       </div>
-      <div class="sidebar__group-item {% ifequal properties.menu_item "analysis-urls-datamodel" %}active{% endifequal %}">
-        <a href="{% url 'analysis-urls-datamodel' %}">URLs Datamodel</a>
+      <div class="sidebar__group-item {% ifequal properties.menu_item "analysis-datamodel" %}active{% endifequal %}">
+        <a href="{% url 'analysis-datamodel' %}">Datamodel</a>
+      </div>
+    </div>
+  </div><!-- END SideBar Group -->
+  <div class="sidebar__group {% if properties.menu_item == "logs" or properties.breadcrumb.0 == "logs" %}open{% endif %}">
+    <div class="sidebar__group-header">
+      <a href="{% url 'md-page' 'api/logs' %}">Logs</a>
+    </div>
+    <div class="sidebar__group-body">
+      <div class="sidebar__group-item {% ifequal properties.menu_item "logs-aggregate-urls" %}active{% endifequal %}">
+        <a href="{% url 'md-page' 'api/logs/aggregate-urls' %}">Aggregate URLs</a>
+      </div>
+      <div class="sidebar__group-item {% ifequal properties.menu_item "logs-list-urls" %}active{% endifequal %}">
+        <a href="{% url 'md-page' 'api/logs/list-urls' %}">List and Filter URLs</a>
+      </div>
+      <div class="sidebar__group-item {% ifequal properties.menu_item "logs-csv-export" %}active{% endifequal %}">
+        <a href="{% url 'md-page' 'api/logs/csv-export' %}">CSV Export</a>
+      </div>
+      <div class="sidebar__group-item {% ifequal properties.menu_item "logs-datamodel" %}active{% endifequal %}">
+        <a href="{% url 'logs-datamodel' %}">Datamodel</a>
       </div>
     </div>
   </div><!-- END SideBar Group -->

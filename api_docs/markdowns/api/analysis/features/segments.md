@@ -6,7 +6,7 @@ The segments can be configured in your project settings.
 
 ## URLs datamodel fields
 
-[[Segment feature's fields;analysis-urls-datamodel?feature=segments]].
+[[Segment feature's fields;analysis-datamodel?feature=segments]].
 The segments feature provides 4 main fields:
 
 - segments.segment_X.value

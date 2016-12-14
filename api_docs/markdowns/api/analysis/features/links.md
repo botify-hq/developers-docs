@@ -5,7 +5,7 @@ The links feature is responsible for computing inlinks/outlinks for each URL, in
 
 ## URLs datamodel fields
 
-[[Links feature's fields;analysis-urls-datamodel?feature=links]].
+[[Links feature's fields;analysis-datamodel?feature=links]].
 
 
 ## Examples of Aggregation

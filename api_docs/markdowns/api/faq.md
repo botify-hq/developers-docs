@@ -22,7 +22,7 @@ An other way is by using [[getUserProjects;user-list-projects]] and [[getProject
 
 
 ### How to get the list of available fields?
-A full list of available fields to select, filter and compute metrics can be found in the [[Urls Datamodel;analysis-urls-datamodel]].
+A full list of available fields to select, filter and compute metrics can be found in the [[Urls Datamodel;analysis-datamodel]].
 
 
 ### How pagination works ?

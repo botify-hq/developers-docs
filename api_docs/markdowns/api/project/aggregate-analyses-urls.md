@@ -1,6 +1,6 @@
 # Aggregate Project's Analyses URLs
 
-Using Botify API, you can **aggregate analyzed URLs** to compute metrics like sum of inlinks, average load time, etc. You can also **group URLs** on any aggregable field and compute metrics on each group. Full list of aggregable fields can be found in [[URLs Datamodel;analysis-urls-datamodel?filter=agg:]].
+Using Botify API, you can **aggregate analyzed URLs** to compute metrics like sum of inlinks, average load time, etc. You can also **group URLs** on any aggregable field and compute metrics on each group. Full list of aggregable fields can be found in [[URLs Datamodel;analysis-datamodel?filter=agg:]].
 The following descirbe how to **perform aggregations on several project's analyses at a time**.
 
 ## Endpoint
