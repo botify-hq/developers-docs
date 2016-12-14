@@ -1,4 +1,4 @@
-# Features
+# Analysis Features
 
 According to analysis configuration and set up integrations, some features can be enabled or not (for instance Search Engines feature is only available if you subscribe to the Log Analyzer option).
 
