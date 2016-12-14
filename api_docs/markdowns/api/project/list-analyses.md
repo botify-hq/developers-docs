@@ -16,7 +16,7 @@ curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}' \
 ```
 
 ## Example of response
-The response contains the list of analyses which belongs to the project. For each analysis, information is given, including their **slug**, **status**, start and finish date, and list of **enabled features**. For more information please refer to [[Analysis documentation;analysis]].
+The response contains the list of analyses which belongs to the project. For each analysis, information is given, including their **slug**, **status**, start and finish date, and list of **enabled features**. For more information please refer to [[Analysis summary documentation;analysis-get-summary]].
 
 Analysis slug is the key to get any data related to. Please note that most of API analysis operations are available only for analyses with the status `success`. Analysis's status can be one of `preparing`, `crawling`, `crawling_paused`, `analyzing`, `success`, `failed`.
 

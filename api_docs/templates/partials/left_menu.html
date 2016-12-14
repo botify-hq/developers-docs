@@ -29,6 +29,9 @@
       <a href="{% url 'md-page' 'api/analysis' %}">Analysis</a>
     </div>
     <div class="sidebar__group-body">
+      <div class="sidebar__group-item {% ifequal properties.menu_item "analysis-get-summary" %}active{% endifequal %}">
+        <a href="{% url 'md-page' 'api/analysis/get-summary' %}">Get Summary</a>
+      </div>
       <div class="sidebar__group-item sidebar__group open">
         <div class="sidebar__group-header {% if properties.menu_item == "analysis-features" or properties.breadcrumb.1 == "analysis-features" %}active{% endif %}">
           <a href="{% url 'md-page' 'api/analysis/features' %}">Features</a>

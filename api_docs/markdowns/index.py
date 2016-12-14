@@ -78,6 +78,17 @@ PAGES = [
         }
     },
     {
+        "url_name": "analysis-get-summary",
+        "markdown_file": "api/analysis/get-summary.md",
+        "path": "api/analysis/get-summary",
+        "properties": {
+            "menu_item": "analysis-get-summary",
+            "breadcrumb": ["analysis"],
+            "title": "Get Summary",
+            "description": "Get analysis summary with Botify API"
+        }
+    },
+    {
         "url_name": "analysis-get-url-info",
         "markdown_file": "api/analysis/get-url-info.md",
         "path": "api/analysis/get-url-info",

@@ -18,7 +18,7 @@ Features include:
 
 ## List enabled features
 
-To list enabled features, you need to request the [[analysis summary;analysis]]. The response contains the list of enabled features with their configuration.
+To list enabled features, you need to request the [[analysis summary;analysis-get-summary]]. The response contains the list of enabled features with their configuration.
 
 If a feature is enabled, the feature property is present and not equal to `null`. For most of features, additional data (like **configuration or prefetch results**) is available in feature value. For more details, please refer to the related documentation section.
 

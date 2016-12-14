@@ -41,7 +41,10 @@
             <li class="{% ifequal properties.menu_item "analysis" %}active{% endifequal %}">
               <a href="{% url 'md-page' 'api/analysis' %}">Analysis</a>
             </li>
-             <li class="{% ifequal properties.menu_item "analysis-features" %}active{% endifequal %}">
+            <li class="{% ifequal properties.menu_item "analysis-get-summary" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'api/analysis/get-summary' %}">Get Summary</a>
+            </li>
+            <li class="{% ifequal properties.menu_item "analysis-features" %}active{% endifequal %}">
               <a href="{% url 'md-page' 'api/analysis/features' %}">Features</a>
             </li>
             <li class="{% ifequal properties.menu_item "analysis-aggregate-urls" %}active{% endifequal %}">
