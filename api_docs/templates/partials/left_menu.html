@@ -107,16 +107,6 @@
       </div>
     </div>
   </div><!-- END SideBar Group -->
-  <div class="sidebar__group {% if properties.menu_item == "integrations" or properties.breadcrumb.0 == "integrations" %}open{% endif %}">
-    <div class="sidebar__group-header">
-      <a href="{% url 'md-page' 'api/integrations' %}">Integrations</a>
-    </div>
-    <div class="sidebar__group-body">
-      <div class="sidebar__group-item {% ifequal properties.menu_item "integrations-google-sheets" %}active{% endifequal %}">
-        <a href="{% url 'md-page' 'api/integrations/google-sheets' %}">Google Sheets</a>
-      </div>
-    </div>
-  </div><!-- END SideBar Group -->
   <div class="sidebar__group {% if properties.menu_item == "sdks" or properties.breadcrumb.0 == "sdks" %}open{% endif %}">
     <div class="sidebar__group-header">
       <a href="{% url 'md-page' 'api/sdks' %}">SDKs</a>
@@ -124,6 +114,16 @@
     <div class="sidebar__group-body">
       <div class="sidebar__group-item">
         <a href="https://github.com/botify-labs/botify-sdk-js" target="_blank">Javascript SDK</a>
+      </div>
+    </div>
+  </div><!-- END SideBar Group -->
+  <div class="sidebar__group {% if properties.menu_item == "integrations" or properties.breadcrumb.0 == "integrations" %}open{% endif %}">
+    <div class="sidebar__group-header">
+      <a href="{% url 'md-page' 'api/integrations' %}">Integrations</a>
+    </div>
+    <div class="sidebar__group-body">
+      <div class="sidebar__group-item {% ifequal properties.menu_item "integrations-google-sheets" %}active{% endifequal %}">
+        <a href="{% url 'md-page' 'api/integrations/google-sheets' %}">Google Sheets</a>
       </div>
     </div>
   </div><!-- END SideBar Group -->
