@@ -145,7 +145,8 @@ FINDER_IGNORE_PATTERNS = [
 
 # @TODO use the prod's real urls once they are released
 SWAGGER_API_URL = "https://api.botify.com/v1/swagger.json"
-DATAMODEL_API_URL = "https://api.botify.com/v1/analyses/urls/datamodel"
+ANALYSIS_DATAMODEL_API_URL = "https://api.botify.com/v1/analyses/urls/datamodel"
+LOGS_DATAMODEL_API_URL = "https://api.botify.com/v1/analyses/datamodel"
 
 
 PIPELINE = {
