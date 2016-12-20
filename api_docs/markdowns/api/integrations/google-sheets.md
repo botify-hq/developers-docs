@@ -27,7 +27,6 @@ Every macro is prefixed by Botify, thus typing `=BOTIFY` in a cell formula  shou
  * @param {String} projectSlug Project's slug
  * @param {Number} nbAnalyses Number of analyses to get
  * @return {Array} The list of analyses.
- * @customfunction
  */
 BOTIFY_PROJECT_LIST_ANALYSES(apiToken, username, projectSlug, nbAnalyses)
 ```
@@ -70,7 +69,6 @@ For more information about how to define aggregation queries, please refer to th
  * @param {Range} fields Range of fields to fetch (ex A1:A4)
  * @param {Boolean} showHeaders Show Groups and Metrics headers (default: true)
  * @return {Array} The value of the fields
- * @customfunction
  */
 BOTIFY_ANALYSIS_GET_URLS_DETAIL(apiToken, username, projectSlug, analysisSlug, urls, fields, showHeaders)
 ```
