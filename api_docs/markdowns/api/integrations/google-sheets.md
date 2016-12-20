@@ -14,6 +14,10 @@ Note that, currently only a small subset of the API is supported by this SDK. Fe
 
 Every macro is prefixed by Botify, thus typing `=BOTIFY` in a cell formula  should show you the available macros thanks to the autocompletion.
 
+- [BOTIFY_PROJECT_LIST_ANALYSES](#get-latest-projects-analyses)
+- [BOTIFY_ANALYSIS_AGGREGATE_URLS](#aggregate-analysis-urls-data)
+- [BOTIFY_ANALYSIS_GET_URLS_DETAIL](#get-detail-for-some-urls)
+
 ### Get latest project's analyses
 ```JS
 /**
@@ -54,10 +58,10 @@ For more information about how to define aggregation queries, please refer to th
 ![image](https://cloud.githubusercontent.com/assets/1886834/14712989/ac889e62-07df-11e6-8da3-fe548f0d9b0c.png)
 
 
-### Get detail on a specific URL
+### Get detail for some URLs
 ```JS
 /**
- * Return the requested fields of a given URL
+ * Return the requested fields of a list of URL
  * @param {String} apiToken Botify API token
  * @param {String} username Username of the project owner
  * @param {String} projectSlug Project's slug of the analysis
@@ -71,7 +75,7 @@ For more information about how to define aggregation queries, please refer to th
 BOTIFY_ANALYSIS_GET_URLS_DETAIL(apiToken, username, projectSlug, analysisSlug, urls, fields, showHeaders)
 ```
 This macro allow you to retrieve fields data for a list of URLs.
-To get a faster response, **we highly recommend to give a list of URLs to a single cell formula** (as in the following example) instead of using this macro URL by URL because it's much more faster this way.
+**To avoid rate limit (429)** and get a faster response, **we highly recommend to give a list of URLs to a single cell formula** (as in the following example) instead of copying this macro for each URL.
 Note a google script must respond within 30 seconds, thus if the list of URLs is too long, some URLs fields might not be computed, We recommend to give **at most 10,000 URLs**.
 ##### Example
 ![image](https://cloud.githubusercontent.com/assets/1886834/14742239/625eb72e-089b-11e6-95c2-d0897355982e.png)
@@ -89,11 +93,11 @@ In the following example, `adam_warlock` is the username, `demo-project` is the 
 
 ![image](https://cloud.githubusercontent.com/assets/1886834/14709625/e8aadb52-07d1-11e6-92f0-21dda26a6331.png)
 
-### How to define an aggregation query?
-Please refer to the [[Aggregate URLs documentation;analysis-aggregate-urls]].
-
 ### How to get the list of available fields?
 A full list of available fields to display or compute metrics on can be found in the [[Urls Datamodel;analysis-urls-datamodel]].
+
+### How to define an aggregation query?
+Please refer to the [[Aggregate URLs documentation;analysis-aggregate-urls]].
 
 ### How to get the source code of the macros?
 The source code of the Botify Google Sheets addon is open source and available on [Github](https://github.com/botify-labs/botify-integration-google-sheets). Feel free to customize our macros or contributing to the project.
