@@ -159,7 +159,7 @@
     var datamodel = $('#datamodel table').DataTable({
       processing: true,
       ajax: {
-        url: "{{ datamodel_api_url }}",
+        url: "{{ urls_datamodel_api_url }}",
         dataType: "json",
         dataSrc: function(json) {
           // Populate groups

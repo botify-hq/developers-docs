@@ -55,12 +55,14 @@ class AnalysisDatamodelView(TemplateView):
             }
         }
 
+
 class LogsDatamodelView(TemplateView):
     template_name = "logs_datamodel.html"
 
     def get_context_data(self, *args, **kwargs):
         return {
-            "datamodel_api_url": settings.LOGS_DATAMODEL_API_URL,
+            "urls_datamodel_api_url": settings.LOGS_URLS_DATAMODEL_API_URL,
+            "segments_datamodel_api_url": settings.LOGS_URLS_DATAMODEL_API_URL,
             "properties": {
                 "menu_item": "logs-datamodel",
                 "breadcrumb": ["logs"],
