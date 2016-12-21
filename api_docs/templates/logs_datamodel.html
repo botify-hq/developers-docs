@@ -17,8 +17,14 @@
 <div id="datamodel">
   <form class="form-inline">
     <div class="form-group">
-      <label>Feature: </label>
-      <select name="selectFeature" class="form-control input-sm">
+      <label>Section: </label>
+      <select name="selectSection" class="form-control input-sm">
+        <option value="all" selected>all</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Bot: </label>
+      <select name="selectBot" class="form-control input-sm">
         <option value="all" selected>all</option>
       </select>
     </div>
@@ -32,13 +38,14 @@
   <table class="table datamodel-table">
     <thead>
       <tr>
-        <th>Feature</th>
+        <th>Section</th>
         <th>Id</th>
         <th>Name</th>
         <th>Permissions</th>
         <th>Type</th>
         <th>SubType</th>
         <th>Multiple</th>
+        <th>Bot</th>
         <th>Group</th>
       </tr>
     </thead>
@@ -59,99 +66,31 @@
 <script type="text/javascript">
   $(function () {
     var initialFilter = url('?') && url('?').filter;
-    var initialCompGroup = url('?') && url('?').comparison;
-    var initialFeature = url('?') && url('?').feature;
+    var initialSection = url('?') && url('?').section;
+    var initialBot = url('?') && url('?').bot;
     var initialGroup = url('?') && url('?').group;
 
-    var compGroupFilter = $('select[name=selectCompGroup]');
-    var featureFilter = $('select[name=selectFeature]');
+    var sectionFilter = $('select[name=selectSection]');
+    var botFilter = $('select[name=selectBot]');
     var groupFilter = $('select[name=selectGroup]');
 
-    var groupsByFeature = {
-      main: [
-        "main",
-        "scheme",
-        "semantic_metadata",
-        "canonical",
-      ],
-      links: [
-        "inlinks",
-        "inlinks_nofollow",
-        "outlinks_internal",
-        "outlinks_internal_nofollow",
-        "outlinks_external",
-        "outlinks_external_nofollow",
-        "redirects",
-        "duplicate_query_kvs",
-        "page_rank",
-      ],
-      segments: [
-        "segments",
-      ],
-      visits: [
-        "visits.organic.all",
-        "visits.organic.aol",
-        "visits.organic.ask",
-        "visits.organic.baidu",
-        "visits.organic.bing",
-        "visits.organic.google",
-        "visits.organic.naver",
-        "visits.organic.yahoo",
-        "visits.organic.yandex",
-        "visits.social.all",
-        "visits.social.facebook",
-        "visits.social.google+",
-        "visits.social.linkedin",
-        "visits.social.pinterest",
-        "visits.social.reddit",
-        "visits.social.tumblr",
-        "visits.social.twitter",
-        "visits",
-      ],
-      search_engines: [
-        "search_engines.google.crawls.all",
-        "search_engines.google.crawls.search",
-        "search_engines.google.crawls.smartphone",
-        "search_engines.google.crawls.ads",
-        "search_engines.google.crawls.other",
-        "search_engines.google.visits",
-        "search_engines.bing.crawls.all",
-        "search_engines.bing.crawls.search",
-        "search_engines.bing.crawls.other",
-        "search_engines.bing.visits",
-      ],
-      content_quality: [
-        "content_quality",
-      ],
-      sitemaps: [
-        "sitemaps",
-      ],
-      extract: [
-        "extract",
-      ],
-      rel: [
-        "hreflang_incoming",
-        "hreflang_outgoing",
-      ],
-      other: [],
-    };
-    var features = Object.keys(groupsByFeature);
-
+    var sections = [];
+    var bots = [];
     var groups = [];
 
     // Init datable
     $.fn.dataTable.ext.search.push(
       function( settings, data, dataIndex ) {
-        var compGroup = compGroupFilter.val();
-        var feature = featureFilter.val();
+        var section = sectionFilter.val();
+        var bot = botFilter.val();
         var group = groupFilter.val();
 
-        var rowCompGroup = data[8];
-        var rowFeature = data[0];
-        var rowGroup = data[7];
+        var rowSection = data[0];
+        var rowBot = data[7];
+        var rowGroup = data[8];
 
-        return (compGroup === rowCompGroup)
-            && (feature === 'all' ? true : feature === rowFeature)
+        return (section === 'all' ? true : section === rowSection)
+            && (bot === 'all' ? true : bot === rowBot)
             && (group === 'all' ? true : group === rowGroup);
       }
     );
@@ -162,41 +101,42 @@
         url: "{{ urls_datamodel_api_url }}",
         dataType: "json",
         dataSrc: function(json) {
-          // Populate groups
           json.groups.forEach(function(group) {
+            // Populate sections
+            var section = getSection(group.id);
+            if (section && sections.indexOf(section) === -1) {
+              sections.push(section);
+            }
+
+            // Populate bots
+            var bot = getBot(group.id);
+            if (bot && bots.indexOf(bot) === -1) {
+              bots.push(bot);
+            }
+
+            // Populate groups
             if (groups.indexOf(group.id) === -1) {
               groups.push(group.id);
             }
           });
-          featureFilter.val(initialFeature || 'all');
-          groupFilter.val(initialGroup || 'all');
+          updateSectionFilter();
+          updateBotFilter();
+          sectionFilter.val(initialSection || 'all');
+          botFilter.val(initialBot || 'all');
           updateGroupFilter();
+          groupFilter.val(initialGroup || 'all');
 
-          // Compute compGroup && feature
+          // Compute field section and bot
           json.fields.forEach(function(field) {
-            features.every(function(feature) {
-              groupsByFeature[feature].every(function (group) {
-                if(field.group.indexOf(group) !== -1) {
-                  field.feature = feature;
-                  return false;
-                }
-                return true;
-              });
-              return !field.feature;
-            });
-
-            field.feature = field.feature || 'other';
-            field.compGroup = getCompGroup(field.group);
-            field.group = field.compGroup  === 'previous' ? field.group.substring(9)
-                        : field.compGroup  === 'diff' ? field.group.substring(5)
-                        : field.group;
+            field.section = getSection(field.group);
+            field.bot = getBot(field.group);
           });
 
           return json.fields;
         },
       },
       columns: [
-        { data: "feature" },
+        { data: "section" },
         { data: "id" },
         { data: "name" },
         {
@@ -206,14 +146,8 @@
         { data: "type" },
         { data: "subtype" },
         { data: "multiple" },
+        { data: "bot" },
         { data: "group" },
-        { data: "compGroup" },
-      ],
-      columnDefs: [
-        {
-          targets: [8],
-          visible: false
-        }
       ],
       scrollX: true,
       search: {
@@ -225,16 +159,12 @@
     });
 
     // Init filter
-    compGroupFilter.val(initialCompGroup || 'current');
-    updateFeatureFilter();
-
-    // Bind events
-    compGroupFilter.change( function() {
+    sectionFilter.change( function() {
       updateGroupFilter();
       datamodel.draw();
     });
 
-    featureFilter.change( function() {
+    botFilter.change( function() {
       updateGroupFilter();
       datamodel.draw();
     });
@@ -243,15 +173,24 @@
       datamodel.draw();
     });
 
-    function getCompGroup(group) {
-      return group.indexOf('previous.') === 0 ? 'previous'
-          : group.indexOf('diff.') === 0 ? 'diff'
-          : 'current';
+    function getSection(group) {
+      return group.split('.')[0];
+    }
+
+    function getBot(group) {
+      var splits = group.split('.');
+      if (splits[1] === 'google' || splits[1] === 'bing') {
+        if (splits[2] === 'bots') { // is sub bot
+          return splits[1] + ' ' + splits[3];
+        }
+        return splits[1];
+      }
+      return null;
     }
 
     function updateGroupFilter() {
-      var compGroup = compGroupFilter.val();
-      var feature = featureFilter.val();
+      var section = sectionFilter.val();
+      var bot = botFilter.val();
 
       groupFilter.empty();
       groupFilter.append($('<option>', {
@@ -259,8 +198,10 @@
         text: 'all'
       }));
 
-      var _groups = feature === 'all' ? groups : groupsByFeature[feature];
-      _groups.forEach(function(group) {
+      groups.forEach(function(group) {
+        if (section !== 'all' && getSection(group) !== section) return;
+        if (bot !== 'all' && getBot(group) !== bot) return;
+
         groupFilter.append($('<option>', {
           value: group,
           text: group
@@ -269,11 +210,20 @@
       groupFilter.val('all');
     }
 
-    function updateFeatureFilter() {
-      features.forEach(function(group) {
-        featureFilter.append($('<option>', {
-          value: group,
-          text: group
+    function updateSectionFilter() {
+      sections.forEach(function(section) {
+        sectionFilter.append($('<option>', {
+          value: section,
+          text: section
+        }));
+      });
+    }
+
+    function updateBotFilter() {
+      bots.forEach(function(bot) {
+        botFilter.append($('<option>', {
+          value: bot,
+          text: bot
         }));
       });
     }
