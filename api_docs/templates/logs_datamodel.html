@@ -17,6 +17,15 @@
 <div id="datamodel">
   <form class="form-inline">
     <div class="form-group">
+      <label>Datamodel: </label>
+      <select name="selectDatamodel" class="form-control input-sm">
+        <option value="urls" selected>URLs</option>
+        <option value="segments">Segments</option>
+      </select>
+    </div>
+  </form>
+  <form class="form-inline">
+    <div class="form-group">
       <label>Section: </label>
       <select name="selectSection" class="form-control input-sm">
         <option value="all" selected>all</option>
@@ -70,6 +79,7 @@
     var initialBot = url('?') && url('?').bot;
     var initialGroup = url('?') && url('?').group;
 
+    var datamodelType = $('select[name=selectDatamodel]');
     var sectionFilter = $('select[name=selectSection]');
     var botFilter = $('select[name=selectBot]');
     var groupFilter = $('select[name=selectGroup]');
@@ -95,10 +105,14 @@
       }
     );
 
+    function getDatamodelUrl() {
+      return datamodelType.val() === 'urls' ? '{{ urls_datamodel_api_url }}' : '{{ segments_datamodel_api_url }}';
+    }
+
     var datamodel = $('#datamodel table').DataTable({
       processing: true,
       ajax: {
-        url: "{{ urls_datamodel_api_url }}",
+        url: getDatamodelUrl(),
         dataType: "json",
         dataSrc: function(json) {
           json.groups.forEach(function(group) {
@@ -158,6 +172,13 @@
       pagingType: "numbers",
     });
 
+    datamodelType.change( function() {
+      sections = [];
+      bots = [];
+      groups = [];
+      datamodel.ajax.url(getDatamodelUrl()).load();
+    });
+
     // Init filter
     sectionFilter.change( function() {
       updateGroupFilter();
@@ -211,6 +232,11 @@
     }
 
     function updateSectionFilter() {
+      sectionFilter.empty();
+      sectionFilter.append($('<option>', {
+        value: 'all',
+        text: 'all'
+      }));
       sections.forEach(function(section) {
         sectionFilter.append($('<option>', {
           value: section,
@@ -220,6 +246,11 @@
     }
 
     function updateBotFilter() {
+      botFilter.empty();
+      botFilter.append($('<option>', {
+        value: 'all',
+        text: 'all'
+      }));
       bots.forEach(function(bot) {
         botFilter.append($('<option>', {
           value: bot,
