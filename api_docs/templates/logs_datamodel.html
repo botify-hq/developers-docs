@@ -74,6 +74,7 @@
 {% block extra_script %}
 <script type="text/javascript">
   $(function () {
+    var initialDatamodel = url('?') && url('?').datamodel;
     var initialFilter = url('?') && url('?').filter;
     var initialSection = url('?') && url('?').section;
     var initialBot = url('?') && url('?').bot;
@@ -109,6 +110,7 @@
       return datamodelType.val() === 'urls' ? '{{ urls_datamodel_api_url }}' : '{{ segments_datamodel_api_url }}';
     }
 
+    datamodelType.val(initialDatamodel || 'urls');
     var datamodel = $('#datamodel table').DataTable({
       processing: true,
       ajax: {
@@ -176,6 +178,9 @@
       sections = [];
       bots = [];
       groups = [];
+      initialSection = sectionFilter.val();
+      initialBot = botFilter.val();
+      initialGroup = groupFilter.val();
       datamodel.ajax.url(getDatamodelUrl()).load();
     });
 
