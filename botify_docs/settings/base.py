@@ -147,7 +147,7 @@ FINDER_IGNORE_PATTERNS = [
 SWAGGER_API_URL = "https://api.botify.com/v1/swagger.json"
 ANALYSIS_DATAMODEL_API_URL = "https://api.botify.com/v1/analyses/urls/datamodel"
 LOGS_URLS_DATAMODEL_API_URL = "https://api.botify.com/v1/logs/urls/datamodel"
-LOGS_SEGMENTSDATAMODEL_API_URL = "https://api.botify.com/v1/logs/segments/datamodel"
+LOGS_SEGMENTS_DATAMODEL_API_URL = "https://api.botify.com/v1/logs/segments/datamodel"
 
 
 PIPELINE = {
