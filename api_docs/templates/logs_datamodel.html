@@ -48,13 +48,11 @@
     <thead>
       <tr>
         <th>Section</th>
+        <th>Bot</th>
         <th>Id</th>
         <th>Name</th>
         <th>Permissions</th>
         <th>Type</th>
-        <th>SubType</th>
-        <th>Multiple</th>
-        <th>Bot</th>
         <th>Group</th>
       </tr>
     </thead>
@@ -68,7 +66,7 @@
     </div>
   </a>
 </div>
-{% md_content "partials/log-datamodel.md" %}
+{% md_content "partials/logs-datamodel.md" %}
 {% endblock %}
 
 {% block extra_script %}
@@ -97,8 +95,8 @@
         var group = groupFilter.val();
 
         var rowSection = data[0];
-        var rowBot = data[7];
-        var rowGroup = data[8];
+        var rowBot = data[1];
+        var rowGroup = data[6];
 
         return (section === 'all' ? true : section === rowSection)
             && (bot === 'all' ? true : bot === rowBot)
@@ -153,16 +151,11 @@
       },
       columns: [
         { data: "section" },
+        { data: "bot", render: function(v) { return v || '-'; } },
         { data: "id" },
         { data: "name" },
-        {
-          data: "permissions",
-          render: "[, ]"
-        },
+        { data: "permissions", render: "[, ]"},
         { data: "type" },
-        { data: "subtype" },
-        { data: "multiple" },
-        { data: "bot" },
         { data: "group" },
       ],
       scrollX: true,

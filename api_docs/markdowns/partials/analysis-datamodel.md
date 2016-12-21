@@ -9,7 +9,7 @@ Describes the list of operations the field can be used for. The rights may inclu
 
 
 ## Type
-Describes the basic type of the data as it is stored. It allows which [[predicates;bql-filter#predicates]] are available and which type of input to use.
+Describes the basic type of the data as it is stored. It defines which [[predicates;bql-filter#predicates]] are available and which type of input to use.
 
 
 ## SubType
