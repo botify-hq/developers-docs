@@ -156,6 +156,42 @@ Returns matching children excluding parent. For instance, the following filter c
 }
 ```
 
+
+### Timeseries predicates
+`timeseries` fields contains a sequence of values for each day. Those fields are any available in the Logs API, where you need to define a range of dates you want to work on.
+For instance, if you want to list the number of crawls by URL from the 1st of January to the 7th, `crawls.google.count_by_day` is a list, the first item is the number of crawls on Jan. 1st, the last item is the number of crawl on Jan. 7th.
+
+#### On every dates
+This example filters URLs that have been crawled at least once **every day on the period**. Note that you can use all numerical predicates (`all.eq`, `all.gte`, `all.gt`, `all.lt`, `all.lte` or `all.between`)
+```JSON
+{
+  "field": "crawls.google.count_by_day",
+  "predicate": "all.gte",
+  "value": "1"
+}
+```
+
+#### On any date
+This example filters URLs that have been crawled at least once **whenever on the period**. Note that you can use any numerical predicates (`any.eq`, `any.gte`, `any.gt`, `any.lt`, `any.lte` or `any.between`)
+```JSON
+{
+  "field": "crawls.google.count_by_day",
+  "predicate": "any.gte",
+  "value": "1"
+}
+```
+
+#### On a date
+This example filters URLs that have been crawled at least once the **first day on the period**. If you want the ones that have been crawled the second day, you would replace `[0]` by `[1]`.
+```JSON
+{
+  "field": "crawls.google.count_by_day[0]",
+  "predicate": "gte",
+  "value": "1"
+}
+```
+
+
 ### Exists Predicate
 The `exists` predicate takes no value and tests if the field exists in the document. Some fields don't exist because the related feature wasn't enabled or failed during analysis. For instance, previous fields do not exist if the comparison feature is not enabled.
 ```JSON
