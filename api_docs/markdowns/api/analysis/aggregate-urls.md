@@ -1,6 +1,8 @@
 # Aggregate URLs
 
-Using Botify API, you can **aggregate analyzed URLs** to compute metrics like sum of inlinks, average load time, etc. You can also **group URLs** on any aggregable field and compute metrics on each group. Full list of aggregable fields can be found in [[Analysis Datamodel;analysis-datamodel?filter=agg:]].
+Using the Botify API, you can **aggregate analyzed URLs** to compute metrics like the number of compliant URLs, the distribution of visits by segment or the sum of URLs by HTTP code and depth.
+Please refer to [[analysis datamodel;analysis-datamodel]] to find the list of [[aggregable fields;analysis-datamodel?filter=agg:]] and [[filterable fields;analysis-datamodel?filter=filters]].
+
 
 ## Endpoint
 
