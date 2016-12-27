@@ -120,7 +120,7 @@ In the following example, `adam_warlock` is the username, `demo-project` is the 
 ![image](https://cloud.githubusercontent.com/assets/1886834/14709625/e8aadb52-07d1-11e6-92f0-21dda26a6331.png)
 
 ### How to get the list of available fields?
-A full list of available fields to display or compute metrics on can be found in the [[Urls Datamodel;analysis-urls-datamodel]].
+A full list of available fields to display or compute metrics on can be found in the [[Analysis Datamodel;analysis-datamodel]].
 
 ### How to define an aggregation query?
 Please refer to the [[Aggregate URLs documentation;analysis-aggregate-urls]].

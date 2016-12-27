@@ -25,6 +25,7 @@ SECRET_KEY = "%sqdqdxr6=0!(!)@j%=c+@1u#e#11+1j)at1-chy#orfk0^vvk"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+BETA = False
 
 # Application definition
 
@@ -145,7 +146,9 @@ FINDER_IGNORE_PATTERNS = [
 
 # @TODO use the prod's real urls once they are released
 SWAGGER_API_URL = "https://api.botify.com/v1/swagger.json"
-DATAMODEL_API_URL = "https://api.botify.com/v1/analyses/urls/datamodel"
+ANALYSIS_DATAMODEL_API_URL = "https://api.botify.com/v1/analyses/urls/datamodel"
+LOGS_URLS_DATAMODEL_API_URL = "https://api.botify.com/v1/logs/urls/datamodel"
+LOGS_SEGMENTS_DATAMODEL_API_URL = "https://api.botify.com/v1/logs/segments/datamodel"
 
 
 PIPELINE = {

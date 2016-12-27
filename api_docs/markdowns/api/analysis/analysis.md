@@ -11,4 +11,4 @@ Botify API allow you to **get any data related to one of your Analysis**. A comp
 - [[List and filter URLs;analysis-list-urls]]
 - [[Get information on any analyzed URL;analysis-get-url-info]]
 - [[Create CSV Exports;analysis-csv-export]]
-- [[URLs Datamodel;analysis-urls-datamodel]]
+- [[Datamodel;analysis-datamodel]]

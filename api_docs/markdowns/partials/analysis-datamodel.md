@@ -9,12 +9,12 @@ Describes the list of operations the field can be used for. The rights may inclu
 
 
 ## Type
-Describes the basic type of the data as it is stored. It allows which [[predicates;bql-filter#predicates]] are available and which type of input to use.
+Describes the basic type of the data as it is stored. It can be one of: **integer**, **long**, **float**, **double**, **date**, **datetime**, **string**, **boolean** or **tree**. It defines which [[predicates;bql-filter#predicates]] are available and which type of input to use.
 
 
 ## SubType
 
-Describes the concept represented by the field, such as `url_status` or `time_millisec`. If the field doesn't represent any specific concept, `subtype` is the same as `type`. List of subtypes may depend on the datamodel. It allows to know how to render the field data.
+Describes the concept represented by the field, such as **url_status** or **time_millisec**. If the field doesn't represent any specific concept, `subtype` is the same as `type`. List of subtypes may depend on the datamodel. It allows to know how to render the field data.
 
 
 ### url
