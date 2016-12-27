@@ -53,7 +53,8 @@ class AnalysisDatamodelView(TemplateView):
                 "breadcrumb": ["analysis"],
                 "title": "Analysis | URLs Datamodel",
                 "description": "Botify API, URLs Datamodel"
-            }
+            },
+            "beta": settings.BETA
         }
 
 
@@ -69,7 +70,8 @@ class LogsDatamodelView(TemplateView):
                 "breadcrumb": ["logs"],
                 "title": "Logs | URLs & Segments Datamodel",
                 "description": "Botify API, URLs & Segments Datamodel"
-            }
+            },
+            "beta": settings.BETA
         }
 
 
