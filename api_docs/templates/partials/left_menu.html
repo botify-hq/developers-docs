@@ -68,6 +68,7 @@
       </div>
     </div>
   </div><!-- END SideBar Group -->
+  {% if beta == True %}
   <div class="sidebar__group {% if properties.menu_item == "logs" or properties.breadcrumb.0 == "logs" %}open{% endif %}">
     <div class="sidebar__group-header">
       <a href="{% url 'md-page' 'api/logs' %}">Logs</a>
@@ -90,6 +91,7 @@
       </div>
     </div>
   </div><!-- END SideBar Group -->
+  {% endif %}
   <div class="sidebar__group {% if properties.menu_item == "project" or properties.breadcrumb.0 == "project" %}open{% endif %}">
     <div class="sidebar__group-header">
       <a href="{% url 'md-page' 'api/project' %}">Project</a>

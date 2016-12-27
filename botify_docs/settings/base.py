@@ -25,6 +25,7 @@ SECRET_KEY = "%sqdqdxr6=0!(!)@j%=c+@1u#e#11+1j)at1-chy#orfk0^vvk"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+BETA = False
 
 # Application definition
 
