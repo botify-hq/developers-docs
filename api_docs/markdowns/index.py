@@ -107,7 +107,7 @@ PAGES = [
             "menu_item": "analysis-list-urls",
             "breadcrumb": ["analysis"],
             "title": "List URLs",
-            "description": "List ans filter URLs with Botify API"
+            "description": "List and filter URLs with Botify API"
         }
     },
     {
