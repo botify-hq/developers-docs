@@ -450,4 +450,9 @@ PAGES = [
         "path": "api/analysis/search-for-urls",
         "redirect_path": "api/analysis/list-urls"
     },
+    {
+        "url_name": "analysis-urls-datamodel",
+        "path": "api/analysis/urls-datamodel",
+        "redirect_path": "api/analysis/datamodel"
+    },
 ]
