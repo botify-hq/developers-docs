@@ -62,7 +62,7 @@ A sample result would be:
 {
   "count": 11,
   "page": 1,
-  "size": 10,
+  "size": 2,
   "results": [
     {
       "url": "www.abc.com/1",
