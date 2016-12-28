@@ -1,6 +1,6 @@
 # List and filter URLs
 
-Botify API allows you to **filter the dataset of analyzed URLs** and return any available information. Full list of requestable fields can be found in [[Analysis Datamodel;analysis-datamodel]].
+Botify API allows you to **list and filter analyzed URLs** and return their fields value (metadata). Full list of requestable fields can be found in [[Analysis Datamodel;analysis-datamodel]].
 
 
 ## Endpoint
@@ -8,7 +8,7 @@ Botify API allows you to **filter the dataset of analyzed URLs** and return any 
 - Operation: [[getUrls;reference#/Analysis/getUrls]]
 - Path: `analyses/{username}/{project_slug}/{analysis_slug}/urls`
 - HTTP Verb: POST
-- Body : `Array<BQLQuery>`
+- Body : `BQLQuery`
 - Response: `Pagination<BQLResult>`
 
 Please refer to [[BQLQuery;bql-query]] documentation for information about how to define fields to select, filters and sort.
