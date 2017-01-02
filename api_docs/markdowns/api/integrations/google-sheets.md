@@ -10,6 +10,10 @@ Note that, currently only a small subset of the API is supported by this SDK. Fe
 - Click on Add
 
 
+## Templates
+- Overview Dashboard: [link](https://docs.google.com/spreadsheets/d/1RnpQemI3jZbCfGUbo-uleTHHFRLWibE6BTw6BE1U8bo/copy)
+
+
 ## Macros
 
 Every macro is prefixed by Botify, thus typing `=BOTIFY` in a cell formula  should show you the available macros thanks to the autocompletion.
