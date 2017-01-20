@@ -114,6 +114,9 @@
       ajax: {
         url: getDatamodelUrl(),
         dataType: "json",
+        beforeSend: function (request) {
+          request.setRequestHeader("X-Botify-Client", "developers-docs");
+        },
         dataSrc: function(json) {
           json.groups.forEach(function(group) {
             // Populate sections
