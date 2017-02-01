@@ -215,11 +215,24 @@ table {
   background: #4a6781;
   border-color: #4a6781;
 }
-/* line 123, ../sass/_utils.scss */
+/* line 122, ../sass/_utils.scss */
+.footer .footer-col.connect .btn-cta-secondary {
+  background: #ffc040;
+  border-color: transparent;
+  color: #1e223f;
+  transition: all .4s ease-in-out;
+}
+/* line 129, ../sass/_utils.scss */
+.footer .footer-col.connect .btn-cta-secondary:hover {
+  background: #ffd172;
+  border-color: transparent;
+  color: #1e223f;
+}
+/* line 136, ../sass/_utils.scss */
 .footer .free-trial {
   margin-bottom: 20px;
 }
-/* line 127, ../sass/_utils.scss */
+/* line 140, ../sass/_utils.scss */
 .footer .footer-col .title {
   color: #fff;
   font-weight: normal;
@@ -230,50 +243,50 @@ table {
   -moz-opacity: 0.9;
   opacity: 0.9;
 }
-/* line 138, ../sass/_utils.scss */
+/* line 151, ../sass/_utils.scss */
 .footer .footer-col p {
   color: #fff;
 }
-/* line 142, ../sass/_utils.scss */
+/* line 155, ../sass/_utils.scss */
 .footer .footer-col a {
   color: #6d8dab;
 }
-/* line 146, ../sass/_utils.scss */
+/* line 159, ../sass/_utils.scss */
 .footer .footer-col a:hover {
   color: #8da6bd;
 }
-/* line 150, ../sass/_utils.scss */
+/* line 163, ../sass/_utils.scss */
 .footer .footer-col a.btn-cta-primary {
   color: #fff;
 }
-/* line 154, ../sass/_utils.scss */
+/* line 167, ../sass/_utils.scss */
 .footer .footer-col .navbar-form {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 159, ../sass/_utils.scss */
+/* line 172, ../sass/_utils.scss */
 .footer .footer-col .navbar-form .form-control {
   -webkit-opacity: 0.9;
   -moz-opacity: 0.9;
   opacity: 0.9;
 }
-/* line 165, ../sass/_utils.scss */
+/* line 178, ../sass/_utils.scss */
 .footer .footer-col .navbar-form .form-control:focus {
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
 }
-/* line 171, ../sass/_utils.scss */
+/* line 184, ../sass/_utils.scss */
 .footer .has-divider {
   border-top: 1px solid #2b3b4a;
   padding-top: 30px;
   padding-bottom: 30px;
 }
-/* line 177, ../sass/_utils.scss */
+/* line 190, ../sass/_utils.scss */
 .footer .download .download-list li {
   margin-bottom: 15px;
 }
-/* line 181, ../sass/_utils.scss */
+/* line 194, ../sass/_utils.scss */
 .footer .download .download-list li .btn-ghost {
   text-align: left;
   -webkit-opacity: 0.6;
@@ -281,41 +294,41 @@ table {
   opacity: 0.6;
   width: 230px;
 }
-/* line 189, ../sass/_utils.scss */
+/* line 202, ../sass/_utils.scss */
 .footer .download .download-list li .btn-ghost:hover {
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
 }
-/* line 195, ../sass/_utils.scss */
+/* line 208, ../sass/_utils.scss */
 .footer .contact p {
   -webkit-opacity: 0.5;
   -moz-opacity: 0.5;
   opacity: 0.5;
 }
-/* line 201, ../sass/_utils.scss */
+/* line 214, ../sass/_utils.scss */
 .footer .contact p a {
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
 }
-/* line 207, ../sass/_utils.scss */
+/* line 220, ../sass/_utils.scss */
 .footer .contact .fa {
   margin-right: 10px;
   font-size: 20px;
 }
-/* line 212, ../sass/_utils.scss */
+/* line 225, ../sass/_utils.scss */
 .footer .contact .email .fa {
   font-size: 16px;
 }
-/* line 216, ../sass/_utils.scss */
+/* line 229, ../sass/_utils.scss */
 .footer .bottom-bar {
   background: #1e1e1e;
   color: #b3b3b3;
   font-size: 14px;
   padding: 10px 0;
 }
-/* line 223, ../sass/_utils.scss */
+/* line 236, ../sass/_utils.scss */
 .footer .bottom-bar .copyright {
   line-height: 1.6;
 }

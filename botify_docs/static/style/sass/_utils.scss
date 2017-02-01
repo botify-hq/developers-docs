@@ -118,6 +118,19 @@
         background: #4a6781;
         border-color: #4a6781;
       }
+
+      &.connect .btn-cta-secondary {
+        background: #ffc040;
+        border-color: transparent;
+        color: #1e223f;
+        transition: all .4s ease-in-out;
+      }
+
+      &.connect .btn-cta-secondary:hover {
+        background: #ffd172;
+        border-color: transparent;
+        color: #1e223f;
+      }
     }
 
     .free-trial  {
