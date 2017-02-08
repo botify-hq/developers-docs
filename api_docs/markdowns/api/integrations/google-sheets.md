@@ -34,7 +34,8 @@ Every macro is prefixed by Botify, thus typing `=BOTIFY` in a cell formula  shou
  * @param {String} apiToken Botify API token
  * @param {String} username Username of the project owner
  * @param {String} projectSlug Project's slug
- * @param {Number} nbAnalyses Number of analyses to get
+ * @param {Number} nbAnalyses [Optional] Number of analyses to get (default: 20)
+ * @param {Boolean} onlySuccess [Optional] List only successfully finished analyses (default: true)
  * @return {Array} The list of analyses.
  */
 function BOTIFY_PROJECT_LIST_ANALYSES(apiToken, username, projectSlug, nbAnalyses)
@@ -51,7 +52,7 @@ function BOTIFY_PROJECT_LIST_ANALYSES(apiToken, username, projectSlug, nbAnalyse
  * @param {String} username Username of the project owner
  * @param {String} projectSlug Project's slug of the analysis
  * @param {BQLAggsQuery} urlsAggsQuery BQL Aggregation Query to perform
- * @param {Number} nbAnalyses Number of analyses to get
+ * @param {Number} nbAnalyses [Optional] Number of analyses to get (default: 5)
  * @return {Array} The result of the aggregation.
  */
 function BOTIFY_PROJECT_AGGREGATE_URLS(apiToken, username, projectSlug, urlsAggsQuery, nbAnalyses)
@@ -74,7 +75,7 @@ For more information about how to define aggregation queries, please refer to th
  * @param {String} projectSlug Project's slug of the analysis
  * @param {String} analysisSlug Analysis's slug
  * @param {BQLAggsQuery} urlsAggsQuery BQL Aggregation Query to perform
- * @param {Boolean} showHeaders Show Groups and Metrics headers (default: true)
+ * @param {Boolean} showHeaders [Optional] Show Groups and Metrics headers (default: true)
  * @return {Array} The result of the aggregation.
  */
 function BOTIFY_ANALYSIS_AGGREGATE_URLS(apiToken, username, projectSlug, analysisSlug, urlsAggsQuery, showHeaders)
@@ -91,17 +92,17 @@ For more information about how to define aggregation queries, please refer to th
 
 ```JS
 /**
- * List URLs matching a given fitler
+ * Return the requested fields of a given URL
  * @param {String} apiToken Botify API token
  * @param {String} username Username of the project owner
  * @param {String} projectSlug Project's slug of the analysis
  * @param {String} analysisSlug Analysis's slug
- * @param {BQLFilter} filter Filter of apply on urls
  * @param {Range} fields Range of fields to fetch (ex A1:A4)
- * @param {BQLSort} sort Sort of apply on urls
- * @param {Number} size Number of urls to retrieve (max: 1000, default 100)
- * @param {Number} page Number of urls to retrieve (min: 1, default 1)
- * @param {Boolean} displayTotal Display the number of urls matching the filter
+ * @param {BQLFilter} filter [Optional] Filter of apply on urls
+ * @param {BQLSort} sort [Optional] Sort of apply on urls
+ * @param {Number} size [Optional] Number of urls to retrieve (max: 1000, default: 100)
+ * @param {Number} page [Optional] Number of urls to retrieve (default: 1)
+ * @param {Boolean} displayTotal [Optional] Display the number of urls matching the filter (default: false)
  * @return {Array} The value of the fields
  */
 function BOTIFY_ANALYSIS_LIST_URLS(apiToken, username, projectSlug, analysisSlug, filter, fields, sort, size, page, displayTotal)
@@ -116,14 +117,14 @@ This macro works the same way the URL Explorer does, listing URLs matching a fil
 
 ```JS
 /**
- * Return the requested fields of a list of URL
+ * Return the requested fields of a given URL
  * @param {String} apiToken Botify API token
  * @param {String} username Username of the project owner
  * @param {String} projectSlug Project's slug of the analysis
  * @param {String} analysisSlug Analysis's slug
  * @param {Range} urls Urls to get detail on
  * @param {Range} fields Range of fields to fetch (ex A1:A4)
- * @param {Boolean} showHeaders Show Groups and Metrics headers (default: true)
+ * @param {Boolean} showHeaders [Optional] Show Groups and Metrics headers (default: true)
  * @return {Array} The value of the fields
  */
 function BOTIFY_ANALYSIS_GET_URLS_DETAIL(apiToken, username, projectSlug, analysisSlug, urls, fields, showHeaders)
