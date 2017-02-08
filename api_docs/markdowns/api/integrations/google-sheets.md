@@ -11,8 +11,30 @@ Note that, currently only a small subset of the API is supported by this SDK. Fe
 
 
 ## Templates
-- Projects Overview: [link](https://drive.google.com/open?id=1Vj8zS0On8cUMWIYF2pNBOdaFrbKQ-U2IhUqv2bz0aOM/copy)
-- Overview Dashboard: [link](https://docs.google.com/spreadsheets/d/1RnpQemI3jZbCfGUbo-uleTHHFRLWibE6BTw6BE1U8bo/copy)
+<div class="row">
+  <div class="col-sm-12 col-md-6">
+    <div class="thumbnail">
+      <img src="https://cloud.githubusercontent.com/assets/1886834/22734076/b4d63a2e-edf4-11e6-9f1f-1dff6e8c83c8.png">
+      <div class="caption">
+        <h3>Projects Overview</h3>
+        <p>Get an overview of all your websites</p>
+        <p> <a href="https://drive.google.com/open?id=1Vj8zS0On8cUMWIYF2pNBOdaFrbKQ-U2IhUqv2bz0aOM/copy" class="btn btn-default" role="button">Get it</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12 col-md-6">
+    <div class="thumbnail">
+      <img src="https://cloud.githubusercontent.com/assets/1886834/22734076/b4d63a2e-edf4-11e6-9f1f-1dff6e8c83c8.png">
+      <div class="caption">
+        <h3>Analysis Overview</h3>
+        <p>Your custom dashboard</p>
+        <p> <a href="https://docs.google.com/spreadsheets/d/1RnpQemI3jZbCfGUbo-uleTHHFRLWibE6BTw6BE1U8bo/copy" class="btn btn-default" role="button">Get it</a></p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 ## Macros
