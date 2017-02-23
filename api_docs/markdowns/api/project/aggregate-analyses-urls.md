@@ -14,11 +14,11 @@ The following descirbe how to **perform aggregations on several project's analys
 Please refer to [[BQLAggsQuery;bql-aggs-query]] documentation for information about input or refer to the following request examples.
 
 ```SH
-curl 'https://api.botify.com/v1/projects/${username}/${project_slug}/urls/aggs?last_analysis_slug=${analysis_slug}&nb_analyses=${count}' \
+curl "https://api.botify.com/v1/projects/${username}/${project_slug}/urls/aggs?last_analysis_slug=${analysis_slug}&nb_analyses=${count}" \
      -X POST \
-     -H 'Authorization: Token ${API_KEY}' \
-     -H 'Content-type: application/json' \
-     --data-binary '${UrlsAggsQueries}'
+     -H "Authorization: Token ${API_KEY}" \
+     -H "Content-type: application/json" \
+     --data-binary "${UrlsAggsQueries}"
 ```
 
 ## Example

@@ -10,10 +10,10 @@ Botify API allows you to **get information on any URL analyzed** by Botify Analy
 - Response: `Object`
 
 ```SH
-curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}/urls/${url}?fields=${fields}' \
+curl "https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}/urls/${url}?fields=${fields}" \
      -X GET \
-     -H 'Authorization: Token ${API_KEY}' \
-     -H 'Content-type: application/json'
+     -H "Authorization: Token ${API_KEY}" \
+     -H "Content-type: application/json"
 ```
 
 ## Example

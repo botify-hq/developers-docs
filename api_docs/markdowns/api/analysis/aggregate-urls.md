@@ -15,11 +15,11 @@ Please refer to [[analysis datamodel;analysis-datamodel]] to find the list of [[
 Please refer to [[BQLAggsQuery;bql-aggs-query]] documentation for information about input or refer to the following request examples.
 
 ```SH
-curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}/urls/aggs' \
+curl "https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}/urls/aggs" \
      -X POST \
-     -H 'Authorization: Token ${API_KEY}' \
-     -H 'Content-type: application/json' \
-     --data-binary '${UrlsAggsQueries}'
+     -H "Authorization: Token ${API_KEY}" \
+     -H "Content-type: application/json" \
+     --data-binary "${UrlsAggsQueries}"
 ```
 
 

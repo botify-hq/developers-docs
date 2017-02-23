@@ -15,11 +15,11 @@ Botify API allows you to **list and filter logs URLs** and return their fields v
 Please refer to [[BQLQuery;bql-query]] documentation for information about how to define fields to select, filters and sort.
 
 ```SH
-curl 'https://api.botify.com/v1/logs/${username}/${project_slug}/urls/${date_start}/${date_end}' \
+curl "https://api.botify.com/v1/logs/${username}/${project_slug}/urls/${date_start}/${date_end}" \
      -X POST \
-     -H 'Authorization: Token ${API_KEY}' \
-     -H 'Content-type: application/json' \
-     --data-binary '${BQLQuery}'
+     -H "Authorization: Token ${API_KEY}" \
+     -H "Content-type: application/json" \
+     --data-binary "${BQLQuery}"
 ```
 
 ## Example

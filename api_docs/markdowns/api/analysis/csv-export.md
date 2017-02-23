@@ -29,11 +29,11 @@ Note that the [Job middleware](https://github.com/botify-labs/botify-sdk-js-midd
 Please refer to [[BQLQuery;bql-query]] documentation for information about how to define fields to select and filters.
 
 ```SH
-curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}/urls/export' \
+curl "https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}/urls/export" \
      -X POST \
-     -H 'Authorization: Token ${API_KEY}' \
-     -H 'Content-type: application/json' \
-     --data-binary '${BQLQuery}'
+     -H "Authorization: Token ${API_KEY}" \
+     -H "Content-type: application/json" \
+     --data-binary "${BQLQuery}"
 ```
 
 ### getUrlsExportStatus
@@ -44,9 +44,9 @@ curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_
 - Response: `CsvExportStatus`
 
 ```SH
-curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}/urls/export' \
+curl "https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}/urls/export" \
      -X GET \
-     -H 'Authorization: Token ${API_KEY}' \
+     -H "Authorization: Token ${API_KEY}" \
 ```
 
 

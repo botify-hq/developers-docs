@@ -14,11 +14,11 @@ Please refer to [[logs segments datamodel;logs-datamodel?datamodel=segments]] to
 Please refer to [[BQLAggsQuery;bql-aggs-query]] documentation for information about input or refer to the following request examples.
 
 ```SH
-curl 'https://api.botify.com/v1/logs/${username}/${project_slug}/segments/${date_start}/${date_end}/aggs' \
+curl "https://api.botify.com/v1/logs/${username}/${project_slug}/segments/${date_start}/${date_end}/aggs" \
      -X POST \
-     -H 'Authorization: Token ${API_KEY}' \
-     -H 'Content-type: application/json' \
-     --data-binary '${UrlsAggsQueries}'
+     -H "Authorization: Token ${API_KEY}" \
+     -H "Content-type: application/json" \
+     --data-binary "${UrlsAggsQueries}"
 ```
 
 

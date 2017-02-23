@@ -10,10 +10,10 @@ Botify API can return the list of projects for a given user.
 - Response: `Array<Project>`
 
 ```SH
-curl 'https://api.botify.com/v1/projects/${username}' \
+curl "https://api.botify.com/v1/projects/${username}" \
      -X GET \
-     -H 'Authorization: Token ${API_KEY}' \
-     -H 'Content-type: application/json'
+     -H "Authorization: Token ${API_KEY}" \
+     -H "Content-type: application/json"
 ```
 
 ## Example of response

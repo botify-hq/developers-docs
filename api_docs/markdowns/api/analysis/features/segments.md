@@ -103,10 +103,10 @@ Segments feature metadata includes:
 - Response: `Analysis`
 
 ```SH
-curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}' \
+curl "https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}" \
      -X GET \
-     -H 'Authorization: Token ${API_KEY}' \
-     -H 'Content-type: application/json'
+     -H "Authorization: Token ${API_KEY}" \
+     -H "Content-type: application/json"
 ```
 
 ### Response

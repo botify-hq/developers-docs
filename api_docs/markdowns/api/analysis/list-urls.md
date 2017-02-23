@@ -14,11 +14,11 @@ Botify API allows you to **list and filter analyzed URLs** and return their fiel
 Please refer to [[BQLQuery;bql-query]] documentation for information about how to define fields to select, filters and sort.
 
 ```SH
-curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}/urls' \
+curl "https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}/urls" \
      -X POST \
-     -H 'Authorization: Token ${API_KEY}' \
-     -H 'Content-type: application/json' \
-     --data-binary '${BQLQuery}'
+     -H "Authorization: Token ${API_KEY}" \
+     -H "Content-type: application/json" \
+     --data-binary "${BQLQuery}"
 ```
 
 ## Example

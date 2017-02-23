@@ -10,10 +10,10 @@ Botify API allow you to get metadata of an logs project, including the **first a
 - Response: `Logs`
 
 ```SH
-curl 'https://api.botify.com/v1/logs/${username}/${project_slug}' \
+curl "https://api.botify.com/v1/logs/${username}/${project_slug}" \
      -X GET \
-     -H 'Authorization: Token ${API_KEY}' \
-     -H 'Content-type: application/json'
+     -H "Authorization: Token ${API_KEY}" \
+     -H "Content-type: application/json"
 ```
 
 ## Response

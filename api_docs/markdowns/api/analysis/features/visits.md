@@ -75,10 +75,10 @@ Visits feature metadata includes:
 - Response: `Analysis`
 
 ```SH
-curl 'https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}' \
+curl "https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}" \
      -X GET \
-     -H 'Authorization: Token ${API_KEY}' \
-     -H 'Content-type: application/json'
+     -H "Authorization: Token ${API_KEY}" \
+     -H "Content-type: application/json"
 ```
 
 ### Response
@@ -151,10 +151,10 @@ An extract of the response could be the following.
 - Response: `Pagination<OrphanURL>`
 
 ```SH
-curl 'https://api.botify.com/v1/analyses/{username}/{project_slug}/{analysis_slug}/features/ganalytics/orphan_urls/{medium}/{source}' \
+curl "https://api.botify.com/v1/analyses/{username}/{project_slug}/{analysis_slug}/features/ganalytics/orphan_urls/{medium}/{source}" \
      -X GET \
-     -H 'Authorization: Token ${API_KEY}' \
-     -H 'Content-type: application/json'
+     -H "Authorization: Token ${API_KEY}" \
+     -H "Content-type: application/json"
 ```
 
 The response could be the following. You can at most get a sample of 1000 orphan URLs. The second number for each URL is the total number of visits.
