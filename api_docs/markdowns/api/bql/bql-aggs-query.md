@@ -33,6 +33,15 @@ The following groups URLs by their `http_code`.
 "http_code"
 ```
 
+This is actually rewritten as:
+```JSON
+"distinct": {
+  "field": "http_code",
+  "size": 100,
+  "order": {"value": "asc"}
+}
+```
+
 The following groups URLs by their `host`, returning the 10 most frequent ones.
 ```JSON
 "distinct": {
