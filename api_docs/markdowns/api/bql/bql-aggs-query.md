@@ -20,16 +20,35 @@ A `BQLAggsQuery` is composed of a list of `BQLAggregate` and an optional `BQLFil
 
 ### Group-Bys
 A group-by is defined by:
-  - a `field` on which the group-by is performed.
-  - some optional `ranges` that define buckets for the group-by operation.
+  - distinct fields on which the group-by is performed.
+  - ranges that define buckets for the group-by operation.
 
-#### Simple GroupBy
-Only [[aggregables fields;analysis-datamodel?filter=agg:]] can be used for group by operations.
+#### Distinct GroupBy
+Only [[aggregables fields;analysis-datamodel?filter=agg:]] can be used for distinct group-by operations. They are specified either by field name or by field, result size and sort order. By default, at most 100 results are returned sorted by value.
+The order key can be `value` or `count`.
 
-**Example**
+**Examples**
 The following groups URLs by their `http_code`.
 ```JSON
 "http_code"
+```
+
+This is actually rewritten as:
+```JSON
+"distinct": {
+  "field": "http_code",
+  "size": 100,
+  "order": {"value": "asc"}
+}
+```
+
+The following groups URLs by their `host`, returning the 10 most frequent ones.
+```JSON
+"distinct": {
+  "field": "host",
+  "size": 10,
+  "order": {"count": "desc"}
+}
 ```
 
 #### Range GroupBy
