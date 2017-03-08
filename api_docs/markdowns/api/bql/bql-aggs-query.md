@@ -25,7 +25,7 @@ A group-by is defined by:
 
 #### Distinct GroupBy
 Only [[aggregables fields;analysis-datamodel?filter=agg:]] can be used for distinct group-by operations. They are specified either by field name or by field, result size and sort order. By default, at most 100 results are returned sorted by value.
-The order key can be `value` or `count`.
+The order key can be by `value` or `count`.
 
 **Examples**
 The following groups URLs by their `http_code`.
@@ -33,22 +33,25 @@ The following groups URLs by their `http_code`.
 "http_code"
 ```
 
-This is actually rewritten as:
+This is actually rewritten as the following. Meaning that HTTP codes are grouped by ascendent value of HTTP Code (ex: 200, then 201, then 301 etc).
 ```JSON
-"distinct": {
-  "field": "http_code",
-  "size": 100,
-  "order": {"value": "asc"}
+{
+  "distinct": {
+    "field": "http_code",
+    "size": 100,
+    "order": {"value": "asc"}
+  }
 }
 ```
 
-The following groups URLs by their `host`, returning the 10 most frequent ones.
+The following groups URLs by their HTTP Code, returning the 10 most frequent ones (ex: 200, then 301, then 400, etc)
 ```JSON
-"distinct": {
-  "field": "host",
-  "size": 10,
-  "order": {"count": "desc"}
-}
+{
+  "distinct": {
+    "field": "http_code",
+    "size": 10,
+    "order": {"value": "desc"}
+  }
 ```
 
 #### Range GroupBy
