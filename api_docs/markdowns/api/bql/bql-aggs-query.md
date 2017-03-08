@@ -25,7 +25,7 @@ A group-by is defined by:
 
 #### Distinct GroupBy
 Only [[aggregables fields;analysis-datamodel?filter=agg:]] can be used for distinct group-by operations. They are specified either by field name or by field, result size and sort order. By default, at most 100 results are returned sorted by value.
-The order key can be by `value` or `count`.
+The order key can be by `value` or `count`. The size is capted at `100`.
 
 **Examples**
 The following groups URLs by their `http_code`.
@@ -39,7 +39,7 @@ This is actually rewritten as the following. Meaning that HTTP codes are grouped
   "distinct": {
     "field": "http_code",
     "size": 100,
-    "order": {"value": "asc"}
+    "order": { "value": "asc" }
   }
 }
 ```
@@ -50,8 +50,9 @@ The following groups URLs by their HTTP Code, returning the 10 most frequent one
   "distinct": {
     "field": "http_code",
     "size": 10,
-    "order": {"value": "desc"}
+    "order": { "value": "desc" }
   }
+}
 ```
 
 #### Range GroupBy
@@ -64,13 +65,8 @@ The following groups URLs by their `delay_last_byte` on two ranges (fast and slo
   "range": {
     "field": "delay_last_byte",
     "ranges": [
-      {
-        "from": 0,
-        "to": 1000
-      },
-      {
-        "from": 1000
-      }
+      { "from": 0, "to": 1000 },
+      { "from": 1000 }
     ]
   }
 }
