@@ -25,7 +25,7 @@ A group-by is defined by:
 
 #### Distinct GroupBy
 Only [[aggregables fields;analysis-datamodel?filter=agg:]] can be used for distinct group-by operations. They are specified either by field name or by field, result size and sort order. By default, at most 100 results are returned sorted by value.
-The order key can be by `value` or `count`. The size is capted at `100`.
+The order key can be by `value` or `count`. The size is capped at `100`.
 
 **Examples**
 The following groups URLs by their `http_code`.
