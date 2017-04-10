@@ -18,12 +18,27 @@ Note that, currently only a small subset of the API is supported by this SDK. Fe
 
 Every macro is prefixed by Botify, thus typing `=BOTIFY` in a cell formula  should show you the available macros thanks to the autocompletion.
 
+- [BOTIFY_USER_LIST_PROJECTS](#get-all-projects-belonging-to-user)
 - [BOTIFY_PROJECT_LIST_ANALYSES](#get-latest-projects-analyses)
 - [BOTIFY_PROJECT_AGGREGATE_URLS](#aggregate-project-urls-data)
 - [BOTIFY_ANALYSIS_LIST_URLS](#list-urls-url-explorer-like)
 - [BOTIFY_ANALYSIS_GET_URLS_DETAIL](#get-detail-for-some-urls)
 - [BOTIFY_ANALYSIS_AGGREGATE_URLS](#aggregate-analysis-urls-data)
 
+### Get all projects belonging to a user
+
+![image](https://developers.botify.com/staticfiles/images/img_google_sheets_integration_BOTIFY_USER_LIST_PROJECTS.png)
+
+```JS
+/**
+ * Return the projects of a user
+ * @param {String} apiToken Botify API token
+ * @param {String} username Username of the project owner
+ * @param {Number} nbProjects [Optional] Number of projects to get (defaults to 30)
+ * @return {Array} The list of projects.
+ */
+function BOTIFY_USER_LIST_PROJECTS(apiToken, username, nbProjects) {
+```
 ### Get latest project's analyses
 
 ![image](https://cloud.githubusercontent.com/assets/1886834/14713052/e3dfa7e8-07df-11e6-9f23-52d7c9275a94.png)
