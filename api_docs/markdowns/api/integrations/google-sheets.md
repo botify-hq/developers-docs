@@ -18,7 +18,7 @@ Note that, currently only a small subset of the API is supported by this SDK. Fe
 
 Every macro is prefixed by Botify, thus typing `=BOTIFY` in a cell formula  should show you the available macros thanks to the autocompletion.
 
-- [BOTIFY_USER_LIST_PROJECTS](#get-all-projects-belonging-to-user)
+- [BOTIFY_USER_LIST_PROJECTS](#get-all-projects-belonging-to-a-user)
 - [BOTIFY_PROJECT_LIST_ANALYSES](#get-latest-projects-analyses)
 - [BOTIFY_PROJECT_AGGREGATE_URLS](#aggregate-project-urls-data)
 - [BOTIFY_ANALYSIS_LIST_URLS](#list-urls-url-explorer-like)
