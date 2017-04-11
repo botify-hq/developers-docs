@@ -16,7 +16,7 @@ There are many ways to get data about your analyses. The [[Getting Started;getti
 An easy way to get your project's slug and analysis's slug is by seeing the URL of your analysis report.
 
 In the following example, `adam_warlock` is the username, `demo-project` is the projectSlug and `20160308` is the analysisSlug.
-![image](https://cloud.githubusercontent.com/assets/1886834/14709625/e8aadb52-07d1-11e6-92f0-21dda26a6331.png)
+![image](/staticfiles/images/img_google_sheets_integration_slugs.png)
 
 An other way is by using [[getUserProjects;user-list-projects]] and [[getProjectAnalyses;project-list-analyses]] operations.
 

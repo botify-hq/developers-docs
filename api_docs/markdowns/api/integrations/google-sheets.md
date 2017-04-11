@@ -18,15 +18,30 @@ Note that, currently only a small subset of the API is supported by this SDK. Fe
 
 Every macro is prefixed by Botify, thus typing `=BOTIFY` in a cell formula  should show you the available macros thanks to the autocompletion.
 
+- [BOTIFY_USER_LIST_PROJECTS](#get-all-projects-belonging-to-a-user)
 - [BOTIFY_PROJECT_LIST_ANALYSES](#get-latest-projects-analyses)
 - [BOTIFY_PROJECT_AGGREGATE_URLS](#aggregate-project-urls-data)
 - [BOTIFY_ANALYSIS_LIST_URLS](#list-urls-url-explorer-like)
 - [BOTIFY_ANALYSIS_GET_URLS_DETAIL](#get-detail-for-some-urls)
 - [BOTIFY_ANALYSIS_AGGREGATE_URLS](#aggregate-analysis-urls-data)
 
+### Get all projects belonging to a user
+
+![image](/staticfiles/images/img_google_sheets_integration_BOTIFY_USER_LIST_PROJECTS.png)
+
+```JS
+/**
+ * Return the projects of a user
+ * @param {String} apiToken Botify API token
+ * @param {String} username Username of the project owner
+ * @param {Number} nbProjects [Optional] Number of projects to get (defaults to 30)
+ * @return {Array} The list of projects.
+ */
+function BOTIFY_USER_LIST_PROJECTS(apiToken, username, nbProjects) {
+```
 ### Get latest project's analyses
 
-![image](https://cloud.githubusercontent.com/assets/1886834/14713052/e3dfa7e8-07df-11e6-9f23-52d7c9275a94.png)
+![image](/staticfiles/images/img_google_sheets_integration_BOTIFY_PROJECT_LIST_ANALYSES.png)
 
 ```JS
 /**
@@ -42,8 +57,8 @@ function BOTIFY_PROJECT_LIST_ANALYSES(apiToken, username, projectSlug, nbAnalyse
 ```
 ### Aggregate project URLs data
 
-![image](https://cloud.githubusercontent.com/assets/1886834/21591935/2bd3e4d6-d109-11e6-89dd-e1bd9b3a48a3.png)
-![image](https://cloud.githubusercontent.com/assets/1886834/21591947/49fdef7e-d109-11e6-85bb-63a5be04b019.png)
+![image](/staticfiles/images/img_google_sheets_integration_BOTIFY_PROJECT_AGGREGATE_URLS_1.png)
+![image](/staticfiles/images/img_google_sheets_integration_BOTIFY_PROJECT_AGGREGATE_URLS_2.png)
 
 ```JS
 /**
@@ -65,7 +80,7 @@ For more information about how to define aggregation queries, please refer to th
 
 ### List URLs (URL explorer like)
 
-![image](https://cloud.githubusercontent.com/assets/1886834/21352834/a0348eb6-c6c3-11e6-8702-2601d2ba905b.png)
+![image](/staticfiles/images/img_google_sheets_integration_BOTIFY_ANALYSIS_LIST_URLS.png)
 
 ```JS
 /**
@@ -90,7 +105,7 @@ This macro works the same way the URL Explorer does, listing URLs matching a fil
 
 ### Get detail for some URLs
 
-![image](https://cloud.githubusercontent.com/assets/1886834/14742239/625eb72e-089b-11e6-95c2-d0897355982e.png)
+![image](/staticfiles/images/img_google_sheets_integration_BOTIFY_ANALYSIS_GET_URLS_DETAIL.png)
 
 ```JS
 /**
@@ -113,7 +128,7 @@ Note a google script must respond within 30 seconds, thus if the list of URLs is
 
 ### Aggregate analysis URLs data
 
-![image](https://cloud.githubusercontent.com/assets/1886834/21362231/bdd388b8-c6e7-11e6-984d-b97b8e5a20d6.png)
+![image](/staticfiles/images/img_google_sheets_integration_BOTIFY_ANALYSIS_AGGREGATE_URLS.png)
 
 ```JS
 /**
@@ -143,7 +158,7 @@ You can get your API token in your user account page as explained [[there;authen
 An easy way to get your projectSlug and analysisSlug is with the URL of your analysis report.
 In the following example, `adam_warlock` is the username, `demo-project` is the projectSlug and `20160308` is the analysisSlug.
 
-![image](https://cloud.githubusercontent.com/assets/1886834/14709625/e8aadb52-07d1-11e6-92f0-21dda26a6331.png)
+![image](/staticfiles/images/img_google_sheets_integration_slugs.png)
 
 ### How to get the list of available fields?
 A full list of available fields to display or compute metrics on can be found in the [[Analysis Datamodel;analysis-datamodel]].

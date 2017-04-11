@@ -43,6 +43,14 @@ workon docs
 pip install -r requirements.txt
 ```
 
+### Configuration
+
+Create a local configuration file by copying the default configuration file:
+
+```SH
+cp ./botify_docs/settings/local.py.default ./botify_docs/settings/local.py
+```
+
 ### Run Server
 Be sure to be on the virtual env `workon docs`
 
