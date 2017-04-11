@@ -16,7 +16,7 @@ There are many ways to get data about your analyses. The [[Getting Started;getti
 An easy way to get your project's slug and analysis's slug is by seeing the URL of your analysis report.
 
 In the following example, `adam_warlock` is the username, `demo-project` is the projectSlug and `20160308` is the analysisSlug.
-![image](https://developers.botify.com/staticfiles/images/img_google_sheets_integration_slugs.png)
+![image](/staticfiles/images/img_google_sheets_integration_slugs.png)
 
 An other way is by using [[getUserProjects;user-list-projects]] and [[getProjectAnalyses;project-list-analyses]] operations.
 

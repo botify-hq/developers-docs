@@ -27,7 +27,7 @@ Every macro is prefixed by Botify, thus typing `=BOTIFY` in a cell formula  shou
 
 ### Get all projects belonging to a user
 
-![image](https://developers.botify.com/staticfiles/images/img_google_sheets_integration_BOTIFY_USER_LIST_PROJECTS.png)
+![image](/staticfiles/images/img_google_sheets_integration_BOTIFY_USER_LIST_PROJECTS.png)
 
 ```JS
 /**
@@ -41,7 +41,7 @@ function BOTIFY_USER_LIST_PROJECTS(apiToken, username, nbProjects) {
 ```
 ### Get latest project's analyses
 
-![image](https://developers.botify.com/staticfiles/images/img_google_sheets_integration_BOTIFY_PROJECT_LIST_ANALYSES.png)
+![image](/staticfiles/images/img_google_sheets_integration_BOTIFY_PROJECT_LIST_ANALYSES.png)
 
 ```JS
 /**
@@ -57,8 +57,8 @@ function BOTIFY_PROJECT_LIST_ANALYSES(apiToken, username, projectSlug, nbAnalyse
 ```
 ### Aggregate project URLs data
 
-![image](https://developers.botify.com/staticfiles/images/img_google_sheets_integration_BOTIFY_PROJECT_AGGREGATE_URLS_1.png)
-![image](https://developers.botify.com/staticfiles/images/img_google_sheets_integration_BOTIFY_PROJECT_AGGREGATE_URLS_2.png)
+![image](/staticfiles/images/img_google_sheets_integration_BOTIFY_PROJECT_AGGREGATE_URLS_1.png)
+![image](/staticfiles/images/img_google_sheets_integration_BOTIFY_PROJECT_AGGREGATE_URLS_2.png)
 
 ```JS
 /**
@@ -80,7 +80,7 @@ For more information about how to define aggregation queries, please refer to th
 
 ### List URLs (URL explorer like)
 
-![image](https://developers.botify.com/staticfiles/images/img_google_sheets_integration_BOTIFY_ANALYSIS_LIST_URLS.png)
+![image](/staticfiles/images/img_google_sheets_integration_BOTIFY_ANALYSIS_LIST_URLS.png)
 
 ```JS
 /**
@@ -105,7 +105,7 @@ This macro works the same way the URL Explorer does, listing URLs matching a fil
 
 ### Get detail for some URLs
 
-![image](https://developers.botify.com/staticfiles/images/img_google_sheets_integration_BOTIFY_ANALYSIS_GET_URLS_DETAIL.png)
+![image](/staticfiles/images/img_google_sheets_integration_BOTIFY_ANALYSIS_GET_URLS_DETAIL.png)
 
 ```JS
 /**
@@ -128,7 +128,7 @@ Note a google script must respond within 30 seconds, thus if the list of URLs is
 
 ### Aggregate analysis URLs data
 
-![image](https://developers.botify.com/staticfiles/images/img_google_sheets_integration_BOTIFY_ANALYSIS_AGGREGATE_URLS.png)
+![image](/staticfiles/images/img_google_sheets_integration_BOTIFY_ANALYSIS_AGGREGATE_URLS.png)
 
 ```JS
 /**
@@ -158,7 +158,7 @@ You can get your API token in your user account page as explained [[there;authen
 An easy way to get your projectSlug and analysisSlug is with the URL of your analysis report.
 In the following example, `adam_warlock` is the username, `demo-project` is the projectSlug and `20160308` is the analysisSlug.
 
-![image](https://developers.botify.com/staticfiles/images/img_google_sheets_integration_slugs.png)
+![image](/staticfiles/images/img_google_sheets_integration_slugs.png)
 
 ### How to get the list of available fields?
 A full list of available fields to display or compute metrics on can be found in the [[Analysis Datamodel;analysis-datamodel]].
