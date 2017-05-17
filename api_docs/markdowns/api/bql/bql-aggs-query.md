@@ -24,7 +24,7 @@ A group-by is defined by:
   - ranges that define buckets for the group-by operation.
 
 #### Distinct GroupBy
-Only [[aggregables fields;analysis-datamodel?filter=agg:]] can be used for distinct group-by operations. They are specified either by field name or by field, result size and sort order. By default, at most 100 results are returned sorted by value.
+Only [[aggregables fields;analysis-datamodel?filter=agg:categorical]] can be used for distinct group-by operations. They are specified either by field name or by field, result size and sort order. By default, at most 100 results are returned sorted by value.
 The order key can be by `value` or `count`. The size is capped at `100`.
 
 **Examples**
@@ -33,7 +33,7 @@ The following groups URLs by their `http_code`.
 "http_code"
 ```
 
-This is actually rewritten as the following. Meaning that HTTP codes are grouped by ascendent value of HTTP Code (ex: 200, then 201, then 301 etc).
+This is actually rewritten into the following.
 ```JSON
 {
   "distinct": {
@@ -44,7 +44,7 @@ This is actually rewritten as the following. Meaning that HTTP codes are grouped
 }
 ```
 
-The following groups URLs by their HTTP Code, returning the 10 most frequent ones (ex: 200, then 301, then 400, etc)
+The following groups URLs by their HTTP Code, returning the 10 most frequent ones (ex: 200, then 400, then 301, etc)
 ```JSON
 {
   "distinct": {
@@ -79,16 +79,32 @@ Metrics define the operation to compute. Except for `count`, a field on which th
 - `avg`
 - `min`
 - `max`
+- `count_true`
+- `count_false`
+- `count_null`
+
 Note: The default metric is `count`.
 
 **Examples**
+
 Count of URLs
 ```JSON
 "count"
 ```
+
 Sum of internal inlinks nofollow
 ```JSON
 { "sum": "inlinks_internal.nb.follow.total" }
+```
+
+Count of compliant URLs
+```JSON
+{"count_true": "compliant.is_compliant"}
+```
+
+Count of URLs without query string
+```JSON
+{"count_null": "main.query_string"}
 ```
 
 
