@@ -30,6 +30,16 @@ body {
       }
     }
 
+    @media(max-width: 991px) {
+      .main-container {
+        .template_row {
+          .template_col {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+
     @media(max-width: 767px) {
       padding: 0;
     }
