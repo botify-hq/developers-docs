@@ -11,7 +11,36 @@ Note that, currently only a small subset of the API is supported by this SDK. Fe
 
 
 ## Templates
-<div class="row"><div class="col-sm-12 col-md-6"><div class="thumbnail"><img src="https://cloud.githubusercontent.com/assets/1886834/22734076/b4d63a2e-edf4-11e6-9f1f-1dff6e8c83c8.png"><div class="caption"><h3>Projects Overview</h3><p>Get an overview of all your websites</p><p><a href="https://docs.google.com/spreadsheets/d/1Vj8zS0On8cUMWIYF2pNBOdaFrbKQ-U2IhUqv2bz0aOM/copy" class="btn btn-default" role="button">Get it</a></p></div></div></div><div class="col-sm-12 col-md-6"><div class="thumbnail"><img src="https://cloud.githubusercontent.com/assets/1886834/22792825/5c0420fa-eeee-11e6-938f-192ce59c9e15.gif"><div class="caption"><h3>Website monitoring</h3><p>Your custom dashboard.</p><p><a href="https://docs.google.com/spreadsheets/d/1RnpQemI3jZbCfGUbo-uleTHHFRLWibE6BTw6BE1U8bo/copy" class="btn btn-default" role="button">Get it</a></p></div></div></div></div>
+<div class="row">
+   <div class="col-sm-12 col-md-6">
+      <div class="thumbnail">
+         <img src="/staticfiles/images/projectsOverview.png"/>
+         <div class="caption">
+            <h3>Projects Overview</h3>
+            <p>Get an overview of all your websites</p>
+            <p><a href="https://docs.google.com/spreadsheets/d/1Vj8zS0On8cUMWIYF2pNBOdaFrbKQ-U2IhUqv2bz0aOM/copy" class="btn btn-default" role="button">Get it</a></p>
+         </div>
+      </div>
+   </div> <div class="col-sm-12 col-md-6">
+      <div class="thumbnail">
+         <img src="/staticfiles/images/websiteMonitoring.gif"/>
+         <div class="caption">
+            <h3>Website monitoring</h3>
+            <p>Your custom dashboard.</p>
+            <p><a href="https://docs.google.com/spreadsheets/d/1RnpQemI3jZbCfGUbo-uleTHHFRLWibE6BTw6BE1U8bo/copy" class="btn btn-default" role="button">Get it</a></p>
+         </div>
+      </div>
+   </div> <div class="col-sm-12 col-md-6">
+      <div class="thumbnail">
+         <img src="/staticfiles/images/botifyAnalysisComparator.gif"/>
+         <div class="caption">
+            <h3>Botify Analysis Comparator</h3>
+            <p>Create custom dashboards and match technical SEO data with ranking or revenue indicators to improve performance.</p>
+            <p><a href="https://docs.google.com/a/botify.com/spreadsheets/d/1vIoJZTY1EINzdHCf3xKwTVNSJp7haa68s28Ffm2IrVU/copy" class="btn btn-default" role="button">Get it</a></p>
+         </div>
+      </div>
+   </div>
+</div>
 
 
 ## Macros
