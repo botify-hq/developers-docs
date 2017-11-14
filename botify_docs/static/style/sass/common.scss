@@ -568,4 +568,23 @@ body {
     border-radius: 5px;
   }
 
+  .api-token-auth {
+    div {
+      padding: 8px 0;
+    }
+
+    .btn {
+      padding: 4px 12px;
+    }
+
+    .alert {
+      padding: 4px;
+      vertical-align: middle;
+    }
+
+    .link-token {
+      font-style: italic;
+      color: #aaa;
+    }
+  }
 }

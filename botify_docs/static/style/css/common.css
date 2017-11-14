@@ -873,3 +873,21 @@ body .inscription-button {
   font-weight: bold;
   border-radius: 5px;
 }
+/* line 572, ../sass/common.scss */
+body .api-token-auth div {
+  padding: 8px 0;
+}
+/* line 576, ../sass/common.scss */
+body .api-token-auth .btn {
+  padding: 4px 12px;
+}
+/* line 580, ../sass/common.scss */
+body .api-token-auth .alert {
+  padding: 4px;
+  vertical-align: middle;
+}
+/* line 585, ../sass/common.scss */
+body .api-token-auth .link-token {
+  font-style: italic;
+  color: #aaa;
+}
