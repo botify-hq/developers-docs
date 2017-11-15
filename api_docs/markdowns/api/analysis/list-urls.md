@@ -15,7 +15,6 @@ Please refer to [[BQLQuery;bql-query]] documentation for information about how t
 
 ```SH
 curl "https://api.botify.com/v1/analyses/${username}/${project_slug}/${analysis_slug}/urls" \
-     -X POST \
      -H "Authorization: Token ${API_KEY}" \
      -H "Content-type: application/json" \
      --data-binary "${BQLQuery}"

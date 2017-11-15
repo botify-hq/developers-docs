@@ -15,7 +15,6 @@ Please refer to [[BQLAggsQuery;bql-aggs-query]] documentation for information ab
 
 ```SH
 curl "https://api.botify.com/v1/projects/${username}/${project_slug}/urls/aggs?last_analysis_slug=${analysis_slug}&nb_analyses=${count}" \
-     -X POST \
      -H "Authorization: Token ${API_KEY}" \
      -H "Content-type: application/json" \
      --data-binary "${UrlsAggsQueries}"
