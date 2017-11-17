@@ -149,7 +149,10 @@ SWAGGER_API_URL = "https://api.botify.com/v1/swagger.json"
 ANALYSIS_DATAMODEL_API_URL = "https://api.botify.com/v1/analyses/urls/datamodel"
 LOGS_URLS_DATAMODEL_API_URL = "https://api.botify.com/v1/logs/urls/datamodel"
 LOGS_SEGMENTS_DATAMODEL_API_URL = "https://api.botify.com/v1/logs/segments/datamodel"
-
+GET_PROFILE_API_URL = "https://api.botify.com/v1/authentication/profile"
+GET_PROJECTS_API_URL = "https://api.botify.com/v1/profiles/USERNAME/projects"
+GET_ALL_ANALYSIS_API_URL = "https://api.botify.com/v1/analyses/PROJECT"
+GET_DATASET_API_URL = "https://app.botify.com/api/v1/analyses/PROJECT/ANALYSIS/urls/datasets?area=AREA"
 
 PIPELINE = {
     'STYLESHEETS': {

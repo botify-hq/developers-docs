@@ -14,280 +14,424 @@
 
 {% block right_content %}
 <h1>Datamodel</h1>
-<div id="datamodel">
-  <form class="form-inline">
-    <div class="form-group">
-      <label>Comparison: </label>
-      <select name="selectCompGroup" class="form-control input-sm">
-        <option value="current" >Current</option>
-        <option value="previous">Previous</option>
-        <option value="diff">Diff</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label>Feature: </label>
-      <select name="selectFeature" class="form-control input-sm">
-        <option value="all" selected>all</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label>Group: </label>
-      <select name="selectGroup" class="form-control input-sm">
-        <option value="all" selected>all</option>
-      </select>
-    </div>
+<div id="apiTokenContainer">
+  <form id="apiTokenForm" class="form-inline api-token-auth">
+    <div >Enter your API Auth token to browse the Analysis Datamodel.</div>
+    <input type="text" class="form-control input-sm" placeholder="API Token" id="apiTokenInput"/>
+    <button type="submit" class="btn btn-default">OK</button>
+    <span id="loading-message-token">Loading...</span>
+    <span id="error-message-token" class="alert alert-danger"></span>
+    <div><a href="https://developers.botify.com/api/authentication/" class="link-token">Where can I find my token ?</a></div>
   </form>
-  <table class="table datamodel-table">
-    <thead>
-      <tr>
-        <th>Feature</th>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Permissions</th>
-        <th>Type</th>
-        <th>SubType</th>
-        <th>Multiple</th>
-        <th>Group</th>
-      </tr>
-    </thead>
-  </table>
 </div>
+<div id="content">
+  <div id="datamodel">
+    <form class="form-inline">
+      <div class="form-group">
+        <label>Project: </label>
+        <select id="projectFilter" class="form-control input-sm">
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Analysis: </label>
+        <select id="analysisFilter" class="form-control input-sm">
+        </select>
+      </div>
+      <span id="loading-message-datamodel">Loading...</span>
+    </form>
+    <form class="form-inline">
+      <div class="form-group">
+        <label>Area: </label>
+        <select id="areaFilter" class="form-control input-sm">
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Feature: </label>
+        <select id="featureFilter" class="form-control input-sm">
+        </select>
+      </div>
+    </form>
+    <table class="table datamodel-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Permissions</th>
+          <th>Type</th>
+          <th>SubType</th>
+          <th>Multiple</th>
+          <th>Group</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
 
-<div class="edit-page-button edit-datamodel">
-  <a href="https://github.com/botify-hq/developers-docs/edit/master/api_docs/markdowns/partials/analysis-datamodel.md" target="_blank">
-    <div title="Edit this page">
-      <img src="{% static 'images/edit-icon.png' %}"><span>Edit this page</span>
-    </div>
-  </a>
+  <div class="edit-page-button edit-datamodel">
+    <a href="https://github.com/botify-hq/developers-docs/edit/master/api_docs/markdowns/partials/analysis-datamodel.md" target="_blank">
+      <div title="Edit this page">
+        <img src="{% static 'images/edit-icon.png' %}"><span>Edit this page</span>
+      </div>
+    </a>
+  </div>
+  {% md_content "partials/analysis-datamodel.md" %}
 </div>
-{% md_content "partials/analysis-datamodel.md" %}
 {% endblock %}
 
 {% block extra_script %}
 <script type="text/javascript">
   $(function () {
-    var initialFilter = url('?') && url('?').filter;
-    var initialCompGroup = url('?') && url('?').comparison;
-    var initialFeature = url('?') && url('?').feature;
-    var initialGroup = url('?') && url('?').group;
+    // Selectors
+    var content = $('#content');
+    var apiTokenContainer = $('#apiTokenContainer');
+    var apiTokenForm = $('#apiTokenForm');
+    var apiTokenInput = $('#apiTokenInput');
+    var projectFilter = $('#projectFilter');
+    var analysisFilter = $('#analysisFilter');
+    var areaFilter = $('#areaFilter');
+    var featureFilter = $('#featureFilter');
+    var errorMessageToken = $('#error-message-token');
+    var loadingMessageToken = $('#loading-message-token');
+    var loadingMessageDatamodel = $('#loading-message-datamodel');
 
-    var compGroupFilter = $('select[name=selectCompGroup]');
-    var featureFilter = $('select[name=selectFeature]');
-    var groupFilter = $('select[name=selectGroup]');
+    // Users information
+    var username;
+    var token;
+    var projects = []
+    var currentProjectIndex = -1;
+    var currentAnalysisIndex = -1;
+    var currentArea = 'current';
 
-    var groupsByFeature = {
-      main: [
-        "main",
-        "scheme",
-        "semantic_metadata",
-        "canonical",
-      ],
-      links: [
-        "inlinks",
-        "inlinks_nofollow",
-        "outlinks_internal",
-        "outlinks_internal_nofollow",
-        "outlinks_external",
-        "outlinks_external_nofollow",
-        "redirects",
-        "duplicate_query_kvs",
-        "page_rank",
-      ],
-      segments: [
-        "segments",
-      ],
-      visits: [
-        "visits.organic.all",
-        "visits.organic.aol",
-        "visits.organic.ask",
-        "visits.organic.baidu",
-        "visits.organic.bing",
-        "visits.organic.google",
-        "visits.organic.naver",
-        "visits.organic.yahoo",
-        "visits.organic.yandex",
-        "visits.social.all",
-        "visits.social.facebook",
-        "visits.social.google+",
-        "visits.social.linkedin",
-        "visits.social.pinterest",
-        "visits.social.reddit",
-        "visits.social.tumblr",
-        "visits.social.twitter",
-        "visits",
-      ],
-      search_engines: [
-        "search_engines.google.crawls.all",
-        "search_engines.google.crawls.search",
-        "search_engines.google.crawls.smartphone",
-        "search_engines.google.crawls.ads",
-        "search_engines.google.crawls.other",
-        "search_engines.google.visits",
-        "search_engines.bing.crawls.all",
-        "search_engines.bing.crawls.search",
-        "search_engines.bing.crawls.other",
-        "search_engines.bing.visits",
-      ],
-      content_quality: [
-        "content_quality",
-      ],
-      sitemaps: [
-        "sitemaps",
-      ],
-      extract: [
-        "extract",
-      ],
-      rel: [
-        "hreflang_incoming",
-        "hreflang_outgoing",
-      ],
-      other: [],
-    };
-    var features = Object.keys(groupsByFeature);
+    var datamodel;
 
-    var groups = [];
+    // Hide content by default
+    content.hide();
+    errorMessageToken.hide();
+    loadingMessageToken.hide();
+    loadingMessageDatamodel.hide();
 
-    // Init datable
+    function setIsInputSelectable(value) {
+      apiTokenInput.attr('disabled', !value);
+      projectFilter.attr('disabled', !value);
+      analysisFilter.attr('disabled', !value);
+      areaFilter.attr('disabled', !value);
+      featureFilter.attr('disabled', !value);
+    }
+
+    function setProjectFilter() {
+      projectFilter.empty();
+      projectFilter.append($('<option>', {
+        value: "",
+        text: "Select a Project",
+        disabled: true,
+        selected: true,
+      }));
+      projects.forEach(function(project){
+        projectFilter.append($('<option>', {
+          value: project.value,
+          text: project.name,
+        }));
+      });
+      projectFilter.attr('disabled', false);
+    }
+
+    function setAnalysisFilter() {
+      analysisFilter.empty();
+      analysisFilter.append($('<option>', {
+        value: "",
+        text: "Select an Analysis",
+        disabled: true,
+        selected: true,
+      }));
+      if (currentProjectIndex !== -1) {
+        analysisFilter.attr('disabled', false);
+        projects[currentProjectIndex].analysis.forEach(function(analysis){
+          analysisFilter.append($('<option>', {
+            value: analysis.slug,
+            text: analysis.name,
+          }));
+        });
+      } else {
+        analysisFilter.attr('disabled', true);
+      }
+    }
+
+    function setFeatureFilter() {
+      featureFilter.empty();
+      featureFilter.append($('<option>', {
+        value: "all",
+        text: "all",
+      }));
+
+      if (currentProjectIndex !== -1 && currentAnalysisIndex !== -1) {
+        projects[currentProjectIndex].analysis[currentAnalysisIndex].area[currentArea].rawData.forEach(function(dataset) {
+          featureFilter.append($('<option>', {
+            value: dataset.id,
+            text: dataset.name,
+          }));
+        })
+        featureFilter.attr('disabled', false);
+      } else {
+        featureFilter.attr('disabled', true);
+      }
+    }
+
+    function setAreaFilter() {
+      areaFilter.empty();
+      areaFilter.append($('<option>', {
+        value: "current",
+        text: "current",
+        selected: currentArea === "current",
+      }));
+
+      if (currentProjectIndex !== -1 && currentAnalysisIndex !== -1) {
+        areaFilter.attr('disabled', false);
+        if (projects[currentProjectIndex].analysis[currentAnalysisIndex].hasComparisonFeature) {
+          areaFilter.append($('<option>', {
+              value: "new",
+              text: "new",
+              selected: currentArea === "new",
+          }));
+            areaFilter.append($('<option>', {
+              value: "disappeared",
+              text: "disappeared",
+              selected: currentArea === "disappeared",
+            }));
+        }
+      } else {
+        areaFilter.attr('disabled', true);
+      }
+    }
+
+    function showPage() {
+      apiTokenContainer.hide();
+      content.show();
+    }
+
+    function getDataset() {
+      $.ajax({
+        url: '{{ get_dataset_api_url }}'
+          .replace("PROJECT", projects[currentProjectIndex].name)
+          .replace("ANALYSIS", projects[currentProjectIndex].analysis[currentAnalysisIndex].slug)
+          .replace("AREA", currentArea),
+        type: 'GET',
+        dataType: 'json',
+        beforeSend: function(request) {
+          setIsInputSelectable(false);
+          loadingMessageDatamodel.show();
+          request.setRequestHeader("Authorization", 'Token ' + token);
+        },
+        success: function(result, status) {
+          if (result.datasets) {
+            var datasets = [];
+            result.datasets.forEach(function(dataset) {
+              dataset.fields.forEach(function(field) {
+                var copyField = Object.assign({}, field);
+                copyField.feature = dataset.id;
+                copyField.group = field.group || dataset.id;
+                datasets.push(copyField)
+              });
+            });
+            projects[currentProjectIndex].analysis[currentAnalysisIndex].area[currentArea] = { rawData: result.datasets, datasets };
+          }
+          loadingMessageDatamodel.hide();
+          setIsInputSelectable(true);
+          setAreaFilter();
+          setFeatureFilter();
+          setDatamodel();
+        },
+     });
+    }
+
+    function getAnalysis() {
+      $.ajax({
+        url: '{{ get_project_all_analysis_api_url }}'.replace("PROJECT", projects[currentProjectIndex].name),
+        type: 'GET',
+        dataType: 'json',
+        beforeSend: function(request) {
+          setIsInputSelectable(false);
+          loadingMessageDatamodel.show();
+          request.setRequestHeader("Authorization", 'Token ' + token);
+        },
+        success: function(result, status) {
+          if (result.results) {
+            projects[currentProjectIndex].analysis = [];
+            result.results.forEach(function(result) {
+              // Parse result
+              if (result.status === "success") {
+                projects[currentProjectIndex].analysis.push({
+                  name: result.name,
+                  slug: result.slug,
+                  area: {},
+                  hasComparisonFeature: (result.features && result.features.comparison) ? true : false,
+                });
+              }
+            });
+          }
+          loadingMessageDatamodel.hide();
+          setIsInputSelectable(true);
+          setAnalysisFilter();
+          setAreaFilter();
+          setFeatureFilter();
+        },
+     });
+    }
+
+    // Second request to get the project list
+    function getProjects() {
+      $.ajax({
+        url: '{{ get_projects_api_url }}'.replace("USERNAME", username),
+        type: 'GET',
+        dataType: 'json',
+        beforeSend: function(request) {
+          request.setRequestHeader("Authorization", 'Token ' + token);
+          loadingMessageDatamodel.show();
+          clearDataModel();
+        },
+        success: function(result, status) {
+          if (result.success === true) {
+            if (result.data) {
+              // Parse result
+              result.data.forEach(function(project) {
+                projects.push({
+                  name: project.organization.slug + "/" + project.slug,
+                  analysis: null,
+                });
+              });
+            }
+          }
+          loadingMessageDatamodel.hide();
+          setProjectFilter();
+          setAnalysisFilter();
+          setAreaFilter();
+          setFeatureFilter();
+        },
+      });
+    }
+
+    // First request to check if the token is good and set the username
+    function checkApiTokenAndSetUsername() {
+      $.ajax({
+        url : '{{ get_profile_api_url }}',
+        type : 'GET',
+        dataType : 'json',
+        beforeSend: function(request) {
+          setIsInputSelectable(false);
+          errorMessageToken.hide();
+          loadingMessageToken.show();
+          request.setRequestHeader("Authorization", 'Token ' + token);
+        },
+        success : function(result, status) {
+          if (result.success === true && result.data) {
+            username = result.data.username;
+            loadingMessageToken.hide();
+            showPage();
+            getProjects();
+          } else {
+            loadingMessageToken.hide();
+            errorMessageToken.text("Invalid token!");
+            errorMessageToken.show();
+            setIsInputSelectable(true);
+          }
+        },
+     });
+    }
+
+    apiTokenForm.submit(function(events) {
+      events.preventDefault();
+      if (apiTokenInput.val().length > 0) {
+        token = apiTokenInput.val();
+        checkApiTokenAndSetUsername();
+      }
+    });
+
+    projectFilter.change(function() {
+      currentProjectIndex = projects.findIndex(function(element) { return element.name == projectFilter.val()});
+      currentAnalysisIndex = -1;
+      clearDataModel();
+
+      if (projects[currentProjectIndex].analysis !== null) {
+        setAnalysisFilter();
+        setAreaFilter();
+        setFeatureFilter();
+      } else {
+        getAnalysis();
+      }
+    });
+
+    analysisFilter.change(function() {
+      currentAnalysisIndex = projects[currentProjectIndex].analysis.findIndex(function(element) { return element.slug == analysisFilter.val()});
+      currentArea = 'current';
+
+      if (projects[currentProjectIndex].analysis[currentAnalysisIndex].area[currentArea]) {
+        setAreaFilter();
+        setFeatureFilter();
+        setDatamodel();
+      } else {
+        getDataset();
+      }
+    });
+
+    areaFilter.change(function() {
+      currentArea = areaFilter.val();
+
+      if (projects[currentProjectIndex].analysis[currentAnalysisIndex].area[currentArea]) {
+        setFeatureFilter();
+        setDatamodel();
+      } else {
+        getDataset();
+      }
+    });
+
+    featureFilter.change(function() {
+      datamodel.draw();
+    });
+
     $.fn.dataTable.ext.search.push(
       function( settings, data, dataIndex ) {
-        var compGroup = compGroupFilter.val();
         var feature = featureFilter.val();
-        var group = groupFilter.val();
 
-        var rowCompGroup = data[8];
         var rowFeature = data[0];
-        var rowGroup = data[7];
 
-        return (compGroup === rowCompGroup)
-            && (feature === 'all' ? true : feature === rowFeature)
-            && (group === 'all' ? true : group === rowGroup);
+        return (feature === 'all' ? true : feature === rowFeature);
       }
     );
 
-    var datamodel = $('#datamodel table').DataTable({
-      processing: true,
-      ajax: {
-        url: "{{ datamodel_api_url }}",
-        dataType: "json",
-        beforeSend: function (request) {
-          request.setRequestHeader("X-Botify-Client", "developers-docs");
-        },
-        dataSrc: function(json) {
-          // Populate groups
-          json.groups.forEach(function(group) {
-            if (groups.indexOf(group.id) === -1) {
-              groups.push(group.id);
-            }
-          });
-          featureFilter.val(initialFeature || 'all');
-          groupFilter.val(initialGroup || 'all');
-          updateGroupFilter();
-
-          // Compute compGroup && feature
-          json.fields.forEach(function(field) {
-            features.every(function(feature) {
-              groupsByFeature[feature].every(function (group) {
-                if(field.group.indexOf(group) !== -1) {
-                  field.feature = feature;
-                  return false;
-                }
-                return true;
-              });
-              return !field.feature;
-            });
-
-            field.feature = field.feature || 'other';
-            field.compGroup = getCompGroup(field.group);
-            field.group = field.compGroup  === 'previous' ? field.group.substring(9)
-                        : field.compGroup  === 'diff' ? field.group.substring(5)
-                        : field.group;
-          });
-
-          return json.fields;
-        },
-      },
-      columns: [
-        { data: "feature" },
-        { data: "id" },
-        { data: "name" },
-        {
-          data: "permissions",
-          render: "[, ]"
-        },
-        { data: "type" },
-        { data: "subtype" },
-        { data: "multiple" },
-        { data: "group" },
-        { data: "compGroup" },
-      ],
-      columnDefs: [
-        {
-          targets: [8],
-          visible: false
-        }
-      ],
-      scrollX: true,
-      search: {
-        regex: true,
-        search: initialFilter || undefined,
-      },
-      order: [],
-      pagingType: "numbers",
-    });
-
-    // Init filter
-    compGroupFilter.val(initialCompGroup || 'current');
-    updateFeatureFilter();
-
-    // Bind events
-    compGroupFilter.change( function() {
-      updateGroupFilter();
+    function clearDataModel() {
+      datamodel.clear();
       datamodel.draw();
-    });
-
-    featureFilter.change( function() {
-      updateGroupFilter();
-      datamodel.draw();
-    });
-
-    groupFilter.change( function() {
-      datamodel.draw();
-    });
-
-    function getCompGroup(group) {
-      return group.indexOf('previous.') === 0 ? 'previous'
-          : group.indexOf('diff.') === 0 ? 'diff'
-          : 'current';
     }
 
-    function updateGroupFilter() {
-      var compGroup = compGroupFilter.val();
-      var feature = featureFilter.val();
-
-      groupFilter.empty();
-      groupFilter.append($('<option>', {
-        value: 'all',
-        text: 'all'
-      }));
-
-      var _groups = feature === 'all' ? groups : groupsByFeature[feature];
-      _groups.forEach(function(group) {
-        groupFilter.append($('<option>', {
-          value: group,
-          text: group
-        }));
-      });
-      groupFilter.val('all');
+    function setDatamodel() {
+      datamodel.clear();
+      datamodel.rows.add(projects[currentProjectIndex].analysis[currentAnalysisIndex].area[currentArea].datasets);
+      datamodel.draw();
     }
 
-    function updateFeatureFilter() {
-      features.forEach(function(group) {
-        featureFilter.append($('<option>', {
-          value: group,
-          text: group
-        }));
+    function initDatamodel() {
+      datamodel = $('#datamodel table').DataTable({
+        columns: [
+          { data: "feature" },
+          { data: "id" },
+          { data: "name" },
+          {
+            data: "permissions",
+            render: "[, ]"
+          },
+          { data: "type" },
+          { data: "subtype" },
+          { data: "multiple" },
+          { data: "group" },
+        ],
+        scrollX: true,
+        search: {
+          regex: true,
+        },
+        order: [],
+        pagingType: "numbers",
       });
     }
+    initDatamodel();
   });
 
 </script>

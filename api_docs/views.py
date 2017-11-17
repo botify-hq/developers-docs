@@ -47,7 +47,10 @@ class AnalysisDatamodelView(TemplateView):
 
     def get_context_data(self, *args, **kwargs):
         return {
-            "datamodel_api_url": settings.ANALYSIS_DATAMODEL_API_URL,
+            "get_profile_api_url": settings.GET_PROFILE_API_URL,
+            "get_projects_api_url": settings.GET_PROJECTS_API_URL,
+            "get_project_all_analysis_api_url": settings.GET_ALL_ANALYSIS_API_URL,
+            "get_dataset_api_url": settings.GET_DATASET_API_URL,
             "properties": {
                 "menu_item": "analysis-datamodel",
                 "breadcrumb": ["analysis"],
