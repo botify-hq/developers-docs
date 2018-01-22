@@ -24,8 +24,8 @@ A group-by is defined by:
   - ranges that define buckets for the group-by operation.
 
 #### Distinct GroupBy
-Only [[aggregables fields;analysis-datamodel?filter=agg:categorical]] can be used for distinct group-by operations. They are specified either by field name or by field, result size and sort order. By default, at most 100 results are returned sorted by value.
-The order key can be by `value` or `count`. The size is capped at `100`.
+Only [[aggregables fields;analysis-datamodel?filter=agg:categorical]] can be used for distinct group-by operations. They are specified either by field name or by field, result size and sort order. By default, at most 300 results are returned sorted by value.
+The order key can be by `value` or `count`.
 
 **Examples**
 The following groups URLs by their `http_code`.
@@ -38,7 +38,7 @@ This is actually rewritten into the following.
 {
   "distinct": {
     "field": "http_code",
-    "size": 100,
+    "size": 300,
     "order": { "value": "asc" }
   }
 }
