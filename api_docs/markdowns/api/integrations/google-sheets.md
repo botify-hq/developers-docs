@@ -6,7 +6,7 @@ Note that, currently only a small subset of the API is supported by this SDK. Fe
 
 ## Install
 
-- Open the [addon page](https://chrome.google.com/webstore/detail/botify-macros/albleinfohecbdikaabneehekfmdgimk).
+- Open the [addon page](https://chrome.google.com/webstore/detail/botify-google-sheets-addo/ahnafmcljcpgmhpffdinacobeeclaaao).
 - Click on "Add"
 - In the main menu, click on "Add-ons" > "Manage add-ons"
 - For the Botify add-on, click on the "Manage" button
