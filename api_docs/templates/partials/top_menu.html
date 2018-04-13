@@ -151,6 +151,9 @@
             <li class=" {% ifequal properties.menu_item "integrations-google-sheets" %}active{% endifequal %}">
               <a href="{% url 'md-page' 'api/integrations/google-sheets' %}">Google Sheets</a>
             </li>
+            <li class=" {% ifequal properties.menu_item "integrations-cms-embed" %}active{% endifequal %}">
+              <a href="{% url 'md-page' 'api/integrations/cms-embed' %}">CMS Embed</a>
+            </li>
           </ul>
         </li>
         <li><a href="https://groups.google.com/forum/#!forum/botify-api" target="_blank">News &amp; Support</a></li>
