@@ -377,6 +377,17 @@ PAGES = [
             "description": "Use Botify API through Botify addon for Google Sheets"
         }
     },
+    {
+        "url_name": "integrations-cms-embed",
+        "markdown_file": "api/integrations/cms-embed.md",
+        "path": "api/integrations/cms-embed",
+        "properties": {
+            "menu_item": "integrations-cms-embed",
+            "breadcrumb": ["integrations"],
+            "title": "Botify CMS Embed",
+            "description": "Get URL Information inside your company's Content Management System."
+        }
+    },
     # SDKs
     {
         "url_name": "sdks",
