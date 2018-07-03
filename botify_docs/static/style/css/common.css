@@ -392,8 +392,8 @@ body .header {
 }
 /* line 61, ../sass/common.scss */
 body .header .botify-developer-logo {
-  width: 241px;
-  height: 50px;
+  width: 250px;
+  height: 44px;
   background: url("../images/botify-developers-logo.png") no-repeat;
 }
 /* line 67, ../sass/common.scss */
@@ -418,8 +418,8 @@ body .top-menu {
 }
 /* line 87, ../sass/common.scss */
 body .top-menu .botify-developer-logo {
-  width: 241px;
-  height: 50px;
+  width: 250px;
+  height: 44px;
   background: url("../images/botify-developers-logo.png") no-repeat;
 }
 /* line 93, ../sass/common.scss */
