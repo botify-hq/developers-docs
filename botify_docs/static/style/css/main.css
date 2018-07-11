@@ -400,7 +400,7 @@ html body .main-content .main-content__header .inner-wrapper .main-content__head
 html body .main-content .main-content__header .inner-wrapper .main-content__header-left .developers-logo {
   width: 393px;
   height: 65px;
-  background: url("../images/developers-logo.png") no-repeat;
+  background: url("../images/developers-logo.gif") no-repeat;
   background-size: contain;
 }
 /* line 67, ../sass/main.scss */
