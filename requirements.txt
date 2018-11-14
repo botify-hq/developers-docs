@@ -10,3 +10,4 @@ django-pipeline==1.6.4
 boto==2.39.0
 django-storages==1.1.8
 s3cmd==1.6.1
+google-compute-engine==2.8.3
