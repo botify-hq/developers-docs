@@ -287,6 +287,17 @@ PAGES = [
             "description": "Aggregate Project's Analyses URLs with Botify API"
         }
     },
+    # Collections
+    {
+        "url_name": "collections",
+        "markdown_file": "api/collections/collections.md",
+        "path": "api/collections",
+        # "properties": {
+        #     "menu_item": "collections",
+        #     "title": "Collections",
+        #     "description": "Botify API, Collections"
+        # }
+    },
     # User
     {
         "url_name": "user",
