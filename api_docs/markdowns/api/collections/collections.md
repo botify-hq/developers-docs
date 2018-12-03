@@ -36,6 +36,11 @@ Three types of collections are to be distinguished:
 - Non-timestamped collections. These collections represent a snapshot at a certain moment in time. This includes the Botify Crawl Reports.
 - "Global" collection. This unique collection is present on every project. It exposes dimensions that are available on all collections. This contains the URL Scheme and Segment data.
 
+The most frequently used collections are:
+- `crawl.YYYYMMDD`
+- `search_console`
+- `log_analyzer.google`
+
 ### Collection details
 
 To get the available dimensions and metrics, a collection exposes the endpoint:
@@ -80,9 +85,12 @@ For a timestamped collection, one needs to additionally specify the period index
 An exception to this is the date field, which will only need to be prefixed by the period index to group multiple timestamped collections together on a certain date span:
 - `"period_{idx}.date"`.
 
+
+In dimensions, metrics and filters, [[BQL Functions can be used. See documentation.;bql-functions]]
+
 #### Filters
 
-The BQL Filter documentation is available [[here;bql-filter]].
+[[The BQL Filter documentation is available here.;bql-filter]]
 Fields are also to be prefixed on BQL Filters.
 
 #### Sort
@@ -122,6 +130,18 @@ The endpoint response is paginated and in JSON format. It is formalised as such:
 [comment]: # (TODO: add the count option information)
 
 ## Examples
+
+First, a typical cURL pattern to use the collections API:
+
+```bash
+curl --request POST \
+  --url https://app.botify.com/api/v1/projects/{{username}}/{{project_slug}}/query?size=50 \
+  --header 'Authorization: Token {{token}}' \
+  --header 'Content-Type: application/json' \
+  --header 'Accept: application/json' \
+  --header 'X-Botify-Client: developers-doc' \
+  --data 'BQL_COLLECTIONS_QUERY'
+```
 
 ### Number of clicks by country during one month
 

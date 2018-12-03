@@ -365,6 +365,17 @@ PAGES = [
             "description": "Botify API, BQLFilter Object Reference"
         }
     },
+    {
+        "url_name": "bql-functions",
+        "markdown_file": "api/bql/bql-functions.md",
+        "path": "api/bql/bql-functions",
+        "properties": {
+            "menu_item": "bql-functions",
+            "breadcrumb": ["bql"],
+            "title": "BQLFunctions",
+            "description": "Botify API, BQLFunctions Object Reference"
+        }
+    },
     # INTEGRATIONS
     {
         "url_name": "integrations",
