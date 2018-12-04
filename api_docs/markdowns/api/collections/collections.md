@@ -133,8 +133,7 @@ The endpoint response is paginated and in JSON format. It is formalised as such:
 First, a typical cURL pattern to use the collections API:
 
 ```bash
-curl -X POST \
-  'https://app.botify.com/api/v1/projects/{{username}}/{{project_slug}}/query?size=50' \
+curl 'https://app.botify.com/api/v1/projects/{{username}}/{{project_slug}}/query?size=50' \
   --header 'Authorization: Token {{token}}' \
   --header 'Content-Type: application/json' \
   --header 'Accept: application/json' \
@@ -191,7 +190,7 @@ curl -X POST \
           "value": 200
         },
         "sort": [
-          {"type": "metrics", "index": 0, "order": "asc"}
+          {"type": "dimensions", "index": 2, "order": "asc"}
         ]
     }
 }
