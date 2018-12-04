@@ -1,4 +1,4 @@
-# Collections API - Getting Started [Alpha Version]
+# Collections API -- Getting Started [Alpha Version]
 
 ## Summary
 
@@ -61,7 +61,7 @@ The dates on which a timestamped collection is available in the collections list
 
 ### Collections BQL Query
 
-A BQL Collection Query fhas the following format:
+A BQL Collection Query has the following format:
 ```JSON
 {
   "dimensions": [DIMENSIONS],
@@ -91,11 +91,10 @@ In dimensions, metrics and filters, [[BQL Functions can be used. See documentati
 #### Filters
 
 [[The BQL Filter documentation is available here.;bql-filter]]
-Fields are also to be prefixed on BQL Filters.
 
 #### Sort
 
-Each field on which we want to sort, can be specified through the format:
+Each field on which we want to sort can be specified through the format:
 ```JSON
 {
   "index": IDX,
@@ -115,7 +114,7 @@ The endpoint response is paginated and in JSON format. It is formalised as such:
 {
   "previous": LINK_TO_PREVIOUS_PAGE,
   "next": LINK_TO_NEXT_PAGE,
-  "page": PAGE_NUM,
+  "page": PAGE_NUMBER,
   "size": PAGE_SIZE,
   "results": [
     {
@@ -134,8 +133,8 @@ The endpoint response is paginated and in JSON format. It is formalised as such:
 First, a typical cURL pattern to use the collections API:
 
 ```bash
-curl --request POST \
-  --url https://app.botify.com/api/v1/projects/{{username}}/{{project_slug}}/query?size=50 \
+curl -X POST \
+  'https://app.botify.com/api/v1/projects/{{username}}/{{project_slug}}/query?size=50' \
   --header 'Authorization: Token {{token}}' \
   --header 'Content-Type: application/json' \
   --header 'Accept: application/json' \
