@@ -33,7 +33,7 @@ A Botify Project has multiple collections usable for querying. To retrieve the a
 
 Three types of collections are to be distinguished:
 - Timestamped collections. Most collections are timestamped and represent a data source that evolves over time. This includes, among others, the Log Analyzer, Keywords and Visits features.
-- Non-timestamped collections. These collections represent a snapshot at a certain moment in time. This includes the Botify Crawl Reports.
+- Non-timestamped collections. These collections represent a snapshot at a certain moment in time. This includes Botify Analytics crawl reports.
 - "Global" collection. This unique collection is present on every project. It exposes dimensions that are available on all collections. This contains the URL Scheme and Segment data.
 
 The most frequently used collections are:
