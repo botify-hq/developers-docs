@@ -22,7 +22,7 @@ For functions with more than one argument, the keywords `"function"` and `"args"
 
 ### Mathematical Functions
 
-The Mathematical Functions output a numerical value or `null`. 
+The Mathematical Functions output a numerical value or `null`.
 
 - `add`
     - Input: any number of numerical values
