@@ -32,9 +32,9 @@ A Botify Project has multiple collections usable for querying. To retrieve the a
 - Response: `List<Collection>`
 
 Three types of collections are to be distinguished:
-- Timestamped collections. Most collections are timestamped and represent a data source that evolves over time. This includes, among others, the Log Analyzer, Keywords and Visits features.
+- The `global` collection is unique and present on every project. It exposes dimensions that are available on all collections, like a project's segmentation, or base URL metrics.
+- **Timestamped** collections represent data sets that evolve over time, for which we get a value for a date or time. They are always queried over a period ([start_date, end_date]). This includes, among others, the Log Analyzer, Keywords and Visits features.
 - Non-timestamped collections. These collections represent a snapshot at a certain moment in time. This includes Botify Analytics crawl reports.
-- "Global" collection. This unique collection is present on every project. It exposes dimensions that are available on all collections. This contains the URL Scheme and Segment data.
 
 The most frequently used collections are:
 - `crawl.YYYYMMDD`
