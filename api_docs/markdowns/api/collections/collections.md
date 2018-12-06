@@ -49,7 +49,7 @@ To get the available dimensions and metrics, a collection exposes the endpoint:
 - HTTP Verb: GET
 - Response: `Datamodel`
 
-The `collection_id` is being retrieved through the collections list endpoint. It is also the name used for the collection on the data querying endpoint.
+The `collection_id` is being retrieved through the collections list endpoint. It is also the identifier used on the data querying endpoint to target the given collection.
 For each field in the datamodel, a `kind` attributes specifies if a field is a dimension or a metric.
 
 [comment]: # (TODO: somehow provide a list of available dimensions and metrics. Maybe not exhaustive, so not necessarily dynamic)
