@@ -2,7 +2,7 @@
 
 ## Summary
 
-The goal of this API is to give the possibility to cross data from different sources and different periods on a project. These data sources are named collections in this context and represent data coming from Botify Crawls, the Log Analyzer, Google Search Console and others.
+The goal of this API is to give the possibility to cross data from different sources and different periods on a given project. These data sources are named "collections" in this context. They represent data coming from Botify Analytics, Botify Log Analyzer, and Botify Keywords.
 
 In the manner of an analytics tool, the collections API is queried by providing a set of dimensions and metrics to aggregate data.
 
