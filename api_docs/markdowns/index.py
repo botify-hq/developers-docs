@@ -287,6 +287,17 @@ PAGES = [
             "description": "Aggregate Project's Analyses URLs with Botify API"
         }
     },
+    # Collections
+    {
+        "url_name": "collections",
+        "markdown_file": "api/collections/collections.md",
+        "path": "api/collections",
+        # "properties": {
+        #     "menu_item": "collections",
+        #     "title": "Collections",
+        #     "description": "Botify API, Collections"
+        # }
+    },
     # User
     {
         "url_name": "user",
@@ -352,6 +363,17 @@ PAGES = [
             "breadcrumb": ["bql"],
             "title": "BQLFilter",
             "description": "Botify API, BQLFilter Object Reference"
+        }
+    },
+    {
+        "url_name": "bql-functions",
+        "markdown_file": "api/bql/bql-functions.md",
+        "path": "api/bql/bql-functions",
+        "properties": {
+            "menu_item": "bql-functions",
+            "breadcrumb": ["bql"],
+            "title": "BQLFunctions",
+            "description": "Botify API, BQLFunctions Object Reference"
         }
     },
     # INTEGRATIONS

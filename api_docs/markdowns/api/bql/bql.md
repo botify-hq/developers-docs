@@ -13,5 +13,4 @@ BQL provides the following abilities on a per-URL basis on the analysis dataset:
 - [[BQLQuery;bql-query]]
 - [[BQLAggsQuery;bql-aggs-query]]
 - [[BQLFilter;bql-filter]]
-
-
+- [[BQLFunction;bql-functions]]
