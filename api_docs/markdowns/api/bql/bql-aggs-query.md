@@ -57,6 +57,7 @@ The following groups URLs by their HTTP Code, returning the 10 most frequent one
 
 #### Range GroupBy
 Only [[numerical fields;analysis-datamodel?filter=agg:numerical]] can be used for range group by operations.
+The `from` boundary is inclusive, while the `to` boundary is exclusive.
 
 **Example**
 The following groups URLs by their `delay_last_byte` on two ranges (fast and slow URLs)
