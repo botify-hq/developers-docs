@@ -400,6 +400,17 @@ PAGES = [
         }
     },
     {
+        "url_name": "integrations-google-data-studio",
+        "markdown_file": "api/integrations/google-data-studio.md",
+        "path": "api/integrations/google-data-studio",
+        "properties": {
+            "menu_item": "integrations-google-data-studio",
+            "breadcrumb": ["integrations"],
+            "title": "Botify for Google Data Studio",
+            "description": "Retrieve Botify data inside your Google Data Studio dashboards."
+        }
+    },
+    {
         "url_name": "integrations-cms-embed",
         "markdown_file": "api/integrations/cms-embed.md",
         "path": "api/integrations/cms-embed",
