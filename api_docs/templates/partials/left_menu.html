@@ -149,6 +149,9 @@
       <div class="sidebar__group-item {% ifequal properties.menu_item "integrations-google-sheets" %}active{% endifequal %}">
         <a href="{% url 'md-page' 'api/integrations/google-sheets' %}">Google Sheets</a>
     </div>
+    <div class="sidebar__group-item {% ifequal properties.menu_item "integrations-google-data-studio" %}active{% endifequal %}">
+      <a href="{% url 'md-page' 'api/integrations/google-data-studio' %}">Google Data Studio</a>
+  </div>
     <div class="sidebar__group-item {% ifequal properties.menu_item "integrations-cms-embed" %}active{% endifequal %}">
       <a href="{% url 'md-page' 'api/integrations/cms-embed' %}">CMS Embed</a>
     </div>
