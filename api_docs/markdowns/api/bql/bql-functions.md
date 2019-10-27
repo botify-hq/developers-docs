@@ -187,3 +187,19 @@ BQL supports retrieving any kind of field as a JSON-formatted string.
     ]
 }
 ```
+
+### Miscellaneous Functions
+
+- `concat`: concatenates strings. Any non-existing value results in NULL.
+
+    Example:
+    ```JSON
+    {
+        "function": "concat",
+        "args": [
+            "segments.pagetype.depth_1",
+            {"literal": "/"},
+            "segments.pagetype.depth_2"
+        ]
+    }
+    ```
