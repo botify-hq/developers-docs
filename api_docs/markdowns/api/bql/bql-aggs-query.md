@@ -83,6 +83,7 @@ Metrics define the operation to compute. Except for `count`, a field on which th
 - `count_true`
 - `count_false`
 - `count_null`
+- the [[count functions;bql-functions#count-functions]] are also available.
 
 Note: The default metric is `count`.
 
@@ -108,6 +109,13 @@ Count of URLs without query string
 {"count_null": "main.query_string"}
 ```
 
+Count of URLs with at least one page with similarity above or equal to 75%
+```json
+{
+  "function": "count_gt",
+  "args": ["content_quality.nb_simscore_pct_75", 0]
+}
+```
 
 ### Filters
 

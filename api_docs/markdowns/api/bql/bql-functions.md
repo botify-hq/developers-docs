@@ -88,6 +88,23 @@ Example:
 {"first_day_of_week": "search_console.period_0.date"}
 ```
 
+### Count Functions
+
+* `count`
+* `count_true`
+* `count_false`
+* `count_null`
+* `count_distinct`
+* `count_distinct_approx`
+
+Conditional counts: these are shortcuts to applying `count_true` to the corresponding boolean function.
+
+* `count_eq`
+* `count_gt`
+* `count_gte`
+* `count_lt`
+* `count_lte`
+  
 ### HTTP Code Functions
 
 - `http_code_family`
