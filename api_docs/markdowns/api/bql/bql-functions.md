@@ -127,43 +127,46 @@ BQL supports retrieving any kind of field as a JSON-formatted string.
 - `not_exists`
 
 ### Logical Functions
+
 - `if`: returns one of two values according to a boolean condition.
+
     - input: Boolean, Any, Any
     - output: Any
 
     The two possible return values must be the same type.
 
     Example:
-    ```JSON
-    {
-        "function": "if",
-        "args": [
-            {
-                "function": "exists",
-                "args": [
-                    "segments.pagetype.depth_2"
-                ]
-            },
-            "segments.pagetype.depth_2",
-            {"literal": "#empty"}
-        ]
-    }
-    ```
 
-* `if_not_exists`: returns the first field's value if it exists, the second 
-field's value otherwise. 
+```json
+{
+    "function": "if",
+    "args": [
+        {
+            "function": "exists",
+            "args": [
+                "segments.pagetype.depth_2"
+            ]
+        },
+        "segments.pagetype.depth_2",
+        {"literal": "#empty"}
+    ]
+}
+```
+
+- `if_not_exists`: returns the first field's value if it exists, the second field's value otherwise. 
     - input: Any, Any
     - output Any
 
     The two possible return values must be the same type.
     
     This is a shortcut for the previous example:
-    ```JSON
-    {
-        "function": "if_not_exists",
-        "args": [
-            "segments.pagetype.depth_2",
-            {"literal": "#empty"}
-        ]
-    }
-    ```
+
+```json
+{
+    "function": "if_not_exists",
+    "args": [
+        "segments.pagetype.depth_2",
+        {"literal": "#empty"}
+    ]
+}
+```
