@@ -38,12 +38,6 @@ However, you can get search engines crawl data as shown in the Botify Analytics 
 The Botify API isn't working in a way where you would request a specific chart. Instead, you'll use **[[BQL;bql]]** (Botify Query Language) to perform aggregations and filters on analyzed URLs.
 It means that **it's much more powerful** because you are able to **compute any metric and generate any chart you want** including some that aren't in the Botify interface.
 
-## Coming soon
-- Allow to get **daily search engine crawl and organic visits data** (from Botify Log Analyzer)
-- Allow to launch Botify Analytics crawls
-- SDKs for other languages
-
-
 ## Demo
 You can find a demo of the API [there](https://jsfiddle.net/8k20pbua/12/).
 But the best API demo is the **Botify Analytics Application** itself, as it is using the API to display/modify (almost) everything.
