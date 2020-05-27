@@ -71,7 +71,7 @@ Can be applied to numerical fields, including `integer`, `long`, `float`, `doubl
   "value": [200, 300]
 }
 ```
-**Note**: Lower boundary is inclusive whereas **upper boundary is exclusive**. For instance the above example means `200 <= http_code < 300`.
+**Note**: Lower and upper boundaies are inclusive. For instance the above example means `200 <= http_code <= 300`.
 
 
 ### Categorical Predicates
