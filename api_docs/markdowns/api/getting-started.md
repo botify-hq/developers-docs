@@ -39,13 +39,6 @@ This language allow you define fields you want to **compute metrics on**, **grou
 
 Note that **exporting all your URLs is only recommended if you want to cross Botify data to others sources** (by matching URL to URL data sources). Indeed using URL aggregation to compute metrics or URL searching is way faster. Plus, according to your plan, csv export can be limited in volume, leading to imcomplete results.
 
-
-## Demo
-
-You can find a demo of the API [there](https://jsfiddle.net/8k20pbua/12/).
-Note that this demo is using the [[Javascript SDK;sdks]] which offers an easier way of using the API.
-
-
 ## Further reading
 
 - [[API Reference;reference]]
