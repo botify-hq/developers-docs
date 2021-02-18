@@ -6,7 +6,6 @@ The purpose of this page is to guide you in the Botify API capabilities.
 - [Get your token](#get-your-token)
 - [List my projects and analyses](#list-my-projects-and-analyses)
 - [Get data about my analyses](#get-data-about-my-analyses)
-- [Demo](#demo)
 - [Further reading](#further-reading)
 
 
