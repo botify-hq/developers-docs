@@ -137,12 +137,12 @@ table {
 /* line 44, ../sass/_utils.scss */
 .new-api-doc-link {
   padding: 5px 0;
-  color: #cc0000;
+  color: #ff8585;
   font-family: "Katahdin Round";
   font-size: 18px;
   text-align: center;
   text-transform: uppercase;
-  border-bottom: 2px solid #cc0000;
+  border-bottom: 2px solid #ff8585;
   text-decoration: none;
   cursor: pointer;
   margin-right: 10px;
@@ -150,7 +150,7 @@ table {
 /* line 56, ../sass/_utils.scss */
 .new-api-doc-link:hover {
   text-decoration: none;
-  color: #cc1111;
+  color: #ff9696;
 }
 
 /* line 62, ../sass/_utils.scss */
