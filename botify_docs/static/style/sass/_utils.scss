@@ -41,6 +41,24 @@
   }
 }
 
+.new-api-doc-link {
+  padding: 5px 0;
+  color: #ff8585;
+  font-family: "Katahdin Round";
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #ff8585;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 10px;
+
+  &:hover {
+    text-decoration: none;
+    color: #ff9696;
+  }
+}
+
 .bold {
   font-weight: bold;
 }
