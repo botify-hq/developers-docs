@@ -1,5 +1,5 @@
 dj-database-url==0.3.0
-Django==1.9.1
+Django==2.2.24
 gunicorn==19.4.5
 whitenoise==2.0.6
 markdown==2.6.5
