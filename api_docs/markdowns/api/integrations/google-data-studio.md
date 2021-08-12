@@ -4,7 +4,7 @@ Botify's **Google Data Studio Connector** allows you to easily get Botify data i
 
 ## Install
 ### Creating a new Data Studio Dashboard with your Botify data
-- Open the [Data sources](https://datastudio.google.com/data?search=Botify) list on Google's Connector Gallery
+- Open the [Data sources](https://datastudio.google.com/u/0/datasources/create?connectorId=AKfycbz5tAY6RxeLAHQ1RUFz50XAynNdHzOTd9jstbdmxGw) list on Google's Connector Gallery
 - Find the "Botify API" Connector
 - Click on "CREATE DATA SOURCE":
 <img width="40%" src="/staticfiles/images/data-studio/botify-data-source.png"/> 
@@ -45,7 +45,7 @@ A full list of available fields to display or compute metrics on can be found in
 ## Troubleshooting
 
 ### I need to revoke my API Token used by the Connector
-- Open the [Data sources](https://datastudio.google.com/data?search=Botify) list on Google's Connector Gallery
+- Open the [Data sources](https://datastudio.google.com/u/0/datasources/create?connectorId=AKfycbz5tAY6RxeLAHQ1RUFz50XAynNdHzOTd9jstbdmxGw) list on Google's Connector Gallery
 - Find the "Botify API" Connector
 - Click on the "three-dot" menu icon
 - Click on "Revoke Access"
