@@ -1,7 +1,8 @@
 # Botify Developers Docs
 [![Build Status](https://travis-ci.org/botify-hq/developers-docs.svg?branch=master)](https://travis-ci.org/botify-hq/developers-docs)
 
-This repo contains sources to build the Botify Developers **static website** using Django Medusa.
+
+This repo contains sources to build the deprecated Botify Developers **static website** using Django Medusa.
 
 - `botify_docs` app contains main templates, styles, statics and homepage.
 - `api_docs` contains mostly markdown files that are used to generate documentation pages.
