@@ -5,7 +5,7 @@ whitenoise==2.0.6
 markdown==2.6.5
 
 -e git://github.com/botify-labs/django-medusa.git@cc6b1e6#egg=django-medusa
-celery==3.1.20
+celery==5.2.2
 django-pipeline==1.6.4
 boto==2.39.0
 django-storages==1.1.8
